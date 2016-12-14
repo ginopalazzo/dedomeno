@@ -7,7 +7,7 @@ class Country(models.Model):
     def __str__(self):
         return self.country_name
 
-
+# recursive territorial entity 2
 class TerritorialEntity(models.Model):
     territorial_entity_name = models.CharField(max_length=200, null=True, blank=True)
     depth_number = models.IntegerField(null=True, blank=True)
