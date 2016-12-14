@@ -1,0 +1,11 @@
+[14/Dec/2016 17:58:22] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:58:23] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:59:02] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:59:08] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:59:08] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:59:09] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:59:15] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:59:23] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:59:24] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 17:59:35] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
+[14/Dec/2016 18:00:49] WARNING [django.request:152] Not Found: /favicon.ico
