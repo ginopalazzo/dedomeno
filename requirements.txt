@@ -4,6 +4,7 @@ gunicorn==19.6.0
 lxml==3.7.0
 Pillow==3.4.2
 psycopg2==2.6.2
+python-decouple==3.0
 requests==2.12.4
 sources==1.1.0
 whitenoise==3.2.2
