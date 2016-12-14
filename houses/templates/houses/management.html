@@ -1,0 +1,217 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>dedomeno - houses</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'houses/css/style.css' %}" />
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>House Management</h1>
+            <p>Import, delete...</p>
+            <div>
+            <ol class="breadcrumb">
+                <li><a href="/">House</a></li>
+                <li><a href="/admin/">Admin</a></li>
+                <li><a href="/admin/houses/">Houses</a></li>
+                <li class="active">Management</li>
+            </ol>
+        </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h2 class="text-center">Sources <spam class="badge"> {{ source_count }} </spam></h2>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-sources-import">Imports</a> 
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapse-sources-import">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <p>Import the logic for a Source</p>
+                                    <form action="#" method="get" class="form-inline">
+                                        <div class="input-group-btn">
+                                        <select class="form-control" id="sel1" name="source-option-source">
+                                            {%for source in source_list%}
+                                                <option>{{ source.source_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <input type="submit" class="btn btn-primary" value="Import" name="btn-import-source">
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-sources-check">
+                                Checks</a>
+                                </h4>
+                            </div>
+                            <div id="collapse-sources-check" class="panel-collapse collapse">
+                                <div class="panel-body">Checks here.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <h2 class="text-center">Localizations <spam class="badge"> {{ country_count }} </spam><spam class="badge"> {{ territorial_count }} </spam></h2>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-localizations-import">Imports</a> 
+                                </h4>
+                            </div>
+                        </div>
+                        <div id="collapse-localizations-import" class="panel-collapse collapse">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <p>Import all Territorial Entities for a given Source and Country</p>
+                                    <form action="#" method="get" class="form-inline">
+                                        <div class="input-group-btn">
+                                        <select class="form-control" id="sel1" name="localization-option-source">
+                                            {%for source in source_list%}
+                                                <option>{{ source.source_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <select class="form-control" id="sel2" name="localization-option-country">
+                                            {%for country in country_list%}
+                                                <option>{{ country.country_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <input type="submit" class="btn btn-primary" value="Import" name="btn-import-territorial-entities">
+                                        </div>
+                                    </form>
+                                </li>
+                                <li class="list-group-item">
+                                    <p>Import all Territorial Entities for a given Source and Province</p>
+                                    <form action="#" method="get" class="form-inline">
+                                        <div class="input-group-btn">
+                                        <select class="form-control" id="sel1" name="localization-option-source">
+                                            {%for source in source_list%}
+                                                <option>{{ source.source_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <select class="form-control" id="sel2" multiple="multiple" name="localization-option-provinces">
+                                            {%for territorial_entity in province_list%}
+                                                <option>{{ territorial_entity.territorial_entity_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <input type="submit" class="btn btn-primary" value="Import" name="btn-import-provinces">
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-localiations-check">
+                                Checks</a>
+                                </h4>
+                            </div>
+                            <div id="collapse-localiations-check" class="panel-collapse collapse">
+                                <div class="panel-body">Checks here.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <h2 class="text-center">Houses</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"> Total houses for rent in dedomeno: <spam class="badge"> {{ houses_rent_total }} </spam> </li>
+                        <li class="list-group-item"> Total active houses for rent in dedomeno: <spam class="badge"> {{ houses_rent_total_active }} </spam> </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h2 class="text-center">Agencies <spam class="badge"> {{ agency_count }} </spam></h2>
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapse-agency-import">Imports</a> 
+                                </h4>
+                            </div>
+                        </div>
+                        <div id="collapse-agency-import" class="panel-collapse collapse">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <p>Import all Real States for a given Source and Country</p>
+                                    <form action="#" method="get" class="form-inline">
+                                        <div class="input-group-btn">
+                                        <select class="form-control" id="sel1" name="agency-option-source">
+                                            {%for source in source_list%}
+                                                <option>{{ source.source_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <select class="form-control" id="sel2" name="agency-option-country">
+                                            {%for country in country_list%}
+                                                <option>{{ country.country_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <input type="submit" class="btn btn-primary" value="Import" name="btn-import-all-agency">
+                                        </div>
+                                    </form>
+                                </li>
+                                <li class="list-group-item">
+                                    <p>Complete all the Real States information for a given Source</p>
+                                    <form action="#" method="get" class="form-inline">
+                                        <div class="input-group-btn">
+                                        <select class="form-control" id="sel1" name="agency-option-source">
+                                            {%for source in source_list%}
+                                                <option>{{ source.source_name }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <input type="submit" class="btn btn-primary" value="Import" name="btn-complete-all-agencies">
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-agency-check">
+                                Checks</a>
+                                </h4>
+                            </div>
+                            <div id="collapse-agency-check" class="panel-collapse collapse">
+                                <div class="panel-body">Checks here.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $('#importProvinces').click(function() {    
+                $.ajax({
+                    url: your_url,
+                    method: 'GET', // or another (GET), whatever you need
+                    // data: {
+                    //     name: value, // data you need to pass to your function
+                    //     click: True
+                    // }
+                    success: function (data) {
+                        alert("Done")
+                        // success callback
+                        // you can process data returned by function from views.py
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

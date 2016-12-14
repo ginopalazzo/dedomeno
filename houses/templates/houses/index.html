@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>dedomeno - houses</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'houses/css/style.css' %}" />
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Summary</h1>
+            <p>A first view of the Spanish real state market</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2 class="text-center">Realstate</h2>
+                    {% if agencies_total > 0 %}
+                        <ul class="list-group">
+                            <li class="list-group-item"> Total Real States: <spam class="badge"> {{ agencies_total }} </spam>
+                            {% for agency in agencies_list %}
+                                <li class="list-group-item">
+                                    <a href="{% url 'houses:detail_agency' agency.id %}">{{ agency.agency_name }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>There's no Agencies save.</p>
+                    {% endif %}
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="text-center">House</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"> Total houses for rent: <spam class="badge"> {{ houses_rent_total_active }} </spam><spam class="badge"> {{ houses_rent_total }} </spam> 
+                        <li class="list-group-item"> Total houses for buy: <spam class="badge"> {{ houses_buy_total_active }} </spam><spam class="badge"> {{ houses_buy_total }} </spam> </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="text-center">Territorial Entity</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"> Territorial Entities: <spam class="badge"> {{ territorial_entities_total }} </spam> </li>
+                        <li class="list-group-item"> Countries: <spam class="badge"> {{ countries_total }} </spam> </li>
+                        {% for country in countries_list %}
+                            <li class="list-group-item ">
+                                {{ country.country_name }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
