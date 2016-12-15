@@ -9,3 +9,36 @@
 [14/Dec/2016 17:59:24] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
 [14/Dec/2016 17:59:35] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
 [14/Dec/2016 18:00:49] WARNING [django.request:152] Not Found: /favicon.ico
+[15/Dec/2016 19:01:01] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 13, in index
+    agencies_total = Agency.objects.count()
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 369, in count
+    return self.query.get_count(using=self.db)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/query.py", line 476, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/query.py", line 457, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 824, in execute_sql
+    sql, params = self.as_sql()
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 374, in as_sql
+    from_, f_params = self.get_from_clause()
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 612, in get_from_clause
+    clause_sql, clause_params = self.compile(from_clause)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 353, in compile
+    sql, params = node.as_sql(self, self.connection)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/datastructures.py", line 146, in as_sql
+    base_sql = compiler.quote_name_unless_alias(self.table_name)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 344, in quote_name_unless_alias
+    r = self.connection.ops.quote_name(name)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/backends/dummy/base.py", line 21, in complain
+    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
+django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.

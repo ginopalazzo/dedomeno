@@ -8,3 +8,4 @@ staticfiles
 local_settings.py
 .DS_Store
 .env
+mysite.log
