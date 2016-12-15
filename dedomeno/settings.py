@@ -110,7 +110,7 @@ DATABASES = {
         'NAME': 'dedomeno_db',
         'USER': 'dedomeno',
         'PASSWORD': '***REMOVED***',
-        'HOST': 'localhost',
+        'HOST': '',
         'PORT': '',
     }
 }
