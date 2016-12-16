@@ -42,3 +42,174 @@ Traceback (most recent call last):
   File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/backends/dummy/base.py", line 21, in complain
     raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
 django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
+[15/Dec/2016 20:00:51] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 14, in index
+    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent1')).count()
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+houses.models.DoesNotExist: Transaction matching query does not exist.
+[15/Dec/2016 20:00:51] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 14, in index
+    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent1')).count()
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+houses.models.DoesNotExist: Transaction matching query does not exist.
+[15/Dec/2016 20:07:06] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 14, in index
+    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent')).count()
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+houses.models.DoesNotExist: Transaction matching query does not exist.
+[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /admin/ HTTP/1.1" 302 0
+[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1695
+[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 200 15937
+[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[15/Dec/2016 20:08:52] WARNING [django.request:152] Not Found: /favicon.ico
+[15/Dec/2016 20:08:52] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2162
+[15/Dec/2016 20:08:56] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[15/Dec/2016 20:08:56] WARNING [django.server:131] "GET /admin/ HTTP/1.1" 400 61771
+[15/Dec/2016 20:09:23] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[15/Dec/2016 20:09:23] WARNING [django.server:131] "GET /admin/ HTTP/1.1" 400 61906
+[15/Dec/2016 20:09:27] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[15/Dec/2016 20:09:27] WARNING [django.server:131] "GET /admin/ HTTP/1.1" 400 61906
+[15/Dec/2016 20:09:41] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
+[15/Dec/2016 20:09:41] WARNING [django.server:131] "GET / HTTP/1.1" 400 61705
+[15/Dec/2016 20:10:28] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[15/Dec/2016 20:10:33] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10424
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 200 15937
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[15/Dec/2016 20:10:38] INFO [django.server:131] "GET /admin/logout/ HTTP/1.1" 200 1043
+[15/Dec/2016 20:10:40] INFO [django.server:131] "GET /admin/ HTTP/1.1" 302 0
+[15/Dec/2016 20:10:40] INFO [django.server:131] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1695
+[15/Dec/2016 20:10:40] INFO [django.server:131] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[15/Dec/2016 20:17:55] INFO [django.server:131] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[15/Dec/2016 20:17:55] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10424
+[15/Dec/2016 20:22:38] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10424
+[15/Dec/2016 20:22:38] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 17, in index
+    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent1')).count()
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+houses.models.DoesNotExist: Transaction matching query does not exist.
+[15/Dec/2016 20:22:38] ERROR [django.server:131] "GET / HTTP/1.1" 500 74112
+[15/Dec/2016 20:22:57] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14989
+[15/Dec/2016 20:23:41] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14989
+[15/Dec/2016 20:31:12] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 11, in index
+    trans = Transaction.objects.get(transaction_name='rent1')
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+houses.models.DoesNotExist: Transaction matching query does not exist.
+[15/Dec/2016 20:31:12] ERROR [django.server:131] "GET / HTTP/1.1" 500 74120
+[15/Dec/2016 20:31:53] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 11, in index
+    trans = Transaction.objects.order_by(transaction_name='rent1')
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+TypeError: order_by() got an unexpected keyword argument 'transaction_name'
+[15/Dec/2016 20:31:53] ERROR [django.server:131] "GET / HTTP/1.1" 500 69574
+[15/Dec/2016 20:32:23] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[16/Dec/2016 16:54:41] INFO [django.server:131] "GET /houses HTTP/1.1" 301 0
+[16/Dec/2016 16:54:42] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 34866
+[16/Dec/2016 16:55:10] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[16/Dec/2016 16:55:10] INFO [django.server:131] "GET /static/houses/css/style.css HTTP/1.1" 304 0
+[16/Dec/2016 16:55:13] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[16/Dec/2016 16:55:15] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[16/Dec/2016 16:55:31] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 12, in index
+    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent1')).count()
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+houses.models.DoesNotExist: Transaction matching query does not exist.
+[16/Dec/2016 16:55:32] ERROR [django.server:131] "GET / HTTP/1.1" 500 74502
+[16/Dec/2016 16:55:44] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[16/Dec/2016 16:55:46] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[16/Dec/2016 16:57:13] ERROR [django.request:124] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 11, in index
+    transaction = Transaction.objects.get(transaction_name='rent1')
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
+    self.model._meta.object_name
+houses.models.DoesNotExist: Transaction matching query does not exist.
+[16/Dec/2016 16:57:14] ERROR [django.server:131] "GET / HTTP/1.1" 500 74267
+[16/Dec/2016 17:12:07] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[16/Dec/2016 17:12:57] INFO [django.server:131] "GET / HTTP/1.1" 200 2371

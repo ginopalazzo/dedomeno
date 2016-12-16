@@ -1,7 +1,4 @@
-from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponseRedirect
-from django.urls import reverse
-from django.views import generic
+from django.shortcuts import render
 
 from houses.models import House, Agency, Transaction
 
@@ -11,12 +8,12 @@ def index(request):
 
     agencies_list = Agency.objects.order_by('agency_name')
     agencies_total = Agency.objects.count()
-    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent')).count()
-    houses_buy_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='sale')).count()
+    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.filter(transaction_name='rent').first()).count()
+    houses_buy_total = House.objects.filter(transaction_type=Transaction.objects.filter(transaction_name='sale').first()).count()
     houses_rent_total_active = House.objects.filter(
-        transaction_type=Transaction.objects.get(transaction_name='rent'), is_online=True).count()
+        transaction_type=Transaction.objects.filter(transaction_name='rent').first(), is_online=True).count()
     houses_buy_total_active = House.objects.filter(
-        transaction_type=Transaction.objects.get(transaction_name='sale'), is_online=True).count()
+        transaction_type=Transaction.objects.filter(transaction_name='sale').first(), is_online=True).count()
 
     context = {
         'agencies_total': agencies_total,
