@@ -1,0 +1,23 @@
+Via: 1.1 varnish
+Via: 1.1 varnish
+Set-Cookie: userUUID=f62af6c9-a8d3-46ea-8113-7a6484d49871; Expires=Wed, 24-Jan-2085 15:58:03 GMT; Path=/
+Set-Cookie: JSESSIONID=1BD0F123E5711CE2AE9CD9D17AFB17E0.web18; Path=/; HttpOnly
+Set-Cookie: contact1BD0F123E5711CE2AE9CD9D17AFB17E0.web18="{'email':null,'phone':null,'phonePrefix':null,'friendEmails':null,'name':null,'message':null,'message2Friends':null,'maxNumberContactsAllow':10,'defaultMessage':true}"; Version=1; Path=/
+Set-Cookie: send1BD0F123E5711CE2AE9CD9D17AFB17E0.web18="{'friendsEmail':null,'email':null,'message':null}"; Version=1; Path=/
+Set-Cookie: WEBSERVERID=R|WG+RM|WG+RF; path=/; HttpOnly
+Vary: Accept-Encoding
+Cache-Control: no-cache, no-store, must-revalidate, private, max-age=0
+Date: Fri, 06 Jan 2017 12:43:56 GMT
+Strict-Transport-Security: max-age=31536000
+X-Cache: MISS, MISS
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Content-Type: text/html;charset=UTF-8
+Content-Encoding: gzip
+X-Served-By: cache-cdg8721-CDG, cache-lhr6334-LHR
+Age: 0
+Pragma: no-cache
+Content-Language: es
+Fastly-Debug-Digest: 9a2bd2aa20a8b279f1ffe1309f7810c91b0858b0da97c183f129b8aac5bcf9e5
+Accept-Ranges: bytes
+X-Cache-Hits: 0, 0
+X-Timer: S1483706636.447878,VS0,VE147

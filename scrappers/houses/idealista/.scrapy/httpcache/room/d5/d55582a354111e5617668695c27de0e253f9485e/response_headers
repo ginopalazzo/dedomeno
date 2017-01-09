@@ -1,0 +1,22 @@
+Accept-Ranges: bytes
+Pragma: no-cache
+X-Served-By: cache-cdg8731-CDG, cache-lhr6327-LHR
+X-Timer: S1483954268.774260,VS0,VE457
+Vary: Accept-Encoding
+X-Cache: MISS, MISS
+Via: 1.1 varnish
+Via: 1.1 varnish
+X-Cache-Hits: 0, 0
+Content-Language: es
+Content-Encoding: gzip
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Fastly-Debug-Digest: 702417c2cf22540e43dfb408775433f934e6721f1ee1f647d3bfef79236661f3
+Content-Type: text/html;charset=UTF-8
+Strict-Transport-Security: max-age=31536000
+Set-Cookie: cookieSearch-1="/alquiler-habitacion/madrid/zona-noroeste/:1483954267654"; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+Set-Cookie: cookieSearch-1="/alquiler-habitacion/madrid/zona-noroeste/:1483954267654"; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+Set-Cookie: cookieSearch-1="/alquiler-habitacion/madrid/zona-noroeste/:1483954268792"; Version=1; Max-Age=31536000; Expires=Tue, 09-Jan-2018 09:31:08 GMT; Path=/
+Set-Cookie: contactC2D7AFD0E4169B90F2862F8CEBD6C83D.web9="{'email':null,'phone':null,'phonePrefix':null,'friendEmails':null,'name':null,'message':null,'message2Friends':null,'maxNumberContactsAllow':10,'defaultMessage':true}"; Version=1; Path=/
+Date: Mon, 09 Jan 2017 09:31:09 GMT
+Cache-Control: no-cache, no-store, must-revalidate, private, max-age=0
+Age: 0

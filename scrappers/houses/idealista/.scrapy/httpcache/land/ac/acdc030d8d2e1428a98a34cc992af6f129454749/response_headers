@@ -1,0 +1,23 @@
+Strict-Transport-Security: max-age=31536000
+X-Cache-Hits: 0, 0
+Via: 1.1 varnish
+Via: 1.1 varnish
+Vary: Accept-Encoding
+Date: Mon, 09 Jan 2017 17:45:43 GMT
+Content-Language: es
+X-Cache: MISS, MISS
+Content-Type: text/html;charset=UTF-8
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Set-Cookie: cookieSearch-1="/venta-terrenos/madrid-provincia/:1483983928902"; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+Set-Cookie: cookieSearch-1="/venta-terrenos/madrid-provincia/:1483983928902"; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+Set-Cookie: cookieSearch-1="/venta-terrenos/madrid-provincia/:1483983942394"; Version=1; Max-Age=31536000; Expires=Tue, 09-Jan-2018 17:45:42 GMT; Path=/
+Set-Cookie: contactB411AAA5270544229ED44CFC07C11E61.web2="{'email':null,'phone':null,'phonePrefix':null,'friendEmails':null,'name':null,'message':null,'message2Friends':null,'maxNumberContactsAllow':10,'defaultMessage':true}"; Version=1; Path=/
+Set-Cookie: WEBSERVERID=B|WHPMb|WHPMX; path=/; HttpOnly
+Fastly-Debug-Digest: 6c5419678a4f0c3b49cda5a504ff850ca18ca9102df134db9ec10923b5b96db0
+Pragma: no-cache
+Age: 0
+X-Timer: S1483983942.373904,VS0,VE1186
+Cache-Control: no-cache, no-store, must-revalidate, private, max-age=0
+X-Served-By: cache-cdg8722-CDG, cache-lcy1125-LCY
+Content-Encoding: gzip
+Accept-Ranges: bytes

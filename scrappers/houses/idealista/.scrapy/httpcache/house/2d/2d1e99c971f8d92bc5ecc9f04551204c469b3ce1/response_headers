@@ -1,0 +1,23 @@
+Age: 0
+Fastly-Debug-Digest: c9d5593bcbd9aef310591fb4edb93be772a40c852e92a5f533c47e96244548e9
+Cache-Control: no-cache, no-store, must-revalidate, private, max-age=0
+Date: Sun, 08 Jan 2017 09:54:51 GMT
+X-Timer: S1483869291.073402,VS0,VE513
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+Accept-Ranges: bytes
+Strict-Transport-Security: max-age=31536000
+Pragma: no-cache
+Content-Type: text/html;charset=UTF-8
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Language: es
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+X-Served-By: cache-cdg8732-CDG, cache-lhr6336-LHR
+Set-Cookie: cookieSearch-1="/venta-viviendas/albacete-provincia/:1483869287719"; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+Set-Cookie: cookieSearch-1="/venta-viviendas/albacete-provincia/:1483869287719"; Version=1; Max-Age=0; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/
+Set-Cookie: cookieSearch-1="/venta-viviendas/albacete-provincia/:1483869291092"; Version=1; Max-Age=31536000; Expires=Mon, 08-Jan-2018 09:54:51 GMT; Path=/
+Set-Cookie: contactFA813BA40F70A22DCAFCCF8B343C1C8D.web6="{'email':null,'phone':null,'phonePrefix':null,'friendEmails':null,'name':null,'message':null,'message2Friends':null,'maxNumberContactsAllow':10,'defaultMessage':true}"; Version=1; Path=/
+Set-Cookie: WEBSERVERID=F|WHIMk|WHIKg; path=/; HttpOnly
+Via: 1.1 varnish
+Via: 1.1 varnish

@@ -2,10 +2,11 @@
 *~
 __pycache__
 myenv
-db.sqlite3
+dedoneno/mysite.log
+dedoneno/db.sqlite3
 staticfiles
-/static
-local_settings.py
+dedoneno/static
+dedomeno.sublime-workspace
+dedomeno.sublime-project
 .DS_Store
 .env
-mysite.log

@@ -1,0 +1,17 @@
+Vary: Accept-Encoding
+Accept-Ranges: bytes
+Accept-Ranges: bytes
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+X-Served-By: cache-lhr6322-LHR
+Server: idealista
+Date: Mon, 09 Jan 2017 14:42:42 GMT
+X-Timer: S1483972962.544651,VS0,VE31
+Pragma: no-cache
+Content-Encoding: gzip
+Via: 1.1 varnish
+Last-Modified: Thu, 10 Nov 2016 13:01:44 GMT
+X-Cache: MISS
+X-Cache-Hits: 0
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Content-Type: text/plain
+Access-Control-Allow-Origin: *

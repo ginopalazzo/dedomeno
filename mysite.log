@@ -1,215 +1,1268 @@
-[14/Dec/2016 17:58:22] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:58:23] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:59:02] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:59:08] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:59:08] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:59:09] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:59:15] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:59:23] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:59:24] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 17:59:35] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '0.0.0.0:5000'. You may need to add '0.0.0.0' to ALLOWED_HOSTS.
-[14/Dec/2016 18:00:49] WARNING [django.request:152] Not Found: /favicon.ico
-[15/Dec/2016 19:01:01] ERROR [django.request:124] Internal Server Error: /
+[19/Dec/2016 19:08:46] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10424
+[19/Dec/2016 19:08:46] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 200 15937
+[19/Dec/2016 19:08:46] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
+[19/Dec/2016 19:08:46] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+[19/Dec/2016 19:08:47] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[19/Dec/2016 19:08:47] INFO [django.server:131] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[19/Dec/2016 19:08:47] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[19/Dec/2016 19:08:47] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[19/Dec/2016 19:08:47] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[19/Dec/2016 19:08:47] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[19/Dec/2016 19:08:47] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[19/Dec/2016 19:08:47] INFO [django.server:131] "GET /static/houses/css/style.css HTTP/1.1" 304 0
+[30/Dec/2016 20:12:53] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 5467
+[30/Dec/2016 20:12:56] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 5467
+[30/Dec/2016 20:13:01] INFO [django.server:131] "GET / HTTP/1.1" 200 2365
+[30/Dec/2016 20:13:09] INFO [django.server:131] "GET /houses HTTP/1.1" 301 0
+[30/Dec/2016 20:13:09] ERROR [django.request:124] Internal Server Error: /houses/
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
     response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 13, in index
-    agencies_total = Agency.objects.count()
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 369, in count
-    return self.query.get_count(using=self.db)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/query.py", line 476, in get_count
-    number = obj.get_aggregation(using, ['__count'])['__count']
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/query.py", line 457, in get_aggregation
-    result = compiler.execute_sql(SINGLE)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 824, in execute_sql
-    sql, params = self.as_sql()
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 374, in as_sql
-    from_, f_params = self.get_from_clause()
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 612, in get_from_clause
-    clause_sql, clause_params = self.compile(from_clause)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 353, in compile
-    sql, params = node.as_sql(self, self.connection)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/datastructures.py", line 146, in as_sql
-    base_sql = compiler.quote_name_unless_alias(self.table_name)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 344, in quote_name_unless_alias
-    r = self.connection.ops.quote_name(name)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/backends/dummy/base.py", line 21, in complain
-    raise ImproperlyConfigured("settings.DATABASES is improperly configured. "
-django.core.exceptions.ImproperlyConfigured: settings.DATABASES is improperly configured. Please supply the ENGINE value. Check settings documentation for more details.
-[15/Dec/2016 20:00:51] ERROR [django.request:124] Internal Server Error: /
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 51, in index
+    return render(request, 'houses/index.html', context)
+NameError: name 'render' is not defined
+[30/Dec/2016 20:13:09] ERROR [django.server:131] "GET /houses/ HTTP/1.1" 500 65214
+[30/Dec/2016 20:15:45] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 5467
+[30/Dec/2016 20:15:51] INFO [django.server:131] "GET /admin/auth/group/add/ HTTP/1.1" 200 8430
+[30/Dec/2016 20:15:52] INFO [django.server:131] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12389
+[30/Dec/2016 20:15:52] INFO [django.server:131] "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5755
+[30/Dec/2016 20:15:52] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[30/Dec/2016 20:15:52] INFO [django.server:131] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[30/Dec/2016 20:15:52] INFO [django.server:131] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[30/Dec/2016 20:15:52] INFO [django.server:131] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[30/Dec/2016 20:16:01] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 5467
+[02/Jan/2017 19:28:15] INFO [django.server:131] "GET / HTTP/1.1" 200 2365
+[02/Jan/2017 19:28:23] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 5467
+[02/Jan/2017 19:28:23] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[02/Jan/2017 19:28:23] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[02/Jan/2017 19:28:24] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[02/Jan/2017 19:28:24] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[02/Jan/2017 19:28:24] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[02/Jan/2017 19:28:24] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[02/Jan/2017 19:28:24] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[02/Jan/2017 19:28:24] INFO [django.server:131] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[02/Jan/2017 19:28:24] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[02/Jan/2017 19:53:36] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6526
+[02/Jan/2017 19:55:19] ERROR [django.request:124] Internal Server Error: /admin/houses/property/
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
-    response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 14, in index
-    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent1')).count()
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
-    self.model._meta.object_name
-houses.models.DoesNotExist: Transaction matching query does not exist.
-[15/Dec/2016 20:00:51] ERROR [django.request:124] Internal Server Error: /
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column houses_property.slug does not exist
+LINE 1: ...ouses_property"."title", "houses_property"."url", "houses_pr...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
     response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 14, in index
-    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent1')).count()
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
-    self.model._meta.object_name
-houses.models.DoesNotExist: Transaction matching query does not exist.
-[15/Dec/2016 20:07:06] ERROR [django.request:124] Internal Server Error: /
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/options.py", line 544, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1657, in changelist_view
+    selection_note=_('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column houses_property.slug does not exist
+LINE 1: ...ouses_property"."title", "houses_property"."url", "houses_pr...
+                                                             ^
+
+[02/Jan/2017 19:55:19] ERROR [django.server:131] "GET /admin/houses/property/ HTTP/1.1" 500 147834
+[02/Jan/2017 19:55:25] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6526
+[02/Jan/2017 20:01:19] ERROR [django.request:124] Internal Server Error: /admin/houses/house/
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
-    response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 14, in index
-    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent')).count()
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
-    self.model._meta.object_name
-houses.models.DoesNotExist: Transaction matching query does not exist.
-[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /admin/ HTTP/1.1" 302 0
-[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1695
-[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
-[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 200 15937
-[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
-[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
-[15/Dec/2016 20:08:51] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
-[15/Dec/2016 20:08:52] WARNING [django.request:152] Not Found: /favicon.ico
-[15/Dec/2016 20:08:52] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2162
-[15/Dec/2016 20:08:56] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-[15/Dec/2016 20:08:56] WARNING [django.server:131] "GET /admin/ HTTP/1.1" 400 61771
-[15/Dec/2016 20:09:23] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-[15/Dec/2016 20:09:23] WARNING [django.server:131] "GET /admin/ HTTP/1.1" 400 61906
-[15/Dec/2016 20:09:27] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-[15/Dec/2016 20:09:27] WARNING [django.server:131] "GET /admin/ HTTP/1.1" 400 61906
-[15/Dec/2016 20:09:41] ERROR [django.security.DisallowedHost:73] Invalid HTTP_HOST header: '127.0.0.1:8000'. You may need to add '127.0.0.1' to ALLOWED_HOSTS.
-[15/Dec/2016 20:09:41] WARNING [django.server:131] "GET / HTTP/1.1" 400 61705
-[15/Dec/2016 20:10:28] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
-[15/Dec/2016 20:10:33] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10424
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 200 15937
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
-[15/Dec/2016 20:10:34] INFO [django.server:131] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
-[15/Dec/2016 20:10:38] INFO [django.server:131] "GET /admin/logout/ HTTP/1.1" 200 1043
-[15/Dec/2016 20:10:40] INFO [django.server:131] "GET /admin/ HTTP/1.1" 302 0
-[15/Dec/2016 20:10:40] INFO [django.server:131] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1695
-[15/Dec/2016 20:10:40] INFO [django.server:131] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
-[15/Dec/2016 20:17:55] INFO [django.server:131] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
-[15/Dec/2016 20:17:55] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10424
-[15/Dec/2016 20:22:38] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 10424
-[15/Dec/2016 20:22:38] ERROR [django.request:124] Internal Server Error: /
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+psycopg2.ProgrammingError: column houses_property.slug does not exist
+LINE 1: ...ouses_property"."title", "houses_property"."url", "houses_pr...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
     response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 17, in index
-    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent1')).count()
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
-    self.model._meta.object_name
-houses.models.DoesNotExist: Transaction matching query does not exist.
-[15/Dec/2016 20:22:38] ERROR [django.server:131] "GET / HTTP/1.1" 500 74112
-[15/Dec/2016 20:22:57] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14989
-[15/Dec/2016 20:23:41] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14989
-[15/Dec/2016 20:31:12] ERROR [django.request:124] Internal Server Error: /
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/options.py", line 544, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 67, in _wrapper
+    return bound_func(*args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 63, in bound_func
+    return func.__get__(self, type(self))(*args2, **kwargs2)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/options.py", line 1657, in changelist_view
+    selection_note=_('0 of %(cnt)s selected') % {'cnt': len(cl.result_list)},
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 238, in __len__
+    self._fetch_all()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column houses_property.slug does not exist
+LINE 1: ...ouses_property"."title", "houses_property"."url", "houses_pr...
+                                                             ^
+
+[02/Jan/2017 20:01:20] ERROR [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 500 151596
+[02/Jan/2017 20:02:53] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6526
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /admin/houses/property/ HTTP/1.1" 200 3423
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[02/Jan/2017 20:02:56] INFO [django.server:131] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /admin/houses/property/add/ HTTP/1.1" 200 10908
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20529
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7790
+[02/Jan/2017 20:02:59] INFO [django.server:131] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[02/Jan/2017 20:04:01] INFO [django.server:131] "GET /admin/houses/property/ HTTP/1.1" 200 3423
+[02/Jan/2017 20:04:01] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:04:03] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2672
+[02/Jan/2017 20:04:05] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3402
+[02/Jan/2017 20:04:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:04:07] INFO [django.server:131] "GET /admin/houses/house/add/ HTTP/1.1" 200 16666
+[02/Jan/2017 20:04:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:16:59] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 10855
+[02/Jan/2017 20:16:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:17:04] INFO [django.server:131] "GET /admin/houses/house/30/change/ HTTP/1.1" 200 16993
+[02/Jan/2017 20:17:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:17:18] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 10855
+[02/Jan/2017 20:17:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:17:21] INFO [django.server:131] "GET /admin/houses/house/25/change/ HTTP/1.1" 200 17436
+[02/Jan/2017 20:17:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:17:31] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 10855
+[02/Jan/2017 20:17:38] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 200 9173
+[02/Jan/2017 20:17:39] INFO [django.server:131] "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+[02/Jan/2017 20:17:42] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 302 0
+[02/Jan/2017 20:17:42] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3535
+[02/Jan/2017 20:17:42] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:17:42] INFO [django.server:131] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[02/Jan/2017 20:17:45] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2672
+[02/Jan/2017 20:18:28] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 10882
+[02/Jan/2017 20:18:28] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:18:30] INFO [django.server:131] "GET /admin/houses/house/58/change/ HTTP/1.1" 200 16884
+[02/Jan/2017 20:18:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:18:38] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 10882
+[02/Jan/2017 20:18:40] INFO [django.server:131] "GET /admin/houses/house/57/change/ HTTP/1.1" 200 16884
+[02/Jan/2017 20:18:40] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:18:45] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 10882
+[02/Jan/2017 20:18:58] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 200 9218
+[02/Jan/2017 20:19:03] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 302 0
+[02/Jan/2017 20:19:03] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3535
+[02/Jan/2017 20:19:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:24:19] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3740
+[02/Jan/2017 20:24:19] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:24:26] INFO [django.server:131] "GET /admin/houses/house/?transaction__exact=sale HTTP/1.1" 200 3853
+[02/Jan/2017 20:24:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:24:27] INFO [django.server:131] "GET /admin/houses/house/?transaction__exact=rent HTTP/1.1" 200 3853
+[02/Jan/2017 20:24:28] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:25:58] INFO [django.server:131] "GET /admin/houses/house/?transaction__exact=rent HTTP/1.1" 200 4458
+[02/Jan/2017 20:25:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:26:00] INFO [django.server:131] "GET /admin/houses/house/?transaction__exact=rent HTTP/1.1" 200 4458
+[02/Jan/2017 20:26:00] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:26:02] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2257
+[02/Jan/2017 20:26:04] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18978
+[02/Jan/2017 20:26:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:26:21] INFO [django.server:131] "GET /admin/houses/house/?o=5 HTTP/1.1" 200 20108
+[02/Jan/2017 20:26:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:26:21] INFO [django.server:131] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[02/Jan/2017 20:26:27] INFO [django.server:131] "GET /admin/houses/house/?o=-5 HTTP/1.1" 200 20148
+[02/Jan/2017 20:26:27] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:26:31] INFO [django.server:131] "GET /admin/houses/house/?o=5 HTTP/1.1" 200 20108
+[02/Jan/2017 20:26:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:26:51] INFO [django.server:131] "GET /admin/houses/house/86/change/?_changelist_filters=o%3D5 HTTP/1.1" 200 17300
+[02/Jan/2017 20:26:52] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:26:58] INFO [django.server:131] "GET /admin/houses/house/?o=5 HTTP/1.1" 200 20108
+[02/Jan/2017 20:31:55] INFO [django.server:131] "POST /admin/houses/house/?o=5 HTTP/1.1" 200 7778
+[02/Jan/2017 20:31:58] INFO [django.server:131] "POST /admin/houses/house/?o=5 HTTP/1.1" 302 0
+[02/Jan/2017 20:31:58] INFO [django.server:131] "GET /admin/houses/house/?o=5 HTTP/1.1" 200 3965
+[02/Jan/2017 20:31:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:54:14] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2257
+[02/Jan/2017 20:54:16] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3740
+[02/Jan/2017 20:54:16] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 20:54:18] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3740
+[02/Jan/2017 20:54:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:00:42] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2257
+[02/Jan/2017 21:00:44] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3740
+[02/Jan/2017 21:00:44] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:01:19] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 19114
+[02/Jan/2017 21:01:19] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:02:02] INFO [django.server:131] "GET /admin/houses/house/120/change/ HTTP/1.1" 200 17137
+[02/Jan/2017 21:02:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:03:09] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 19270
+[02/Jan/2017 21:03:19] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 200 7862
+[02/Jan/2017 21:03:22] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 302 0
+[02/Jan/2017 21:03:22] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3969
+[02/Jan/2017 21:03:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:04:48] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[02/Jan/2017 21:04:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:07:04] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[02/Jan/2017 21:07:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:08:36] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 20030
+[02/Jan/2017 21:08:36] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:08:48] INFO [django.server:131] "GET /admin/houses/house/150/change/ HTTP/1.1" 200 133187
+[02/Jan/2017 21:08:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:09:04] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 20030
+[02/Jan/2017 21:09:14] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 200 7898
+[02/Jan/2017 21:09:17] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 302 0
+[02/Jan/2017 21:09:17] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3969
+[02/Jan/2017 21:09:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:12:51] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[02/Jan/2017 21:12:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:25:42] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 34052
+[02/Jan/2017 21:25:42] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:25:47] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 200 12698
+[02/Jan/2017 21:25:50] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 302 0
+[02/Jan/2017 21:25:50] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3969
+[02/Jan/2017 21:25:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:28:06] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53679
+[02/Jan/2017 21:28:06] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:28:44] INFO [django.server:131] "GET /admin/houses/house/?house_type=cortijo HTTP/1.1" 200 7997
+[02/Jan/2017 21:28:44] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:28:50] INFO [django.server:131] "GET /admin/houses/house/1068/change/?_changelist_filters=house_type%3Dcortijo HTTP/1.1" 200 135841
+[02/Jan/2017 21:28:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:30:04] INFO [django.server:131] "GET /admin/houses/house/?house_type=cortijo HTTP/1.1" 200 8489
+[02/Jan/2017 21:30:08] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53132
+[02/Jan/2017 21:30:11] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53031
+[02/Jan/2017 21:30:11] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:31:15] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53309
+[02/Jan/2017 21:31:15] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 21:33:53] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53797
+[02/Jan/2017 21:33:54] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 23:44:07] INFO [django.server:131] "GET /admin/houses/house/?o=5 HTTP/1.1" 200 56143
+[02/Jan/2017 23:44:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 23:44:18] INFO [django.server:131] "GET /admin/houses/house/2403/change/?_changelist_filters=o%3D5 HTTP/1.1" 200 148942
+[02/Jan/2017 23:44:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 23:44:20] INFO [django.server:131] "GET /admin/houses/house/971/change/?_changelist_filters=o%3D5 HTTP/1.1" 200 114976
+[02/Jan/2017 23:44:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 23:44:22] INFO [django.server:131] "GET /admin/houses/house/?o=-5 HTTP/1.1" 200 58687
+[02/Jan/2017 23:44:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 23:44:30] INFO [django.server:131] "GET /admin/houses/house/2554/change/?_changelist_filters=o%3D-5 HTTP/1.1" 200 122205
+[02/Jan/2017 23:44:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Jan/2017 23:46:39] INFO [django.server:131] "GET /admin/houses/house/1665/change/?_changelist_filters=o%3D-5 HTTP/1.1" 200 130688
+[02/Jan/2017 23:46:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 00:02:41] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 5900
+[03/Jan/2017 00:02:45] INFO [django.server:131] "GET / HTTP/1.1" 200 2365
+[03/Jan/2017 00:04:22] INFO [django.server:131] "GET / HTTP/1.1" 200 2365
+[03/Jan/2017 00:06:38] INFO [django.server:131] "GET / HTTP/1.1" 200 2309
+[03/Jan/2017 00:06:52] INFO [django.server:131] "GET /houses HTTP/1.1" 301 0
+[03/Jan/2017 00:06:52] ERROR [django.request:124] Internal Server Error: /houses/
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
     response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 11, in index
-    trans = Transaction.objects.get(transaction_name='rent1')
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
-    self.model._meta.object_name
-houses.models.DoesNotExist: Transaction matching query does not exist.
-[15/Dec/2016 20:31:12] ERROR [django.server:131] "GET / HTTP/1.1" 500 74120
-[15/Dec/2016 20:31:53] ERROR [django.request:124] Internal Server Error: /
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 51, in index
+    return render(request, 'houses/index.html', context)
+NameError: name 'render' is not defined
+[03/Jan/2017 00:06:53] ERROR [django.server:131] "GET /houses/ HTTP/1.1" 500 65193
+[03/Jan/2017 00:35:16] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2257
+[03/Jan/2017 00:35:19] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53797
+[03/Jan/2017 00:35:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 00:44:01] ERROR [django.request:124] Internal Server Error: /houses/
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
     response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 11, in index
-    trans = Transaction.objects.order_by(transaction_name='rent1')
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-TypeError: order_by() got an unexpected keyword argument 'transaction_name'
-[15/Dec/2016 20:31:53] ERROR [django.server:131] "GET / HTTP/1.1" 500 69574
-[15/Dec/2016 20:32:23] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
-[16/Dec/2016 16:54:41] INFO [django.server:131] "GET /houses HTTP/1.1" 301 0
-[16/Dec/2016 16:54:42] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 34866
-[16/Dec/2016 16:55:10] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
-[16/Dec/2016 16:55:10] INFO [django.server:131] "GET /static/houses/css/style.css HTTP/1.1" 304 0
-[16/Dec/2016 16:55:13] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
-[16/Dec/2016 16:55:15] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
-[16/Dec/2016 16:55:31] ERROR [django.request:124] Internal Server Error: /
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 51, in index
+    return render(request, 'houses/index.html', context)
+NameError: name 'render' is not defined
+[03/Jan/2017 00:44:02] ERROR [django.server:131] "GET /houses/ HTTP/1.1" 500 65193
+[03/Jan/2017 00:46:24] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 2048
+[03/Jan/2017 00:54:20] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 2048
+[03/Jan/2017 00:56:03] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 1615
+[03/Jan/2017 00:56:19] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 1615
+[03/Jan/2017 00:56:26] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 1615
+[03/Jan/2017 17:41:31] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53797
+[03/Jan/2017 17:41:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 17:41:39] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 200 19500
+[03/Jan/2017 17:41:45] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 302 0
+[03/Jan/2017 17:41:46] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53528
+[03/Jan/2017 17:41:46] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 17:42:17] INFO [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 200 389938
+[03/Jan/2017 17:42:28] ERROR [django.security.TooManyFieldsSent:73] The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+[03/Jan/2017 17:42:28] ERROR [django.security.TooManyFieldsSent:73] The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+[03/Jan/2017 17:42:28] ERROR [django.security.TooManyFieldsSent:73] The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+[03/Jan/2017 17:42:28] ERROR [django.security.TooManyFieldsSent:73] The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+[03/Jan/2017 17:42:28] ERROR [django.security.TooManyFieldsSent:73] The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+[03/Jan/2017 17:42:28] ERROR [django.security.TooManyFieldsSent:73] The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+[03/Jan/2017 17:42:29] ERROR [django.security.TooManyFieldsSent:73] The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+[03/Jan/2017 17:42:29] ERROR [django.security.TooManyFieldsSent:73] The number of GET/POST parameters exceeded settings.DATA_UPLOAD_MAX_NUMBER_FIELDS.
+[03/Jan/2017 17:42:30] ERROR [django.server:131] "POST /admin/houses/house/ HTTP/1.1" 500 59
+[03/Jan/2017 17:42:34] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 53394
+[03/Jan/2017 17:43:06] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
     response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 12, in index
-    houses_rent_total = House.objects.filter(transaction_type=Transaction.objects.get(transaction_name='rent1')).count()
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
-    self.model._meta.object_name
-houses.models.DoesNotExist: Transaction matching query does not exist.
-[16/Dec/2016 16:55:32] ERROR [django.server:131] "GET / HTTP/1.1" 500 74502
-[16/Dec/2016 16:55:44] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
-[16/Dec/2016 16:55:46] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
-[16/Dec/2016 16:57:13] ERROR [django.request:124] Internal Server Error: /
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 69, in management
+    'real_estate_count': real_state_count,
+NameError: name 'real_state_count' is not defined
+[03/Jan/2017 17:43:06] ERROR [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 500 77873
+[03/Jan/2017 17:51:55] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[03/Jan/2017 17:51:55] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 17:51:58] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[03/Jan/2017 17:51:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 18:09:59] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[03/Jan/2017 18:09:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 18:17:31] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18832
+[03/Jan/2017 18:17:32] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 18:17:37] ERROR [django.request:124] Internal Server Error: /admin/houses/house/2748/change/
 Traceback (most recent call last):
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
     response = get_response(request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 217, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/dedomeno/views.py", line 11, in index
-    transaction = Transaction.objects.get(transaction_name='rent1')
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "/Users/ginopalazzo/Magic/dedomeno/myenv/lib/python3.5/site-packages/django/db/models/query.py", line 385, in get
-    self.model._meta.object_name
-houses.models.DoesNotExist: Transaction matching query does not exist.
-[16/Dec/2016 16:57:14] ERROR [django.server:131] "GET / HTTP/1.1" 500 74267
-[16/Dec/2016 17:12:07] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
-[16/Dec/2016 17:12:57] INFO [django.server:131] "GET / HTTP/1.1" 200 2371
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 1050, in render
+    return render_value_in_context(output, context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 1028, in render_value_in_context
+    value = force_text(value)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/encoding.py", line 76, in force_text
+    s = six.text_type(s)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/html.py", line 391, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/boundfield.py", line 43, in __str__
+    return self.as_widget()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/boundfield.py", line 101, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/widgets.py", line 307, in render
+    'widget': self.widget.render(name, value, *args, **kwargs),
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/widgets.py", line 617, in render
+    options = self.render_options(value)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/widgets.py", line 567, in render_options
+    for option_value, option_label in self.choices:
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/models.py", line 1119, in __iter__
+    yield self.choice(obj)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/models.py", line 1125, in choice
+    return (self.field.prepare_value(obj), self.field.label_from_instance(obj))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/models.py", line 1188, in label_from_instance
+    return smart_text(obj)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/encoding.py", line 41, in smart_text
+    return force_text(s, encoding, strings_only, errors)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/encoding.py", line 76, in force_text
+    s = six.text_type(s)
+TypeError: __str__ returned non-string (type int)
+[03/Jan/2017 18:17:37] ERROR [django.server:131] "GET /admin/houses/house/2748/change/ HTTP/1.1" 500 423004
+[03/Jan/2017 18:17:43] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18832
+[03/Jan/2017 18:20:15] ERROR [django.request:124] Internal Server Error: /admin/houses/house/2748/change/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/response.py", line 86, in rendered_content
+    content = template.render(context, self._request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 66, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 208, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 174, in render
+    return compiled_parent._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 70, in render
+    result = block.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 210, in render
+    return template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 210, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 199, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/defaulttags.py", line 315, in render
+    return nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 994, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 961, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 1050, in render
+    return render_value_in_context(output, context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 1028, in render_value_in_context
+    value = force_text(value)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/encoding.py", line 76, in force_text
+    s = six.text_type(s)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/html.py", line 391, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/boundfield.py", line 43, in __str__
+    return self.as_widget()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/boundfield.py", line 101, in as_widget
+    return force_text(widget.render(name, self.value(), attrs=attrs))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/widgets.py", line 307, in render
+    'widget': self.widget.render(name, value, *args, **kwargs),
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/widgets.py", line 617, in render
+    options = self.render_options(value)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/widgets.py", line 567, in render_options
+    for option_value, option_label in self.choices:
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/models.py", line 1119, in __iter__
+    yield self.choice(obj)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/models.py", line 1125, in choice
+    return (self.field.prepare_value(obj), self.field.label_from_instance(obj))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/forms/models.py", line 1188, in label_from_instance
+    return smart_text(obj)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/encoding.py", line 41, in smart_text
+    return force_text(s, encoding, strings_only, errors)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/encoding.py", line 76, in force_text
+    s = six.text_type(s)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/models.py", line 30, in __str__
+    return '[' + self.date_start + '--' + self.date_start + ']: ' + str(self.price_value)
+TypeError: Can't convert 'NoneType' object to str implicitly
+[03/Jan/2017 18:20:15] ERROR [django.server:131] "GET /admin/houses/house/2748/change/ HTTP/1.1" 500 426857
+[03/Jan/2017 18:20:36] INFO [django.server:131] "GET /admin/houses/house/2748/change/ HTTP/1.1" 200 128215
+[03/Jan/2017 18:20:37] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 18:22:24] INFO [django.server:131] "GET /admin/houses/house/2748/change/ HTTP/1.1" 200 127915
+[03/Jan/2017 18:22:24] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 18:29:12] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18832
+[03/Jan/2017 18:29:12] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 18:29:14] INFO [django.server:131] "GET /admin/houses/house/2748/change/ HTTP/1.1" 200 121340
+[03/Jan/2017 18:29:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 18:31:20] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18832
+[03/Jan/2017 18:31:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 19:39:51] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18910
+[03/Jan/2017 19:39:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[03/Jan/2017 19:39:53] INFO [django.server:131] "GET /admin/houses/house/2808/change/ HTTP/1.1" 200 127588
+[03/Jan/2017 19:39:54] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 13:55:15] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2257
+[04/Jan/2017 13:55:16] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[04/Jan/2017 13:55:16] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[04/Jan/2017 13:55:16] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[04/Jan/2017 13:55:16] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[04/Jan/2017 13:55:16] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[04/Jan/2017 13:55:16] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[04/Jan/2017 13:55:16] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[04/Jan/2017 13:55:16] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[04/Jan/2017 13:57:57] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[04/Jan/2017 13:58:05] INFO [django.server:131] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[04/Jan/2017 13:58:08] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 13:58:10] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 14602
+[04/Jan/2017 13:58:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 13:58:13] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 13:58:14] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[04/Jan/2017 13:58:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 13:58:17] INFO [django.server:131] "GET /admin/houses/realestate/add/ HTTP/1.1" 200 7929
+[04/Jan/2017 13:58:17] INFO [django.server:131] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[04/Jan/2017 13:58:17] INFO [django.server:131] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:17] INFO [django.server:131] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[04/Jan/2017 13:58:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 13:58:17] INFO [django.server:131] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[04/Jan/2017 13:58:21] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[04/Jan/2017 13:58:23] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 13:59:12] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 13:59:16] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 13:59:17] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[04/Jan/2017 13:59:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 13:59:19] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 13:59:20] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 13:59:22] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18809
+[04/Jan/2017 13:59:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 13:59:24] INFO [django.server:131] "GET /admin/houses/house/3006/change/ HTTP/1.1" 200 17519
+[04/Jan/2017 13:59:24] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 13:59:31] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18809
+[04/Jan/2017 13:59:37] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:06:39] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[04/Jan/2017 14:06:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:06:41] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[04/Jan/2017 14:06:41] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:06:42] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:17:44] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:17:47] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[04/Jan/2017 14:17:47] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:17:48] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:17:49] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18809
+[04/Jan/2017 14:17:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:17:55] INFO [django.server:131] "GET /admin/houses/house/3237/change/ HTTP/1.1" 200 17459
+[04/Jan/2017 14:17:56] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:17:59] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18809
+[04/Jan/2017 14:23:56] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:24:01] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[04/Jan/2017 14:24:01] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:24:03] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:24:04] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18809
+[04/Jan/2017 14:24:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:24:08] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:24:42] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18809
+[04/Jan/2017 14:24:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:24:48] INFO [django.server:131] "GET /admin/houses/house/3267/change/ HTTP/1.1" 200 17459
+[04/Jan/2017 14:24:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:26:57] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[04/Jan/2017 14:27:00] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:27:02] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 10018
+[04/Jan/2017 14:27:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:27:18] INFO [django.server:131] "GET /admin/houses/realestate/11/change/ HTTP/1.1" 200 8835
+[04/Jan/2017 14:27:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:27:43] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 10018
+[04/Jan/2017 14:39:55] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:39:56] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[04/Jan/2017 14:39:56] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:39:57] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:39:58] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 14:39:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:40:02] INFO [django.server:131] "GET /admin/houses/realestate/22/change/ HTTP/1.1" 200 9054
+[04/Jan/2017 14:40:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:40:18] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 14:40:25] INFO [django.server:131] "GET /admin/houses/realestate/16/change/ HTTP/1.1" 200 8798
+[04/Jan/2017 14:40:25] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:40:32] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 14:40:34] INFO [django.server:131] "GET /admin/houses/realestate/17/change/ HTTP/1.1" 200 8945
+[04/Jan/2017 14:40:34] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:40:38] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 14:40:39] INFO [django.server:131] "GET /admin/houses/realestate/13/change/ HTTP/1.1" 200 9232
+[04/Jan/2017 14:40:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:40:57] INFO [django.server:131] "GET /admin/houses/realestate/13/change/st3.idealista.com/87/5b/b1/p0461802.gif HTTP/1.1" 301 0
+[04/Jan/2017 14:40:57] INFO [django.server:131] "GET /admin/houses/realestate/13/change/st3.idealista.com/87/5b/b1/p0461802.gif/ HTTP/1.1" 302 0
+[04/Jan/2017 14:40:57] WARNING [django.request:152] Not Found: /admin/houses/realestate/13/change/st3.idealista.com/87/5b/b1/p0461802.gif/change/
+[04/Jan/2017 14:40:57] WARNING [django.server:131] "GET /admin/houses/realestate/13/change/st3.idealista.com/87/5b/b1/p0461802.gif/change/ HTTP/1.1" 404 1967
+[04/Jan/2017 14:43:53] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:43:55] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[04/Jan/2017 14:43:55] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:43:57] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:43:58] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 14:43:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:46:51] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 14:46:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:46:53] INFO [django.server:131] "GET /admin/houses/realestate/66/change/ HTTP/1.1" 200 8874
+[04/Jan/2017 14:46:53] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:46:55] INFO [django.server:131] "GET /admin/houses/realestate/66/change/https%3A//st3.idealista.com/7f/5f/af/P29004648.gif HTTP/1.1" 301 0
+[04/Jan/2017 14:46:55] INFO [django.server:131] "GET /admin/houses/realestate/66/change/https://st3.idealista.com/7f/5f/af/P29004648.gif/ HTTP/1.1" 302 0
+[04/Jan/2017 14:46:56] WARNING [django.request:152] Not Found: /admin/houses/realestate/66/change/https://st3.idealista.com/7f/5f/af/P29004648.gif/change/
+[04/Jan/2017 14:46:56] WARNING [django.server:131] "GET /admin/houses/realestate/66/change/https://st3.idealista.com/7f/5f/af/P29004648.gif/change/ HTTP/1.1" 404 1994
+[04/Jan/2017 14:47:00] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 14:47:01] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:47:30] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[04/Jan/2017 14:47:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:47:32] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:48:56] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:48:58] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 14:48:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:49:02] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 14:49:03] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18719
+[04/Jan/2017 14:49:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 14:49:06] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 17:13:02] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9765
+[04/Jan/2017 17:13:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 17:13:07] INFO [django.server:131] "GET /admin/houses/realestate/77/change/ HTTP/1.1" 200 8874
+[04/Jan/2017 17:13:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 17:18:45] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 17:22:02] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18718
+[04/Jan/2017 17:22:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 17:22:04] INFO [django.server:131] "GET /admin/houses/house/3351/change/ HTTP/1.1" 200 17964
+[04/Jan/2017 17:22:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 17:22:08] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18718
+[04/Jan/2017 17:22:10] INFO [django.server:131] "GET /admin/houses/house/3347/change/ HTTP/1.1" 200 17831
+[04/Jan/2017 17:22:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 17:22:15] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18718
+[04/Jan/2017 23:05:18] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 23:05:21] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 10262
+[04/Jan/2017 23:05:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:05:25] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 23:05:27] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18401
+[04/Jan/2017 23:05:27] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:19:30] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6336
+[04/Jan/2017 23:19:30] INFO [django.server:131] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[04/Jan/2017 23:19:33] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18491
+[04/Jan/2017 23:19:33] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:19:35] INFO [django.server:131] "GET /admin/houses/house/3566/change/ HTTP/1.1" 200 23645
+[04/Jan/2017 23:19:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:19:35] INFO [django.server:131] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[04/Jan/2017 23:19:35] INFO [django.server:131] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[04/Jan/2017 23:19:35] INFO [django.server:131] "GET /static/admin/js/inlines.js HTTP/1.1" 200 13404
+[04/Jan/2017 23:19:35] INFO [django.server:131] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[04/Jan/2017 23:23:43] INFO [django.server:131] "GET /admin/houses/house/3566/change/ HTTP/1.1" 200 30329
+[04/Jan/2017 23:23:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:23:51] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18491
+[04/Jan/2017 23:23:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:24:01] INFO [django.server:131] "GET /admin/houses/house/3542/change/ HTTP/1.1" 200 30172
+[04/Jan/2017 23:24:01] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:46:31] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18412
+[04/Jan/2017 23:46:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:46:34] INFO [django.server:131] "GET /admin/houses/house/3693/change/ HTTP/1.1" 200 31517
+[04/Jan/2017 23:46:34] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:52:24] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 23:58:07] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18412
+[04/Jan/2017 23:58:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:58:10] INFO [django.server:131] "GET /admin/houses/house/3780/change/ HTTP/1.1" 200 31604
+[04/Jan/2017 23:58:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:58:25] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18412
+[04/Jan/2017 23:58:28] INFO [django.server:131] "GET /admin/houses/house/3772/change/ HTTP/1.1" 200 31695
+[04/Jan/2017 23:58:28] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:58:34] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18412
+[04/Jan/2017 23:58:35] INFO [django.server:131] "GET /admin/houses/house/3779/change/ HTTP/1.1" 200 31666
+[04/Jan/2017 23:58:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:58:40] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18412
+[04/Jan/2017 23:58:42] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[04/Jan/2017 23:58:43] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9846
+[04/Jan/2017 23:58:44] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Jan/2017 23:58:45] INFO [django.server:131] "GET /admin/houses/realestate/358/change/ HTTP/1.1" 200 8801
+[04/Jan/2017 23:58:45] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[05/Jan/2017 00:01:14] INFO [django.server:131] "GET /admin/houses/realestate/358/change/ HTTP/1.1" 200 47925
+[05/Jan/2017 00:01:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[05/Jan/2017 00:01:26] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9846
+[05/Jan/2017 00:01:28] INFO [django.server:131] "GET /admin/houses/realestate/357/change/ HTTP/1.1" 200 47950
+[05/Jan/2017 00:01:28] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[05/Jan/2017 00:01:31] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 9846
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6336
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[06/Jan/2017 13:50:05] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[06/Jan/2017 13:50:34] INFO [django.server:131] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[06/Jan/2017 13:50:35] INFO [django.server:131] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[06/Jan/2017 13:50:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 13:50:35] INFO [django.server:131] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[06/Jan/2017 13:50:35] INFO [django.server:131] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[06/Jan/2017 13:50:38] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6336
+[06/Jan/2017 13:50:43] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 3442
+[06/Jan/2017 13:50:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 13:50:44] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6336
+[06/Jan/2017 13:58:31] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[06/Jan/2017 13:58:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 13:58:33] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[06/Jan/2017 13:58:33] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 14:00:21] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18691
+[06/Jan/2017 14:00:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 14:00:29] INFO [django.server:131] "GET /admin/houses/house/3873/change/ HTTP/1.1" 200 30230
+[06/Jan/2017 14:00:29] INFO [django.server:131] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[06/Jan/2017 14:00:29] INFO [django.server:131] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[06/Jan/2017 14:00:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 14:00:29] INFO [django.server:131] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[06/Jan/2017 14:00:29] INFO [django.server:131] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[06/Jan/2017 14:02:44] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18691
+[06/Jan/2017 14:02:46] INFO [django.server:131] "GET /admin/houses/house/3888/change/ HTTP/1.1" 200 30148
+[06/Jan/2017 14:02:46] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 14:02:54] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18691
+[06/Jan/2017 17:18:58] INFO [django.server:131] "GET /admin/houses/house/3896/change/ HTTP/1.1" 200 30161
+[06/Jan/2017 17:18:58] INFO [django.server:131] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[06/Jan/2017 17:18:58] INFO [django.server:131] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[06/Jan/2017 17:18:58] INFO [django.server:131] "GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+[06/Jan/2017 17:18:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:18:58] INFO [django.server:131] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[06/Jan/2017 17:19:06] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18691
+[06/Jan/2017 17:19:59] INFO [django.server:131] "GET /admin/houses/house/3872/change/ HTTP/1.1" 200 30007
+[06/Jan/2017 17:19:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:20:09] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18691
+[06/Jan/2017 17:20:12] INFO [django.server:131] "GET /admin/houses/house/3897/change/ HTTP/1.1" 200 30038
+[06/Jan/2017 17:20:12] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:20:22] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18691
+[06/Jan/2017 17:20:29] INFO [django.server:131] "GET /admin/houses/house/?house_type=chalet+adosado+chalet+adosado HTTP/1.1" 200 9037
+[06/Jan/2017 17:20:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:20:31] INFO [django.server:131] "GET /admin/houses/house/3882/change/?_changelist_filters=house_type%3Dchalet%2Badosado%2Bchalet%2Badosado HTTP/1.1" 200 30538
+[06/Jan/2017 17:20:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:20:56] INFO [django.server:131] "GET /admin/houses/house/?house_type=chalet+adosado+chalet+adosado HTTP/1.1" 200 9037
+[06/Jan/2017 17:23:29] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[06/Jan/2017 17:23:31] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18064
+[06/Jan/2017 17:23:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:23:54] INFO [django.server:131] "GET /admin/houses/house/3926/change/ HTTP/1.1" 200 30132
+[06/Jan/2017 17:23:54] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:38:37] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[06/Jan/2017 17:38:39] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18942
+[06/Jan/2017 17:38:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:38:47] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18942
+[06/Jan/2017 17:38:47] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:38:49] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[06/Jan/2017 17:38:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:38:53] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 14780
+[06/Jan/2017 17:38:53] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:40:20] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[06/Jan/2017 17:40:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:41:02] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49400
+[06/Jan/2017 17:41:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:41:10] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49308
+[06/Jan/2017 17:41:11] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:41:17] INFO [django.server:131] "GET /admin/houses/house/4987/change/ HTTP/1.1" 200 30434
+[06/Jan/2017 17:41:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:42:04] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49479
+[06/Jan/2017 17:43:36] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49757
+[06/Jan/2017 17:43:36] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:43:58] INFO [django.server:131] "GET /admin/houses/house/?house_type=palacio HTTP/1.1" 200 7300
+[06/Jan/2017 17:43:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[06/Jan/2017 17:44:03] INFO [django.server:131] "GET /admin/houses/house/5593/change/?_changelist_filters=house_type%3Dpalacio HTTP/1.1" 200 30459
+[06/Jan/2017 17:44:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:17:47] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49533
+[07/Jan/2017 00:17:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:18:00] INFO [django.server:131] "GET /admin/houses/house/?house_type=estudio HTTP/1.1" 200 7652
+[07/Jan/2017 00:18:00] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:18:04] INFO [django.server:131] "GET /admin/houses/house/6470/change/?_changelist_filters=house_type%3Destudio HTTP/1.1" 200 30304
+[07/Jan/2017 00:18:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:18:14] INFO [django.server:131] "GET /admin/houses/house/?house_type=estudio HTTP/1.1" 200 7652
+[07/Jan/2017 00:18:17] INFO [django.server:131] "GET /admin/houses/house/6183/change/?_changelist_filters=house_type%3Destudio HTTP/1.1" 200 30390
+[07/Jan/2017 00:18:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:18:20] INFO [django.server:131] "GET /admin/houses/house/?house_type=estudio HTTP/1.1" 200 7652
+[07/Jan/2017 00:18:27] INFO [django.server:131] "GET /admin/houses/house/?house_type=%C3%A1tico HTTP/1.1" 200 14718
+[07/Jan/2017 00:18:27] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:18:33] INFO [django.server:131] "GET /admin/houses/house/6451/change/?_changelist_filters=house_type%3D%25C3%25A1tico HTTP/1.1" 200 30356
+[07/Jan/2017 00:18:33] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:18:42] INFO [django.server:131] "GET /admin/houses/house/?house_type=%C3%A1tico HTTP/1.1" 200 14718
+[07/Jan/2017 00:18:45] INFO [django.server:131] "GET /admin/houses/house/6173/change/?_changelist_filters=house_type%3D%25C3%25A1tico HTTP/1.1" 200 30622
+[07/Jan/2017 00:18:45] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:18:48] INFO [django.server:131] "GET /admin/houses/house/?house_type=%C3%A1tico HTTP/1.1" 200 14718
+[07/Jan/2017 00:18:51] INFO [django.server:131] "GET /admin/houses/house/6161/change/?_changelist_filters=house_type%3D%25C3%25A1tico HTTP/1.1" 200 30430
+[07/Jan/2017 00:18:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:18:54] INFO [django.server:131] "GET /admin/houses/house/?house_type=%C3%A1tico HTTP/1.1" 200 14718
+[07/Jan/2017 00:18:56] INFO [django.server:131] "GET /admin/houses/house/6404/change/?_changelist_filters=house_type%3D%25C3%25A1tico HTTP/1.1" 200 30431
+[07/Jan/2017 00:18:57] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:20:24] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49533
+[07/Jan/2017 00:20:25] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:20:29] INFO [django.server:131] "GET /admin/houses/house/?q=35247169 HTTP/1.1" 200 7225
+[07/Jan/2017 00:20:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:20:32] INFO [django.server:131] "GET /admin/houses/house/6602/change/?_changelist_filters=q%3D35247169 HTTP/1.1" 200 30810
+[07/Jan/2017 00:20:32] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:20:47] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49533
+[07/Jan/2017 00:20:47] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:21:00] INFO [django.server:131] "GET /admin/houses/house/?house_type=casa+o+chalet+independiente HTTP/1.1" 200 29807
+[07/Jan/2017 00:21:00] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 00:21:05] INFO [django.server:131] "GET /admin/houses/house/6554/change/?_changelist_filters=house_type%3Dcasa%2Bo%2Bchalet%2Bindependiente HTTP/1.1" 200 30783
+[07/Jan/2017 00:21:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:24:37] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49640
+[07/Jan/2017 12:24:37] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:24:56] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49522
+[07/Jan/2017 12:24:56] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:30:31] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49454
+[07/Jan/2017 12:30:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:33:17] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49671
+[07/Jan/2017 12:33:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:39:20] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 50665
+[07/Jan/2017 12:39:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:44:49] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 50343
+[07/Jan/2017 12:44:49] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:45:01] INFO [django.server:131] "GET /admin/houses/house/?o=5 HTTP/1.1" 200 52830
+[07/Jan/2017 12:45:01] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:45:01] INFO [django.server:131] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[07/Jan/2017 12:45:03] INFO [django.server:131] "GET /admin/houses/house/?o=-5 HTTP/1.1" 200 54449
+[07/Jan/2017 12:45:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:45:10] INFO [django.server:131] "GET /admin/houses/house/7834/change/?_changelist_filters=o%3D-5 HTTP/1.1" 200 30708
+[07/Jan/2017 12:45:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[07/Jan/2017 12:45:25] INFO [django.server:131] "GET /admin/houses/house/?o=-5 HTTP/1.1" 200 54449
+[07/Jan/2017 12:45:30] INFO [django.server:131] "GET /admin/houses/house/9726/change/?_changelist_filters=o%3D-5 HTTP/1.1" 200 30315
+[07/Jan/2017 12:45:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:43:02] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 50343
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[08/Jan/2017 10:43:03] INFO [django.server:131] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[08/Jan/2017 10:43:14] INFO [django.server:131] "GET /admin/houses/house/?transaction__exact=rent HTTP/1.1" 200 6048
+[08/Jan/2017 10:43:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:43:17] INFO [django.server:131] "GET /admin/houses/house/?transaction__exact=sale HTTP/1.1" 200 55779
+[08/Jan/2017 10:43:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:43:22] INFO [django.server:131] "GET /admin/houses/house/?transaction__exact=rent HTTP/1.1" 200 6048
+[08/Jan/2017 10:43:23] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 50343
+[08/Jan/2017 10:43:25] INFO [django.server:131] "GET /admin/houses/house/9726/change/?_changelist_filters=o%3D-5 HTTP/1.1" 200 30315
+[08/Jan/2017 10:47:03] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49608
+[08/Jan/2017 10:47:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:47:06] INFO [django.server:131] "GET /admin/houses/house/9827/change/ HTTP/1.1" 200 30281
+[08/Jan/2017 10:47:06] INFO [django.server:131] "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[08/Jan/2017 10:47:06] INFO [django.server:131] "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[08/Jan/2017 10:47:06] INFO [django.server:131] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[08/Jan/2017 10:47:06] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[08/Jan/2017 10:47:06] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[08/Jan/2017 10:47:06] INFO [django.server:131] "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[08/Jan/2017 10:47:06] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:47:14] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49608
+[08/Jan/2017 10:47:17] INFO [django.server:131] "GET /admin/houses/house/9818/change/ HTTP/1.1" 200 30263
+[08/Jan/2017 10:47:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:48:28] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49608
+[08/Jan/2017 10:48:28] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:48:31] INFO [django.server:131] "GET /admin/houses/house/?q=27173918 HTTP/1.1" 200 8372
+[08/Jan/2017 10:48:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:48:39] INFO [django.server:131] "GET /admin/houses/house/9825/change/?_changelist_filters=q%3D27173918 HTTP/1.1" 200 30167
+[08/Jan/2017 10:48:40] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:49:09] INFO [django.server:131] "GET /admin/houses/house/?q=27173918 HTTP/1.1" 200 8372
+[08/Jan/2017 10:49:27] INFO [django.server:131] "GET /admin/houses/house/?q=id-35512390 HTTP/1.1" 200 8840
+[08/Jan/2017 10:49:27] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:49:31] INFO [django.server:131] "GET /admin/houses/house/9820/change/?_changelist_filters=q%3Did-35512390 HTTP/1.1" 200 30266
+[08/Jan/2017 10:49:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:50:53] INFO [django.server:131] "GET /admin/houses/house/?q=id-35512390 HTTP/1.1" 200 8840
+[08/Jan/2017 10:50:57] INFO [django.server:131] "GET /admin/houses/house/?q=id-35502780 HTTP/1.1" 200 8808
+[08/Jan/2017 10:50:57] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:50:59] INFO [django.server:131] "GET /admin/houses/house/9822/change/?_changelist_filters=q%3Did-35502780 HTTP/1.1" 200 30613
+[08/Jan/2017 10:50:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:51:05] INFO [django.server:131] "GET /admin/houses/house/?q=id-35502780 HTTP/1.1" 200 8808
+[08/Jan/2017 10:51:07] INFO [django.server:131] "GET /admin/houses/house/6236/change/?_changelist_filters=q%3Did-35502780 HTTP/1.1" 200 30589
+[08/Jan/2017 10:51:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 10:51:11] INFO [django.server:131] "GET /admin/houses/house/?q=id-35502780 HTTP/1.1" 200 8808
+[08/Jan/2017 12:09:22] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 2683
+[08/Jan/2017 12:09:22] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[08/Jan/2017 12:09:26] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 18054
+[08/Jan/2017 12:09:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 12:10:04] INFO [django.server:131] "GET /admin/houses/house/?house_type=casa+o+chalet+independiente HTTP/1.1" 200 6747
+[08/Jan/2017 12:10:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 12:10:06] INFO [django.server:131] "GET /admin/houses/house/10339/change/?_changelist_filters=house_type%3Dcasa%2Bo%2Bchalet%2Bindependiente HTTP/1.1" 200 37058
+[08/Jan/2017 12:10:06] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 12:15:30] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49267
+[08/Jan/2017 12:15:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 12:15:38] INFO [django.server:131] "GET /admin/houses/house/?q=id-35263174 HTTP/1.1" 200 7305
+[08/Jan/2017 12:15:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[08/Jan/2017 12:15:40] INFO [django.server:131] "GET /admin/houses/house/10796/change/?_changelist_filters=q%3Did-35263174 HTTP/1.1" 200 36581
+[08/Jan/2017 12:15:40] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 10:04:12] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 3836
+[09/Jan/2017 10:04:12] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 10:15:15] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49437
+[09/Jan/2017 10:15:15] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 10:15:21] INFO [django.server:131] "GET /admin/houses/house/11203/change/ HTTP/1.1" 200 37124
+[09/Jan/2017 10:15:22] INFO [django.server:131] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[09/Jan/2017 10:15:22] INFO [django.server:131] "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[09/Jan/2017 10:15:22] INFO [django.server:131] "GET /static/admin/js/inlines.js HTTP/1.1" 304 0
+[09/Jan/2017 10:15:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 10:15:22] INFO [django.server:131] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[09/Jan/2017 10:16:16] INFO [django.server:131] "GET /admin/houses/house/11203/change/ HTTP/1.1" 200 37124
+[09/Jan/2017 10:59:44] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3078
+[09/Jan/2017 10:59:45] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6731
+[09/Jan/2017 10:59:45] INFO [django.server:131] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+[09/Jan/2017 10:59:47] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 48059
+[09/Jan/2017 10:59:47] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 10:59:55] INFO [django.server:131] "GET /admin/houses/room/11537/change/ HTTP/1.1" 200 36014
+[09/Jan/2017 10:59:55] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 11:30:32] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3078
+[09/Jan/2017 11:30:34] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 47133
+[09/Jan/2017 11:30:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 11:30:38] INFO [django.server:131] "GET /admin/houses/room/11805/change/ HTTP/1.1" 200 36125
+[09/Jan/2017 11:30:38] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 11:33:43] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3078
+[09/Jan/2017 11:33:45] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 47133
+[09/Jan/2017 11:33:45] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 11:33:51] INFO [django.server:131] "GET /admin/houses/room/11712/change/ HTTP/1.1" 200 36263
+[09/Jan/2017 11:33:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:19:11] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3078
+[09/Jan/2017 12:19:14] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 46745
+[09/Jan/2017 12:19:15] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:19:20] INFO [django.server:131] "GET /admin/houses/room/?house_type=chalet HTTP/1.1" 200 51282
+[09/Jan/2017 12:19:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:19:24] INFO [django.server:131] "GET /admin/houses/room/12088/change/?_changelist_filters=house_type%3Dchalet HTTP/1.1" 200 37089
+[09/Jan/2017 12:19:24] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:19:41] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 46745
+[09/Jan/2017 12:19:41] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:19:43] INFO [django.server:131] "GET /admin/houses/room/12101/change/ HTTP/1.1" 200 36668
+[09/Jan/2017 12:19:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:19:56] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 46745
+[09/Jan/2017 12:19:59] INFO [django.server:131] "GET /admin/houses/room/12076/change/ HTTP/1.1" 200 36813
+[09/Jan/2017 12:19:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:23:31] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 49458
+[09/Jan/2017 12:23:32] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:23:45] INFO [django.server:131] "GET /admin/houses/room/?gay_friendly__exact=1 HTTP/1.1" 200 11391
+[09/Jan/2017 12:23:45] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:23:49] INFO [django.server:131] "GET /admin/houses/room/11834/change/?_changelist_filters=gay_friendly__exact%3D1 HTTP/1.1" 200 36742
+[09/Jan/2017 12:23:49] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:23:51] INFO [django.server:131] "GET /admin/houses/room/?gay_friendly__exact=1 HTTP/1.1" 200 11391
+[09/Jan/2017 12:23:53] INFO [django.server:131] "GET /admin/houses/room/12103/change/?_changelist_filters=gay_friendly__exact%3D1 HTTP/1.1" 200 36618
+[09/Jan/2017 12:23:53] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:24:13] INFO [django.server:131] "GET /admin/houses/room/?gay_friendly__exact=1 HTTP/1.1" 200 11391
+[09/Jan/2017 12:24:16] INFO [django.server:131] "GET /admin/houses/room/?gay_friendly__exact=1&people_max=15 HTTP/1.1" 200 8723
+[09/Jan/2017 12:24:16] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:24:22] INFO [django.server:131] "GET /admin/houses/room/?people_max=15 HTTP/1.1" 200 9060
+[09/Jan/2017 12:24:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:24:24] INFO [django.server:131] "GET /admin/houses/room/11816/change/?_changelist_filters=people_max%3D15 HTTP/1.1" 200 36738
+[09/Jan/2017 12:24:24] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:25:35] INFO [django.server:131] "GET /admin/houses/room/?people_max=15 HTTP/1.1" 200 9060
+[09/Jan/2017 12:25:40] INFO [django.server:131] "GET /admin/houses/room/?people_max=10 HTTP/1.1" 200 9056
+[09/Jan/2017 12:25:40] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:25:43] INFO [django.server:131] "GET /admin/houses/room/12034/change/?_changelist_filters=people_max%3D10 HTTP/1.1" 200 36697
+[09/Jan/2017 12:25:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:26:08] INFO [django.server:131] "GET /admin/houses/room/?people_max=10 HTTP/1.1" 200 9056
+[09/Jan/2017 12:29:02] INFO [django.server:131] "GET /admin/houses/room/? HTTP/1.1" 200 49458
+[09/Jan/2017 12:29:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:29:32] INFO [django.server:131] "GET /admin/houses/room/? HTTP/1.1" 200 53215
+[09/Jan/2017 12:29:32] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:29:35] INFO [django.server:131] "GET /admin/houses/room/?o=5 HTTP/1.1" 200 56621
+[09/Jan/2017 12:29:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:29:35] INFO [django.server:131] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+[09/Jan/2017 12:29:37] INFO [django.server:131] "GET /admin/houses/room/?o=-5 HTTP/1.1" 200 56749
+[09/Jan/2017 12:29:37] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:29:40] INFO [django.server:131] "GET /admin/houses/room/12083/change/?_changelist_filters=o%3D-5 HTTP/1.1" 200 36560
+[09/Jan/2017 12:29:40] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:48:00] INFO [django.server:131] "GET /admin/houses/room/?o=-5 HTTP/1.1" 200 57167
+[09/Jan/2017 12:48:00] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:48:06] INFO [django.server:131] "GET /admin/houses/room/12593/change/?_changelist_filters=o%3D-5 HTTP/1.1" 200 36740
+[09/Jan/2017 12:48:06] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:48:12] INFO [django.server:131] "GET /admin/houses/room/?o=-5&people_max=34 HTTP/1.1" 200 10180
+[09/Jan/2017 12:48:12] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:49:05] INFO [django.server:131] "GET /admin/houses/room/12577/change/?_changelist_filters=o%3D-5 HTTP/1.1" 200 36665
+[09/Jan/2017 12:49:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:49:07] INFO [django.server:131] "GET /admin/houses/room/?o=-5&people_max=34 HTTP/1.1" 200 10180
+[09/Jan/2017 12:49:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:49:10] INFO [django.server:131] "GET /admin/houses/room/12426/change/?_changelist_filters=people_max%3D34%26o%3D-5 HTTP/1.1" 200 36615
+[09/Jan/2017 12:49:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:53:12] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3078
+[09/Jan/2017 12:53:14] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 53617
+[09/Jan/2017 12:53:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:53:18] INFO [django.server:131] "GET /admin/houses/room/12664/change/ HTTP/1.1" 200 36467
+[09/Jan/2017 12:53:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:53:30] INFO [django.server:131] "GET /admin/houses/room/?q=Las+rozas HTTP/1.1" 200 30456
+[09/Jan/2017 12:53:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:53:37] INFO [django.server:131] "GET /admin/houses/room/12405/change/?_changelist_filters=q%3DLas%2Brozas HTTP/1.1" 200 37132
+[09/Jan/2017 12:53:37] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 12:55:05] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 6731
+[09/Jan/2017 12:55:06] INFO [django.server:131] "GET / HTTP/1.1" 200 2309
+[09/Jan/2017 12:55:06] INFO [django.server:131] "GET /static/houses/css/style.css HTTP/1.1" 304 0
+[09/Jan/2017 15:48:29] INFO [django.server:131] "GET /admin/houses/room/?q=Las+rozas HTTP/1.1" 200 30456
+[09/Jan/2017 15:48:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:48:31] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3483
+[09/Jan/2017 15:48:34] INFO [django.server:131] "GET /admin/houses/office/ HTTP/1.1" 200 41124
+[09/Jan/2017 15:48:34] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:48:40] INFO [django.server:131] "GET /admin/houses/office/12742/change/ HTTP/1.1" 200 43687
+[09/Jan/2017 15:48:40] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:49:55] INFO [django.server:131] "GET /admin/houses/office/?distribution=%5B%27mamparas+%27%5D HTTP/1.1" 200 11610
+[09/Jan/2017 15:49:55] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:49:58] INFO [django.server:131] "GET /admin/houses/office/12727/change/?_changelist_filters=distribution%3D%255B%2527mamparas%2B%2527%255D HTTP/1.1" 200 43540
+[09/Jan/2017 15:49:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:50:12] INFO [django.server:131] "GET /admin/houses/office/?distribution=%5B%27mamparas+%27%5D HTTP/1.1" 200 11610
+[09/Jan/2017 15:55:58] INFO [django.server:131] "GET /admin/houses/office/ HTTP/1.1" 200 50257
+[09/Jan/2017 15:55:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:56:10] INFO [django.server:131] "GET /admin/houses/office/?p=1 HTTP/1.1" 200 11847
+[09/Jan/2017 15:56:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:56:19] INFO [django.server:131] "GET /admin/houses/office/?o=5 HTTP/1.1" 200 53350
+[09/Jan/2017 15:56:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:56:35] INFO [django.server:131] "GET /admin/houses/office/13008/change/?_changelist_filters=o%3D5 HTTP/1.1" 200 43551
+[09/Jan/2017 15:56:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:58:39] INFO [django.server:131] "GET /admin/houses/office/ HTTP/1.1" 200 50257
+[09/Jan/2017 15:58:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 15:58:41] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3483
+[09/Jan/2017 16:20:14] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 16:20:17] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 34944
+[09/Jan/2017 16:20:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:20:17] INFO [django.server:131] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[09/Jan/2017 16:20:17] INFO [django.server:131] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[09/Jan/2017 16:20:30] INFO [django.server:131] "GET /admin/houses/garage/13088/change/ HTTP/1.1" 200 28912
+[09/Jan/2017 16:20:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:21:05] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 37250
+[09/Jan/2017 16:21:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:35:19] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 16:35:22] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62222
+[09/Jan/2017 16:35:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:35:45] INFO [django.server:131] "GET /admin/houses/garage/13511/change/ HTTP/1.1" 200 28700
+[09/Jan/2017 16:35:46] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:37:47] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62222
+[09/Jan/2017 16:37:47] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:37:51] INFO [django.server:131] "GET /admin/houses/garage/13511/change/ HTTP/1.1" 200 28700
+[09/Jan/2017 16:39:22] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62222
+[09/Jan/2017 16:58:51] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 16:58:53] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62383
+[09/Jan/2017 16:58:53] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:59:00] INFO [django.server:131] "GET /admin/houses/garage/14042/change/ HTTP/1.1" 200 28791
+[09/Jan/2017 16:59:00] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:59:12] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62383
+[09/Jan/2017 16:59:32] INFO [django.server:131] "GET /admin/houses/garage/?o=6 HTTP/1.1" 200 65180
+[09/Jan/2017 16:59:32] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:59:36] INFO [django.server:131] "GET /admin/houses/garage/?o=-6 HTTP/1.1" 200 65257
+[09/Jan/2017 16:59:36] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:59:39] INFO [django.server:131] "GET /admin/houses/garage/13872/change/?_changelist_filters=o%3D-6 HTTP/1.1" 200 28914
+[09/Jan/2017 16:59:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 16:59:50] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62383
+[09/Jan/2017 16:59:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:02:04] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62290
+[09/Jan/2017 17:02:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:03:10] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62282
+[09/Jan/2017 17:03:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:03:23] INFO [django.server:131] "GET /admin/houses/garage/?q=35266498 HTTP/1.1" 200 8698
+[09/Jan/2017 17:03:23] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:03:26] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 17:03:29] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62170
+[09/Jan/2017 17:03:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:22:29] INFO [django.server:131] "GET / HTTP/1.1" 200 2309
+[09/Jan/2017 17:22:43] INFO [django.server:131] "GET /admin/houses/garage/?o=-6 HTTP/1.1" 200 65098
+[09/Jan/2017 17:22:44] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:22:45] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 17:22:47] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62380
+[09/Jan/2017 17:22:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:23:36] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 17:23:39] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 53617
+[09/Jan/2017 17:23:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:23:47] INFO [django.server:131] "GET /admin/houses/room/?o=5 HTTP/1.1" 200 56745
+[09/Jan/2017 17:23:47] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:23:51] INFO [django.server:131] "GET /admin/houses/room/?o=5&people_max=34 HTTP/1.1" 200 10128
+[09/Jan/2017 17:23:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:24:06] INFO [django.server:131] "GET /admin/houses/room/12426/change/?_changelist_filters=o%3D5%26people_max%3D34 HTTP/1.1" 200 36622
+[09/Jan/2017 17:24:06] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:24:52] INFO [django.server:131] "GET /admin/houses/room/ HTTP/1.1" 200 53617
+[09/Jan/2017 17:24:53] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:25:11] INFO [django.server:131] "GET /admin/houses/room/?gay_friendly__exact=1 HTTP/1.1" 200 13971
+[09/Jan/2017 17:25:11] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:25:22] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 17:25:24] INFO [django.server:131] "GET /admin/houses/room/?gay_friendly__exact=1 HTTP/1.1" 200 13971
+[09/Jan/2017 17:25:28] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 17:25:31] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62359
+[09/Jan/2017 17:25:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:25:45] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62392
+[09/Jan/2017 17:25:45] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:45:32] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62241
+[09/Jan/2017 17:45:33] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:45:41] INFO [django.server:131] "GET /admin/houses/garage/?q=2346139 HTTP/1.1" 200 8664
+[09/Jan/2017 17:45:42] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:46:50] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 17:46:53] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 62261
+[09/Jan/2017 17:46:53] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:46:58] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 17:47:01] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 49437
+[09/Jan/2017 17:47:01] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 17:47:07] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 3888
+[09/Jan/2017 18:47:20] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 4708
+[09/Jan/2017 18:50:12] INFO [django.server:131] "GET /admin/houses/land/ HTTP/1.1" 200 56685
+[09/Jan/2017 18:50:13] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 18:50:36] INFO [django.server:131] "GET /admin/houses/land/18991/change/ HTTP/1.1" 200 32169
+[09/Jan/2017 18:50:37] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 18:50:52] INFO [django.server:131] "GET /admin/houses/land/ HTTP/1.1" 200 56685
+[09/Jan/2017 18:50:54] INFO [django.server:131] "GET /admin/houses/land/18984/change/ HTTP/1.1" 200 32220
+[09/Jan/2017 18:50:54] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 18:51:02] INFO [django.server:131] "GET /admin/houses/land/ HTTP/1.1" 200 56685
+[09/Jan/2017 18:51:34] INFO [django.server:131] "GET /admin/houses/land/ HTTP/1.1" 200 57556
+[09/Jan/2017 18:51:34] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 19:03:56] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 4708
+[09/Jan/2017 19:04:05] INFO [django.server:131] "GET /admin/houses/commercial/ HTTP/1.1" 200 29003
+[09/Jan/2017 19:04:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 19:04:09] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 4708
+[09/Jan/2017 19:04:11] INFO [django.server:131] "GET /admin/houses/land/ HTTP/1.1" 200 57556
+[09/Jan/2017 19:04:11] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 19:05:04] INFO [django.server:131] "GET /admin/houses/land/?nearest_town=en+el+n%C3%BAcleo+urbano+ HTTP/1.1" 200 37490
+[09/Jan/2017 19:05:04] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[09/Jan/2017 19:05:12] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 4708
+[09/Jan/2017 19:05:20] INFO [django.server:131] "GET /admin/houses/commercial/ HTTP/1.1" 200 49343
+[09/Jan/2017 19:05:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035

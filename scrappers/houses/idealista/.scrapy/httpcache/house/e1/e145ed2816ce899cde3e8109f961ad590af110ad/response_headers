@@ -1,0 +1,21 @@
+Vary: Accept-Encoding
+Via: 1.1 varnish
+Via: 1.1 varnish
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+X-Served-By: cache-cdg8733-CDG, cache-lhr6326-LHR
+X-Cache-Hits: 0, 0
+Fastly-Debug-Digest: 6b94323c4b70494af32c18b005c906f16b5de5ce6f1c8de75020303eb21bf436
+Strict-Transport-Security: max-age=31536000
+Cache-Control: no-cache, no-store, must-revalidate, private, max-age=0
+Set-Cookie: contact71172D5D90EB04B7470DF37DBC1B6E23.web11="{'email':null,'phone':null,'phonePrefix':null,'friendEmails':null,'name':null,'message':null,'message2Friends':null,'maxNumberContactsAllow':10,'defaultMessage':true}"; Version=1; Path=/
+Set-Cookie: send71172D5D90EB04B7470DF37DBC1B6E23.web11="{'friendsEmail':null,'email':null,'message':null}"; Version=1; Path=/
+Set-Cookie: WEBSERVERID=K|WHIdR|WHIdP; path=/; HttpOnly
+Date: Sun, 08 Jan 2017 11:06:06 GMT
+Content-Language: es
+X-Cache: MISS, MISS
+Content-Type: text/html;charset=UTF-8
+X-Timer: S1483873566.449745,VS0,VE164
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Age: 0

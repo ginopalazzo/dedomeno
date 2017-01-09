@@ -1,0 +1,17 @@
+X-Cache: MISS
+Last-Modified: Thu, 10 Nov 2016 13:01:44 GMT
+Access-Control-Allow-Origin: *
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Date: Mon, 09 Jan 2017 17:52:28 GMT
+Content-Type: text/plain
+X-Cache-Hits: 0
+Pragma: no-cache
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+X-Timer: S1483984348.774150,VS0,VE52
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Accept-Ranges: bytes
+Server: idealista
+X-Served-By: cache-lcy1128-LCY
+Vary: Accept-Encoding
+Via: 1.1 varnish
