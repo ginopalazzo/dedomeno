@@ -11,7 +11,7 @@ class GarageSpider(scrapy.Spider):
         }
     }
     start_urls = [
-        'https://www.idealista.com/venta-garajes/madrid-provincia/?ordenado-por=fecha-publicacion-desc',
+        'https://www.idealista.com/alquiler-garajes/bilbao-vizcaya/?ordenado-por=fecha-publicacion-desc',
         # 'https://www.idealista.com/venta-viviendas/alava/?ordenado-por=fecha-publicacion-desc',
         # 'https://www.idealista.com/venta-viviendas/albacete-provincia/?ordenado-por=fecha-publicacion-desc',
     ]

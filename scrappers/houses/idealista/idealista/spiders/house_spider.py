@@ -11,7 +11,7 @@ class HouseSpider(scrapy.Spider):
         }
     }
     start_urls = [
-        'https://www.idealista.com/venta-viviendas/albacete-provincia/?ordenado-por=fecha-publicacion-desc',
+        'https://www.idealista.com/venta-viviendas/madrid-provincia/?ordenado-por=fecha-publicacion-desc',
         # 'https://www.idealista.com/venta-viviendas/alava/?ordenado-por=fecha-publicacion-desc',
         # 'https://www.idealista.com/venta-viviendas/albacete-provincia/?ordenado-por=fecha-publicacion-desc',
     ]
@@ -62,7 +62,7 @@ class HouseSpider(scrapy.Spider):
         house['outside'] = "".join(building.re('(exterior|interior)'))
         house['terrace'] = bool(basic.re('(erraza)'))
         house['chimney'] = bool(basic.re('(himenea)'))
-        house['garage'] = bool(basic.re('(garaje incluida)'))
+        house['has_garage'] = bool(basic.re('(garaje incluida)'))
         house['builtin_wardrobes'] = bool(basic.re('(rmarios empotrados)'))
         house['store_room'] = bool(basic.re('(trastero)'))
         house['elevator'] = bool(building.re('on (ascensor)'))

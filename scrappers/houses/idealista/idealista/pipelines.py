@@ -5,12 +5,8 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 from datetime import date
-
-
-class RealEstatePipeline(object):
-    def process_item(self, item, spider):
-        item.save()
-        return item
+from idealista.items import DateItem, PriceItem
+from houses.models import Property
 
 
 class PropertyPipeline(object):
@@ -29,11 +25,12 @@ class PropertyPipeline(object):
         return real_estate
 
     def compose_phone(self, phones):
-        phone_list = [None, None]
+        phone_list = [None, None, None, None]
         i = 0
         for phone in phones:
-            phone_list[i] = phone.strip()
-            i = i + 1
+            if phone is not None:
+                phone_list[i] = phone.strip()
+                i = i + 1
         return phone_list
 
     def compose_transaction(self, transaction):
@@ -50,6 +47,35 @@ class PropertyPipeline(object):
         else:
             return None
 
+    def close_spider(self, spider):
+        """
+        Email all the gigs that should be sent, and record that they were sent.
+        """
+        print('SPIDER CLOSE, checking for offline items: %s as %s in %s' % (spider.property_type, spider.transaction, spider.province))
+        set_spider = spider.spiderset
+        set_db = set(Property.objects.filter(
+            online = True,
+            transaction=spider.transaction,
+            address_province=spider.province,
+            property_type=spider.property_type).values_list('slug', flat=True)
+        )
+        set_offline = set_db - set_spider
+        print(set_db)
+        print(set_spider)
+        print(set_offline)
+        today = date.today()
+        for slug in set_offline:
+            item = Property.objects.get(slug=slug)
+            item.online = False
+            item_price = item.price_set.order_by('-date_start').first()
+            item_date = item.date_set.order_by('-online').first()
+            item_price.date_end = today
+            item_date.offline = today
+            item_price.save()
+            item_date.save()
+            item.save()
+        print('%d properties offline' % len(set_offline))
+
 
 class HousePipeline(object):
     def process_item(self, item, spider):
@@ -58,8 +84,8 @@ class HousePipeline(object):
         item['m2_terrain'] = self.compose_int(item['m2_terrain'])
         item['rooms'] = self.compose_int(item['rooms'])
         item['wc'] = self.compose_int(item['wc'])
-        item.save()
-        return item
+        house = item.save()
+        return item, house
 
     def compose_int(self, string):
         if string:
@@ -76,8 +102,8 @@ class RoomPipeline(object):
         item['people_max'] = self.compose_int(item['people_max'])
         item['people_now_living_age_min'] = self.compose_int(item['people_now_living_age_min'])
         item['people_now_living_age_max'] = self.compose_int(item['people_now_living_age_max'])
-        item.save()
-        return item
+        room = item.save()
+        return item, room
 
     def compose_int(self, string):
         if string:
@@ -94,8 +120,8 @@ class OfficePipeline(object):
         item['wc'] = self.compose_int(item['wc'])
         item['elevators'] = self.compose_int(item['elevators'])
         item['num_of_floors'] = self.compose_int(item['num_of_floors'])
-        item.save()
-        return item
+        office = item.save()
+        return item, office
 
     def compose_int(self, string):
         if string:
@@ -107,8 +133,8 @@ class OfficePipeline(object):
 class GaragePipeline(object):
     def process_item(self, item, spider):
         item['garage_number'] = self.compose_int(item['garage_number'])
-        item.save()
-        return item
+        garage = item.save()
+        return item, garage
 
     def compose_int(self, string):
         if string:
@@ -124,8 +150,8 @@ class LandPipeline(object):
         item['m2_min_sale'] = self.compose_int(item['m2_min_sale'])
         item['m2_to_build'] = self.compose_int(item['m2_to_build'])
         item['building_floors'] = self.compose_int(item['building_floors'])
-        item.save()
-        return item
+        land = item.save()
+        return item, land
 
     def compose_int(self, string):
         if string:
@@ -144,11 +170,30 @@ class CommercialPipeline(object):
         item['num_of_floors'] = self.compose_int(item['num_of_floors'])
         item['show_windows'] = self.compose_int(item['show_windows'])
         item['wc'] = self.compose_int(item['wc'])
-        item.save()
-        return item
+        commercial = item.save()
+        return item, commercial
 
     def compose_int(self, string):
         if string:
             return int("".join(string[0].strip().split('.')))
         else:
             return None
+
+
+class DatePipeline(object):
+    def process_item(self, item, spider):
+        date_item = DateItem()
+        date_item['online'] = date.today()
+        date_item['property_date'] = item[1]
+        date_item.save()
+        return item
+
+
+class PricePipeline(object):
+    def process_item(self, item, spider):
+        price_item = PriceItem()
+        price_item['value'] = item[0]['price_raw']
+        price_item['date_start'] = date.today()
+        price_item['property_price'] = item[1]
+        price_item.save()
+        return item

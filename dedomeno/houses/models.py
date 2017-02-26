@@ -1,36 +1,17 @@
 from django.db import models
 from multiselectfield import MultiSelectField
-from django.contrib.postgres.fields import ArrayField
-
-# ('rent', 'Alquiler'),
-# ('sale', 'Venta'),
-# ---------------------
-# ('new construction', 'Obra Nueva'),
-# ('house', 'Vivienda'),
-# ('office', 'Oficina'),
-# ('comercial', 'Locales o Naves'),
-# ('parking', 'Garajes'),
-# ('land', 'Terrenos'),
-# ('share', 'Compartir'),
-# ('holliday', 'Vacaciones'),
-# ---------------------
-# ('flat', 'Piso'),
-# ('house', 'Chalet'),
-# ('rustic', 'Rústico'),
-# ('duplex', 'Duplex'),
-# ('attic', 'Ático'),
 
 
 class RealEstate(models.Model):
-    name = models.CharField(max_length=200, null=True, blank=True)
-    slug = models.SlugField(max_length=50, null=True, blank=True)
+    name = models.CharField(max_length=500, null=True, blank=True)
+    slug = models.SlugField(max_length=500, unique=True)
     logo = models.URLField(null=True, blank=True)
     web = models.URLField(null=True, blank=True)
     url = models.URLField(null=True, blank=True)
     html = models.TextField(blank=True, null=True)
-    desc = models.CharField(max_length=10000, null=True, blank=True)
-    telephone = models.CharField(max_length=30, null=True, blank=True)
-    address = models.CharField(max_length=200, null=True, blank=True)
+    desc = models.TextField(null=True, blank=True)
+    telephone = models.CharField(max_length=300, null=True, blank=True)
+    address = models.CharField(max_length=2000, null=True, blank=True)
     source = models.CharField(max_length=200, null=True, blank=True)
 
     def __str__(self):
@@ -42,9 +23,9 @@ class Property(models.Model):
     Father Model for all the properties
     '''
     # main data
-    title = models.CharField(max_length=200, null=True)
+    title = models.CharField(max_length=500, null=True)
     url = models.URLField(blank=True, null=True)
-    slug = models.SlugField(max_length=50, null=True, blank=True)
+    slug = models.SlugField(max_length=50, unique=True)
     source = models.CharField(max_length=200, null=True, blank=True)
     html = models.TextField(blank=True, null=True)
     desc = models.TextField(blank=True, null=True)
@@ -53,17 +34,31 @@ class Property(models.Model):
         ('sale', 'sale'),
     )
     transaction = models.CharField(choices=TRANSACTION_CHOICES, null=True, blank=True, max_length=4)
+    PROPERTY_CHOICES = (
+        ('house', 'house'),
+        ('room', 'room'),
+        ('office', 'office'),
+        ('garage', 'garage'),
+        ('land', 'land'),
+        ('commercial', 'commercial'),
+    )
+    property_type = models.CharField(choices=PROPERTY_CHOICES, max_length=200, blank=True, null=True)
     # https://docs.djangoproject.com/en/1.8/ref/contrib/postgres/fields/#arrayfield
     # equipment = ArrayField(models.CharField(max_length=5000, blank=True, null=True), null=True)
     # contact
-    name = models.CharField(blank=True, max_length=130, null=True)
+    name = models.CharField(blank=True, max_length=500, null=True)
     phone_1 = models.CharField(blank=True, max_length=30, null=True)
     phone_2 = models.CharField(blank=True, max_length=30, null=True)
-    real_estate = models.ForeignKey(RealEstate, blank=True, null=True, help_text='If blank there is not a real estate involved')
-    real_estate_raw = models.CharField(blank=True, max_length=50, null=True)
+    real_estate = models.ForeignKey(RealEstate, blank=True, null=True, on_delete=models.SET_NULL, help_text='If blank there is not a real estate involved')
+    real_estate_raw = models.CharField(blank=True, max_length=200, null=True)
     price_raw = models.IntegerField(blank=True, null=True)
+    address_province = models.CharField(max_length=200, blank=True, null=True)
     address_raw = models.CharField(max_length=2000, blank=True, null=True)
     date_raw = models.DateField(blank=True, null=True)
+    online = models.NullBooleanField(default=True)
+
+    def __str__(self):
+        return self.title
 
 
 class Price(models.Model):
@@ -73,13 +68,16 @@ class Price(models.Model):
     property_price = models.ForeignKey(Property, blank=True, null=True)
 
     def __str__(self):
-        return '[' + str(self.date_start) + ']-[' + str(self.date_end) + ']: ' + str(self.price_value)
+        return '[' + str(self.date_start) + ']-[' + str(self.date_end) + ']: ' + str(self.value)
 
 
 class Date(models.Model):
     online = models.DateField(blank=True, null=True)
     offline = models.DateField(blank=True, null=True)
     property_date = models.ForeignKey(Property, blank=True, null=True)
+
+    def __str__(self):
+        return '[' + str(self.online) + ']-[' + str(self.offline) + ']'
 
 
 class House(Property):

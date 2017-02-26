@@ -10,3 +10,4 @@ dedomeno.sublime-workspace
 dedomeno.sublime-project
 .DS_Store
 .env
+scrappers/houses/idealista/.scrapy/httpcache

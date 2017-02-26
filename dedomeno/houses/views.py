@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404, render
 from django.views import generic
 from django.contrib import admin
 
-from .models import House, RealEstate
+from houses.models import House, RealEstate, Garage, Office, Room, Commercial, Land
 
 from .management.localizations import *
 from .management.sources import *
@@ -38,22 +38,30 @@ def index(request):
     # template_name = 'houses/index.html'
 
     real_estate_list = RealEstate.objects.order_by('name')[:10]
-    real_estate_total = RealEstate.objects.count()
-    houses_rent_total = House.objects.filter(transaction='rent').count()
-    houses_sale_total = House.objects.filter(transaction='sale').count()
+    real_estates_total = RealEstate.objects.count()
+    houses_total = House.objects.all().count()
+    garages_total = Garage.objects.count()
+    offices_total = Office.objects.count()
+    rooms_total = Room.objects.count()
+    commercials_total = Commercial.objects.count()
+    lands_total = Land.objects.count()
 
     context = {
-        'real_estate_total': real_estate_total,
         'real_estate_list': real_estate_list,
-        'houses_rent_total': houses_rent_total,
-        'houses_sale_total': houses_sale_total,
+        'real_estates_total': real_estates_total,
+        'houses_total': houses_total,
+        'garages_total': garages_total,
+        'offices_total': offices_total,
+        'rooms_total': rooms_total,
+        'commercials_total': commercials_total,
+        'lands_total': lands_total,
     }
     return render(request, 'houses/index.html', context)
 
 
 class DetailRealEstateView(generic.DetailView):
     model = RealEstate
-    template_name = 'houses/detail_real_state.html'
+    template_name = 'houses/detail_real_estate.html'
 
 
 class DetailHouseView(generic.DetailView):
@@ -62,16 +70,24 @@ class DetailHouseView(generic.DetailView):
 
 
 def management(request):
-    real_estate_count = RealEstate.objects.count()
-    houses_rent_total = House.objects.count()
-    houses_buy_total = House.objects.count()
+    real_estates_total = RealEstate.objects.count()
+    houses_total = House.objects.count()
+    garages_total = Garage.objects.count()
+    offices_total = Office.objects.count()
+    rooms_total = Room.objects.count()
+    commercials_total = Commercial.objects.count()
+    lands_total = Land.objects.count()
+
     context = {
-        'real_estate_count': real_state_count,
-        'houses_rent_total': houses_rent_total_active,
-        'houses_buy_total': houses_buy_total_active,
+        'real_estates_total': real_estates_total,
+        'houses_total': houses_total,
+        'garages_total': garages_total,
+        'offices_total': offices_total,
+        'rooms_total': rooms_total,
+        'commercials_total': commercials_total,
+        'lands_total': lands_total
     }
     # HOUSES
-    """
     if(request.GET.get('btn-import-houses-all')):
         importAllhouses(request.GET.get('house-option-source'), request.GET.get('house-option-country'))
     #   Import children territorial entities for provinces (Map resuorce)
@@ -87,4 +103,4 @@ def management(request):
     elif(request.GET.get('btn-complete-all-agencies')):
         completeAllAgencies(request.GET.get('agency-option-source'))
     return render(request, 'houses/management.html', context)
-    """
+    

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import RealEstate, Date, Price, House, Room, Office, Garage, Land, Commercial
+from .models import RealEstate, Date, Price, Property, House, Room, Office, Garage, Land, Commercial
 
 '''
 class SourceAdmin(admin.ModelAdmin):
@@ -78,19 +78,27 @@ class PriceInLineAdmin(admin.TabularInline):
     model = Price
 
 
+class PriceAdmin(admin.ModelAdmin):
+    list_display = ['property_price', 'value', 'date_start', 'date_end']
+
+
 class DateInLineAdmin(admin.TabularInline):
     model = Date
 
 
-class HouseInLineAdmin(admin.TabularInline):
-    model = House
+class DateAdmin(admin.ModelAdmin):
+    list_display = ['property_date', 'online', 'offline']
+
+
+class PropertyInLineAdmin(admin.TabularInline):
+    model = Property
 
 
 class RealEstateAdmin(admin.ModelAdmin):
     search_fields = ['name', 'slug']
     list_display = ('name', 'slug', 'source', 'telephone', 'address')
     inlines = [
-        HouseInLineAdmin,
+        PropertyInLineAdmin,
     ]
 
 
@@ -123,8 +131,8 @@ class OfficeAdmin(admin.ModelAdmin):
 
 class GarageAdmin(admin.ModelAdmin):
     search_fields = ['title', 'slug']
-    list_display = ('title', 'slug', 'transaction', 'garage_type', 'automatic_door', 'price_raw')
-    list_filter = ['garage_type', 'automatic_door', 'covered', 'elevator', 'security_cameras', 'alarm', 'security_guard']
+    list_display = ('title', 'slug', 'transaction', 'garage_type', 'automatic_door', 'price_raw', 'real_estate_raw')
+    list_filter = ['transaction', 'garage_type', 'automatic_door', 'covered', 'elevator', 'security_cameras', 'alarm', 'security_guard']
     inlines = [
         PriceInLineAdmin, DateInLineAdmin,
     ]
@@ -148,6 +156,8 @@ class CommercialAdmin(admin.ModelAdmin):
     ]
 
 
+admin.site.register(Date, DateAdmin)
+admin.site.register(Price, PriceAdmin)
 admin.site.register(RealEstate, RealEstateAdmin)
 admin.site.register(House, HouseAdmin)
 admin.site.register(Room, RoomAdmin)

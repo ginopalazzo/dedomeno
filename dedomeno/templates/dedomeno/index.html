@@ -20,13 +20,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="houses">
-                        <h2 class="text-center"><i class="fa fa-home"></i> Houses</h2>
-                    </a>
+                    
+                        <h2 class="text-center"><i class="fa fa-home"></i> <a href="houses">Houses</a> <spam class="badge"> sale </spam> <spam class="badge"> rent </spam> </h2>
                     <ul class="list-group">
-                        <li class="list-group-item"> Real Estates <spam class="badge"> {{ real_estate_total }} </spam>
-                        <li class="list-group-item"> Houses for rent <spam class="badge"> {{ houses_rent_total }} </spam> </li>
-                        <li class="list-group-item"> Houses for buy <spam class="badge"> {{ houses_sale_total }} </spam> </li>
+                        <li class="list-group-item"> Real Estates <spam class="badge"> {{ real_estates_total }} </spam>
+                        <li class="list-group-item"> Houses <spam class="badge btn btn-default"> {{ houses_total_rent }} </spam> <spam class="badge btn btn-primary"> {{ houses_total_sale }} </spam> </li>
+                        <li class="list-group-item"> Garages <spam class="badge"> {{ garages_total_rent }} </spam> <spam class="badge"> {{ garages_total_sale }} </spam> </li>
+                        <li class="list-group-item"> Rooms <spam class="badge"> {{ rooms_total }} </spam> </li>
+                        <li class="list-group-item"> Offices <spam class="badge"> {{ offices_total_rent }} </spam> <spam class="badge"> {{ offices_total_sale }} </spam> </li>
+                        <li class="list-group-item"> Lands <spam class="badge"> {{ lands_total_rent }} </spam> <spam class="badge"> {{ lands_total_sale }} </spam> </li>
+                        <li class="list-group-item"> Commercials <spam class="badge"> {{ commercials_total_sale }} </spam> <spam class="badge"> {{ commercials_total_rent }} </spam> </li>
                     </ul>
 
                 </div>

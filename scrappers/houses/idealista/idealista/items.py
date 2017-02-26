@@ -10,6 +10,13 @@ from scrapy_djangoitem import DjangoItem
 from houses.models import Price, Date, RealEstate, Property, House, Room, Office, Garage, Land, Commercial
 
 
+class PropertyListItem(scrapy.Item):
+    slug = scrapy.Field()
+    url = scrapy.Field()
+    price = scrapy.Field()
+    date = scrapy.Field()
+
+
 class RealEstateItem(DjangoItem):
     django_model = RealEstate
 

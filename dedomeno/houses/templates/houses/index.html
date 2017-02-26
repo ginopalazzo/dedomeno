@@ -20,12 +20,13 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h2 class="text-center">Real Estate</h2>
-                    {% if real_estate_total > 0 %}
+                    {% if real_estates_total > 0 %}
                         <ul class="list-group">
-                            <li class="list-group-item"> Total Real States: <spam class="badge"> {{ real_estate_total }} </spam>
-                            {% for agency in real_estate_list %}
+                            <li class="list-group-item"> Total Real States: <spam class="badge"> {{ real_estates_total }} </spam>
+                            {% for real_estate in real_estate_list %}
                                 <li class="list-group-item">
-                                    <a href="{% url 'houses:detail_agency' agency.id %}">{{ agency.agency_name }}</a>
+                                    <a href="{% url 'houses:detail_real_estate' real_estate.id %}">{{ real_estate.name }}</a>
+                                    <spam class="badge"> {{ real_estate }} </spam> 
                                 </li>
                             {% endfor %}
                         </ul>
