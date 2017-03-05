@@ -89,7 +89,8 @@ def management(request):
     }
     # HOUSES
     if(request.GET.get('btn-import-houses-all')):
-        importAllhouses(request.GET.get('house-option-source'), request.GET.get('house-option-country'))
+        startPropertySpider()#'sale', 'garage', 'almeria')
+        #importAllhouses(request.GET.get('house-option-source'), request.GET.get('house-option-country'))
     #   Import children territorial entities for provinces (Map resuorce)
     elif(request.GET.get('btn-import-houses-provinces')):
         source = Source.objects.get(source_name=request.GET.get('house-option-source'))

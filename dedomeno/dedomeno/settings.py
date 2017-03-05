@@ -19,6 +19,7 @@ from decouple import config, Csv
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
@@ -48,11 +49,14 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # DECOUPLE! ALLOWED_HOSTS = []
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
+# worker_max_tasks_per_child
+CELERY_WORKER_MAX_TASK_PER_CHILD = 1
 
 # Application definition
 
 INSTALLED_APPS = [
     'houses.apps.HousesConfig',
+    'idealista.apps.IdealistaConfig',
     'django_celery_beat',
     'django.contrib.admin',
     'django.contrib.auth',

@@ -1,2 +1,3 @@
-from pathlib import Path
-print('Running' if __name__ == '__main__' else 'Importing', Path(__file__).resolve())
+from idealista.crawlproperty import CrawlProperty
+# p = CrawlProperty(property_type='garage', transaction='rent', province='almeria')
+# p.startPropertySpider()

@@ -11339,3 +11339,1323 @@ AttributeError: 'NoneType' object has no attribute 'has_header'
 [26/Feb/2017 14:29:43] INFO [django.server:131] "POST /admin/houses/garage/167288/change/?_changelist_filters=transaction__exact%3Drent HTTP/1.1" 302 0
 [26/Feb/2017 14:29:43] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=rent HTTP/1.1" 200 74159
 [26/Feb/2017 14:29:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 10:29:04] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 10:29:05] INFO [django.server:131] "GET /static/houses/css/style.css HTTP/1.1" 200 0
+[28/Feb/2017 11:10:15] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 11:10:17] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:10:20] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 23, in startPropertySpider
+    settings = get_project_settings()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/utils/project.py", line 68, in get_project_settings
+    settings.setmodule(settings_module_path, priority='project')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/settings/__init__.py", line 282, in setmodule
+    module = import_module(module)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'scrappers'
+[28/Feb/2017 11:10:21] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 96299
+[28/Feb/2017 11:15:06] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:15:09] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:15:11] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 23, in startPropertySpider
+    settings = get_project_settings()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/utils/project.py", line 68, in get_project_settings
+    settings.setmodule(settings_module_path, priority='project')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/settings/__init__.py", line 282, in setmodule
+    module = import_module(module)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'scrappers'
+[28/Feb/2017 11:15:11] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 96299
+[28/Feb/2017 11:24:10] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 23, in startPropertySpider
+    settings = get_project_settings()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/utils/project.py", line 68, in get_project_settings
+    settings.setmodule(settings_module_path, priority='project')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/settings/__init__.py", line 282, in setmodule
+    module = import_module(module)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'scrappers'
+[28/Feb/2017 11:24:10] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 96434
+[28/Feb/2017 11:24:14] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:24:15] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:24:18] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 23, in startPropertySpider
+    settings = get_project_settings()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/utils/project.py", line 68, in get_project_settings
+    settings.setmodule(settings_module_path, priority='project')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/settings/__init__.py", line 282, in setmodule
+    module = import_module(module)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'scrappers'
+[28/Feb/2017 11:24:18] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 96299
+[28/Feb/2017 11:28:30] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 23, in startPropertySpider
+    settings = get_project_settings()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/utils/project.py", line 68, in get_project_settings
+    settings.setmodule(settings_module_path, priority='project')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/settings/__init__.py", line 282, in setmodule
+    module = import_module(module)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 944, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 986, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 969, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 956, in _find_and_load_unlocked
+ImportError: No module named 'scrappers'
+[28/Feb/2017 11:28:30] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 96434
+[28/Feb/2017 11:29:43] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:29:46] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 25, in startPropertySpider
+    self.settings.set('ITEM_PIPELINES', {
+NameError: name 'self' is not defined
+[28/Feb/2017 11:29:46] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 84742
+[28/Feb/2017 11:30:20] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:30:23] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 31, in startPropertySpider
+    process = CrawlerProcess(self.settings)
+NameError: name 'self' is not defined
+[28/Feb/2017 11:30:23] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 84866
+[28/Feb/2017 11:30:39] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:30:42] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 31, in startPropertySpider
+    process = CrawlerProcess(settings)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/crawler.py", line 239, in __init__
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/utils/ossignal.py", line 21, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/posixbase.py", line 295, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 1159, in _handleSignals
+    signal.signal(signal.SIGINT, self.sigInt)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+[28/Feb/2017 11:30:42] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 104137
+[28/Feb/2017 11:32:12] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:32:15] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 31, in startPropertySpider
+    process = CrawlerRunner(settings)
+NameError: name 'CrawlerRunner' is not defined
+[28/Feb/2017 11:32:15] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 84890
+[28/Feb/2017 11:32:31] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 35, in startPropertySpider
+    process.start()
+AttributeError: 'CrawlerRunner' object has no attribute 'start'
+[28/Feb/2017 11:32:31] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 85398
+[28/Feb/2017 11:33:52] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:33:55] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 31, in startPropertySpider
+    process = CrawlerProcess(settings)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/crawler.py", line 239, in __init__
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/utils/ossignal.py", line 21, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/posixbase.py", line 295, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 1159, in _handleSignals
+    signal.signal(signal.SIGINT, self.sigInt)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+[28/Feb/2017 11:33:55] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 104017
+[28/Feb/2017 11:35:28] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:35:31] INFO [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 200 14452
+[28/Feb/2017 11:42:15] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 39, in startPropertySpider
+    d.addBoth(lambda _: reactor.stop())
+NameError: name 'd' is not defined
+[28/Feb/2017 11:42:16] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 85392
+[28/Feb/2017 11:43:18] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:43:41] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:45:53] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:45:58] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider('sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 31, in startPropertySpider
+    process = CrawlerProcess(settings)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/crawler.py", line 239, in __init__
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/utils/ossignal.py", line 21, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/posixbase.py", line 295, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 1159, in _handleSignals
+    signal.signal(signal.SIGINT, self.sigInt)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/signal.py", line 47, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread
+[28/Feb/2017 11:45:58] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 104137
+[28/Feb/2017 11:47:31] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:47:34] INFO [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 200 14452
+[28/Feb/2017 11:51:28] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:51:31] INFO [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 200 14452
+[28/Feb/2017 11:57:25] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 11:57:41] INFO [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 200 14452
+[28/Feb/2017 12:02:00] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 12:02:04] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider()#'sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 25, in startPropertySpider
+    p.startPropertySpider()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/idealista/crawlproperty.py", line 32, in startPropertySpider
+    process.start()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/crawler.py", line 280, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 1198, in run
+    self.startRunning(installSignalHandlers=installSignalHandlers)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 1178, in startRunning
+    ReactorBase.startRunning(self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 687, in startRunning
+    raise error.ReactorNotRestartable()
+twisted.internet.error.ReactorNotRestartable
+[28/Feb/2017 12:02:04] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 103026
+[28/Feb/2017 12:02:07] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 12:30:55] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 12:31:00] INFO [django.server:131] "GET /admin/houses/management/?btn-import-territorial-entities=Import HTTP/1.1" 200 14452
+[28/Feb/2017 12:31:26] INFO [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 200 14452
+[28/Feb/2017 12:34:09] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 5503
+[28/Feb/2017 12:34:09] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 434
+[28/Feb/2017 12:34:09] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[28/Feb/2017 12:34:09] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[28/Feb/2017 12:34:09] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[28/Feb/2017 12:34:09] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[28/Feb/2017 12:34:09] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[28/Feb/2017 12:34:09] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[28/Feb/2017 12:34:12] ERROR [django.request:124] Internal Server Error: /admin/houses/management/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/decorators.py", line 149, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/admin/sites.py", line 211, in inner
+    return view(request, *args, **kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 92, in management
+    startPropertySpider()#'sale', 'garage', 'almeria')
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/management/houses.py", line 25, in startPropertySpider
+    p.startPropertySpider()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/idealista/crawlproperty.py", line 31, in startPropertySpider
+    process.start()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/scrapy/crawler.py", line 280, in start
+    reactor.run(installSignalHandlers=False)  # blocking call
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 1198, in run
+    self.startRunning(installSignalHandlers=installSignalHandlers)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 1178, in startRunning
+    ReactorBase.startRunning(self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/twisted/internet/base.py", line 687, in startRunning
+    raise error.ReactorNotRestartable()
+twisted.internet.error.ReactorNotRestartable
+[28/Feb/2017 12:34:12] ERROR [django.server:131] "GET /admin/houses/management/?btn-import-houses-all=Import HTTP/1.1" 500 103081
+[28/Feb/2017 12:53:00] INFO [django.server:131] "GET /admin/houses/management/ HTTP/1.1" 200 14452
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=rent HTTP/1.1" 200 73825
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6577
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/js/core.js HTTP/1.1" 200 7976
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/js/actions.js HTTP/1.1" 200 6501
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8186
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[28/Feb/2017 12:53:02] INFO [django.server:131] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[28/Feb/2017 12:53:03] INFO [django.server:131] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[28/Feb/2017 12:53:07] INFO [django.server:131] "GET /admin HTTP/1.1" 301 0
+[28/Feb/2017 12:53:08] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 12198
+[28/Feb/2017 12:53:13] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4353
+[28/Feb/2017 12:53:13] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 12:53:15] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 12198
+[28/Feb/2017 12:53:17] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[28/Feb/2017 12:53:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 12:53:21] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12218
+[28/Feb/2017 12:53:21] INFO [django.server:131] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7790
+[28/Feb/2017 12:53:21] INFO [django.server:131] "GET /static/admin/js/collapse.js HTTP/1.1" 200 1151
+[28/Feb/2017 12:53:21] INFO [django.server:131] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20529
+[28/Feb/2017 12:53:21] INFO [django.server:131] "GET /static/admin/js/change_form.js HTTP/1.1" 200 698
+[28/Feb/2017 12:53:21] INFO [django.server:131] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[28/Feb/2017 12:53:21] INFO [django.server:131] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[28/Feb/2017 12:53:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 12:53:52] INFO [django.server:131] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[28/Feb/2017 12:53:52] INFO [django.server:131] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[28/Feb/2017 12:54:26] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:04:16] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[28/Feb/2017 13:04:16] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:04:20] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:04:22] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4353
+[28/Feb/2017 13:04:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:04:23] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/1/change/ HTTP/1.1" 200 6298
+[28/Feb/2017 13:04:24] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:04:29] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4353
+[28/Feb/2017 13:04:31] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:04:32] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 3161
+[28/Feb/2017 13:04:32] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:04:34] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4662
+[28/Feb/2017 13:04:34] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:04:51] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 302 0
+[28/Feb/2017 13:04:51] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 4567
+[28/Feb/2017 13:04:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:04:54] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:04:55] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4353
+[28/Feb/2017 13:04:55] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:04:58] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6029
+[28/Feb/2017 13:04:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:05:05] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4353
+[28/Feb/2017 13:05:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:05:07] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:05:23] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 12137
+[28/Feb/2017 13:05:25] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[28/Feb/2017 13:05:25] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:05:28] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12261
+[28/Feb/2017 13:05:28] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:05:58] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 13:05:58] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5237
+[28/Feb/2017 13:05:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:06:05] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:06:09] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:06:12] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 12097
+[28/Feb/2017 13:08:15] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:09:53] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:12:55] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:13:27] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 12097
+[28/Feb/2017 13:16:02] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:19:51] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:20:07] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4353
+[28/Feb/2017 13:20:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:20:10] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6029
+[28/Feb/2017 13:20:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:20:22] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4353
+[28/Feb/2017 13:20:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:20:47] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6029
+[28/Feb/2017 13:20:47] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:20:55] INFO [django.server:131] "POST /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 302 0
+[28/Feb/2017 13:20:56] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4831
+[28/Feb/2017 13:20:56] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:21:01] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:21:08] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5004
+[28/Feb/2017 13:21:08] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:21:11] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12639
+[28/Feb/2017 13:21:12] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:21:21] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12821
+[28/Feb/2017 13:21:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:21:39] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5004
+[28/Feb/2017 13:21:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:25:39] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:25:45] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:26:16] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:28:25] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:35:08] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:47:13] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:47:20] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:47:22] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 4355
+[28/Feb/2017 13:47:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:47:24] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:47:26] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5004
+[28/Feb/2017 13:47:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:47:28] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:47:31] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4613
+[28/Feb/2017 13:47:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:49:28] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:50:13] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 13:50:17] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:50:19] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5004
+[28/Feb/2017 13:50:19] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:50:21] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12639
+[28/Feb/2017 13:50:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:50:42] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 302 0
+[28/Feb/2017 13:50:43] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5240
+[28/Feb/2017 13:50:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:50:45] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12639
+[28/Feb/2017 13:50:45] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:50:50] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 302 0
+[28/Feb/2017 13:50:50] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5240
+[28/Feb/2017 13:50:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:50:52] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12639
+[28/Feb/2017 13:50:52] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:51:13] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12821
+[28/Feb/2017 13:51:13] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:51:18] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12821
+[28/Feb/2017 13:51:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:51:24] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 302 0
+[28/Feb/2017 13:51:24] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5240
+[28/Feb/2017 13:51:24] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:51:28] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12639
+[28/Feb/2017 13:51:28] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:51:33] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 302 0
+[28/Feb/2017 13:51:33] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12589
+[28/Feb/2017 13:51:33] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:52:55] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12704
+[28/Feb/2017 13:52:59] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5004
+[28/Feb/2017 13:52:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:53:01] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12377
+[28/Feb/2017 13:53:01] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:53:10] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 13:53:10] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5577
+[28/Feb/2017 13:53:10] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 13:53:13] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 13:53:15] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11886
+[28/Feb/2017 13:53:20] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 14:12:13] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11886
+[28/Feb/2017 14:12:15] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5351
+[28/Feb/2017 14:12:15] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 14:12:17] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 200 12704
+[28/Feb/2017 14:12:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 14:12:26] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/2/change/ HTTP/1.1" 302 0
+[28/Feb/2017 14:12:26] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5587
+[28/Feb/2017 14:12:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 14:12:29] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 14:12:43] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11872
+[28/Feb/2017 14:12:45] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 14:13:16] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 14:13:19] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 14:13:55] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 14:14:01] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 14:20:06] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 14:29:30] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 14:33:52] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5351
+[28/Feb/2017 14:33:52] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 14:33:58] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3341
+[28/Feb/2017 14:33:58] INFO [django.server:131] "GET /static/admin/js/cancel.js HTTP/1.1" 200 204
+[28/Feb/2017 14:33:59] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 302 0
+[28/Feb/2017 14:33:59] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5136
+[28/Feb/2017 14:33:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 14:34:02] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12377
+[28/Feb/2017 14:34:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 14:34:04] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4997
+[28/Feb/2017 14:34:21] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12377
+[28/Feb/2017 14:34:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 14:34:35] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 14:34:35] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5582
+[28/Feb/2017 14:34:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:27:52] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 15:28:58] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3334
+[28/Feb/2017 15:29:01] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 302 0
+[28/Feb/2017 15:29:01] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5142
+[28/Feb/2017 15:29:01] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:29:52] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12377
+[28/Feb/2017 15:29:52] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:30:06] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5003
+[28/Feb/2017 15:30:18] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12442
+[28/Feb/2017 15:30:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:30:31] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 15:30:31] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5590
+[28/Feb/2017 15:30:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:30:33] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11751
+[28/Feb/2017 15:30:33] INFO [django.server:131] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[28/Feb/2017 15:34:46] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 15:34:52] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 15:34:54] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 15:35:00] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11751
+[28/Feb/2017 15:35:05] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 15:35:07] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11751
+[28/Feb/2017 15:35:10] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11751
+[28/Feb/2017 15:35:12] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 68010
+[28/Feb/2017 15:35:13] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:35:18] INFO [django.server:131] "GET /admin/houses/garage/167336/change/ HTTP/1.1" 200 453212
+[28/Feb/2017 15:35:18] INFO [django.server:131] "GET /static/admin/js/inlines.js HTTP/1.1" 200 13404
+[28/Feb/2017 15:35:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:35:34] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 68010
+[28/Feb/2017 15:35:36] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11751
+[28/Feb/2017 15:35:37] INFO [django.server:131] "GET /admin/auth/group/add/ HTTP/1.1" 200 9393
+[28/Feb/2017 15:35:37] INFO [django.server:131] "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 5755
+[28/Feb/2017 15:35:37] INFO [django.server:131] "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 12389
+[28/Feb/2017 15:35:37] INFO [django.server:131] "GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+[28/Feb/2017 15:35:37] INFO [django.server:131] "GET /static/admin/img/icon-unknown-alt.svg HTTP/1.1" 200 655
+[28/Feb/2017 15:35:37] INFO [django.server:131] "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+[28/Feb/2017 15:35:40] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11751
+[28/Feb/2017 15:35:48] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 15:37:14] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11751
+[28/Feb/2017 15:37:19] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 4355
+[28/Feb/2017 15:37:19] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:37:26] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4662
+[28/Feb/2017 15:37:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:37:35] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 302 0
+[28/Feb/2017 15:37:35] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 4820
+[28/Feb/2017 15:37:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:37:37] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 15:37:39] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5357
+[28/Feb/2017 15:37:39] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:37:41] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/5/change/ HTTP/1.1" 200 12812
+[28/Feb/2017 15:37:41] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:37:48] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/5/change/ HTTP/1.1" 302 0
+[28/Feb/2017 15:37:48] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5593
+[28/Feb/2017 15:37:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 15:42:22] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 15:51:00] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:00:23] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5357
+[28/Feb/2017 16:00:23] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:00:26] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/5/change/ HTTP/1.1" 200 12812
+[28/Feb/2017 16:00:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:00:29] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5357
+[28/Feb/2017 16:01:32] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:03:38] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:05:37] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:05:37] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:05:37] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:05:37] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:05:56] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:06:00] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:06:03] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:06:10] INFO [houses.tasks:46] stop spider office
+[28/Feb/2017 16:06:10] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 16:06:10] INFO [houses.tasks:46] stop spider office
+[28/Feb/2017 16:06:10] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 16:07:14] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:07:18] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:30:41] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:31:06] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:32:26] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 16:32:26] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:26] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:26] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:32:26] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:26] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:27] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:27] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:27] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:27] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:27] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:32:28] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:28] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:29] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:32:29] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:30] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:32:30] INFO [houses.tasks:43] start spider office
+[28/Feb/2017 16:39:54] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5357
+[28/Feb/2017 16:40:00] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5357
+[28/Feb/2017 16:47:00] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/4/change/ HTTP/1.1" 200 12810
+[28/Feb/2017 16:47:00] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:47:02] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5357
+[28/Feb/2017 16:47:05] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/5/change/ HTTP/1.1" 200 12812
+[28/Feb/2017 16:47:06] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:47:18] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/5/change/ HTTP/1.1" 302 0
+[28/Feb/2017 16:47:18] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5593
+[28/Feb/2017 16:47:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:47:20] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/4/change/ HTTP/1.1" 200 12810
+[28/Feb/2017 16:47:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:47:24] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/4/change/ HTTP/1.1" 302 0
+[28/Feb/2017 16:47:24] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5592
+[28/Feb/2017 16:47:25] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:47:50] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11726
+[28/Feb/2017 16:47:52] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 67903
+[28/Feb/2017 16:47:53] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:47:58] INFO [django.server:131] "GET /admin/houses/garage/167412/change/ HTTP/1.1" 200 447300
+[28/Feb/2017 16:47:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:48:00] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 67903
+[28/Feb/2017 16:48:16] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 5503
+[28/Feb/2017 16:48:18] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11726
+[28/Feb/2017 16:48:22] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5357
+[28/Feb/2017 16:48:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:48:26] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12566
+[28/Feb/2017 16:48:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:48:35] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12888
+[28/Feb/2017 16:48:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:48:49] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 16:48:50] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5952
+[28/Feb/2017 16:48:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 16:49:41] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:49:44] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:49:46] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 16:50:11] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:50:21] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 16:50:21] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:21] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:21] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:50:22] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:22] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:22] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:50:22] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:22] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:23] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:23] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 16:50:23] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:23] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:24] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 16:50:24] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 18:45:41] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5715
+[28/Feb/2017 18:45:41] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 18:45:45] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/6/change/ HTTP/1.1" 200 12909
+[28/Feb/2017 18:45:45] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 18:45:50] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5715
+[28/Feb/2017 18:45:57] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3727
+[28/Feb/2017 18:45:59] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 302 0
+[28/Feb/2017 18:45:59] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4789
+[28/Feb/2017 18:45:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 18:46:02] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12566
+[28/Feb/2017 18:46:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 18:46:18] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 18:46:18] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5243
+[28/Feb/2017 18:46:19] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 18:46:23] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 18:48:12] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:32] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 18:48:32] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:32] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:32] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:32] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:32] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:32] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:33] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:33] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:33] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:33] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:33] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:33] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:33] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:48:33] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:51:31] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:51:42] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 18:56:03] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3344
+[28/Feb/2017 18:56:05] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 302 0
+[28/Feb/2017 18:56:05] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4788
+[28/Feb/2017 18:56:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 18:56:24] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:56:26] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 18:58:08] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 18:58:12] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 19:04:45] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 19:05:09] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 19:05:34] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 19:06:00] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 19:06:00] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 19:06:00] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 19:06:21] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 19:06:22] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 19:06:22] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 19:08:11] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[28/Feb/2017 19:08:11] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:08:14] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12566
+[28/Feb/2017 19:08:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:08:19] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[28/Feb/2017 19:08:24] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 19:08:26] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 4608
+[28/Feb/2017 19:08:27] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:08:29] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4662
+[28/Feb/2017 19:08:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:08:38] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 302 0
+[28/Feb/2017 19:08:38] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 5074
+[28/Feb/2017 19:08:38] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:08:41] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 19:08:44] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4613
+[28/Feb/2017 19:08:44] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:08:48] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6029
+[28/Feb/2017 19:08:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:09:06] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6029
+[28/Feb/2017 19:09:08] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4613
+[28/Feb/2017 19:09:08] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:09:11] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 19:09:13] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[28/Feb/2017 19:09:13] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:09:15] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12610
+[28/Feb/2017 19:09:15] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:09:34] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 19:09:34] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5217
+[28/Feb/2017 19:09:34] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:21:40] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4994
+[28/Feb/2017 19:21:40] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:22:24] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/8/change/ HTTP/1.1" 200 12924
+[28/Feb/2017 19:22:25] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:41:58] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 19:42:20] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 19:43:21] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/8/change/ HTTP/1.1" 302 0
+[28/Feb/2017 19:43:21] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5218
+[28/Feb/2017 19:43:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 19:50:04] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 20:01:57] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 20:02:14] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 20:10:29] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/8/change/ HTTP/1.1" 200 12923
+[28/Feb/2017 20:10:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:10:35] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4993
+[28/Feb/2017 20:13:04] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12713
+[28/Feb/2017 20:13:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:13:26] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 20:13:26] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12989
+[28/Feb/2017 20:13:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:13:50] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 20:13:51] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/10/change/ HTTP/1.1" 200 13304
+[28/Feb/2017 20:13:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:13:56] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/10/change/ HTTP/1.1" 302 0
+[28/Feb/2017 20:13:56] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12985
+[28/Feb/2017 20:13:56] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:14:23] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 20:14:23] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6278
+[28/Feb/2017 20:14:23] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:19:36] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 20:20:08] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 20:20:08] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 20:20:08] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 20:53:27] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 20:53:31] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 4861
+[28/Feb/2017 20:53:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:53:36] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4662
+[28/Feb/2017 20:53:36] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:53:46] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 302 0
+[28/Feb/2017 20:53:46] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4919
+[28/Feb/2017 20:53:46] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:53:49] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4829
+[28/Feb/2017 20:53:49] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:53:55] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 302 0
+[28/Feb/2017 20:53:56] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4919
+[28/Feb/2017 20:53:56] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:54:08] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4834
+[28/Feb/2017 20:54:08] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:54:20] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 302 0
+[28/Feb/2017 20:54:20] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4921
+[28/Feb/2017 20:54:20] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:54:23] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 5619
+[28/Feb/2017 20:54:23] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:54:41] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 20:54:49] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/11/change/ HTTP/1.1" 200 13179
+[28/Feb/2017 20:54:49] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:54:54] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6045
+[28/Feb/2017 20:54:55] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12844
+[28/Feb/2017 20:54:58] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/10/change/ HTTP/1.1" 200 13166
+[28/Feb/2017 20:54:59] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12844
+[28/Feb/2017 20:55:02] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 20:55:03] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 5619
+[28/Feb/2017 20:55:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:55:06] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/3/change/ HTTP/1.1" 200 4935
+[28/Feb/2017 20:55:06] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:55:11] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/3/change/ HTTP/1.1" 302 0
+[28/Feb/2017 20:55:11] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 5835
+[28/Feb/2017 20:55:11] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:55:14] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/5/change/ HTTP/1.1" 200 4933
+[28/Feb/2017 20:55:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:55:18] INFO [django.server:131] "POST /admin/django_celery_beat/intervalschedule/5/change/ HTTP/1.1" 302 0
+[28/Feb/2017 20:55:18] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 5834
+[28/Feb/2017 20:55:18] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:55:28] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 20:55:31] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6045
+[28/Feb/2017 20:55:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:55:36] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/8/change/ HTTP/1.1" 200 13157
+[28/Feb/2017 20:55:36] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:55:50] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/8/change/ HTTP/1.1" 302 0
+[28/Feb/2017 20:55:50] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6270
+[28/Feb/2017 20:55:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:55:56] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/9/change/ HTTP/1.1" 200 13162
+[28/Feb/2017 20:55:56] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:56:03] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/9/change/ HTTP/1.1" 302 0
+[28/Feb/2017 20:56:03] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6278
+[28/Feb/2017 20:56:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:56:07] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/10/change/ HTTP/1.1" 200 13166
+[28/Feb/2017 20:56:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:56:11] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/10/change/ HTTP/1.1" 302 0
+[28/Feb/2017 20:56:11] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6278
+[28/Feb/2017 20:56:11] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:56:13] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/8/change/ HTTP/1.1" 200 13157
+[28/Feb/2017 20:56:13] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:56:19] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/8/change/ HTTP/1.1" 302 0
+[28/Feb/2017 20:56:19] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6272
+[28/Feb/2017 20:56:19] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 20:57:10] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 20:57:32] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 20:57:33] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 20:57:54] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 20:57:55] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 20:58:15] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 20:58:16] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 20:58:36] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 20:58:37] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 20:59:00] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 20:59:01] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 20:59:21] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 20:59:22] INFO [houses.tasks:57] start spider office
+[28/Feb/2017 20:59:39] INFO [houses.tasks:60] stop spider office
+[28/Feb/2017 20:59:40] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:00:01] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:00:02] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 21:00:22] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 21:00:23] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 21:00:43] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 21:00:44] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 21:01:06] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 21:01:07] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 21:01:26] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 21:01:27] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:01:43] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:01:45] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 21:02:00] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 21:02:01] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:02:17] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:02:18] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 21:02:35] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 21:02:36] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:02:59] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:03:00] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:03:23] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:03:24] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 21:03:37] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 21:03:43] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 21:03:43] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 21:03:44] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 21:04:03] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 21:06:56] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:07:16] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:08:56] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 21:09:16] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 21:11:15] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 21:11:23] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 21:11:43] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 21:11:56] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:12:21] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:15:56] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 21:16:14] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 21:16:56] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:17:12] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:17:13] INFO [houses.tasks:57] start spider office
+[28/Feb/2017 21:17:29] INFO [houses.tasks:60] stop spider office
+[28/Feb/2017 21:20:48] INFO [houses.tasks:36] start spider garage
+[28/Feb/2017 21:21:07] INFO [houses.tasks:39] stop spider garage
+[28/Feb/2017 21:21:15] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 21:21:56] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:22:24] INFO [houses.tasks:46] stop spider garage
+[28/Feb/2017 21:22:56] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 21:23:18] INFO [houses.tasks:53] stop spider office
+[28/Feb/2017 21:30:21] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 21:32:46] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:37:46] INFO [houses.tasks:43] start spider garage
+[28/Feb/2017 21:37:56] INFO [houses.tasks:57] start spider office
+[28/Feb/2017 21:37:58] INFO [houses.tasks:50] start spider office
+[28/Feb/2017 21:47:13] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[28/Feb/2017 21:48:24] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 23:09:30] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6047
+[28/Feb/2017 23:09:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:09:48] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3896
+[28/Feb/2017 23:09:50] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 302 0
+[28/Feb/2017 23:09:50] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4789
+[28/Feb/2017 23:09:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:09:55] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[28/Feb/2017 23:10:05] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[28/Feb/2017 23:10:05] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:10:08] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12292
+[28/Feb/2017 23:10:08] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:10:42] INFO [django.server:131] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[28/Feb/2017 23:14:19] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13619
+[28/Feb/2017 23:14:19] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:14:57] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13649
+[28/Feb/2017 23:14:57] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:15:29] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13642
+[28/Feb/2017 23:15:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:18:26] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12700
+[28/Feb/2017 23:18:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:18:42] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12706
+[28/Feb/2017 23:18:42] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:18:51] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12725
+[28/Feb/2017 23:18:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:19:32] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12725
+[28/Feb/2017 23:19:32] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:19:43] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12637
+[28/Feb/2017 23:19:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:19:55] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12633
+[28/Feb/2017 23:19:55] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:20:14] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[28/Feb/2017 23:20:14] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 200 12975
+[28/Feb/2017 23:20:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:20:58] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 200 13922
+[28/Feb/2017 23:20:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:21:09] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 200 13921
+[28/Feb/2017 23:21:09] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:21:22] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 200 12964
+[28/Feb/2017 23:21:22] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:21:36] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 302 0
+[28/Feb/2017 23:21:36] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 200 13035
+[28/Feb/2017 23:21:36] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:22:18] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 302 0
+[28/Feb/2017 23:22:18] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 200 14092
+[28/Feb/2017 23:22:19] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[28/Feb/2017 23:22:29] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 302 0
+[28/Feb/2017 23:22:29] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5237
+[28/Feb/2017 23:22:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[01/Mar/2017 22:13:10] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[01/Mar/2017 22:13:11] WARNING [django.request:152] Not Found: /favicon.ico
+[01/Mar/2017 22:13:11] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2162
+[01/Mar/2017 23:15:57] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[01/Mar/2017 23:16:01] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[01/Mar/2017 23:16:06] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[01/Mar/2017 23:17:07] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[01/Mar/2017 23:17:23] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11599
+[01/Mar/2017 23:17:35] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 67866
+[01/Mar/2017 23:17:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[01/Mar/2017 23:17:37] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11599
+[01/Mar/2017 23:17:40] INFO [django.server:131] "GET /admin/houses/garage/ HTTP/1.1" 200 67866
+[01/Mar/2017 23:17:42] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=rent HTTP/1.1" 200 73648
+[01/Mar/2017 23:17:42] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[01/Mar/2017 23:21:29] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[01/Mar/2017 23:26:37] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[02/Mar/2017 20:07:46] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[02/Mar/2017 20:07:49] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[02/Mar/2017 20:11:49] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 72789
+[02/Mar/2017 20:11:49] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:11:52] INFO [django.server:131] "GET /admin/houses/garage/167775/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 200 448310
+[02/Mar/2017 20:11:52] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:12:06] INFO [django.server:131] "POST /admin/houses/garage/167775/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 302 0
+[02/Mar/2017 20:12:06] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 73046
+[02/Mar/2017 20:12:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:13:16] INFO [django.server:131] "GET /admin/houses/garage/167776/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 200 448211
+[02/Mar/2017 20:13:16] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:13:19] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 72801
+[02/Mar/2017 20:13:24] INFO [django.server:131] "GET /admin/houses/garage/167775/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 200 448355
+[02/Mar/2017 20:13:24] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:13:35] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 72801
+[02/Mar/2017 20:13:42] INFO [django.server:131] "GET /admin/houses/garage/167777/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 200 448310
+[02/Mar/2017 20:13:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:13:46] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 72801
+[02/Mar/2017 20:13:51] INFO [django.server:131] "GET /admin/houses/garage/167769/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 200 448105
+[02/Mar/2017 20:13:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:13:58] INFO [django.server:131] "POST /admin/houses/garage/167769/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 302 0
+[02/Mar/2017 20:13:58] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 73012
+[02/Mar/2017 20:13:58] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:15:02] INFO [django.server:131] "GET /admin/houses/garage/167769/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 200 448099
+[02/Mar/2017 20:15:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:15:08] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 72806
+[02/Mar/2017 20:15:14] INFO [django.server:131] "GET /admin/houses/garage/167771/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 200 448321
+[02/Mar/2017 20:15:14] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:15:29] INFO [django.server:131] "POST /admin/houses/garage/167771/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 302 0
+[02/Mar/2017 20:15:29] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 73055
+[02/Mar/2017 20:15:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:15:36] INFO [django.server:131] "GET /admin/houses/garage/167769/change/?_changelist_filters=transaction__exact%3Dsale HTTP/1.1" 200 448099
+[02/Mar/2017 20:15:36] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:15:43] INFO [django.server:131] "GET /admin/houses/garage/?transaction__exact=sale HTTP/1.1" 200 72807
+[02/Mar/2017 20:17:21] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[02/Mar/2017 20:20:14] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[02/Mar/2017 20:20:35] INFO [django.server:131] "GET /admin/houses/ HTTP/1.1" 200 5503
+[02/Mar/2017 20:20:37] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11682
+[02/Mar/2017 20:20:43] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5003
+[02/Mar/2017 20:20:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:21:00] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/12/change/ HTTP/1.1" 200 13829
+[02/Mar/2017 20:21:00] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:22:57] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11682
+[02/Mar/2017 20:23:14] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 20:23:21] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5003
+[02/Mar/2017 20:23:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:23:28] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3340
+[02/Mar/2017 20:23:29] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 302 0
+[02/Mar/2017 20:23:29] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4788
+[02/Mar/2017 20:23:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:23:33] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 20:24:35] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[02/Mar/2017 20:24:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:24:37] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 20:24:38] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4613
+[02/Mar/2017 20:24:38] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:24:41] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6029
+[02/Mar/2017 20:24:41] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:24:55] INFO [django.server:131] "POST /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 302 0
+[02/Mar/2017 20:24:55] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5094
+[02/Mar/2017 20:24:55] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:24:57] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 20:24:59] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[02/Mar/2017 20:24:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:25:54] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[02/Mar/2017 20:25:54] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:35:23] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[02/Mar/2017 20:35:28] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 20:35:30] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[02/Mar/2017 20:35:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:35:33] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 20:35:36] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4874
+[02/Mar/2017 20:35:36] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:35:44] INFO [django.server:131] "POST /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 3316
+[02/Mar/2017 20:35:46] INFO [django.server:131] "POST /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 302 0
+[02/Mar/2017 20:35:46] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4746
+[02/Mar/2017 20:35:46] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 20:35:48] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6029
+[02/Mar/2017 20:35:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:11:06] INFO [django.server:131] "POST /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 302 0
+[02/Mar/2017 21:11:06] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5094
+[02/Mar/2017 21:11:06] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:11:09] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 21:11:11] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[02/Mar/2017 21:11:11] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:11:26] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/1/change/ HTTP/1.1" 200 12691
+[02/Mar/2017 21:11:26] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:11:43] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4649
+[02/Mar/2017 21:11:43] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:11:49] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12345
+[02/Mar/2017 21:11:49] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:12:35] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13750
+[02/Mar/2017 21:12:35] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:12:50] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[02/Mar/2017 21:12:50] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5252
+[02/Mar/2017 21:12:50] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:14:31] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[02/Mar/2017 21:14:47] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[02/Mar/2017 21:15:09] INFO [django.server:131] "GET / HTTP/1.1" 200 2951
+[02/Mar/2017 21:15:51] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 21:15:54] INFO [django.server:131] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 5619
+[02/Mar/2017 21:15:54] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:15:55] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 21:15:56] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5012
+[02/Mar/2017 21:15:57] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:16:00] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12345
+[02/Mar/2017 21:16:01] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:16:06] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5012
+[02/Mar/2017 21:16:07] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 21:16:09] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4874
+[02/Mar/2017 21:16:09] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:16:12] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6029
+[02/Mar/2017 21:16:12] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:16:17] INFO [django.server:131] "POST /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 302 0
+[02/Mar/2017 21:16:17] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5355
+[02/Mar/2017 21:16:17] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:16:21] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 21:16:40] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5012
+[02/Mar/2017 21:16:41] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:16:47] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3349
+[02/Mar/2017 21:16:49] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 302 0
+[02/Mar/2017 21:16:49] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4788
+[02/Mar/2017 21:16:49] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:16:52] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12398
+[02/Mar/2017 21:16:52] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:17:29] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[02/Mar/2017 21:17:29] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5256
+[02/Mar/2017 21:17:29] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:19:20] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/14/change/ HTTP/1.1" 200 13947
+[02/Mar/2017 21:19:21] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:20:56] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 21:20:59] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5135
+[02/Mar/2017 21:20:59] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:21:02] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/5/change/ HTTP/1.1" 200 6302
+[02/Mar/2017 21:21:02] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:23:46] INFO [django.server:131] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5135
+[02/Mar/2017 21:23:50] INFO [django.server:131] "GET /admin/django_celery_beat/ HTTP/1.1" 200 3386
+[02/Mar/2017 21:23:53] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 12398
+[02/Mar/2017 21:23:53] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:26:51] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[02/Mar/2017 21:26:51] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5628
+[02/Mar/2017 21:26:51] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:35:49] INFO [django.server:131] "GET / HTTP/1.1" 200 2949
+[02/Mar/2017 21:36:55] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/15/change/ HTTP/1.1" 200 13965
+[02/Mar/2017 21:36:55] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[02/Mar/2017 21:37:06] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/15/history/ HTTP/1.1" 200 2337
+[02/Mar/2017 21:37:11] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/15/change/ HTTP/1.1" 200 13965
+[02/Mar/2017 23:14:02] INFO [django.server:131] "GET / HTTP/1.1" 200 2949
+[03/Mar/2017 20:35:40] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5382
+[03/Mar/2017 20:35:41] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:03:09] INFO [django.server:131] "GET / HTTP/1.1" 200 2949
+[04/Mar/2017 15:34:41] INFO [django.server:131] "GET /admin/ HTTP/1.1" 302 0
+[04/Mar/2017 15:34:41] INFO [django.server:131] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1695
+[04/Mar/2017 15:34:42] INFO [django.server:131] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[04/Mar/2017 15:34:44] INFO [django.server:131] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[04/Mar/2017 15:34:44] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11683
+[04/Mar/2017 15:34:48] INFO [django.server:131] "GET /admin/houses/land/ HTTP/1.1" 200 97396
+[04/Mar/2017 15:34:49] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:35:10] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11683
+[04/Mar/2017 15:45:25] INFO [django.server:131] "GET /houses HTTP/1.1" 301 0
+[04/Mar/2017 15:45:26] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 4888
+[04/Mar/2017 15:45:41] INFO [django.server:131] "GET /houses/realestate/2637/ HTTP/1.1" 200 48
+[04/Mar/2017 15:55:47] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 50097
+[04/Mar/2017 15:55:48] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:56:07] INFO [django.server:131] "GET /admin/houses/house/166579/change/ HTTP/1.1" 200 455710
+[04/Mar/2017 15:56:07] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:56:27] INFO [django.server:131] "GET /admin/houses/house/ HTTP/1.1" 200 50097
+[04/Mar/2017 15:56:30] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11683
+[04/Mar/2017 15:56:34] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 48274
+[04/Mar/2017 15:56:34] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:56:37] INFO [django.server:131] "GET /admin/houses/realestate/9530/change/ HTTP/1.1" 200 43680
+[04/Mar/2017 15:56:37] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:56:43] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 48274
+[04/Mar/2017 15:56:45] INFO [django.server:131] "GET /admin/houses/realestate/9520/change/ HTTP/1.1" 200 44523
+[04/Mar/2017 15:56:46] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:56:53] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 48274
+[04/Mar/2017 15:57:03] INFO [django.server:131] "GET /admin/houses/realestate/9520/change/ HTTP/1.1" 200 44523
+[04/Mar/2017 15:57:03] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:58:25] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 48274
+[04/Mar/2017 15:58:25] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 15:58:31] INFO [django.server:131] "GET /admin/houses/realestate/9515/change/ HTTP/1.1" 200 44000
+[04/Mar/2017 15:58:31] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[04/Mar/2017 16:37:45] INFO [django.server:131] "GET /houses HTTP/1.1" 301 0
+[04/Mar/2017 16:37:45] INFO [django.server:131] "GET /houses/ HTTP/1.1" 200 4888
+[04/Mar/2017 16:37:57] INFO [django.server:131] "GET /admin/houses/realestate/ HTTP/1.1" 200 48274
+[05/Mar/2017 10:51:20] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 11683
+[05/Mar/2017 10:51:20] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[05/Mar/2017 10:51:23] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5382
+[05/Mar/2017 10:51:23] INFO [django.server:131] "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[05/Mar/2017 10:51:23] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035
+[05/Mar/2017 10:51:28] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3557
+[05/Mar/2017 10:51:30] INFO [django.server:131] "POST /admin/django_celery_beat/periodictask/ HTTP/1.1" 302 0
+[05/Mar/2017 10:51:30] INFO [django.server:131] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 4789
+[05/Mar/2017 10:51:30] INFO [django.server:131] "GET /admin/jsi18n/ HTTP/1.1" 200 7035

@@ -8,11 +8,24 @@ import re
 from .scrapertoolbelt import *
 from .agencies import *
 
+from scrapy.crawler import CrawlerProcess
+from scrapy.utils.project import get_project_settings
+
+# from idealista.crawlproperty import CrawlPropertyReactor
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 uas = loadUserAgents()
 
+'''
+def startPropertySpider():
+    # set up settings
+    print('start spider')
+    p = CrawlPropertyReactor(property_type='garage', transaction='rent', province='almeria')
+    p.run()
+    print('close spider')
+    # the script will block here until the crawling is finished
+'''
 
 def importAllhouses(source_name, country_name):
     """
