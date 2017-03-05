@@ -26,6 +26,8 @@ class RandomUserAgentMiddleware(object):
     def __init__(self, crawler):
         super(RandomUserAgentMiddleware, self).__init__()
         self.ua = UserAgent()
+        module_dir = os.path.dirname(__file__)  # get current directory
+        self.uafile = os.path.join(module_dir, 'user_agents.txt')
         self.ua_backup = self.loadUserAgents()
         self.per_proxy = crawler.settings.get('RANDOM_UA_PER_PROXY', False)
         self.proxy2ua = {}
@@ -36,10 +38,8 @@ class RandomUserAgentMiddleware(object):
             path to text file of user agents, one per line
             use as a backup if UserAgent() is not online
         """
-        module_dir = os.path.dirname(__file__)  # get current directory
-        uafile = os.path.join(module_dir, 'user_agents.txt')
         uas = []
-        with open(uafile, 'rb') as uaf:
+        with open(self.uafile, 'rb') as uaf:
             for ua in uaf.readlines():
                 if ua:
                     uas.append(ua.strip()[1: - 1 - 1])
@@ -65,7 +65,7 @@ class RandomUserAgentMiddleware(object):
             try:
                 request.headers.setdefault('User-Agent', self.ua.random)
             except Exception:
-                print('BYEEEEEEE')
+                print('BYEEEEEEE, %s' % self.uafile)
                 request.headers.setdefault('User-Agent', random.choice(self.ua_backup))
 
 

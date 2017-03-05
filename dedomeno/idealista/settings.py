@@ -12,7 +12,8 @@ import sys
 import os
 import django
 
-sys.path.append('/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno')
+# sys.path.insert(0, BASE_DIR+'/dedomeno')
+sys.path.append('../dedomeno')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dedomeno.settings'
 django.setup()
 

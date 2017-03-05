@@ -48,13 +48,10 @@ class PropertyPipeline(object):
             return None
 
     def close_spider(self, spider):
-        """
-        Email all the gigs that should be sent, and record that they were sent.
-        """
         print('SPIDER CLOSE, checking for offline items: %s as %s in %s' % (spider.property_type, spider.transaction, spider.province))
         set_spider = spider.spiderset
         set_db = set(Property.objects.filter(
-            online = True,
+            online=True,
             transaction=spider.transaction,
             address_province=spider.province,
             property_type=spider.property_type).values_list('slug', flat=True)
