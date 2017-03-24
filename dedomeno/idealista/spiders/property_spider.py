@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Scrpay imports
 import scrapy
 from scrapy.exceptions import CloseSpider
@@ -7,6 +8,7 @@ from idealista.items import RealEstateItem, HouseItem, RoomItem, OfficeItem, Lan
 from houses.models import Date, Price, RealEstate, House, Room, Office, Land, Garage, Commercial
 # Other imports
 from datetime import date
+import re
 
 
 class PropertySpider(scrapy.Spider):
@@ -133,6 +135,7 @@ class PropertySpider(scrapy.Spider):
         property_item = self.setPropertyItem()
         title = response.xpath('//span[@class="txt-bold"]/text()')
         # PROPERTY fields
+        # property_item['proxy'] = response.meta['proxy']
         property_item['title'] = title.extract_first()
         property_item['price_raw'] = int("".join((response.xpath('//p[@class="price"]/text()')[0].re('(\d)'))))
         property_item['source'] = 'idealista'
@@ -141,7 +144,7 @@ class PropertySpider(scrapy.Spider):
         property_item['transaction'] = title.re('(Alquiler|venta)')[0].lower()
         property_item['property_type'] = self.property_type
         property_item['address_province'] = self.province
-        # self.property_item['html'] = response.text
+        property_item['html'] = response.text
         property_item['desc'] = response.xpath('//div[@class="adCommentsLanguage expandable"]/text()').extract_first()
         property_item['name'] = response.xpath('//div[@class="advertiser-data txt-soft"]/p/text()').extract_first()
         # FIXED: phone sometimes is shown as:
@@ -151,7 +154,12 @@ class PropertySpider(scrapy.Spider):
         phones.append(response.xpath('//a[@class="_mobilePhone"]/text()').extract_first())
         phones.append(response.xpath('//div[@class="phone last-phone"]/text()').extract_first())
         property_item['phones'] = phones
+        property_item['address_exact'] = not bool(response.xpath('//div[@class="contextual full-width warning icon-feedbk-alert"]/text()').extract_first())
         property_item['address_raw'] = ".".join(response.xpath('//div[@id="addressPromo"]/ul/li/text()').extract())
+        # mapConfig={latitude:"42.0064667",longitude:"-5.6714257",
+        match = re.search(r"latitude:\"(.*)\",longitude:\"(.*)\",onMapElements", response.text)
+        property_item['latitude'] = match.group(1)
+        property_item['longitude'] = match.group(2)
         property_item['real_estate_raw'] = response.xpath('//a[@class="about-advertiser-name"]/@href').extract_first()
         # property_item = self.parse_garage(response, property_item)
         property_item = self.parse_property_middleware(response, property_item)

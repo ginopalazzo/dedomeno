@@ -49,8 +49,13 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # DECOUPLE! ALLOWED_HOSTS = []
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-# worker_max_tasks_per_child
-CELERY_WORKER_MAX_TASK_PER_CHILD = 1
+# CELERY CONFIGURATION: CELERY_SETTING_UPPER_CASE
+# http://docs.celeryproject.org/en/latest/userguide/configuration.html
+CELERY_WORKER_MAX_TASKS_PER_CHILD = 1
+CELERY_WORKER_CONCURRENCY = 1
+
+CELERY_ENABLE_UTC = False
+CELERYD_ENABLE_UTC = False
 
 # Application definition
 

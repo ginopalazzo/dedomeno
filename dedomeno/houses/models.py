@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import JSONField
 from multiselectfield import MultiSelectField
 
 
@@ -54,6 +55,10 @@ class Property(models.Model):
     price_raw = models.IntegerField(blank=True, null=True)
     address_province = models.CharField(max_length=200, blank=True, null=True)
     address_raw = models.CharField(max_length=2000, blank=True, null=True)
+    address = JSONField(blank=True, null=True)
+    address_exact = models.NullBooleanField()
+    latitude = models.CharField(max_length=200, blank=True, null=True)
+    longitude = models.CharField(max_length=200, blank=True, null=True)
     date_raw = models.DateField(blank=True, null=True)
     online = models.NullBooleanField(default=True)
 

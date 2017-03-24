@@ -36,28 +36,34 @@ class PropertyItem(DjangoItem):
 class HouseItem(DjangoItem):
     django_model = House
     phones = scrapy.Field()
+    proxy = scrapy.Field()
 
 
 class RoomItem(DjangoItem):
     django_model = Room
     phones = scrapy.Field()
+    proxy = scrapy.Field()
 
 
 class OfficeItem(DjangoItem):
     django_model = Office
     phones = scrapy.Field()
+    proxy = scrapy.Field()
 
 
 class GarageItem(DjangoItem):
     django_model = Garage
     phones = scrapy.Field()
+    proxy = scrapy.Field()
 
 
 class LandItem(DjangoItem):
     django_model = Land
     phones = scrapy.Field()
+    proxy = scrapy.Field()
 
 
 class CommercialItem(DjangoItem):
     django_model = Commercial
     phones = scrapy.Field()
+    proxy = scrapy.Field()

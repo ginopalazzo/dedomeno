@@ -7,6 +7,13 @@
 from datetime import date
 from idealista.items import DateItem, PriceItem
 from houses.models import Property
+from geopy.geocoders import GoogleV3, Nominatim
+import os
+import random
+import logging
+
+
+log = logging.getLogger(__name__)
 
 
 class PropertyPipeline(object):
@@ -17,7 +24,30 @@ class PropertyPipeline(object):
         item['transaction'] = self.compose_transaction(item['transaction'])
         item['real_estate_raw'] = self.compose_real_estate(item['real_estate_raw'])
         item['date_raw'] = date.today()
+        # item['address'] = self.compose_address(item['latitude'], item['longitude'], item['address_raw'], item['proxy'], spider.settings)
         return item
+    '''
+    def compose_address(self, latitude, longitude, address_raw, proxy_raw, settings):
+        print('PROXY: %s' % proxy_raw)
+        print('ADDRESS_RAW: %s' % address_raw)
+        coordinates = (latitude, longitude)
+        print('COORDINATES: %s' % str(coordinates))
+        proxy_raw = proxy_raw.split('//')[1]
+        proxy_list = settings.get('CUSTOM_PROXY_LIST')
+        # google_api_ley_list = settings.get('GOOGLE_API_KEY_LIST')
+        proxy = next(x for x in proxy_list if proxy_raw in x)
+        os.environ['http_proxy'] = proxy
+        os.environ['https_proxy'] = proxy
+        print('PROXY_DIC: %s' % proxy)
+        # g = GoogleV3(api_key=random.choice(google_api_ley_list))
+        # address = g.reverse(coordinates, exactly_one=True, timeout=10)
+        n = Nominatim()
+        address = n.reverse(coordinates, exactly_one=True, language='es', timeout=10)
+        os.environ.pop('http_proxy')
+        os.environ.pop('https_proxy')
+        print('ADDRESS: %s' % address.raw)
+        return address.raw
+    '''
 
     def compose_real_estate(self, real_estate):
         if real_estate is not None:
@@ -48,7 +78,7 @@ class PropertyPipeline(object):
             return None
 
     def close_spider(self, spider):
-        print('SPIDER CLOSE, checking for offline items: %s as %s in %s' % (spider.property_type, spider.transaction, spider.province))
+        log.info('SPIDER CLOSE, checking for offline items: %s as %s in %s' % (spider.property_type, spider.transaction, spider.province))
         set_spider = spider.spiderset
         set_db = set(Property.objects.filter(
             online=True,
@@ -57,9 +87,6 @@ class PropertyPipeline(object):
             property_type=spider.property_type).values_list('slug', flat=True)
         )
         set_offline = set_db - set_spider
-        print(set_db)
-        print(set_spider)
-        print(set_offline)
         today = date.today()
         for slug in set_offline:
             item = Property.objects.get(slug=slug)
@@ -71,7 +98,7 @@ class PropertyPipeline(object):
             item_price.save()
             item_date.save()
             item.save()
-        print('%d properties offline' % len(set_offline))
+        log.info('%d properties offline' % len(set_offline))
 
 
 class HousePipeline(object):

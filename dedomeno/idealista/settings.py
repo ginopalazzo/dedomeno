@@ -95,7 +95,7 @@ DOWNLOADER_MIDDLEWARES = {
 # If proxy mode is 2 uncomment this sentence :
 # CUSTOM_PROXY = "http://ginopalazzo:***REMOVED***@fr.proxymesh.com:31280"
 # If proxy mode is 3 uncomment this sentence :
-PROXY_LIST = '/Users/ginopalazzo/Magic/dedomeno-proyect/scrappers/houses/idealista/idealista/proxy_list.txt'
+# PROXY_LIST = '/Users/ginopalazzo/Magic/dedomeno-proyect/scrappers/houses/idealista/idealista/proxy_list.txt'
 BLACKLIST_HTTP_STATUS_CODES = [307]
 CUSTOM_PROXY_LIST = [
     'http://accounts1:YM5wTvgN@157.52.158.2:60099',
@@ -125,7 +125,8 @@ CUSTOM_PROXY_LIST = [
     'http://accounts1:YM5wTvgN@157.52.158.61:60099'
 ]
 
-CLOSESPIDER_ERRORCOUNT = 1
+
+CLOSESPIDER_ERRORCOUNT = 10
 
 # Configure item pipelines: * Configuration per Spider
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html

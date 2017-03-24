@@ -57,7 +57,6 @@ class RandomUserAgentMiddleware(object):
                 try:
                     self.proxy2ua[proxy] = self.ua.random
                 except Exception:
-                    print('HELLOOOOOOOOOO')
                     self.proxy2ua[proxy] = random.choice(self.ua_backup)
                 log.debug('Assign User-Agent %s to Proxy %s' % (self.proxy2ua[proxy], proxy))
             request.headers.setdefault('User-Agent', self.proxy2ua[proxy])
@@ -65,7 +64,7 @@ class RandomUserAgentMiddleware(object):
             try:
                 request.headers.setdefault('User-Agent', self.ua.random)
             except Exception:
-                print('BYEEEEEEE, %s' % self.uafile)
+                # print('Exception with uafile, %s' % self.uafile)
                 request.headers.setdefault('User-Agent', random.choice(self.ua_backup))
 
 
@@ -119,9 +118,9 @@ class RotatorProxy(object):
             proxy_address, len(self.proxies)))
 
     def process_response(self, request, response, spider):
-        print('   request: %s %s' % (request.url, request.meta))
-        print('   response: %s %s' % (response.url, response.status))
-        print('   num_pages: %s' % self._num_pages)
+        log.debug('   request: %s %s' % (request.url, request.meta))
+        log.debug('   response: %s %s' % (response.url, response.status))
+        log.debug('   num_pages: %s' % self._num_pages)
         self._num_pages = self._num_pages + 1
         if response.status in self._http_status_codes:
             del self.proxies[-1]

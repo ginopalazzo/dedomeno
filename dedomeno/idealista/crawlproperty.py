@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+'''
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
+
 
 class CrawlPropertyReactor:
     def __init__(self, transaction=None, property_type=None, province=None, *args, **kwargs):
@@ -15,12 +17,57 @@ class CrawlPropertyReactor:
             'idealista.pipelines.PricePipeline': 600,
         }, 0)
         # self.startPropertySpider()
+        self.process = CrawlerProcess(self.settings)
+
+    def run(self):
+        # set up settings
+        self.process.crawl('property', transaction=self.transaction, property_type=self.property_type, province=self.province)
+        self.process.join()
+        self.process.start()
+        # the script will block here until the crawling is finished
+
+    def stop(self):
+        self.process.stop()
+
+    def getIdealistaScheme(self):
+        return self.settings.get('IDEALISTA_URL_SCHEME')
+
+    def getIdealistaProvinces(self):
+        return self.getIdealistaScheme()['provinces']
+
+
+# p = CrawlPropertyReactor(property_type='garage', transaction='sale', province='lugo')
+# print(p.getIdealistaProvinces())
+# p.run()
+
+
+# no funciona con el for
+from scrapy.crawler import CrawlerProcess
+from scrapy.utils.project import get_project_settings
+from scrapy.utils.log import configure_logging
+
+configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
+
+
+class CrawlPropertyReactor:
+    def __init__(self, transaction=None, property_type=None, provinces=None, *args, **kwargs):
+        self.property_type = property_type
+        self.transaction = transaction
+        self.provinces = provinces
+        self.settings = get_project_settings()
+        self.settings.set('ITEM_PIPELINES', {
+            'idealista.pipelines.PropertyPipeline': 300,
+            'idealista.pipelines.%sPipeline' % property_type.capitalize(): 400,
+            'idealista.pipelines.DatePipeline': 500,
+            'idealista.pipelines.PricePipeline': 600,
+        }, 0)
 
     def run(self):
         # set up settings
         process = CrawlerProcess(self.settings)
-        process.crawl('property', transaction=self.transaction, property_type=self.property_type, province=self.province)
-        process.start()
+        for province in self.provinces:
+            process.crawl('property', transaction=self.transaction, property_type=self.property_type, province=province)
+            process.start()
         # the script will block here until the crawling is finished
 
     def getIdealistaScheme(self):
@@ -30,17 +77,19 @@ class CrawlPropertyReactor:
         return self.getIdealistaScheme()['provinces']
 
 
-p = CrawlPropertyReactor(property_type='garage', transaction='sale', province='lugo')
-# print(p.getIdealistaProvinces())
+p = CrawlPropertyReactor(property_type='garage', transaction='sale', provinces=['teruel', 'huesca', 'albacete', 'avila', 'caceres'])
 p.run()
+# print(p.getIdealistaProvinces())
 
 
-'''
+
+
 from scrapy.crawler import Crawler
 from twisted.internet import reactor
 from billiard import Process
 from scrapy.utils.project import get_project_settings
 from idealista.spiders.property_spider import PropertySpider
+
 
 class CrawlPropertyReactor(Process):
     def __init__(self, spider):
@@ -76,11 +125,13 @@ def run_spider(transaction, property_type, province):
     crawler.join()
 
 
+from scrapy import signals
 from scrapy.conf import settings
 from scrapy.utils.log import configure_logging
 from scrapy.crawler import Crawler
 from twisted.internet import reactor
 from billiard import Process
+from 
 from scrapy.utils.project import get_project_settings
 
 configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
@@ -99,7 +150,7 @@ class CrawlPropertyReactor(Process):
             'idealista.pipelines.DatePipeline': 500,
             'idealista.pipelines.PricePipeline': 600,
         }, 0)
-        self.crawler = Crawler(self.settings)
+        self.crawler = Crawler('property', self.settings)
         self.crawler.configure()
         self.crawler.signals.connect(reactor.stop, signal=signals.spider_closed)
 
@@ -114,23 +165,27 @@ def run_spider(transaction, property_type, province):
     crawler.start()
     crawler.join()
 
+
 run_spider('rent', 'garage', 'almeria')
 
 
-from twisted.internet import reactor
-import scrapy
+'''
+# funciona genial hasta que finaliza, que hay intento de reinicio del Reactor
+from twisted.internet import reactor, defer
 from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 from scrapy.utils.project import get_project_settings
+import pprint
 
 configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
 
 
 class CrawlPropertyReactor():
-    def __init__(self, transaction=None, property_type=None, province=None, *args, **kwargs):
+    def __init__(self, transaction=None, property_type=None, provinces=None, *args, **kwargs):
         self.property_type = property_type
+        self.stats_dic_list = []
         self.transaction = transaction
-        self.province = province
+        self.provinces = provinces
         self.settings = get_project_settings()
         self.settings.set('ITEM_PIPELINES', {
             'idealista.pipelines.PropertyPipeline': 300,
@@ -138,15 +193,37 @@ class CrawlPropertyReactor():
             'idealista.pipelines.DatePipeline': 500,
             'idealista.pipelines.PricePipeline': 600,
         }, 0)
-        self.runner = CrawlerRunner(self.settings)
+
+    @defer.inlineCallbacks
+    def conf(self):
+        runner = CrawlerRunner(self.settings)
+        for province in self.provinces:
+            property_crawler = runner.create_crawler('property')
+            yield runner.crawl(property_crawler, transaction=self.transaction, property_type=self.property_type, province=province)
+            province_dic_stats = {}
+            province_dic_stats['transaction'] = self.transaction
+            province_dic_stats['property_type'] = self.property_type
+            province_dic_stats['province'] = province
+            province_dic_stats['finish_reason'] = property_crawler.stats.get_value('finish_reason')
+            province_dic_stats['start_time'] = property_crawler.stats.get_value('start_time')
+            province_dic_stats['end_time'] = property_crawler.stats.get_value('end_time')
+            province_dic_stats['item_scraped_count'] = property_crawler.stats.get_value('item_scraped_count')
+            province_dic_stats['log_count/ERROR'] = property_crawler.stats.get_value('log_count/ERROR', default=0)
+            # province_dic_stats.update(property_crawler.stats.get_stats())
+            self.stats_dic_list.append(province_dic_stats)
+        reactor.stop()  # the script will block here until the crawling is finished
+        # pp = pprint.PrettyPrinter(indent=4)
+        # pp.pprint(self.stats_dic_list)
+        return self.stats_dic_list
+        # crawler.signals.connect(self.callback, signal=signals.spider_closed)
+        # get_stats()
+        # get_value(key, default=None)
+        # 'item_scraped_count'
 
     def run(self):
-        self.runner.crawl('property', transaction=self.transaction, property_type=self.property_type, province=self.province)
-        d = self.runner.join()
-        d.addBoth(lambda _: reactor.stop())
-        reactor.run()  # the script will block here until the crawling is finished
+        reactor.run()
 
-    def stop():
+    def stop(self):
         reactor.stop()
 
     def getIdealistaScheme(self):
@@ -156,7 +233,70 @@ class CrawlPropertyReactor():
         return self.getIdealistaScheme()['provinces'].keys()
 
 
-# spider = CrawlPropertyReactor(property_type='garage', transaction='sale', province='zamora')
-# print(spider.getIdealistaProvinces())
+# teruel 24 huesca 155 zamora 80 caceres 94
+# valencia 3154
+# spider = CrawlPropertyReactor(property_type='garage', transaction='sale', provinces=['teruel', 'melilla'])
+# spider.conf()
 # spider.run()
+
+'''
+from scrapy.crawler import CrawlerRunner
+from scrapy import log, signals
+from scrapy.settings import Settings
+from twisted.internet import reactor
+from datetime import datetime
+from scrapy.utils.project import get_project_settings
+# from idealista.spiders.property_spider import PropertySpider
+
+
+class CrawlPropertyReactor():
+    def __init__(self, transaction=None, property_type=None, provinces=None, *args, **kwargs):
+        self.starttime = datetime.now()
+        self.endtime = datetime.now()
+        self.property_type = property_type
+        self.transaction = transaction
+        self.provinces = provinces
+        self.settings = get_project_settings()
+        self.settings.set('ITEM_PIPELINES', {
+            'idealista.pipelines.PropertyPipeline': 300,
+            'idealista.pipelines.%sPipeline' % property_type.capitalize(): 400,
+            'idealista.pipelines.DatePipeline': 500,
+            'idealista.pipelines.PricePipeline': 600,
+        }, 0)
+
+    def configure_crawler(self, crawler, province):
+        # spider = PropertySpider(self.transaction, self.property_type, province)
+        # configure signals
+        crawler.signals.connect(self.callback, signal=signals.spider_closed)
+        # detach spider
+        crawler._spider = None
+        # configure and start the crawler
+        crawler.configure()
+        crawler.crawl('property', self.transaction, self.property_type, province)
+    # callback fired when the spider is closed
+
+    def callback(self, spider, reason):
+        try:
+            province = self.provinces.pop()
+            self.configure_crawler(province)
+        except IndexError:
+            # stop the reactor if no postal codes left
+            self.endtime = datetime.now()
+            print('start time: %s' % str(self.starttime))
+            print('end time: %s' % str(self.endtime))
+            reactor.stop()
+
+    def run(self):
+        crawler = CrawlerRunner(self.settings)
+        self.configure_crawler(crawler, self.provinces.pop())
+        crawler.start()
+        # start logging
+        log.start()
+        # start the reactor (blocks execution)
+        reactor.run()
+
+
+p = CrawlPropertyReactor(property_type='garage', transaction='sale', provinces=['huesca', 'teruel', 'albacete', 'avila', 'caceres'])
+# print(p.getIdealistaProvinces())
+p.run()
 '''
