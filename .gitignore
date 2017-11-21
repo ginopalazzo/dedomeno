@@ -4,7 +4,6 @@ __pycache__
 myenv
 dedoneno/mysite.log
 dedoneno/db.sqlite3
-staticfiles
 dedoneno/static
 dedomeno.sublime-workspace
 dedomeno.sublime-project

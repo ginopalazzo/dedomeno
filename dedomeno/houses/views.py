@@ -36,7 +36,6 @@ admin.site.get_urls = admin_urls
 
 def index(request):
     # template_name = 'houses/index.html'
-
     real_estate_list = RealEstate.objects.order_by('name')[:10]
     real_estates_total = RealEstate.objects.count()
     houses_total = House.objects.all().count()

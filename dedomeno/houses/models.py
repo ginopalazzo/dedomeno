@@ -1,9 +1,13 @@
+from multiselectfield import MultiSelectField
+
 from django.db import models
 from django.contrib.postgres.fields import JSONField
-from multiselectfield import MultiSelectField
 
 
 class RealEstate(models.Model):
+    """
+    Stores a Real Estate entity.
+    """
     name = models.CharField(max_length=500, null=True, blank=True)
     slug = models.SlugField(max_length=500, unique=True)
     logo = models.URLField(null=True, blank=True)
@@ -20,9 +24,10 @@ class RealEstate(models.Model):
 
 
 class Property(models.Model):
-    '''
-    Father Model for all the properties
-    '''
+    """
+    Father Model for all the properties; if :model:`houses.RealEstate`
+    is blank there is not a real estate involved
+    """
     # main data
     title = models.CharField(max_length=500, null=True)
     url = models.URLField(blank=True, null=True)
@@ -45,12 +50,13 @@ class Property(models.Model):
     )
     property_type = models.CharField(choices=PROPERTY_CHOICES, max_length=200, blank=True, null=True)
     # https://docs.djangoproject.com/en/1.8/ref/contrib/postgres/fields/#arrayfield
-    # equipment = ArrayField(models.CharField(max_length=5000, blank=True, null=True), null=True)
+    # equipment = ArrayField(models.CharField(max_length=5000, blank=True, null=True), null=True)
     # contact
     name = models.CharField(blank=True, max_length=500, null=True)
     phone_1 = models.CharField(blank=True, max_length=30, null=True)
     phone_2 = models.CharField(blank=True, max_length=30, null=True)
-    real_estate = models.ForeignKey(RealEstate, blank=True, null=True, on_delete=models.SET_NULL, help_text='If blank there is not a real estate involved')
+    real_estate = models.ForeignKey(RealEstate, blank=True, null=True, on_delete=models.SET_NULL,
+                                    help_text='If blank there is not a real estate involved')
     real_estate_raw = models.CharField(blank=True, max_length=200, null=True)
     price_raw = models.IntegerField(blank=True, null=True)
     address_province = models.CharField(max_length=200, blank=True, null=True)
@@ -67,6 +73,9 @@ class Property(models.Model):
 
 
 class Price(models.Model):
+    """
+    Stores the price of a :model:`houses.Property` for a period of time.
+    """
     value = models.IntegerField(blank=True, null=True)
     date_start = models.DateField(blank=True, null=True)
     date_end = models.DateField(blank=True, null=True)
@@ -77,6 +86,9 @@ class Price(models.Model):
 
 
 class Date(models.Model):
+    """
+    Stores the period of time a :model:`houses.Property` has been online
+    """
     online = models.DateField(blank=True, null=True)
     offline = models.DateField(blank=True, null=True)
     property_date = models.ForeignKey(Property, blank=True, null=True)
@@ -86,13 +98,16 @@ class Date(models.Model):
 
 
 class House(Property):
+    """
+    Stores a House type :model:`houses.Property`
+    """
     # house data
     house_type = models.CharField(max_length=200, null=True, blank=True)
     m2_total = models.IntegerField(blank=True, null=True)
     m2_to_use = models.IntegerField(blank=True, null=True)
     m2_terrain = models.IntegerField(blank=True, null=True)
-    rooms = models.IntegerField(blank=True, null=True)
-    wc = models.IntegerField(blank=True, null=True)
+    rooms = models.IntegerField(blank=True, null=True, default=0)
+    wc = models.IntegerField(blank=True, null=True, default=0)
     floor_num = models.CharField(max_length=200, null=True, blank=True)
     outside = models.CharField(max_length=20, null=True, blank=True)
     ORIENTATION_CHOICES = (
@@ -122,6 +137,9 @@ class House(Property):
 
 
 class Room(Property):
+    """
+    Stores a Room type :model:`houses.Property`
+    """
     # Características básicas
     house_type = models.CharField(max_length=200, null=True, blank=True)
     m2_total = models.IntegerField(blank=True, null=True)
@@ -150,6 +168,9 @@ class Room(Property):
 
 
 class Office(Property):
+    """
+    Stores a Office type :model:`houses.Property`
+    """
     # Basic
     m2_total = models.IntegerField(blank=True, null=True)
     m2_to_use = models.IntegerField(blank=True, null=True)
@@ -199,6 +220,9 @@ class Office(Property):
 
 
 class Garage(Property):
+    """
+    Stores a Garage type :model:`houses.Property`
+    """
     # Basic
     garage_type = models.CharField(max_length=200, null=True, blank=True)
     garage_number = models.IntegerField(blank=True, null=True)
@@ -212,6 +236,9 @@ class Garage(Property):
 
 
 class Land(Property):
+    """
+    Stores a Land type :model:`houses.Property`
+    """
     # Basic
     m2_total = models.IntegerField(blank=True, null=True)
     m2_min_rent = models.IntegerField(blank=True, null=True)
@@ -233,6 +260,9 @@ class Land(Property):
 
 
 class Commercial(Property):
+    """
+    Stores a Commercial type :model:`houses.Property`
+    """
     # Basic
     transfer_price = models.IntegerField(blank=True, null=True)
     m2_total = models.IntegerField(blank=True, null=True)

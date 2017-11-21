@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Scrpay imports
+# Scrapy imports
 import scrapy
 from scrapy.exceptions import CloseSpider
 from scrapy.utils.project import get_project_settings
@@ -12,48 +12,71 @@ import re
 
 
 class PropertySpider(scrapy.Spider):
-    ''' The PropertySpider will crawl every property for a transaction, property type and province given.
-        It will also crawl every Real Estate asociate with the Property.
+    """ The PropertySpider will crawl every property for a transaction, property type and province given.
+        It will also crawl every Real Estate associate with the Property.
         Example of the pipelines needed to crawl. Be aware that the type of Property (i.e. Commercial) is needed.
+        Usually you want to declare this in the script calling the spider.
         custom_settings = {
-        'ITEM_PIPELINES': {
-            'idealista.pipelines.PropertyPipeline': 300,
-            'idealista.pipelines.CommercialPipeline': 400,
-            'idealista.pipelines.DatePipeline': 500,
-            'idealista.pipelines.PricePipeline': 600,
-        }
+            'ITEM_PIPELINES': {
+                'idealista.pipelines.PropertyPipeline': 300,
+                'idealista.pipelines.{House, Room, Office, Garage, Land, Commercial}Pipeline': 400,
+                'idealista.pipelines.DatePipeline': 500,
+                'idealista.pipelines.PricePipeline': 600,
+            }
     }
-    '''
+    """
     name = "property"
 
     def __init__(self, transaction=None, property_type=None, province=None, *args, **kwargs):
-        ''' Initialize the spider with the console parameters
-        '''
+        """
+        Initialize the spider with the console parameters
+        :param transaction: could be rent or sale
+        :param property_type: must be a correct property type
+        :param province: must be a supported province or 'all'
+        :param args: TODO
+        :param kwargs: TODO
+        """
         super(PropertySpider, self).__init__(*args, **kwargs)
         self.property_type = property_type
         self.transaction = transaction
         self.province = province
+        # self.spiderset is use to check en the close_spider pipeline if there is a offline property in the db.
         self.spiderset = set()
         # set the start_urls with the console parameters
         self.urls_scheme = get_project_settings().get('IDEALISTA_URL_SCHEME')
-        self.checkArgs(transaction, property_type, province)
-        self.start_urls = self.setStartUrls(transaction, property_type, province)
+        self.check_args(transaction, property_type, province)
+        self.start_urls = self.set_start_urls(transaction, property_type, province)
 
-    def checkArgs(self, transaction, property_type, province):
+    def check_args(self, transaction, property_type, province):
+        """
+        Will check if the parameters of the __init__ method are well formatted.
+        :param transaction: must be either rent or sale
+        :param property_type: must be a correct property type
+        :param province: must be a supported province or 'all'
+        @raise CloseSpider: if the parameters doesnt fit with settings.IDEALISTA_URL_SCHEME
+        """
         if transaction != 'rent' and transaction != 'sale':
             raise CloseSpider('Transaction not supported')
+        # TODO: Change string concatenation
         if property_type not in self.urls_scheme[transaction + '_transaction']:
             raise CloseSpider('Property type not supported')
         if province not in self.urls_scheme['provinces'] and province != 'all':
             raise CloseSpider('Province not supported')
 
-    def setStartUrls(self, transaction_name, property_name, provinces_name):
-        ''' Comose a list of the properties urls relatetd
-            https://www.idealista.com/venta-viviendas/a-coruna-provincia/?ordenado-por=fecha-publicacion-desc
-        '''
+    def set_start_urls(self, transaction_name, property_name, provinces_name):
+        """
+        Compose property url list like:
+        https://www.idealista.com/venta-viviendas/a-coruna-provincia/?ordenado-por=fecha-publicacion-desc
+        :param transaction_name: type of transaction {sale, rent}
+        :param property_name: type of property {house, room, office, garage, land, commercial}
+        :param provinces_name: list of provinces to crawls
+        :return: the a list with all the initial urls to start to crawl
+        """
+        # TODO: It could be more flexible and mix properties and transactions as we do with provinces?
         url = self.urls_scheme['url']
         transaction = self.urls_scheme[transaction_name]
         separator = self.urls_scheme['separator']
+        # TODO: Change string concatenation
         property_name = self.urls_scheme[transaction_name + '_transaction'][property_name]
         query = self.urls_scheme['query_pub_date']
         property_list = []
@@ -62,13 +85,16 @@ class PropertySpider(scrapy.Spider):
         else:
             provinces = [self.urls_scheme['provinces'][provinces_name]]
         for province in provinces:
+            # TODO: Change string concatenation
             property_list.append(url + transaction + separator + property_name + '/' + province + '/' + query)
         return property_list
 
-    def setPropertyItem(self):
-        ''' Create a new Property Item type for the current spider.
-            It depends of the property set in the command line.
-        '''
+    def set_property_item(self):
+        """
+        Create a new Property Item type for the current spider.
+        It depends of the property set in the command line
+        :return: a Property child Item
+        """
         return {
             'house': HouseItem(),
             'room': RoomItem(),
@@ -78,10 +104,12 @@ class PropertySpider(scrapy.Spider):
             'commercial': CommercialItem(),
         }.get(self.property_type, 'Not a valid property')
 
-    def setPropertyObject(self, slug):
-        ''' Create a new Property Item type for the current spider.
-            It depends of the property set in the command line.
-        '''
+    def set_property_object(self, slug):
+        """
+        Create a new Property Object that will be stored in the database.
+        :param slug: id of the property (prefix(id for Idealista) + - + property number)
+        :return: a new Property child object, initialize with his slug.
+        """
         return {
             'house': House.objects.filter(slug=slug).first(),
             'room': Room.objects.filter(slug=slug).first(),
@@ -92,21 +120,25 @@ class PropertySpider(scrapy.Spider):
         }.get(self.property_type, 'Not a valid property')
 
     def parse(self, response):
-        ''' will parse every property in the start
-        '''
+        """
+        Will parse every property url list in self.start_urls, and capture the property and next page url
+        :param response: response of a list of properties page
+        :return: yield the property page or next list of properties page
+        """
         for item in response.xpath('//div[@class="item-info-container"]'):
             item_page = response.urljoin(item.xpath('.//a[@class="item-link "]/@href').extract_first())
+            # TODO: Change string concatenation
             slug = 'id-' + item_page.split("/")[4]
             self.spiderset.add(slug)
             price = int("".join((item.xpath('.//span[@class="item-price"]/text()')[0].re('(\d)'))))
-            property_obj = self.setPropertyObject(slug)
-            # property_obj = House.objects.filter(slug=slug).first()
-            # check if there is already a property with that slug
+            property_obj = self.set_property_object(slug)
+            # if there is already a property object in the db with that slug and check for changes: price & offline
             if property_obj:
                 # check if last price has change
                 property_price = property_obj.price_set.order_by('-date_start').first()
-                # check just in case we have a property without price value.
+                # check just in case we have a property without price value
                 if property_price:
+                    # Update the price if the new one is different from the one store in the db
                     if property_price.value != price:
                         property_price.date_end = date.today()
                         property_price.save()
@@ -118,8 +150,8 @@ class PropertySpider(scrapy.Spider):
                         Date.objects.create(online=date.today(), property_date=property_obj)
                         if property_price.value == price:
                             Price.objects.create(value=int(price), date_start=date.today(), property_price=property_obj)
-                        # new Date
-            # if there is not a property with that slug scrapy it
+                            # new Date
+            # if there is not a property with that slug, scrapy it
             else:
                 yield scrapy.Request(item_page, callback=self.parse_property)
         # next page definition: Siguiente. Follow each page
@@ -129,17 +161,21 @@ class PropertySpider(scrapy.Spider):
             yield scrapy.Request(next_page, callback=self.parse)
 
     def parse_property(self, response):
-        ''' Will parse all the property atributes and return a propertyItem object.
-        '''
+        """
+        Will parse all the property attributes and return a propertyItem object.
+        :param response: response of a property page
+        :return: yield property item (to the PipeLines!!) or a RealEstate Request
+        """
         # example: property_item = GarageItem()
-        property_item = self.setPropertyItem()
+        property_item = self.set_property_item()
         title = response.xpath('//span[@class="txt-bold"]/text()')
         # PROPERTY fields
-        # property_item['proxy'] = response.meta['proxy']
+        # property_item['proxy'] = response.meta['proxy']
         property_item['title'] = title.extract_first()
         property_item['price_raw'] = int("".join((response.xpath('//p[@class="price"]/text()')[0].re('(\d)'))))
         property_item['source'] = 'idealista'
         property_item['url'] = response.url
+        # TODO: Change string concatenation
         property_item['slug'] = 'id-' + response.url.split("/")[4]
         property_item['transaction'] = title.re('(Alquiler|venta)')[0].lower()
         property_item['property_type'] = self.property_type
@@ -148,29 +184,34 @@ class PropertySpider(scrapy.Spider):
         property_item['desc'] = response.xpath('//div[@class="adCommentsLanguage expandable"]/text()').extract_first()
         property_item['name'] = response.xpath('//div[@class="advertiser-data txt-soft"]/p/text()').extract_first()
         # FIXED: phone sometimes is shown as:
-        phones = []
-        phones.append(response.xpath('//p[@class="txt-big txt-bold _browserPhone"]/text()').extract_first())
-        phones.append(response.xpath('//p[@class="txt-bold _browserPhone icon-phone"]/text()').extract_first())
-        phones.append(response.xpath('//a[@class="_mobilePhone"]/text()').extract_first())
-        phones.append(response.xpath('//div[@class="phone last-phone"]/text()').extract_first())
+        phones = [response.xpath('//p[@class="txt-big txt-bold _browserPhone"]/text()').extract_first(),
+                  response.xpath('//p[@class="txt-bold _browserPhone icon-phone"]/text()').extract_first(),
+                  response.xpath('//a[@class="_mobilePhone"]/text()').extract_first(),
+                  response.xpath('//div[@class="phone last-phone"]/text()').extract_first()]
         property_item['phones'] = phones
-        property_item['address_exact'] = not bool(response.xpath('//div[@class="contextual full-width warning icon-feedbk-alert"]/text()').extract_first())
+        property_item['address_exact'] = not bool(
+            response.xpath('//div[@class="contextual full-width warning icon-feedbk-alert"]/text()').extract_first())
         property_item['address_raw'] = ".".join(response.xpath('//div[@id="addressPromo"]/ul/li/text()').extract())
         # mapConfig={latitude:"42.0064667",longitude:"-5.6714257",
         match = re.search(r"latitude:\"(.*)\",longitude:\"(.*)\",onMapElements", response.text)
         property_item['latitude'] = match.group(1)
         property_item['longitude'] = match.group(2)
         property_item['real_estate_raw'] = response.xpath('//a[@class="about-advertiser-name"]/@href').extract_first()
-        # property_item = self.parse_garage(response, property_item)
+
+        # Will continue parsing the child property, with the correct specific child parameters
+        # Example: property_item = self.parse_garage(response, property_item)
         property_item = self.parse_property_middleware(response, property_item)
+
         # If property has a real estate
         if property_item['real_estate_raw']:
+            # TODO: Change string concatenation
             real_estate_slug = 'id-' + property_item['real_estate_raw'].split('/')[2]
             real_estate = RealEstate.objects.filter(slug=real_estate_slug)
-            # If the real estate is not in de db
+            # if the real estate is not in de db
             if not real_estate:
                 real_estate_page = response.urljoin(property_item['real_estate_raw'])
-                yield scrapy.Request(real_estate_page, callback=self.parse_real_estate, meta={'property_item': property_item})
+                yield scrapy.Request(real_estate_page, callback=self.parse_real_estate,
+                                     meta={'property_item': property_item})
             else:
                 property_item['real_estate'] = real_estate.first()
                 yield property_item
@@ -178,6 +219,12 @@ class PropertySpider(scrapy.Spider):
             yield property_item
 
     def parse_property_middleware(self, response, property_item):
+        """
+        Behave as a middleware between the parse_property and parse_(property_type)
+        :param response: response of a property page
+        :param property_item: a father property item waiting to fill the property child attributes
+        :return: a call to the specific parse property type function
+        """
         dic = {
             'house': self.parse_house,
             'room': self.parse_room,
@@ -189,8 +236,12 @@ class PropertySpider(scrapy.Spider):
         return dic.get(self.property_type, 'Not a valid property')(response, property_item)
 
     def parse_house(self, response, property_item):
-        ''' will parse House atributes. Return the Property
-        '''
+        """
+        Will parse house property type specific attributes
+        :param response: response of a property house page
+        :param property_item: a father property item waiting to fill the property house attributes
+        :return: return a property item
+        """
         # Características básicas
         basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
         title = response.xpath('//span[@class="txt-bold"]/text()')
@@ -222,8 +273,12 @@ class PropertySpider(scrapy.Spider):
         return property_item
 
     def parse_room(self, response, property_item):
-        ''' will parse Room atributes. Return the Property
-        '''
+        """
+        Will parse room property type specific attributes
+        :param response: response of a property room page
+        :param property_item: a father property item waiting to fill the property room attributes
+        :return: return a property item
+        """
         # Características básicas
         basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
         property_item['house_type'] = "".join(basic.re('abitación en (.+) de')).strip().lower()
@@ -255,8 +310,12 @@ class PropertySpider(scrapy.Spider):
         return property_item
 
     def parse_office(self, response, property_item):
-        ''' will parse Office atributes. Return the Property
-        '''
+        """
+        Will parse office property type specific attributes
+        :param response: response of a property office page
+        :param property_item: a father property item waiting to fill the property office attributes
+        :return: return a property item
+        """
         # Basic
         basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
         property_item['m2_total'] = basic.re('([0-9]*[.]?[0-9]+)\sm²\sconstruidos')
@@ -299,8 +358,12 @@ class PropertySpider(scrapy.Spider):
         return property_item
 
     def parse_garage(self, response, property_item):
-        ''' will parse Garage atributes. Return the Property
-        '''
+        """
+        Will parse garage property type specific attributes
+        :param response: response of a property garage page
+        :param property_item: a father property item waiting to fill the property garage attributes
+        :return: return a property item
+        """
         # Características básicas
         basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
         property_item['garage_type'] = "".join(basic.re('Plaza\spara\s(.+)')).strip().lower()
@@ -316,8 +379,12 @@ class PropertySpider(scrapy.Spider):
         return property_item
 
     def parse_land(self, response, property_item):
-        ''' will parse Land atributes. Return the Property
-        '''
+        """
+        Will parse land property type specific attributes
+        :param response: response of a property land page
+        :param property_item: a father property item waiting to fill the property land attributes
+        :return: return a property item
+        """
         # Basic
         basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
         property_item['m2_total'] = basic.re('uperficie\stotal\sdel\sterreno\s([0-9]*[.]?[0-9]+)\sm²')
@@ -342,11 +409,17 @@ class PropertySpider(scrapy.Spider):
         return property_item
 
     def parse_commercial(self, response, property_item):
-        ''' will parse Commercial atributes. Return the Property
-        '''
+        """
+        Will parse commercial property type specific attributes
+        :param response: response of a property commercial page
+        :param property_item: a father property item waiting to fill the property commercial attributes
+        :return: return a property item
+        """
         # Basic
         basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
-        property_item['transfer_price'] = response.xpath('//div[@class="details-block clearfix"]/p[@class="more-details"]/text()').re('Traspaso\spor\s([0-9]*[.]?[0-9]+)\s€')
+        property_item['transfer_price'] = response.xpath(
+            '//div[@class="details-block clearfix"]/p[@class="more-details"]/text()').re(
+            'Traspaso\spor\s([0-9]*[.]?[0-9]+)\s€')
         property_item['m2_total'] = basic.re('([0-9]*[.]?[0-9]+)\sm²\sconstruidos')
         property_item['m2_to_use'] = basic.re('([0-9]*[.]?[0-9]+)\sm²\sútiles')
         property_item['m2_terrain'] = basic.re('Parcela de (.+) m²')
@@ -374,14 +447,18 @@ class PropertySpider(scrapy.Spider):
         return property_item
 
     def parse_real_estate(self, response):
-        ''' will parse RealEstate atributes and save a RealEstate Item.
-            Return the Property Item liked with the RealEstate Item.
-        '''
+        """
+        Will parse real estate attributes and save a real estate object in the db.
+        :param response: response of a Real Estate page.
+        :return: yield the property item linked with the RealEstate Item.
+        """
         real_estate = RealEstateItem()
         real_estate['name'] = response.xpath('//div[@class="office-title"]/h2/text()').extract_first()
+        # TODO: Change string concatenation
         real_estate['slug'] = 'id-' + response.url.split('/')[4]
         logo = response.xpath('//div[@class="logo-branding"]/img/@src').extract_first()
         if logo:
+            # TODO: Change string concatenation
             real_estate['logo'] = 'https:' + logo
         real_estate['web'] = response.xpath('//div[@id="online"]/a/@href').extract_first()
         # str(real_estate['web'])[:199]
@@ -391,7 +468,10 @@ class PropertySpider(scrapy.Spider):
         # real_estate['html'] = response.text
         real_estate['desc'] = response.xpath('//p[@class="office-description"]/text()').extract_first()
         real_estate['telephone'] = response.xpath('//*[@class="icon-phone"]/span/text()').extract_first()
-        real_estate['address'] = ''.join(response.xpath('//a[@class="showMap icon-location"]/div/span/text()').extract()) + ''.join(response.xpath('//span[@class="regular-address"]/span/text()').extract())
+        real_estate['address'] = ''.join(
+            # TODO: Change string concatenation
+            response.xpath('//a[@class="showMap icon-location"]/div/span/text()').extract()) + ''.join(
+            response.xpath('//span[@class="regular-address"]/span/text()').extract())
         real_estate['source'] = 'idealista'
         real_estate_ob = real_estate.save()
         property_item = response.meta['property_item']

@@ -6,9 +6,20 @@ import logging
 
 logger = logging.getLogger(__name__)
 '''
+# remove all tasks from queue: celery. 
+celery -A proj purge
+# django-celery-beat: enables you to store the periodic task schedule in the database
+# https://github.com/celery/django-celery-beat
+# Run the RabbitMQ message broker
+# https://www.rabbitmq.com/getstarted.html
 sudo rabbitmq-server
+# Run Flower, a web based tool for monitoring and administrating Celery clusters
+# http://flower.readthedocs.io/en/latest/features.html
 celery -A dedomeno flower
+# Celery: 
+# Start the celery worker
 celery -A dedomeno worker --loglevel=INFO
+# Start the celery beat (schedule tasks)
 celery -A dedomeno beat -l info -S django
 
 ["palencia", "zaragoza", "barcelona", "valladolid", "las palmas", "cuenca", "melilla", "cordoba", "toledo", "lerida", "leon", "badajoz", "granada", "burgos", "soria", "a coruña", "gerona", "lugo", "ciudad real", "tenerife", "asturias", "baleares", "ourense", "tarragona", "avila", "almeria", "malaga", "la rioja", "valencia", "castellon", "cadiz", "albacete", "alicante", "cantabria", "huelva", "pontevedra", "segovia", "navarra", "jaen", "guadalajara", "salamanca", "zamora", "guipuzcoa", "alava", "murcia", "huesca", "caceres", "vizcaya", "sevilla", "madrid", "teruel", "ceuta"]

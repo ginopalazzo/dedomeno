@@ -17,7 +17,16 @@ log = logging.getLogger(__name__)
 
 
 class PropertyPipeline(object):
+    """
+    Is a pipeline to process all the Property Items and clean them
+    """
     def process_item(self, item, spider):
+        """
+        Clean and format the attributes of the property item.
+        :param item: property item.
+        :param spider: spider that has crawl the property item.
+        :return: the property item .
+        """
         phone = self.compose_phone(item['phones'])
         item['phone_1'] = phone[0]
         item['phone_2'] = phone[1]
@@ -27,6 +36,7 @@ class PropertyPipeline(object):
         # item['address'] = self.compose_address(item['latitude'], item['longitude'], item['address_raw'], item['proxy'], spider.settings)
         return item
     '''
+    # This was used to compose an address with a GeoService (i.e Google, OpenStreetMaps...)
     def compose_address(self, latitude, longitude, address_raw, proxy_raw, settings):
         print('PROXY: %s' % proxy_raw)
         print('ADDRESS_RAW: %s' % address_raw)
@@ -78,7 +88,12 @@ class PropertyPipeline(object):
             return None
 
     def close_spider(self, spider):
-        log.info('SPIDER CLOSE, checking for offline items: %s as %s in %s' % (spider.property_type, spider.transaction, spider.province))
+        """
+        Check in the db for any property that doesnt belong to scarpped properties and set it offline.
+        :param spider: spider has spiderset atribute with all the slugs of the scrapped properties.
+        """
+        log.info('SPIDER CLOSE, checking for offline items: %s as %s in %s' % (
+            spider.property_type, spider.transaction, spider.province))
         set_spider = spider.spiderset
         set_db = set(Property.objects.filter(
             online=True,

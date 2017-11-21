@@ -12,6 +12,7 @@ import sys
 import os
 import django
 
+# ------------ DJANGO SETTINGS ------------
 # sys.path.insert(0, BASE_DIR+'/dedomeno')
 sys.path.append('../dedomeno')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'dedomeno.settings'
@@ -23,69 +24,75 @@ SPIDER_MODULES = ['idealista.spiders']
 NEWSPIDER_MODULE = 'idealista.spiders'
 
 
-LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'WARNING'
+
+
+# ------------ CRAWLER SETTINGS ------------
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0'
-
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
-
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 1
-
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY = 0.8
 # The download delay setting will honor only one of:
-#CONCURRENT_REQUESTS_PER_DOMAIN = 10
-#CONCURRENT_REQUESTS_PER_IP = 1
-
+# CONCURRENT_REQUESTS_PER_DOMAIN = 10
+# CONCURRENT_REQUESTS_PER_IP = 1
 # Disable cookies (enabled by default)
 COOKIES_ENABLED = False
-
 # Disable Telnet Console (enabled by default)
-#TELNETCONSOLE_ENABLED = False
-
+# TELNETCONSOLE_ENABLED = False
 # Override the default request headers:
-#DEFAULT_REQUEST_HEADERS = {
-#   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-#   'Accept-Language': 'en',
-#}
-
-# Enable or disable spider middlewares
-# See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    'idealista.middlewares.IdealistaSpiderMiddleware': 543,
-#}
-
+# DEFAULT_REQUEST_HEADERS = {
+#    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#    'Accept-Language': 'en',
+# }
 # Retry many times since proxies often fail
 RETRY_TIMES = 4
 # Retry on most error codes since proxies fail for different reasons
 RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
-
+# Enables o disables the redirect
 REDIRECT_ENABLED = False
+# Closes the spider if n errors occurred
+CLOSESPIDER_ERRORCOUNT = 10
 
+
+# ------------ SPIDER MIDDLEWARES SETTINGS ------------
+# Enable or disable spider middlewares
+# See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
+# SPIDER_MIDDLEWARES = {
+#     'idealista.middlewares.IdealistaSpiderMiddleware': 543,
+# }
+
+
+# ------------ DOWNLOADER MIDDLEWARES SETTINGS ------------
 # Enable or disable downloader middlewares
-# See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     # check if its works without RedirectMiddleware
     # 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
     # 'idealista.idealistamiddlewares.redirect.RedirectMiddleware': 1,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 80,
-    'idealista.middlewares.RotatorProxy': 100,
+    # 'idealista.middlewares.RotatorProxy': 100,
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'idealista.middlewares.RandomUserAgentMiddleware': 120,
 }
+# See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 
+
+# ------------ EXTENSIONS SETTINGS ------------
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
-#EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
-#    'scrapy.extensions.closespider.CloseSpider': 500,
-#}
+# EXTENSIONS = {
+#     'scrapy.extensions.telnet.TelnetConsole': None,
+#     'scrapy.extensions.closespider.CloseSpider': 500,
+# }
 
+
+# ------------ PROXIES SETTINGS ------------
 # Proxy mode
 # 0 = Every requests have different proxy
 # 1 = Take only one proxy from the list and assign it to every requests
@@ -126,8 +133,7 @@ CUSTOM_PROXY_LIST = [
 ]
 
 
-CLOSESPIDER_ERRORCOUNT = 10
-
+# ------------ PIPELINES SETTINGS ------------
 # Configure item pipelines: * Configuration per Spider
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
@@ -135,6 +141,8 @@ CLOSESPIDER_ERRORCOUNT = 10
     # 'idealista.pipelines.HousePipeline': 300,
 #}
 
+
+# ------------ AUTOTHROTTLE SETTINGS ------------
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = False
@@ -148,6 +156,8 @@ CLOSESPIDER_ERRORCOUNT = 10
 # Enable showing throttling stats for every response received:
 AUTOTHROTTLE_DEBUG = True
 
+
+# ------------ HTTP CACHING SETTINGS ------------
 # Enable and configure HTTP caching (disabled by default)
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
 #HTTPCACHE_ENABLED = True
@@ -156,6 +166,16 @@ AUTOTHROTTLE_DEBUG = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+
+# ------------ EMAIL WARNING SETTINGS ------------
+# The gmail account will be use to send the warning emails to the recipient
+GMAIL_USER = 'ginopalazzo@gmail.com'
+GMAIL_PASSWORD = '***REMOVED***'
+RECIPIENT = 'ginopalazzo@gmail.com'
+
+
+# ------------ IDEALISTA SETTINGS ------------
+# Dictionary with the url scheme of idealista to compose urls
 IDEALISTA_URL_SCHEME = {
     'source': 'Idealista',
     'url': 'https://www.idealista.com/',

@@ -177,7 +177,7 @@ from scrapy.utils.log import configure_logging
 from scrapy.utils.project import get_project_settings
 import pprint
 
-configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s'})
+configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s', 'LOG_LEVEL': 'INFO'})
 
 
 class CrawlPropertyReactor():
@@ -206,7 +206,7 @@ class CrawlPropertyReactor():
             province_dic_stats['province'] = province
             province_dic_stats['finish_reason'] = property_crawler.stats.get_value('finish_reason')
             province_dic_stats['start_time'] = property_crawler.stats.get_value('start_time')
-            province_dic_stats['end_time'] = property_crawler.stats.get_value('end_time')
+            province_dic_stats['finish_time'] = property_crawler.stats.get_value('finish_time')
             province_dic_stats['item_scraped_count'] = property_crawler.stats.get_value('item_scraped_count')
             province_dic_stats['log_count/ERROR'] = property_crawler.stats.get_value('log_count/ERROR', default=0)
             # province_dic_stats.update(property_crawler.stats.get_stats())
@@ -236,8 +236,9 @@ class CrawlPropertyReactor():
 # teruel 24 huesca 155 zamora 80 caceres 94
 # valencia 3154
 # spider = CrawlPropertyReactor(property_type='garage', transaction='sale', provinces=['teruel', 'melilla'])
-# spider.conf()
-# spider.run()
+spider = CrawlPropertyReactor(property_type='house', transaction='rent', provinces=['cuenca'])
+spider.conf()
+spider.run()
 
 '''
 from scrapy.crawler import CrawlerRunner

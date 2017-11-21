@@ -49,16 +49,18 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 # DECOUPLE! ALLOWED_HOSTS = []
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-# CELERY CONFIGURATION: CELERY_SETTING_UPPER_CASE
+
+# ------------ CELERY SETTINGS ------------
+# CELERY_SETTING_UPPER_CASE
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html
 CELERY_WORKER_MAX_TASKS_PER_CHILD = 1
 CELERY_WORKER_CONCURRENCY = 1
-
 CELERY_ENABLE_UTC = False
 CELERYD_ENABLE_UTC = False
 
-# Application definition
 
+# ------------ DJANGO SETTINGS ------------
+#  Application definition
 INSTALLED_APPS = [
     'houses.apps.HousesConfig',
     'idealista.apps.IdealistaConfig',
@@ -69,6 +71,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admindocs',
     'multiselectfield',
 ]
 
@@ -103,9 +106,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'dedomeno.wsgi.application'
 
 
-# Database
+# ------------ DATABASE SETTINGS ------------
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-
 DATABASES = {
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
@@ -123,14 +125,13 @@ DATABASES = {
         'PORT': '',
     }
 }
-
 # Update database configuration with $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-# Password validation
-# https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
+# ------------ PASSWORD VALIDATION SETTINGS ------------
+# https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -147,25 +148,22 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
+# ------------ INTERNATIONALIZATION SETTINGS ------------
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
-
 LANGUAGE_CODE = 'es'
-
 TIME_ZONE = 'Europe/Madrid'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
+# ------------ STATIC FILES SETTINGS ------------
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
 STATIC_URL = '/static/'
 
+
+# ------------ LOGGING SETTINGS ------------
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
