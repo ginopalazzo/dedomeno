@@ -24,10 +24,12 @@ SPIDER_MODULES = ['idealista.spiders']
 NEWSPIDER_MODULE = 'idealista.spiders'
 
 
-LOG_LEVEL = 'WARNING'
+LOG_LEVEL = 'INFO'
 
 
 # ------------ CRAWLER SETTINGS ------------
+'''
+# ----- Polite Idealista crawl settings ----
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0'
 # Obey robots.txt rules
@@ -58,7 +60,38 @@ RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
 REDIRECT_ENABLED = False
 # Closes the spider if n errors occurred
 CLOSESPIDER_ERRORCOUNT = 10
+'''
 
+# Crawl responsibly by identifying yourself (and your website) on the user-agent
+# USER_AGENT = 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:47.0) Gecko/20100101 Firefox/47.0'
+# Obey robots.txt rules
+ROBOTSTXT_OBEY = True
+# Configure maximum concurrent requests performed by Scrapy (default: 16)
+#!CONCURRENT_REQUESTS = 1
+# Configure a delay for requests for the same website (default: 0)
+# See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
+# See also autothrottle settings and docs
+#!DOWNLOAD_DELAY = 0.04
+# The download delay setting will honor only one of:
+# CONCURRENT_REQUESTS_PER_DOMAIN = 10
+# CONCURRENT_REQUESTS_PER_IP = 1
+# Disable cookies (enabled by default)
+COOKIES_ENABLED = False
+# Disable Telnet Console (enabled by default)
+# TELNETCONSOLE_ENABLED = False
+# Override the default request headers:
+# DEFAULT_REQUEST_HEADERS = {
+#    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#    'Accept-Language': 'en',
+# }
+# Retry many times since proxies often fail
+RETRY_TIMES = 4
+# Retry on most error codes since proxies fail for different reasons
+RETRY_HTTP_CODES = [500, 503, 504, 400, 403, 404, 408]
+# Enables o disables the redirect
+REDIRECT_ENABLED = False
+# Closes the spider if n errors occurred
+CLOSESPIDER_ERRORCOUNT = 10
 
 # ------------ SPIDER MIDDLEWARES SETTINGS ------------
 # Enable or disable spider middlewares
@@ -75,7 +108,7 @@ DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
     # 'idealista.idealistamiddlewares.redirect.RedirectMiddleware': 1,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 80,
-    # 'idealista.middlewares.RotatorProxy': 100,
+    'idealista.middlewares.RotatorProxy': None,
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'idealista.middlewares.RandomUserAgentMiddleware': 120,
@@ -104,34 +137,21 @@ DOWNLOADER_MIDDLEWARES = {
 # If proxy mode is 3 uncomment this sentence :
 # PROXY_LIST = '/Users/ginopalazzo/Magic/dedomeno-proyect/scrappers/houses/idealista/idealista/proxy_list.txt'
 BLACKLIST_HTTP_STATUS_CODES = [307]
+
+CUSTOM_PROXY_LIST = [
+    'http://***REMOVED***:***REMOVED***@185.150.103.211:58542',
+    'http://***REMOVED***:***REMOVED***@185.176.188.17:58542',
+    'http://***REMOVED***:***REMOVED***@185.176.189.211:58542',
+    'http://***REMOVED***:***REMOVED***@185.176.190.158:58542',
+    'http://***REMOVED***:***REMOVED***@185.176.191.18:58542'
+]
+'''
 CUSTOM_PROXY_LIST = [
     'http://accounts1:YM5wTvgN@157.52.158.2:60099',
     'http://accounts1:YM5wTvgN@157.52.158.3:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.6:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.13:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.15:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.16:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.17:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.19:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.20:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.26:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.32:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.35:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.37:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.40:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.41:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.42:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.43:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.48:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.49:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.50:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.51:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.52:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.53:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.57:60099',
     'http://accounts1:YM5wTvgN@157.52.158.61:60099'
 ]
-
+'''
 
 # ------------ PIPELINES SETTINGS ------------
 # Configure item pipelines: * Configuration per Spider
@@ -187,6 +207,8 @@ IDEALISTA_URL_SCHEME = {
         'commercial': 'locales',
         'garage': 'garajes',
         'land': 'terrenos',
+        'storeroom': 'trasteros',
+        'building': 'edificios',
     },
     'sale': 'venta',
     'sale_transaction': {
@@ -195,6 +217,8 @@ IDEALISTA_URL_SCHEME = {
         'commercial': 'locales',
         'garage': 'garajes',
         'land': 'terrenos',
+        'storeroom': 'trasteros',
+        'building': 'edificios',
     },
     'separator': '-',
     'query_pub_date': '?ordenado-por=fecha-publicacion-desc',

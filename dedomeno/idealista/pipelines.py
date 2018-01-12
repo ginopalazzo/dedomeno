@@ -116,24 +116,19 @@ class PropertyPipeline(object):
         log.info('%d properties offline' % len(set_offline))
 
 
-class HousePipeline(object):
+class HousePipeline(PropertyPipeline):
     def process_item(self, item, spider):
         item['m2_total'] = self.compose_int(item['m2_total'])
         item['m2_to_use'] = self.compose_int(item['m2_to_use'])
         item['m2_terrain'] = self.compose_int(item['m2_terrain'])
         item['rooms'] = self.compose_int(item['rooms'])
         item['wc'] = self.compose_int(item['wc'])
+        item['construction_year'] = self.compose_int(item['construction_year'])
         house = item.save()
         return item, house
 
-    def compose_int(self, string):
-        if string:
-            return int("".join(string[0].strip().split('.')))
-        else:
-            return None
 
-
-class RoomPipeline(object):
+class RoomPipeline(PropertyPipeline):
     def process_item(self, item, spider):
         item['m2_total'] = self.compose_int(item['m2_total'])
         item['wc'] = self.compose_int(item['wc'])
@@ -144,14 +139,8 @@ class RoomPipeline(object):
         room = item.save()
         return item, room
 
-    def compose_int(self, string):
-        if string:
-            return int("".join(string[0].strip().split('.')))
-        else:
-            return None
 
-
-class OfficePipeline(object):
+class OfficePipeline(PropertyPipeline):
     def process_item(self, item, spider):
         item['m2_total'] = self.compose_int(item['m2_total'])
         item['m2_to_use'] = self.compose_int(item['m2_to_use'])
@@ -162,27 +151,15 @@ class OfficePipeline(object):
         office = item.save()
         return item, office
 
-    def compose_int(self, string):
-        if string:
-            return int("".join(string[0].strip().split('.')))
-        else:
-            return None
 
-
-class GaragePipeline(object):
+class GaragePipeline(PropertyPipeline):
     def process_item(self, item, spider):
         item['garage_number'] = self.compose_int(item['garage_number'])
         garage = item.save()
         return item, garage
 
-    def compose_int(self, string):
-        if string:
-            return int("".join(string[0].strip().split('.')))
-        else:
-            return None
 
-
-class LandPipeline(object):
+class LandPipeline(PropertyPipeline):
     def process_item(self, item, spider):
         item['m2_total'] = self.compose_int(item['m2_total'])
         item['m2_min_rent'] = self.compose_int(item['m2_min_rent'])
@@ -192,16 +169,9 @@ class LandPipeline(object):
         land = item.save()
         return item, land
 
-    def compose_int(self, string):
-        if string:
-            return int("".join(string[0].strip().split('.')))
-        else:
-            return None
 
-
-class CommercialPipeline(object):
+class CommercialPipeline(PropertyPipeline):
     def process_item(self, item, spider):
-        'transfer_price'
         item['transfer_price'] = self.compose_int(item['transfer_price'])
         item['m2_total'] = self.compose_int(item['m2_total'])
         item['m2_to_use'] = self.compose_int(item['m2_to_use'])
@@ -212,11 +182,27 @@ class CommercialPipeline(object):
         commercial = item.save()
         return item, commercial
 
-    def compose_int(self, string):
-        if string:
-            return int("".join(string[0].strip().split('.')))
-        else:
-            return None
+
+class StoreroomPipeline(PropertyPipeline):
+    def process_item(self, item, spider):
+        item['m2_total'] = self.compose_int(item['m2_total'])
+        item['m_height'] = self.compose_int(item['m_height'])
+        storeroom = item.save()
+        return item, storeroom
+
+
+class BuildingPipeline(PropertyPipeline):
+    def process_item(self, item, spider):
+        item['m2_total'] = self.compose_int(item['m2_total'])
+        item['m2_min_rent'] = self.compose_int(item['m2_min_rent'])
+        item['elevator_num'] = self.compose_int(item['elevator_num'])
+        item['floor_num'] = self.compose_int(item['floor_num'])
+        item['garage_num'] = self.compose_int(item['garage_num'])
+        item['house_num'] = self.compose_int(item['house_num'])
+        item['construction_year'] = self.compose_int(item['construction_year'])
+
+        building = item.save()
+        return item, building
 
 
 class DatePipeline(object):

@@ -7,7 +7,7 @@
 
 import scrapy
 from scrapy_djangoitem import DjangoItem
-from houses.models import Price, Date, RealEstate, Property, House, Room, Office, Garage, Land, Commercial
+from houses.models import Price, Date, RealEstate, Property, House, Room, Office, Garage, Land, Commercial, StoreRoom, Building
 
 
 class PropertyListItem(scrapy.Item):
@@ -65,5 +65,17 @@ class LandItem(DjangoItem):
 
 class CommercialItem(DjangoItem):
     django_model = Commercial
+    phones = scrapy.Field()
+    proxy = scrapy.Field()
+
+
+class StoreRoomItem(DjangoItem):
+    django_model = StoreRoom
+    phones = scrapy.Field()
+    proxy = scrapy.Field()
+
+
+class BuildingItem(DjangoItem):
+    django_model = Building
     phones = scrapy.Field()
     proxy = scrapy.Field()

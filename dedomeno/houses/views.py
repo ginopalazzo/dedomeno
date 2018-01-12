@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404, render
 from django.views import generic
 from django.contrib import admin
 
-from houses.models import House, RealEstate, Garage, Office, Room, Commercial, Land
+from houses.models import House, RealEstate, Garage, Office, Room, Commercial, Land, StoreRoom, Building
 
 from .management.localizations import *
 from .management.sources import *
@@ -44,6 +44,8 @@ def index(request):
     rooms_total = Room.objects.count()
     commercials_total = Commercial.objects.count()
     lands_total = Land.objects.count()
+    storeroom_total = StoreRoom.objects.count()
+    buildings_total = Buildings.objects.count()
 
     context = {
         'real_estate_list': real_estate_list,
@@ -54,6 +56,8 @@ def index(request):
         'rooms_total': rooms_total,
         'commercials_total': commercials_total,
         'lands_total': lands_total,
+        'storeroom_total': storeroom_total,
+        'buildings_total': buildings_total,
     }
     return render(request, 'houses/index.html', context)
 

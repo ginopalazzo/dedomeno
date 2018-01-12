@@ -47,6 +47,8 @@ class Property(models.Model):
         ('garage', 'garage'),
         ('land', 'land'),
         ('commercial', 'commercial'),
+        ('storeroom', 'storeroom'),
+        ('building', 'building'),
     )
     property_type = models.CharField(choices=PROPERTY_CHOICES, max_length=200, blank=True, null=True)
     # https://docs.djangoproject.com/en/1.8/ref/contrib/postgres/fields/#arrayfield
@@ -122,6 +124,7 @@ class House(Property):
     )
     orientation = MultiSelectField(choices=ORIENTATION_CHOICES, null=True, blank=True, max_length=30, max_choices=8)
     preservation = models.CharField(max_length=100, null=True, blank=True)
+    construction_year = models.IntegerField(blank=True, null=True)
     # equipment
     has_garage = models.NullBooleanField()
     terrace = models.NullBooleanField()
@@ -264,6 +267,7 @@ class Commercial(Property):
     Stores a Commercial type :model:`houses.Property`
     """
     # Basic
+    commercial_type = models.CharField(max_length=200, null=True, blank=True)
     transfer_price = models.IntegerField(blank=True, null=True)
     m2_total = models.IntegerField(blank=True, null=True)
     m2_to_use = models.IntegerField(blank=True, null=True)
@@ -287,3 +291,32 @@ class Commercial(Property):
     kitchen = models.NullBooleanField()
     security_door = models.NullBooleanField()
     smoke_extractor = models.NullBooleanField()
+
+
+class StoreRoom(Property):
+    """
+    Stores a StoreRoom type :model:`houses.Property`
+    """
+    # Basic
+    m2_total = models.IntegerField(blank=True, null=True)
+    m_height = models.IntegerField(blank=True, null=True)
+    access_24h = models.NullBooleanField()
+    limited_parking = models.NullBooleanField()
+
+
+class Building(Property):
+    """
+    Stores a Building type :model:`houses.Property`
+    """
+    # Basic
+    m2_total = models.IntegerField(blank=True, null=True)
+    m2_min_rent = models.IntegerField(blank=True, null=True)
+    building_type = models.CharField(max_length=200, null=True, blank=True)
+    elevator_num = models.IntegerField(blank=True, null=True)
+    floor_num = models.CharField(max_length=200, null=True, blank=True)
+    garage_num = models.CharField(max_length=200, null=True, blank=True)
+    security = models.NullBooleanField()
+    preservation = models.CharField(max_length=100, null=True, blank=True)
+    tenant = models.CharField(max_length=200, null=True, blank=True)
+    house_num = models.IntegerField(blank=True, null=True)
+    construction_year = models.IntegerField(blank=True, null=True)

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from houses.models import House, RealEstate, Garage, Office, Room, Commercial, Land
+from houses.models import House, RealEstate, Garage, Office, Room, Commercial, Land, StoreRoom, Building
 
 
 def index(request):
@@ -19,6 +19,10 @@ def index(request):
     commercials_total_sale = Commercial.objects.filter(transaction='sale').count()
     lands_total_rent = Land.objects.filter(transaction='rent').count()
     lands_total_sale = Land.objects.filter(transaction='sale').count()
+    storeroom_total_rent = StoreRoom.objects.filter(transaction='rent').count()
+    storeroom_total_sale = StoreRoom.objects.filter(transaction='sale').count()
+    buildings_total_rent = Building.objects.filter(transaction='rent').count()
+    buildings_total_sale = Building.objects.filter(transaction='sale').count()
 
     context = {
         'real_estate_list': real_estate_list,
@@ -34,6 +38,10 @@ def index(request):
         'commercials_total_sale': commercials_total_sale,
         'lands_total_rent': lands_total_rent,
         'lands_total_sale': lands_total_sale,
+        'storeroom_total_rent': storeroom_total_rent,
+        'storeroom_total_sale': storeroom_total_sale,
+        'buildings_total_rent': buildings_total_rent,
+        'buildings_total_sale': buildings_total_sale,
     }
 
     return render(request, 'dedomeno/index.html', context)

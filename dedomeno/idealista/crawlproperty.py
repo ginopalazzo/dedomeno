@@ -181,11 +181,24 @@ configure_logging({'LOG_FORMAT': '%(levelname)s: %(message)s', 'LOG_LEVEL': 'INF
 
 
 class CrawlPropertyReactor():
+    """
+    Start a new CrawlerRunner object for the idealista scrapper
+    """
     def __init__(self, transaction=None, property_type=None, provinces=None, *args, **kwargs):
+        """
+        Initialize the CrawlPropertyReactor object
+        :param transaction: type of transaction {sale,rent}
+        :param property_type: type of property {house,garage,commercial,land,office}
+        :param provinces: a list of Spanish provinces to crawl (see idealista scrapper settings for the schema)
+        :param args:
+        :param kwargs:
+        """
         self.property_type = property_type
+        # will populate the statistics of the scrapper
         self.stats_dic_list = []
         self.transaction = transaction
         self.provinces = provinces
+        # set the ITEM_PIPELINES settings for the specific property_type
         self.settings = get_project_settings()
         self.settings.set('ITEM_PIPELINES', {
             'idealista.pipelines.PropertyPipeline': 300,
@@ -236,7 +249,7 @@ class CrawlPropertyReactor():
 # teruel 24 huesca 155 zamora 80 caceres 94
 # valencia 3154
 # spider = CrawlPropertyReactor(property_type='garage', transaction='sale', provinces=['teruel', 'melilla'])
-spider = CrawlPropertyReactor(property_type='house', transaction='rent', provinces=['cuenca'])
+spider = CrawlPropertyReactor(property_type='storeroom', transaction='sale', provinces=['madrid'])
 spider.conf()
 spider.run()
 

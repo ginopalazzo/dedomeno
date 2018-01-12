@@ -99,6 +99,10 @@ class RotatorProxy(object):
         """
         self._num_pages = 0
         self._http_status_codes = settings.get('BLACKLIST_HTTP_STATUS_CODES', [307])
+        # get the email data from the settings
+        self.gmail_user = settings.get('GMAIL_USER')
+        self.gmail_password = settings.get('GMAIL_PASSWORD')
+        self.recipient = settings.get('RECIPIENT')
         # create a list of proxies from the settings CUSTOM_PROXY_LIST
         custom_proxy_list = settings.get('CUSTOM_PROXY_LIST')
         self.proxies = []
@@ -212,21 +216,17 @@ class RotatorProxy(object):
         :param subject: subject string of the email
         :return: None
         """
-        # TODO change _send_mail in order to take the gmail and recipent from scrapy settings.
-        gmailUser = 'ginopalazzo@gmail.com'
-        gmailPassword = '***REMOVED***'
-        recipient = 'ginopalazzo@gmail.com'
-        log.info("Sending mail with subject: %s to %s ........." % (subject, recipient))
+        log.info("Sending mail with subject: %s to %s ........." % (subject, self.recipient))
         msg = MIMEMultipart()
-        msg['From'] = gmailUser
-        msg['To'] = recipient
+        msg['From'] = self.gmail_user
+        msg['To'] = self.recipient
         msg['Subject'] = subject
         msg.attach(MIMEText(message))
-        mailServer = smtplib.SMTP('smtp.gmail.com', 587)
-        mailServer.ehlo()
-        mailServer.starttls()
-        mailServer.ehlo()
-        mailServer.login(gmailUser, gmailPassword)
-        mailServer.sendmail(gmailUser, recipient, msg.as_string())
-        mailServer.close()
+        mail_server = smtplib.SMTP('smtp.gmail.com', 587)
+        mail_server.ehlo()
+        mail_server.starttls()
+        mail_server.ehlo()
+        mail_server.login(self.gmail_user, self.gmail_password)
+        mail_server.sendmail(self.gmail_user, self.recipient, msg.as_string())
+        mail_server.close()
         log.info("Mail sent")

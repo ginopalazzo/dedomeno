@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import RealEstate, Date, Price, Property, House, Room, Office, Garage, Land, Commercial
+from .models import RealEstate, Date, Price, Property, House, Room, Office, Garage, Land, Commercial, StoreRoom, Building
 
 '''
 class SourceAdmin(admin.ModelAdmin):
@@ -156,6 +156,24 @@ class CommercialAdmin(admin.ModelAdmin):
     ]
 
 
+class StoreRoomAdmin(admin.ModelAdmin):
+    search_fields = ['title', 'slug']
+    list_display = ('title', 'slug', 'transaction', 'm2_total', 'price_raw')
+    # list_filter = ['ground', 'nearest_town', 'access', 'zoned']
+    inlines = [
+        PriceInLineAdmin, DateInLineAdmin,
+    ]
+
+
+class BuildingAdmin(admin.ModelAdmin):
+    search_fields = ['title', 'slug']
+    list_display = ('title', 'slug', 'transaction', 'm2_total', 'price_raw')
+    # list_filter = ['ground', 'nearest_town', 'access', 'zoned']
+    inlines = [
+        PriceInLineAdmin, DateInLineAdmin,
+    ]
+
+
 admin.site.register(Date, DateAdmin)
 admin.site.register(Price, PriceAdmin)
 admin.site.register(RealEstate, RealEstateAdmin)
@@ -165,3 +183,5 @@ admin.site.register(Office, OfficeAdmin)
 admin.site.register(Garage, GarageAdmin)
 admin.site.register(Land, LandAdmin)
 admin.site.register(Commercial, CommercialAdmin)
+admin.site.register(StoreRoom, StoreRoomAdmin)
+admin.site.register(Building, BuildingAdmin)

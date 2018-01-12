@@ -3,9 +3,9 @@
 import scrapy
 from scrapy.exceptions import CloseSpider
 from scrapy.utils.project import get_project_settings
-from idealista.items import RealEstateItem, HouseItem, RoomItem, OfficeItem, LandItem, GarageItem, CommercialItem
+from idealista.items import RealEstateItem, HouseItem, RoomItem, OfficeItem, LandItem, GarageItem, CommercialItem, StoreRoomItem, BuildingItem
 # Django model imports
-from houses.models import Date, Price, RealEstate, House, Room, Office, Land, Garage, Commercial
+from houses.models import Date, Price, RealEstate, House, Room, Office, Land, Garage, Commercial, StoreRoom, Building
 # Other imports
 from datetime import date
 import re
@@ -19,7 +19,7 @@ class PropertySpider(scrapy.Spider):
         custom_settings = {
             'ITEM_PIPELINES': {
                 'idealista.pipelines.PropertyPipeline': 300,
-                'idealista.pipelines.{House, Room, Office, Garage, Land, Commercial}Pipeline': 400,
+                'idealista.pipelines.{House, Room, Office, Garage, Land, Commercial, Storeroom, Building}Pipeline': 400,
                 'idealista.pipelines.DatePipeline': 500,
                 'idealista.pipelines.PricePipeline': 600,
             }
@@ -102,6 +102,8 @@ class PropertySpider(scrapy.Spider):
             'garage': GarageItem(),
             'land': LandItem(),
             'commercial': CommercialItem(),
+            'storeroom': StoreRoomItem(),
+            'building': BuildingItem(),
         }.get(self.property_type, 'Not a valid property')
 
     def set_property_object(self, slug):
@@ -117,6 +119,8 @@ class PropertySpider(scrapy.Spider):
             'garage': Garage.objects.filter(slug=slug).first(),
             'land': Land.objects.filter(slug=slug).first(),
             'commercial': Commercial.objects.filter(slug=slug).first(),
+            'storeroom': StoreRoom.objects.filter(slug=slug).first(),
+            'building': Building.objects.filter(slug=slug).first(),
         }.get(self.property_type, 'Not a valid property')
 
     def parse(self, response):
@@ -197,7 +201,6 @@ class PropertySpider(scrapy.Spider):
         property_item['latitude'] = match.group(1)
         property_item['longitude'] = match.group(2)
         property_item['real_estate_raw'] = response.xpath('//a[@class="about-advertiser-name"]/@href').extract_first()
-
         # Will continue parsing the child property, with the correct specific child parameters
         # Example: property_item = self.parse_garage(response, property_item)
         property_item = self.parse_property_middleware(response, property_item)
@@ -232,6 +235,8 @@ class PropertySpider(scrapy.Spider):
             'garage': self.parse_garage,
             'land': self.parse_land,
             'commercial': self.parse_commercial,
+            'storeroom': self.parse_storeroom,
+            'building': self.parse_building,
         }
         return dic.get(self.property_type, 'Not a valid property')(response, property_item)
 
@@ -245,19 +250,23 @@ class PropertySpider(scrapy.Spider):
         # Características básicas
         basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
         title = response.xpath('//span[@class="txt-bold"]/text()')
-        property_item['house_type'] = "".join(title[0].re('Alquiler\sde\s(\w*)\sen|(\D*)\sen\sventa')).strip().lower()
+        meta = response.xpath('/html/head/meta[@name="description"]/@content')[0]
+        property_item['house_type'] = meta.re('(\D*)\sde\s')[0].strip()
         property_item['m2_total'] = basic.re('([0-9]*[.]?[0-9]+)\sm²\sconstruidos')
         property_item['m2_to_use'] = basic.re('([0-9]*[.]?[0-9]+)\sm²\sútiles')
-        property_item['m2_terrain'] = basic.re('Parcela de (.+) m²')
+        property_item['m2_terrain'] = basic.re('arcela de (.+) m²')
         property_item['rooms'] = basic.re('(\d+)\shabitaci')
         property_item['wc'] = basic.re('(\d+)\sbaño')
         property_item['orientation'] = basic.re('(norte|sur|este|oeste)')
         property_item['preservation'] = "".join(basic.re('(buen estado|para reformar)'))
         property_item['terrace'] = bool(basic.re('(erraza)'))
         property_item['chimney'] = bool(basic.re('(himenea)'))
-        property_item['has_garage'] = bool(basic.re('(garaje incluida)'))
+        property_item['has_garage'] = bool(basic.re('(araje incluida)'))
         property_item['builtin_wardrobes'] = bool(basic.re('(rmarios empotrados)'))
-        property_item['store_room'] = bool(basic.re('(trastero)'))
+        property_item['store_room'] = bool(basic.re('(rastero)'))
+        property_item['furnished'] = bool(basic.re('(otalmente amueblado y equipado)'))
+        property_item['furnished_kitchen'] = bool(basic.re('(ocina equipada)|(otalmente amueblado y equipado)'))
+        property_item['construction_year'] = basic.re('onstruido\sen\s([0-9]*[.]?[0-9]+)')
         # Edificio
         building = response.xpath('//div[h2/text()="Edificio"]/ul/li/text()')
         property_item['floor_num'] = "".join(building.re('Planta\s(\d+)|(Bajo)|(Sótano)|(Semi-Sótano)|(Entreplanta)'))
@@ -268,8 +277,6 @@ class PropertySpider(scrapy.Spider):
         property_item['garden'] = bool(equipment.re('(ardín)'))
         property_item['air_conditioning'] = bool(equipment.re('(ire acondicionado)'))
         property_item['swimming_pool'] = bool(equipment.re('(iscina)'))
-        property_item['furnished'] = bool(equipment.re('(otalmente amueblado y equipado)'))
-        property_item['furnished_kitchen'] = bool(equipment.re('(ocina equipada)|(otalmente amueblado y equipado)'))
         return property_item
 
     def parse_room(self, response, property_item):
@@ -392,7 +399,7 @@ class PropertySpider(scrapy.Spider):
         property_item['m2_min_sale'] = basic.re('uperficie\smínima\sen\sVenta\s([0-9]*[.]?[0-9]+)\sm²')
         property_item['m2_to_build'] = basic.re('uperficie\sedificable\s([0-9]*[.]?[0-9]+)\sm²')
         property_item['access'] = "".join(basic.re('Acceso\s(.+)'))
-        property_item['nearest_town'] = "".join(basic.re('Distancia\smunicipio\smás\scercano:\s(.+)'))
+        property_item['nearest_town'] = "".join(basic.re('más\scercano:\s(.+)'))
         # Urban situation
         urban = response.xpath('//div[h2/text()="Situación urbanística"]/ul/li/text()')
         property_item['ground'] = "".join(urban.re('Terreno\s(.+)'))
@@ -415,6 +422,8 @@ class PropertySpider(scrapy.Spider):
         :param property_item: a father property item waiting to fill the property commercial attributes
         :return: return a property item
         """
+        meta = response.xpath('/html/head/meta[@name="description"]/@content')[0]
+        property_item['commercial_type'] = meta.re('(\D*)\sde\s')[0].strip()
         # Basic
         basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
         property_item['transfer_price'] = response.xpath(
@@ -444,6 +453,40 @@ class PropertySpider(scrapy.Spider):
         property_item['kitchen'] = bool(equipment.re('(ocina)'))
         property_item['security_door'] = bool(equipment.re('(uerta de seguridad)'))
         property_item['smoke_extractor'] = bool(equipment.re('(alida de humos)'))
+        return property_item
+
+    def parse_storeroom(self, response, property_item):
+        """
+        Will parse storeroom property type specific attributes
+        :param response: response of a property storeroom page
+        :param property_item: a father property item waiting to fill the property commercial attributes
+        :return: return a property item
+        """
+        # Basic
+        basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
+        property_item['m2_total'] = basic.re('([0-9]*[.]?[0-9]+)\sm²\sconstruidos')
+        property_item['m_height'] = basic.re('([0-9]*[.]?[0-9]+)\sm\sde\saltura')
+        property_item['access_24h'] = bool(basic.re('(ccesible\s24h)'))
+        property_item['limited_parking'] = bool(basic.re('(ona\sde\scarga)'))
+        return property_item
+
+    def parse_building(self, response, property_item):
+        """
+        Stores a Building type :model:`houses.Property`
+        """
+        # Basic
+        basic = response.xpath('//div[h2/text()="Características básicas"]/ul/li/text()')
+        property_item['m2_total'] = basic.re('([0-9]*[.]?[0-9]+)\sm²\sconstruidos')
+        property_item['m2_min_rent'] = basic.re('([0-9]*[.]?[0-9]+)\sm²\sde\ssuperficie')
+        property_item['building_type'] = "".join(basic.re('(Edificio\s\D*)')).strip().lower()
+        property_item['elevator_num'] = basic.re('([0-9]*[.]?[0-9]+)\sascensore')
+        property_item['floor_num'] = basic.re('([0-9]*[.]?[0-9]+)\splanta')
+        property_item['garage_num'] = basic.re('([0-9]*[.]?[0-9]+)\splazas\sde\sgaraje')
+        property_item['security'] = bool(basic.re('(igilancia)'))
+        property_item['preservation'] = "".join(basic.re('(Buen estado|Para reformar)'))
+        property_item['tenant'] = "".join(basic.re('(Con\sinquilino|Sin\sinquilino)'))
+        property_item['house_num'] = basic.re('([0-9]*[.]?[0-9]+)\svivienda')
+        property_item['construction_year'] = basic.re('onstruido\sen\s([0-9]*[.]?[0-9]+)')
         return property_item
 
     def parse_real_estate(self, response):
