@@ -45,7 +45,7 @@ def index(request):
     commercials_total = Commercial.objects.count()
     lands_total = Land.objects.count()
     storeroom_total = StoreRoom.objects.count()
-    buildings_total = Buildings.objects.count()
+    buildings_total = Building.objects.count()
 
     context = {
         'real_estate_list': real_estate_list,

@@ -3749,3 +3749,732 @@ AttributeError: 'QuerySet' object has no attribute 'property_set'
 [30/Jan/2017 20:48:31] INFO [django.server:131] "GET / HTTP/1.1" 200 2941
 [30/Jan/2017 20:48:32] INFO [django.server:131] "GET /static/houses/css/style.css HTTP/1.1" 304 0
 [30/Jan/2017 21:00:41] INFO [django.server:131] "GET / HTTP/1.1" 200 2942
+[15/Jan/2018 13:17:30] INFO [django.server:124] "GET / HTTP/1.1" 200 3218
+[15/Jan/2018 13:17:50] INFO [django.server:124] "GET / HTTP/1.1" 200 3218
+[15/Jan/2018 13:34:58] INFO [django.server:124] "GET /admin/houses/storeroom/ HTTP/1.1" 200 50049
+[15/Jan/2018 13:34:58] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[15/Jan/2018 13:34:59] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 13:35:05] INFO [django.server:124] "GET / HTTP/1.1" 200 3218
+[15/Jan/2018 13:35:08] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 12753
+[15/Jan/2018 13:52:30] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[15/Jan/2018 13:52:30] ERROR [django.request:118] Internal Server Error: /houses/
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 48, in index
+    buildings_total = Buildings.objects.count()
+NameError: name 'Buildings' is not defined
+[15/Jan/2018 13:52:30] ERROR [django.server:124] "GET /houses/ HTTP/1.1" 500 66064
+[15/Jan/2018 13:53:37] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 4786
+[15/Jan/2018 14:36:33] INFO [django.server:124] "GET /admin/houses/garage/ HTTP/1.1" 200 67726
+[15/Jan/2018 14:36:33] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jan/2018 14:36:33] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 14:36:33] INFO [django.server:124] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[15/Jan/2018 14:36:34] INFO [django.server:124] "GET /admin/houses/house/ HTTP/1.1" 200 52455
+[15/Jan/2018 14:36:35] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 14:36:45] INFO [django.server:124] "GET /admin/houses/house/?transaction__exact=rent HTTP/1.1" 200 59309
+[15/Jan/2018 14:36:45] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 14:43:26] INFO [django.server:124] "GET /admin/houses/house/?transaction__exact=sale HTTP/1.1" 200 58536
+[15/Jan/2018 14:43:26] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 14:43:34] INFO [django.server:124] "GET /admin/houses/ HTTP/1.1" 200 6632
+[15/Jan/2018 14:43:47] INFO [django.server:124] "GET / HTTP/1.1" 200 3221
+[15/Jan/2018 14:44:10] INFO [django.server:124] "GET /admin/houses/office/ HTTP/1.1" 200 54639
+[15/Jan/2018 14:44:10] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jan/2018 14:44:10] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 14:44:17] INFO [django.server:124] "GET /admin/houses/office/?o=4 HTTP/1.1" 200 58067
+[15/Jan/2018 14:44:17] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 14:44:17] INFO [django.server:124] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[15/Jan/2018 14:50:09] INFO [django.server:124] "GET /admin/houses/office/?q=30972922&o=4 HTTP/1.1" 200 7628
+[15/Jan/2018 14:50:10] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 14:50:16] INFO [django.server:124] "GET /admin/houses/office/377561/change/?_changelist_filters=q%3D30972922%26o%3D4 HTTP/1.1" 200 477333
+[15/Jan/2018 14:50:16] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 14:56:47] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 12753
+[15/Jan/2018 14:56:47] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jan/2018 14:57:17] INFO [django.server:124] "GET / HTTP/1.1" 200 3222
+[15/Jan/2018 15:20:31] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 12753
+[15/Jan/2018 15:20:31] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jan/2018 15:20:34] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4637
+[15/Jan/2018 15:20:34] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 15:20:42] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 15:20:44] INFO [django.server:124] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 3450
+[15/Jan/2018 15:20:44] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 15:20:46] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 15:20:47] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3467
+[15/Jan/2018 15:20:47] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 15:20:49] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 15:20:50] INFO [django.server:124] "GET /admin/django_celery_beat/solarschedule/ HTTP/1.1" 200 3459
+[15/Jan/2018 15:20:50] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 15:20:52] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 15:20:55] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4637
+[15/Jan/2018 16:05:35] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:05:35] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jan/2018 16:06:51] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 12753
+[15/Jan/2018 16:06:56] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:06:59] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4637
+[15/Jan/2018 16:06:59] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:07:04] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6318
+[15/Jan/2018 16:07:04] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:07:26] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4637
+[15/Jan/2018 16:11:35] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6318
+[15/Jan/2018 16:11:35] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:11:42] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4637
+[15/Jan/2018 16:11:42] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:11:43] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:11:45] INFO [django.server:124] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 3450
+[15/Jan/2018 16:11:45] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:11:46] INFO [django.server:124] "GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 4960
+[15/Jan/2018 16:11:47] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:11:53] INFO [django.server:124] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 3450
+[15/Jan/2018 16:11:54] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:11:59] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4637
+[15/Jan/2018 16:11:59] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:15:58] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:16:01] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4637
+[15/Jan/2018 16:16:01] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:16:04] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6318
+[15/Jan/2018 16:16:04] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:16:24] INFO [django.server:124] "POST /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 302 0
+[15/Jan/2018 16:16:24] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5120
+[15/Jan/2018 16:16:24] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:16:25] INFO [django.server:124] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[15/Jan/2018 16:16:28] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:16:32] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3467
+[15/Jan/2018 16:16:32] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:21:06] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:21:09] INFO [django.server:124] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 3450
+[15/Jan/2018 16:21:09] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:21:11] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:21:12] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4900
+[15/Jan/2018 16:21:12] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:21:14] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:21:17] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3467
+[15/Jan/2018 16:21:17] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:26:37] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:26:37] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jan/2018 16:57:03] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3467
+[15/Jan/2018 16:57:04] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jan/2018 16:57:04] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:57:06] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13338
+[15/Jan/2018 16:57:06] INFO [django.server:124] "GET /static/admin/js/collapse.js HTTP/1.1" 200 1151
+[15/Jan/2018 16:57:06] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:57:52] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 12791
+[15/Jan/2018 16:57:57] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3467
+[15/Jan/2018 16:57:57] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:57:59] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13338
+[15/Jan/2018 16:57:59] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:58:46] INFO [django.server:124] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[15/Jan/2018 16:59:06] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:59:13] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13338
+[15/Jan/2018 16:59:13] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:59:15] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 16:59:17] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6318
+[15/Jan/2018 16:59:17] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:59:34] INFO [django.server:124] "POST /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 302 0
+[15/Jan/2018 16:59:34] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5382
+[15/Jan/2018 16:59:34] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 16:59:35] INFO [django.server:124] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[15/Jan/2018 16:59:38] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 17:00:50] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5162
+[15/Jan/2018 17:00:50] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:00:53] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 200 6318
+[15/Jan/2018 17:00:53] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:01:03] INFO [django.server:124] "POST /admin/django_celery_beat/crontabschedule/add/ HTTP/1.1" 302 0
+[15/Jan/2018 17:01:03] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5644
+[15/Jan/2018 17:01:03] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:01:26] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 17:01:36] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13450
+[15/Jan/2018 17:01:36] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:03:04] INFO [django.server:124] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[15/Jan/2018 17:03:04] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13745
+[15/Jan/2018 17:03:04] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:04:24] INFO [django.server:124] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[15/Jan/2018 17:04:24] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5730
+[15/Jan/2018 17:04:24] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:14:49] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[15/Jan/2018 17:16:46] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/36/change/ HTTP/1.1" 200 13981
+[15/Jan/2018 17:16:46] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:17:05] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5854
+[15/Jan/2018 17:22:36] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[15/Jan/2018 17:35:50] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[15/Jan/2018 17:41:48] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[15/Jan/2018 17:41:54] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[15/Jan/2018 17:46:16] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/35/change/ HTTP/1.1" 200 13984
+[15/Jan/2018 17:46:16] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[15/Jan/2018 17:46:16] INFO [django.server:124] "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+[15/Jan/2018 17:46:16] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:46:28] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[15/Jan/2018 17:46:35] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5685
+[15/Jan/2018 17:46:35] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[15/Jan/2018 17:46:44] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 13067
+[15/Jan/2018 17:48:27] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[15/Jan/2018 17:48:35] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[16/Jan/2018 17:32:58] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 5685
+[16/Jan/2018 17:32:59] INFO [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[16/Jan/2018 17:32:59] INFO [django.server:124] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[16/Jan/2018 17:32:59] INFO [django.server:124] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[16/Jan/2018 17:32:59] INFO [django.server:124] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[16/Jan/2018 17:32:59] INFO [django.server:124] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+[16/Jan/2018 17:32:59] INFO [django.server:124] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[16/Jan/2018 17:32:59] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[16/Jan/2018 17:33:00] INFO [django.server:124] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+[16/Jan/2018 17:33:00] INFO [django.server:124] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[16/Jan/2018 17:33:00] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 17:33:01] INFO [django.server:124] "GET /static/admin/js/actions.js HTTP/1.1" 200 6502
+[16/Jan/2018 17:33:01] INFO [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[16/Jan/2018 17:33:01] INFO [django.server:124] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[16/Jan/2018 17:33:01] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[16/Jan/2018 17:33:01] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[16/Jan/2018 17:33:02] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[16/Jan/2018 17:34:01] INFO [django.server:124] "POST /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 4816
+[16/Jan/2018 17:34:01] INFO [django.server:124] "GET /static/admin/js/cancel.js HTTP/1.1" 200 204
+[16/Jan/2018 17:34:04] INFO [django.server:124] "POST /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 302 0
+[16/Jan/2018 17:34:04] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 3577
+[16/Jan/2018 17:34:04] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 17:34:04] INFO [django.server:124] "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[16/Jan/2018 17:34:08] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[16/Jan/2018 17:34:08] INFO [django.server:124] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[16/Jan/2018 17:34:08] INFO [django.server:124] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[16/Jan/2018 17:34:10] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 3467
+[16/Jan/2018 17:34:10] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 17:34:12] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[16/Jan/2018 17:34:15] INFO [django.server:124] "GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 3450
+[16/Jan/2018 17:34:16] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 17:34:17] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[16/Jan/2018 17:34:19] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/ HTTP/1.1" 200 3443
+[16/Jan/2018 17:34:19] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 17:34:21] INFO [django.server:124] "GET /admin/django_celery_beat/ HTTP/1.1" 200 4133
+[16/Jan/2018 18:08:42] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[16/Jan/2018 18:12:14] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 5120
+[16/Jan/2018 18:12:14] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13283
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /static/admin/js/collapse.js HTTP/1.1" 304 0
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20283
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[16/Jan/2018 18:12:19] INFO [django.server:124] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[16/Jan/2018 18:13:41] INFO [django.server:124] "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[16/Jan/2018 18:13:41] INFO [django.server:124] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[16/Jan/2018 18:14:00] INFO [django.server:124] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13656
+[16/Jan/2018 18:14:00] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:14:10] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/add/?_to_field=id&_popup=1 HTTP/1.1" 200 5210
+[16/Jan/2018 18:14:10] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:14:28] INFO [django.server:124] "POST /admin/django_celery_beat/crontabschedule/add/?_to_field=id&_popup=1 HTTP/1.1" 200 394
+[16/Jan/2018 18:14:28] INFO [django.server:124] "GET /static/admin/js/popup_response.js HTTP/1.1" 200 569
+[16/Jan/2018 18:14:32] INFO [django.server:124] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[16/Jan/2018 18:14:32] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13640
+[16/Jan/2018 18:14:32] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:15:24] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/add/?_to_field=id&_popup=1 HTTP/1.1" 200 5210
+[16/Jan/2018 18:15:24] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:15:32] INFO [django.server:124] "POST /admin/django_celery_beat/crontabschedule/add/?_to_field=id&_popup=1 HTTP/1.1" 200 394
+[16/Jan/2018 18:15:37] INFO [django.server:124] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13817
+[16/Jan/2018 18:15:38] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:16:03] INFO [django.server:124] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[16/Jan/2018 18:16:03] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6121
+[16/Jan/2018 18:16:03] INFO [django.server:124] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[16/Jan/2018 18:16:03] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:16:12] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/39/change/ HTTP/1.1" 200 13894
+[16/Jan/2018 18:16:12] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:16:17] INFO [django.server:124] "POST /admin/django_celery_beat/periodictask/39/change/ HTTP/1.1" 302 0
+[16/Jan/2018 18:16:17] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6119
+[16/Jan/2018 18:16:17] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:16:22] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 13397
+[16/Jan/2018 18:16:22] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:16:57] INFO [django.server:124] "GET /admin/django_celery_beat/crontabschedule/add/?_to_field=id&_popup=1 HTTP/1.1" 200 5210
+[16/Jan/2018 18:16:57] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:17:07] INFO [django.server:124] "POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+[16/Jan/2018 18:17:07] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6478
+[16/Jan/2018 18:17:07] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:17:12] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/41/change/ HTTP/1.1" 200 13876
+[16/Jan/2018 18:17:12] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:17:14] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6234
+[16/Jan/2018 18:17:20] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/40/change/ HTTP/1.1" 200 13911
+[16/Jan/2018 18:17:20] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:17:25] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6234
+[16/Jan/2018 18:17:27] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/39/change/ HTTP/1.1" 200 13902
+[16/Jan/2018 18:17:27] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[16/Jan/2018 18:17:32] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6234
+[16/Jan/2018 18:20:36] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[16/Jan/2018 19:48:43] INFO [django.server:124] "GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 6234
+[16/Jan/2018 20:11:42] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[16/Jan/2018 20:12:58] INFO [django.server:124] "GET / HTTP/1.1" 200 3225
+[16/Jan/2018 20:12:59] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 20:12:59] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 20:13:06] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 20:13:34] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[16/Jan/2018 20:17:23] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[16/Jan/2018 20:31:08] INFO [django.server:124] "GET / HTTP/1.1" 200 3223
+[16/Jan/2018 21:25:20] INFO [django.server:124] "GET / HTTP/1.1" 200 3297
+[16/Jan/2018 21:25:21] WARNING [django.server:124] "GET /static/dedomeno/inmg/dedomeno.png HTTP/1.1" 404 1702
+[16/Jan/2018 21:25:38] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:25:42] INFO [django.server:124] "GET / HTTP/1.1" 200 3296
+[16/Jan/2018 21:25:42] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:25:56] INFO [django.server:124] "GET / HTTP/1.1" 200 3287
+[16/Jan/2018 21:25:56] WARNING [django.server:124] "GET /static/img/dedomeno.png HTTP/1.1" 404 1672
+[16/Jan/2018 21:26:04] INFO [django.server:124] "GET / HTTP/1.1" 200 3303
+[16/Jan/2018 21:26:04] WARNING [django.server:124] "GET /static/static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1720
+[16/Jan/2018 21:27:22] INFO [django.server:124] "GET / HTTP/1.1" 200 3309
+[16/Jan/2018 21:27:22] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:27:38] INFO [django.server:124] "GET / HTTP/1.1" 200 3309
+[16/Jan/2018 21:27:38] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:27:53] INFO [django.server:124] "GET / HTTP/1.1" 200 3300
+[16/Jan/2018 21:27:53] WARNING [django.server:124] "GET /static/img/dedomeno.png HTTP/1.1" 404 1672
+[16/Jan/2018 21:30:36] INFO [django.server:124] "GET / HTTP/1.1" 200 3310
+[16/Jan/2018 21:30:36] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:30:46] INFO [django.server:124] "GET / HTTP/1.1" 200 3310
+[16/Jan/2018 21:30:47] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:31:07] INFO [django.server:124] "GET / HTTP/1.1" 200 3311
+[16/Jan/2018 21:31:07] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:32:13] INFO [django.server:124] "GET / HTTP/1.1" 200 3393
+[16/Jan/2018 21:32:13] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:32:13] WARNING [django.server:124] "GET /static/dedomeno/dedomeno.png HTTP/1.1" 404 1687
+[16/Jan/2018 21:32:51] INFO [django.server:124] "GET / HTTP/1.1" 200 3392
+[16/Jan/2018 21:32:51] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:32:51] WARNING [django.server:124] "GET /static/dedomeno/dedomeno.png HTTP/1.1" 404 1687
+[16/Jan/2018 21:33:00] INFO [django.server:124] "GET / HTTP/1.1" 200 3393
+[16/Jan/2018 21:33:00] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:33:00] WARNING [django.server:124] "GET /static/dedomeno/dedomeno.png HTTP/1.1" 404 1687
+[16/Jan/2018 21:33:06] INFO [django.server:124] "GET / HTTP/1.1" 200 3394
+[16/Jan/2018 21:33:06] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:33:06] WARNING [django.server:124] "GET /static/dedomeno/dedomeno.png HTTP/1.1" 404 1687
+[16/Jan/2018 21:33:18] INFO [django.server:124] "GET / HTTP/1.1" 200 3397
+[16/Jan/2018 21:33:18] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:33:19] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:33:27] INFO [django.server:124] "GET / HTTP/1.1" 200 3399
+[16/Jan/2018 21:33:27] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:33:27] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:34:23] INFO [django.server:124] "GET / HTTP/1.1" 200 3402
+[16/Jan/2018 21:34:23] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:34:24] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:34:27] INFO [django.server:124] "GET / HTTP/1.1" 200 3402
+[16/Jan/2018 21:34:27] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:34:27] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:34:49] INFO [django.server:124] "GET / HTTP/1.1" 200 3389
+[16/Jan/2018 21:34:49] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:34:49] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:37:42] INFO [django.server:124] "GET / HTTP/1.1" 200 3308
+[16/Jan/2018 21:37:42] WARNING [django.server:124] "GET /static/houses/img/dedomeno.png HTTP/1.1" 404 1693
+[16/Jan/2018 21:37:46] INFO [django.server:124] "GET / HTTP/1.1" 200 3308
+[16/Jan/2018 21:37:46] WARNING [django.server:124] "GET /static/houses/img/dedomeno.png HTTP/1.1" 404 1693
+[16/Jan/2018 21:39:28] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:39:28] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:39:31] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:39:31] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:39:37] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:39:37] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:39:42] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:39:42] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:39:52] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:39:52] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:40:21] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:40:21] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:40:40] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:40:40] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:40:40] WARNING [django.request:93] Not Found: /favicon.ico
+[16/Jan/2018 21:40:40] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 85
+[16/Jan/2018 21:41:33] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:41:33] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:42:04] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 155, in url
+    return self._url(self.stored_name, name, force)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 134, in _url
+    hashed_name = hashed_name_func(*args)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 422, in stored_name
+    raise ValueError("Missing staticfiles manifest entry for '%s'" % clean_name)
+ValueError: Missing staticfiles manifest entry for 'houses/css/style.css'
+[16/Jan/2018 21:42:04] ERROR [django.server:124] "GET / HTTP/1.1" 500 27
+[16/Jan/2018 21:42:24] INFO [django.server:124] "GET / HTTP/1.1" 200 3296
+[16/Jan/2018 21:42:24] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:42:37] INFO [django.server:124] "GET / HTTP/1.1" 200 3296
+[16/Jan/2018 21:42:37] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:43:03] INFO [django.server:124] "GET / HTTP/1.1" 200 3298
+[16/Jan/2018 21:43:03] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 21:43:03] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:43:04] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 21:43:16] INFO [django.server:124] "GET / HTTP/1.1" 200 3289
+[16/Jan/2018 21:43:16] WARNING [django.server:124] "GET /static/css/style.css HTTP/1.1" 404 1663
+[16/Jan/2018 21:43:16] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:43:17] WARNING [django.server:124] "GET /static/css/style.css HTTP/1.1" 404 1663
+[16/Jan/2018 21:46:49] ERROR [django.request:118] Internal Server Error: /
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/dedomeno/views.py", line 47, in index
+    return render(request, 'dedomeno/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 106, in render
+    url = self.url(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 103, in url
+    return self.handle_simple(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/templatetags/static.py", line 118, in handle_simple
+    return staticfiles_storage.url(path)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/utils/functional.py", line 215, in inner
+    self._setup()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 494, in _setup
+    self._wrapped = get_storage_class(settings.STATICFILES_STORAGE)()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 379, in __init__
+    self.hashed_files = self.load_manifest()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 389, in load_manifest
+    content = self.read_manifest()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 383, in read_manifest
+    with self.open(self.manifest_name) as manifest:
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/files/storage.py", line 33, in open
+    return self._open(name, mode)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/files/storage.py", line 218, in _open
+    return File(open(self.path(name), mode))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/contrib/staticfiles/storage.py", line 43, in path
+    raise ImproperlyConfigured("You're using the staticfiles app "
+django.core.exceptions.ImproperlyConfigured: You're using the staticfiles app without having set the STATIC_ROOT setting to a filesystem path.
+[16/Jan/2018 21:46:50] ERROR [django.server:124] "GET / HTTP/1.1" 500 156323
+[16/Jan/2018 21:47:07] INFO [django.server:124] "GET / HTTP/1.1" 200 3298
+[16/Jan/2018 21:47:07] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 21:47:08] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:47:08] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 21:47:29] INFO [django.server:124] "GET / HTTP/1.1" 200 3298
+[16/Jan/2018 21:47:29] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 21:47:29] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:47:29] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 21:48:09] INFO [django.server:124] "GET / HTTP/1.1" 200 3298
+[16/Jan/2018 21:48:09] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690
+[16/Jan/2018 21:48:09] WARNING [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 404 1699
+[16/Jan/2018 21:48:10] WARNING [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 404 1690

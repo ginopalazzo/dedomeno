@@ -44,6 +44,7 @@ class PropertySpider(scrapy.Spider):
         self.spiderset = set()
         # set the start_urls with the console parameters
         self.urls_scheme = get_project_settings().get('IDEALISTA_URL_SCHEME')
+        self.country = self.urls_scheme['country']
         self.check_args(transaction, property_type, province)
         self.start_urls = self.set_start_urls(transaction, property_type, province)
 
@@ -129,40 +130,56 @@ class PropertySpider(scrapy.Spider):
         :param response: response of a list of properties page
         :return: yield the property page or next list of properties page
         """
-        for item in response.xpath('//div[@class="item-info-container"]'):
-            item_page = response.urljoin(item.xpath('.//a[@class="item-link "]/@href').extract_first())
-            # TODO: Change string concatenation
-            slug = 'id-' + item_page.split("/")[4]
-            self.spiderset.add(slug)
-            price = int("".join((item.xpath('.//span[@class="item-price"]/text()')[0].re('(\d)'))))
-            property_obj = self.set_property_object(slug)
-            # if there is already a property object in the db with that slug and check for changes: price & offline
-            if property_obj:
-                # check if last price has change
-                property_price = property_obj.price_set.order_by('-date_start').first()
-                # check just in case we have a property without price value
-                if property_price:
-                    # Update the price if the new one is different from the one store in the db
-                    if property_price.value != price:
-                        property_price.date_end = date.today()
-                        property_price.save()
-                        Price.objects.create(value=int(price), date_start=date.today(), property_price=property_obj)
-                    # check if a property that was offline now is online
-                    if not property_obj.online:
-                        property_obj.online = True
-                        property_obj.save()
-                        Date.objects.create(online=date.today(), property_date=property_obj)
-                        if property_price.value == price:
+        """
+        FIRST, GO DEEPER!!
+        address_level = response.xpath('//span[@class="breadcrumb-title icon-arrow-dropdown-after"]/text()').extract_first()
+        bread = response.xpath('//div[@class="breadcrumb-subitems"]/ul/li/ul/li')
+        
+        """
+        breadcrumb_list = response.xpath('//div[@class="breadcrumb-subitems"]/ul/li/ul/li/a/@href').extract()
+        if len(breadcrumb_list) is not 0:
+            for crumb in breadcrumb_list:
+                next_page = response.urljoin(crumb+self.urls_scheme['query_pub_date'])
+                yield scrapy.Request(next_page, callback=self.parse)
+        else:
+            geo_path = response.xpath('//div[@class="breadcrumb-geo wrapper clearfix"]/ul/li/a/text()').extract()
+            geo_current = response.xpath('//span[@class="breadcrumb-title icon-arrow-dropdown-after"]/text()').extract()
+            geo = list(map(str.strip, [*geo_path, *geo_current]))
+            for item in response.xpath('//div[@class="item-info-container"]'):
+                item_page = response.urljoin(item.xpath('.//a[@class="item-link "]/@href').extract_first())
+                # TODO: Change string concatenation
+                slug = 'id-' + item_page.split("/")[4]
+                self.spiderset.add(slug)
+                price = int("".join((item.xpath('.//span[contains(@class, "item-price")]/text()')[0].re('(\d)'))))
+                property_obj = self.set_property_object(slug)
+                # if there is already a property object in the db with that slug and check for changes: price & offline
+                if property_obj:
+                    # check if last price has change
+                    property_price = property_obj.price_set.order_by('-date_start').first()
+                    # check just in case we have a property without price value
+                    if property_price:
+                        # Update the price if the new one is different from the one store in the db
+                        if property_price.value != price:
+                            property_price.date_end = date.today()
+                            property_price.save()
                             Price.objects.create(value=int(price), date_start=date.today(), property_price=property_obj)
-                            # new Date
-            # if there is not a property with that slug, scrapy it
-            else:
-                yield scrapy.Request(item_page, callback=self.parse_property)
-        # next page definition: Siguiente. Follow each page
-        next_page = response.xpath('//a[@class="icon-arrow-right-after"]/@href').extract_first()
-        if next_page is not None:
-            next_page = response.urljoin(next_page)
-            yield scrapy.Request(next_page, callback=self.parse)
+                        # check if a property that was offline now is online
+                        if not property_obj.online:
+                            property_obj.online = True
+                            property_obj.save()
+                            Date.objects.create(online=date.today(), property_date=property_obj)
+                            if property_price.value == price:
+                                Price.objects.create(value=int(price), date_start=date.today(), property_price=property_obj)
+                                # new Date
+                # if there is not a property with that slug, scrapy it
+                else:
+                    yield scrapy.Request(item_page, callback=self.parse_property,
+                                         meta={'geo': geo})
+            # next page definition: Siguiente. Follow each page
+            next_page = response.xpath('//a[@class="icon-arrow-right-after"]/@href').extract_first()
+            if next_page is not None:
+                next_page = response.urljoin(next_page)
+                yield scrapy.Request(next_page, callback=self.parse)
 
     def parse_property(self, response):
         """
@@ -172,18 +189,20 @@ class PropertySpider(scrapy.Spider):
         """
         # example: property_item = GarageItem()
         property_item = self.set_property_item()
-        title = response.xpath('//span[@class="txt-bold"]/text()')
+        title = response.xpath('/html/head/title/text()')
         # PROPERTY fields
         # property_item['proxy'] = response.meta['proxy']
         property_item['title'] = title.extract_first()
-        property_item['price_raw'] = int("".join((response.xpath('//p[@class="price"]/text()')[0].re('(\d)'))))
+        property_item['price_raw'] = int("".join((response.xpath('//span[@class="h3-simulated txt-bold"]/text()')[0].re('(\d)'))))
         property_item['source'] = 'idealista'
         property_item['url'] = response.url
+        property_item['country'] = self.country
         # TODO: Change string concatenation
         property_item['slug'] = 'id-' + response.url.split("/")[4]
         property_item['transaction'] = title.re('(Alquiler|venta)')[0].lower()
         property_item['property_type'] = self.property_type
         property_item['address_province'] = self.province
+        property_item['address_path'] = response.meta['geo']
         property_item['html'] = response.text
         property_item['desc'] = response.xpath('//div[@class="adCommentsLanguage expandable"]/text()').extract_first()
         property_item['name'] = response.xpath('//div[@class="advertiser-data txt-soft"]/p/text()').extract_first()
@@ -499,6 +518,7 @@ class PropertySpider(scrapy.Spider):
         real_estate['name'] = response.xpath('//div[@class="office-title"]/h2/text()').extract_first()
         # TODO: Change string concatenation
         real_estate['slug'] = 'id-' + response.url.split('/')[4]
+        real_estate['country'] = self.country
         logo = response.xpath('//div[@class="logo-branding"]/img/@src').extract_first()
         if logo:
             # TODO: Change string concatenation

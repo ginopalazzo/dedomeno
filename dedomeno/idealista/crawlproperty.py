@@ -249,9 +249,10 @@ class CrawlPropertyReactor():
 # teruel 24 huesca 155 zamora 80 caceres 94
 # valencia 3154
 # spider = CrawlPropertyReactor(property_type='garage', transaction='sale', provinces=['teruel', 'melilla'])
-spider = CrawlPropertyReactor(property_type='storeroom', transaction='sale', provinces=['madrid'])
-spider.conf()
-spider.run()
+if __name__ == "__main__":
+    spider = CrawlPropertyReactor(property_type='garage', transaction='rent', provinces=['sevilla'])
+    spider.run()
+    spider.conf()
 
 '''
 from scrapy.crawler import CrawlerRunner

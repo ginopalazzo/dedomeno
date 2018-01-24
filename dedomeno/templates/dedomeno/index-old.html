@@ -1,0 +1,71 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dedomeno</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/25b2d4a1cc.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'dedomeno/css/style.css' %}" />
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1 class="display-4"><img src="{% static "dedomeno/img/dedomeno.png" %}" class="logo" alt="Dedomeno"/> Dedomeno</h1>
+            <p class="font-weight-light">Usefull data easy to understand<sup> beta</sup></p>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="{% static "dedomeno/img/dedomeno-logo-dark.png" %}" alt="Dedomeno"/>
+                    </a>
+                </div>
+                <button type="button" class="btn btn-default navbar-btn navbar-right"><i class="fa fa-user-circle-o fa-lg"></i> Login</button>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2 class="text-center"><i class="fa fa-home"></i> <a href="houses">Houses</a></h2>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-first"> - </spam> <spam class="badge badge-total"> total </spam><spam class="badge badge-sale"> sale </spam> <spam class="badge badge-rent"> rent</li>
+                        <li class="list-group-item"> Real Estates <spam class="badge"> {{ real_estates_total|intcomma }} </spam><spam class="badge badge-sale"> - </spam><spam class="badge badge-rent"> - </spam> </li>
+                        <li class="list-group-item"> Houses <spam class="badge badge-total"> {{ houses_total|intcomma }} </spam> <spam class="badge badge-sale"> {{ houses_total_rent|intcomma }} </spam> <spam class="badge badge-rent"> {{ houses_total_sale|intcomma }} </spam> </li>
+                        <li class="list-group-item"> Garages <spam class="badge badge-total"> {{ garages_total|intcomma }} </spam> <spam class="badge badge-sale"> {{ garages_total_rent|intcomma }} </spam> <spam class="badge badge-rent"> {{ garages_total_sale|intcomma }} </spam> </li>
+                        <li class="list-group-item"> Rooms <spam class="badge badge-total"> {{ rooms_total|intcomma }} </spam> <spam class="badge badge-sale"> - </spam> <spam class="badge badge-rent"> {{ rooms_total|intcomma }} </spam> </li>
+                        <li class="list-group-item"> Offices <spam class="badge badge-total"> {{ offices_total|intcomma }} </spam> <spam class="badge badge-sale"> {{ offices_total_rent|intcomma }} </spam> <spam class="badge badge-rent"> {{ offices_total_sale|intcomma }} </spam> </li>
+                        <li class="list-group-item"> Lands <spam class="badge badge-total"> {{ lands_total|intcomma }} </spam> <spam class="badge badge-sale"> {{ lands_total_rent|intcomma }} </spam> <spam class="badge badge-rent"> {{ lands_total_sale|intcomma }} </spam> </li>
+                        <li class="list-group-item"> Commercials <spam class="badge badge-total"> {{ commercials_total|intcomma }} </spam> <spam class="badge badge-sale"> {{ commercials_total_sale|intcomma }} </spam> <spam class="badge badge-rent"> {{ commercials_total_rent|intcomma }} </spam> </li>
+                        <li class="list-group-item"> Store Rooms <spam class="badge badge-total"> {{ storeroom_total|intcomma }} </spam> <spam class="badge badge-sale"> {{ storeroom_total_sale|intcomma }} </spam> <spam class="badge badge-rent"> {{ storeroom_total_rent|intcomma }} </spam> </li>
+                        <li class="list-group-item"> Buildings <spam class="badge badge-total"> {{ buildings_total|intcomma }} </spam> <spam class="badge badge-sale"> {{ buildings_total_sale|intcomma }} </spam> <spam class="badge badge-rent"> {{ buildings_total_rent|intcomma }} </spam> </li>
+                    </ul>
+
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="text-center">
+                        <i class="fa fa-motorcycle"></i> Vechicles</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"> No data yet <spam class="badge"> 0 </spam> </li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h2 class="text-center">
+                        <i class="fa fa-shopping-cart"></i> Shoping</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"> No data yet <spam class="badge"> 0 </spam> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="footer navbar navbar-default navbar-inverse">
+            <div class="container">
+                ...
+            </div>
+        </footer>
+    </body>
+</html>

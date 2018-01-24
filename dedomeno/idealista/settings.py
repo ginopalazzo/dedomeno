@@ -67,11 +67,11 @@ CLOSESPIDER_ERRORCOUNT = 10
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#!CONCURRENT_REQUESTS = 1
+CONCURRENT_REQUESTS = 1
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#!DOWNLOAD_DELAY = 0.04
+DOWNLOAD_DELAY = 0.04
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 10
 # CONCURRENT_REQUESTS_PER_IP = 1
@@ -108,7 +108,7 @@ DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
     # 'idealista.idealistamiddlewares.redirect.RedirectMiddleware': 1,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 80,
-    'idealista.middlewares.RotatorProxy': None,
+    'idealista.middlewares.RotatorProxy': 120,
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'idealista.middlewares.RandomUserAgentMiddleware': 120,
@@ -198,6 +198,7 @@ RECIPIENT = 'ginopalazzo@gmail.com'
 # Dictionary with the url scheme of idealista to compose urls
 IDEALISTA_URL_SCHEME = {
     'source': 'Idealista',
+    'country': 'spain',
     'url': 'https://www.idealista.com/',
     'rent': 'alquiler',
     'rent_transaction': {

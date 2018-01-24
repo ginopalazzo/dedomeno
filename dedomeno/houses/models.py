@@ -2,6 +2,7 @@ from multiselectfield import MultiSelectField
 
 from django.db import models
 from django.contrib.postgres.fields import JSONField
+from django.contrib.postgres.fields import ArrayField
 
 
 class RealEstate(models.Model):
@@ -18,6 +19,7 @@ class RealEstate(models.Model):
     telephone = models.CharField(max_length=300, null=True, blank=True)
     address = models.CharField(max_length=2000, null=True, blank=True)
     source = models.CharField(max_length=200, null=True, blank=True)
+    country = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -61,6 +63,7 @@ class Property(models.Model):
                                     help_text='If blank there is not a real estate involved')
     real_estate_raw = models.CharField(blank=True, max_length=200, null=True)
     price_raw = models.IntegerField(blank=True, null=True)
+    address_path = ArrayField(models.CharField(max_length=200, blank=True, null=True), default=[])
     address_province = models.CharField(max_length=200, blank=True, null=True)
     address_raw = models.CharField(max_length=2000, blank=True, null=True)
     address = JSONField(blank=True, null=True)
@@ -69,6 +72,7 @@ class Property(models.Model):
     longitude = models.CharField(max_length=200, blank=True, null=True)
     date_raw = models.DateField(blank=True, null=True)
     online = models.NullBooleanField(default=True)
+    country = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -81,7 +85,7 @@ class Price(models.Model):
     value = models.IntegerField(blank=True, null=True)
     date_start = models.DateField(blank=True, null=True)
     date_end = models.DateField(blank=True, null=True)
-    property_price = models.ForeignKey(Property, blank=True, null=True)
+    property_price = models.ForeignKey(Property, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return '[' + str(self.date_start) + ']-[' + str(self.date_end) + ']: ' + str(self.value)
@@ -93,7 +97,7 @@ class Date(models.Model):
     """
     online = models.DateField(blank=True, null=True)
     offline = models.DateField(blank=True, null=True)
-    property_date = models.ForeignKey(Property, blank=True, null=True)
+    property_date = models.ForeignKey(Property, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return '[' + str(self.online) + ']-[' + str(self.offline) + ']'

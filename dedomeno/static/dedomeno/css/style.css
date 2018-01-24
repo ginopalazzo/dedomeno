@@ -1,0 +1,18 @@
+.jumbotron{
+    margin-bottom: 0;
+}
+img.logo {
+    vertical-align: text-bottom;
+}
+.list-group-item-first{
+    background-color: rgba(204, 204, 204, 0.42);
+}
+.badge-sale {
+    background-color: #2e6da4;
+}
+.badge-rent {
+    background-color: rgba(46, 109, 164, 0.78);
+}
+.navbar-brand {
+    padding: 10px 15px 15px 15px;
+}

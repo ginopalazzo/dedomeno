@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>dedomeno - houses</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'houses/css/style.css' %}" />
+    </head>
+    <body>
+        <div class="jumbotron text-center">
+            <h1>Summary</h1>
+            <p>A first view of the Spanish real estate market</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2 class="text-center">Real Estate</h2>
+                    {% if real_estates_total > 0 %}
+                        <ul class="list-group">
+                            <li class="list-group-item"> Total Real States: <spam class="badge"> {{ real_estates_total }} </spam>
+                            {% for real_estate in real_estate_list %}
+                                <li class="list-group-item">
+                                    <a href="{% url 'houses:detail_real_estate' real_estate.id %}">{{ real_estate.name }}</a>
+                                    <spam class="badge"> {{ real_estate }} </spam> 
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>There's no Agencies save.</p>
+                    {% endif %}
+                </div>
+                <div class="col-sm-6">
+                    <h2 class="text-center">House</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item"> Total houses for rent: <spam class="badge"> {{ houses_rent_total_active }} </spam><spam class="badge"> {{ houses_rent_total }} </spam> 
+                        <li class="list-group-item"> Total houses for buy: <spam class="badge"> {{ houses_buy_total_active }} </spam><spam class="badge"> {{ houses_buy_total }} </spam> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
