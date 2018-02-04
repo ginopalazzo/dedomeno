@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
-from houses.models import House, RealEstate, Garage, Office, Room, Commercial, Land, StoreRoom, Building
-
+from houses.models import Property, House, RealEstate, Garage, Office, Room, Commercial, Land, StoreRoom, Building
+from idealista import settings
 
 def index(request):
     # template_name = 'houses/index.html'
-
+    # TODO: https://docs.djangoproject.com/en/2.0/topics/db/queries/#caching-and-querysets
     real_estate_list = RealEstate.objects.order_by('name')[:10]
     real_estates_total = RealEstate.objects.count()
     houses_total_rent = House.objects.filter(transaction='rent').count()
@@ -23,7 +23,16 @@ def index(request):
     storeroom_total_sale = StoreRoom.objects.filter(transaction='sale').count()
     buildings_total_rent = Building.objects.filter(transaction='rent').count()
     buildings_total_sale = Building.objects.filter(transaction='sale').count()
-
+    idealista_dict = settings.IDEALISTA_URL_SCHEME
+    transaction_list = ['sale', 'rent']
+    property_sale_list = list(idealista_dict['sale_transaction'].keys())
+    property_rent_list = list(idealista_dict['rent_transaction'].keys())
+    province_list = sorted(list(idealista_dict['provinces'].keys()))
+    '''
+    province_list = [i['address_province'] for i in
+                     Property.objects.all().values('address_province').annotate(
+                         Count('address_province')).order_by('address_province').values('address_province')]
+    '''
     context = {
         'real_estate_list': real_estate_list,
         'real_estates_total': real_estates_total,
@@ -49,6 +58,10 @@ def index(request):
         'buildings_total_rent': buildings_total_rent,
         'buildings_total_sale': buildings_total_sale,
         'buildings_total': buildings_total_sale + buildings_total_rent,
+        'transaction_list': transaction_list,
+        'property_sale_list': property_sale_list,
+        'property_rent_list': property_rent_list,
+        'province_list': province_list,
     }
 
     return render(request, 'dedomeno/index.html', context)

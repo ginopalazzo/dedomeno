@@ -1,40 +1,36 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Dedomeno{% endblock %}</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/25b2d4a1cc.js"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'dedomeno/css/style.css' %}" />
-</head>
+{% load django_bootstrap_breadcrumbs %}
 
-<body>
-    <div class="jumbotron text-center">
-        {% block jumbotron %}
-        <h1 class="display-4"><img src="{% static "dedomeno/img/dedomeno.png" %}" class="logo" alt="Dedomeno"/> Dedomeno</h1>
-        <p class="font-weight-light">Usefull data easy to understand<sup> beta</sup></p>
-        {% endblock %}
-    </div>
-    <nav class="navbar navbar-default">
-        {% block navbar %}
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img src="{% static "dedomeno/img/dedomeno-logo-dark.png" %}" alt="Dedomeno"/>
-                </a>
-            </div>
-            <button type="button" class="btn btn-default navbar-btn navbar-right"><i class="fa fa-user-circle-o fa-lg"></i> Login</button>
+{% block breadcrumbs %}
+    {% clear_breadcrumbs %}
+    {% breadcrumb "Home" "/" %}
+{% endblock %}
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Dedomeno{% endblock %}</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{% static 'dedomeno/css/style.css' %}" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    </head>
+
+    <body>
+        {% include "jumbotron.html" %}
+        {% include "nav-bar.html" %}
+
+        <div id="content">
+            {% block content %}{% endblock %}
         </div>
-        {% endblock %}
-    </nav>
-    <div id="content">
-        {% block content %}{% endblock %}
-    </div>
-    {% include "footer.html" %}
-</body>
+        {% include "footer.html" %}
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/25b2d4a1cc.js"></script>
+    </body>
 </html>

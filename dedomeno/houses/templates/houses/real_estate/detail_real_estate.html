@@ -1,0 +1,64 @@
+{% extends "houses/real_estate/index.html" %}
+{% load humanize %}
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+{% load js %}
+
+
+{% block title %}Dedomeno - Houses{% endblock %}
+{% block breadcrumbs %}
+    {{ block.super }}
+    {% breadcrumb real_estate.name "detail_real_estate.views.index" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2 class="text-center"><img src= {{ real_estate.logo }} alt={{ real_estate.name }} width="70"/> {{ real_estate.name }}</h2>
+                <div class="container-fluid charts">
+                    <div id="donut-charts"></div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Useful information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><i class="far fa-file-alt"> </i></th>
+                            <td>{{ real_estate.desc|lower }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fas fa-link"></i></th>
+                            <td><a href={{ real_estate.web|default:"#" }}>{{ real_estate.web }}</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fas fa-phone"></i></th>
+                            <td>{{ real_estate.telephone }}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><i class="fas fa-location-arrow"></i></th>
+                            <td>{{ real_estate.address}}, {{ real_estate.country }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="{% static 'houses/js/donutcharts.js' %}" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        // Returns a json-like object.
+        function genData() {
+            return {{ donut_chart | js }};
+        }
+    </script>
+{% endblock %}

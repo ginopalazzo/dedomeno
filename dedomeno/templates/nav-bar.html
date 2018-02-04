@@ -1,0 +1,13 @@
+{% load static %}
+{% load django_bootstrap_breadcrumbs %}
+
+{% block navbar %}
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{% static "dedomeno/img/dedomeno-logo-dark.png" %}" class="logo" alt="Dedomeno"/>
+            </a>
+            {% render_breadcrumbs %}
+        </div>
+    </nav>
+{% endblock %}

@@ -1,0 +1,57 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Download Data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelectTransaction">
+                            <i class="far fa-money-bill-alt"></i>
+                        </label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelectTransaction">
+                        <option selected>Choose Transaction ...</option>
+                        <{% for transaction in transaction_list %}
+                            <option value="{{ transaction }}">{{ transaction }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelectProperty">
+                            <i class="far fa-building"></i>
+                        </label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelectProperty">
+                        <option selected>Choose Property ...</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelectProvince">
+                            <i class="far fa-compass"></i>
+                        </label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelectProvince">
+                        <option selected>Choose Province...</option>
+                        {% for province in province_list %}
+                            <option value="{{ province }}">{{ province }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Download</button>
+            </div>
+        </div>
+    </div>
+</div>

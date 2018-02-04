@@ -11,5 +11,5 @@ urlpatterns = [
     # /houses/1
     url(r'^(?P<pk>[0-9]+)/$', views.DetailHouseView.as_view(), name='detail_house'),
     # /houses/
-    url(r'^$', views.index, name='index'),
+    url(r'^realestate$', views.real_estate, name='real_estate'),
 ]

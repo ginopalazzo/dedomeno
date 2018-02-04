@@ -1,0 +1,19 @@
+{% load static %}
+
+<div class="jumbotron text-center">
+    {% block jumbotron %}
+        <h1 class="display-4 font-weight-normal" >
+            <img src="{% static "dedomeno/img/dedomeno.png" %}" class="logo" alt="Dedomeno"/>
+            Dedomeno
+            <sup class="display-15 beta"> beta </sup>
+        </h1>
+        <p class="font-weight-light">
+            Information wants to be free
+        </p>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Download Data
+        </button>
+        <!-- Modal -->
+        {% include "modal-download.html" %}
+    {% endblock %}
+</div>

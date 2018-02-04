@@ -76,6 +76,7 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
     'multiselectfield',
     'django.contrib.humanize',
+    'django_bootstrap_breadcrumbs',
 ]
 
 MIDDLEWARE = [
@@ -93,7 +94,7 @@ ROOT_URLCONF = 'dedomeno.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,6 +102,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },

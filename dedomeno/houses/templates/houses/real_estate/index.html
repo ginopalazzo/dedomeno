@@ -1,12 +1,12 @@
-{% extends "base.html" %}
+{% extends "houses/index.html" %}
 {% load humanize %}
 {% load django_bootstrap_breadcrumbs %}
 
 
-{% block title %}Dedomeno - Houses{% endblock %}
+{% block title %}Dedomeno - Real Estate{% endblock %}
 {% block breadcrumbs %}
     {{ block.super }}
-    {% breadcrumb "Houses" "/houses" %}
+    {% breadcrumb "Real Estate" "/houses/realestate" %}
 {% endblock %}
 
 {% block content %}
@@ -14,7 +14,7 @@
         <div class="row">
             <!--Property Type-->
             <div class="col-sm-4">
-                <h2 class="text-center"><i class="fa fa-home fa-sm"></i> <a href="houses">Property Types</a></h2>
+                <h2 class="text-center"><i class="fa fa-home fa-sm"></i> <a href="houses">AAAA Types</a></h2>
                 <ul class="list-group">
                    <li class="list-group-item list-group-item-first"> -  <span class="pull-right"><spam class="badge badge-pill badge-total"> total </spam><spam class="badge badge-pill badge-sale"> sale </spam> <spam class="badge badge-pill badge-rent"> rent</span></span></li>
                     {% for property in property_list %}
@@ -31,7 +31,7 @@
             <!--.Property Type-->
             <!--Real Estate-->
             <div class="col-sm-4">
-                <h2 class="text-center"><i class="fa fa-building fa-sm"></i> <a href="realestate">Real Estate</a></h2>
+                <h2 class="text-center"><i class="fa fa-building fa-sm"></i> <a href="houses">Real Estate</a></h2>
                 <ul class="list-group">
                    <li class="list-group-item list-group-item-first"> - <spam class="badge badge-pill badge-total pull-right"> total </spam></li>
                     {% for real_estate in real_estate_list %}

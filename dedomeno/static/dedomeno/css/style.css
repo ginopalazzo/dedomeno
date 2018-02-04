@@ -1,18 +1,80 @@
-.jumbotron{
+
+body {
+    font-family: 'Roboto Light',sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color: #2e6da4;
+}
+a:hover {
+    color: rgba(46, 109, 164, 0.78);
+    text-decoration: none;
+}
+
+.jumbotron {
     margin-bottom: 0;
+    border-top: 1px solid #2e6da4;
 }
 img.logo {
     vertical-align: text-bottom;
+}
+.beta {
+    font-size: 20px;
 }
 .list-group-item-first{
     background-color: rgba(204, 204, 204, 0.42);
 }
 .badge-sale {
     background-color: #2e6da4;
+    color: white;
 }
 .badge-rent {
     background-color: rgba(46, 109, 164, 0.78);
+    color: white;
 }
-.navbar-brand {
-    padding: 10px 15px 15px 15px;
+.navbar {
+    margin-bottom: 40px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.breadcrumb{
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.page-footer{
+    margin-top: 40px;
+}
+
+.footer-rrss{
+    background-color: rgba(46, 109, 164, 0.78);
+    color : white;
+}
+
+hr{
+   border-top: 1px solid rgba(46, 109, 164, 0.78);
+}
+
+.page-footer{
+    background: #2B2B2B;
+    color: #999;
+    box-shadow: 0 -2px 4px 0 rgba(0,0,0,.6);
+}
+
+.page-footer strong{
+    color: white;
+}
+
+.footer-copyright{
+    background-color: rgba(0,0,0,.2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.charts{
+    margin-top: 50px;
 }

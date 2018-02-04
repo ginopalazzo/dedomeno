@@ -108,7 +108,7 @@ DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
     # 'idealista.idealistamiddlewares.redirect.RedirectMiddleware': 1,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 80,
-    'idealista.middlewares.RotatorProxy': 120,
+    'idealista.middlewares.RotatorProxy': None, #!
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'idealista.middlewares.RandomUserAgentMiddleware': 120,
