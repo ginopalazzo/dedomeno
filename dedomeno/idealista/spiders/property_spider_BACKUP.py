@@ -142,11 +142,9 @@ class PropertySpider(scrapy.Spider):
                 next_page = response.urljoin(crumb+self.urls_scheme['query_pub_date'])
                 yield scrapy.Request(next_page, callback=self.parse)
         else:
-            # Gather all possible information of the territorial organization of the Property
             geo_path = response.xpath('//div[@class="breadcrumb-geo wrapper clearfix"]/ul/li/a/text()').extract()
             geo_current = response.xpath('//span[@class="breadcrumb-title icon-arrow-dropdown-after"]/text()').extract()
             geo = list(map(str.strip, [*geo_path, *geo_current]))
-            geocode = re.findall(r"geo=(.*);", response.text)[0].split('-')
             for item in response.xpath('//div[@class="item-info-container"]'):
                 item_page = response.urljoin(item.xpath('.//a[@class="item-link "]/@href').extract_first())
                 # TODO: Change string concatenation
@@ -176,7 +174,7 @@ class PropertySpider(scrapy.Spider):
                 # if there is not a property with that slug, scrapy it
                 else:
                     yield scrapy.Request(item_page, callback=self.parse_property,
-                                         meta={'geo': geo, 'geocode': geocode})
+                                         meta={'geo': geo})
             # next page definition: Siguiente. Follow each page
             next_page = response.xpath('//a[@class="icon-arrow-right-after"]/@href').extract_first()
             if next_page is not None:
@@ -205,7 +203,6 @@ class PropertySpider(scrapy.Spider):
         property_item['property_type'] = self.property_type
         property_item['address_province'] = self.province
         property_item['address_path'] = response.meta['geo']
-        print(response.meta['geocode'])
         # property_item['html'] = response.text
         property_item['desc'] = response.xpath('//div[@class="adCommentsLanguage expandable"]/text()').extract_first()
         property_item['name'] = response.xpath('//div[@class="advertiser-data txt-soft"]/p/text()').extract_first()

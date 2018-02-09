@@ -67,11 +67,12 @@ CLOSESPIDER_ERRORCOUNT = 10
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 1
+#!CONCURRENT_REQUESTS = 1
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.04
+#! DOWNLOAD_DELAY = 0.04 #With the rotator proxies (DOUBLE CHECK!!)
+#!DOWNLOAD_DELAY = 0.6
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 10
 # CONCURRENT_REQUESTS_PER_IP = 1
@@ -222,6 +223,7 @@ IDEALISTA_URL_SCHEME = {
         'building': 'edificios',
     },
     'separator': '-',
+    'municipality': 'municipios',
     'query_pub_date': '?ordenado-por=fecha-publicacion-desc',
     'pro': 'pro',
     'real estate': 'agencias-inmobiliarias',
@@ -278,5 +280,267 @@ IDEALISTA_URL_SCHEME = {
         'vizcaya': 'vizcaya',
         'zamora': 'zamora-provincia',
         'zaragoza': 'zaragoza-provincia',
-    }
+    },
+    'provinces_ine': {
+        '02': {
+            'name_official': 'Albacete',
+            'name_dedomeno': 'albacete',
+            'name-idealista': 'albacete-provincia',
+        },
+        '03': {
+            'name_official': 'Alicante/Alacant',
+            'name_dedomeno': 'alicante',
+            'name-idealista': 'alicante',
+        },
+        '04': {
+            'name_official': 'Almería',
+            'name_dedomeno': 'almeria',
+            'name-idealista': 'almeria-provincia',
+        },
+        '01': {
+            'name_official': 'Araba/Álava',
+            'name_dedomeno': 'alava',
+            'name-idealista': 'alava',
+        },
+        '33': {
+            'name_official': 'Asturias',
+            'name_dedomeno': 'asturias',
+            'name-idealista': 'asturias',
+        },
+        '05': {
+            'name_official': 'Ávila',
+            'name_dedomeno': 'avila',
+            'name-idealista': 'avila-provincia',
+        },
+        '06': {
+            'name_official': 'Badajoz',
+            'name_dedomeno': 'badajoz',
+            'name-idealista':'badajoz-provincia',
+        },
+        '07': {
+            'name_official': 'Balears, Illes',
+            'name_dedomeno': 'baleares',
+            'name-idealista': 'balears-illes',
+        },
+        '08': {
+            'name_official': 'Barcelona',
+            'name_dedomeno': 'barcelona',
+            'name-idealista': 'barcelona-provincia',
+        },
+        '48': {
+            'name_official': 'Bizkaia',
+            'name_dedomeno': 'vizcaya',
+            'name-idealista': 'vizcaya',
+        },
+        '09': {
+            'name_official': 'Burgos',
+            'name_dedomeno': 'burgos',
+            'name-idealista': 'burgos-provincia',
+        },
+        '10': {
+            'name_official': 'Cáceres',
+            'name_dedomeno': 'caceres',
+            'name-idealista': 'caceres-provincia',
+        },
+        '11': {
+            'name_official': 'Cádiz',
+            'name_dedomeno': 'cadiz',
+            'name-idealista': 'cadiz-provincia',
+        },
+        '39': {
+            'name_official': 'Cantabria',
+            'name_dedomeno': 'cantabria',
+            'name-idealista': 'cantabria',
+        },
+        '12': {
+            'name_official': 'Castellón/Castelló',
+            'name_dedomeno': 'castellon',
+            'name-idealista': 'castellon',
+        },
+        '13': {
+            'name_official': 'Ciudad Real',
+            'name_dedomeno': 'ciudad real',
+            'name-idealista': 'ciudad-real-provincia',
+        },
+        '14': {
+            'name_official': 'Córdoba',
+            'name_dedomeno': 'cordoba',
+            'name-idealista': 'cordoba-provincia',
+        },
+        '15': {
+            'name_official': 'Coruña, A',
+            'name_dedomeno': 'a coruña',
+            'name-idealista': 'a-coruna-provincia',
+        },
+        '16': {
+            'name_official': 'Cuenca',
+            'name_dedomeno': 'cuenca',
+            'name-idealista': 'cuenca-provincia',
+        },
+        '20': {
+            'name_official': 'Gipuzkoa',
+            'name_dedomeno': 'guipuzcoa',
+            'name-idealista': 'guipuzcoa',
+        },
+        '17': {
+            'name_official': 'Girona',
+            'name_dedomeno': 'gerona',
+            'name-idealista': 'girona-provincia',
+        },
+        '18': {
+            'name_official': 'Granada',
+            'name_dedomeno': 'granada',
+            'name-idealista': 'granada-provincia',
+        },
+        '19': {
+            'name_official': 'Guadalajara',
+            'name_dedomeno': 'guadalajara',
+            'name-idealista': 'guadalajara-provincia',
+        },
+        '21': {
+            'name_official': 'Huelva',
+            'name_dedomeno': 'huelva',
+            'name-idealista': 'huelva-provincia',
+        },
+        '22': {
+            'name_official': 'Huesca',
+            'name_dedomeno': 'huesca',
+            'name-idealista': 'huesca-provincia',
+        },
+        '23': {
+            'name_official': 'Jaén',
+            'name_dedomeno': 'jaen',
+            'name-idealista': 'jaen-provincia',
+        },
+        '24': {
+            'name_official': 'León',
+            'name_dedomeno': 'leon',
+            'name-idealista': 'leon-provincia',
+        },
+        '25': {
+            'name_official': 'Lleida',
+            'name_dedomeno': 'lerida',
+            'name-idealista': 'lleida-provincia',
+        },
+        '27': {
+            'name_official': 'Lugo',
+            'name_dedomeno': 'lugo',
+            'name-idealista': 'lugo-provincia',
+        },
+        '28': {
+            'name_official': 'Madrid',
+            'name_dedomeno': 'madrid',
+            'name-idealista': 'madrid-provincia',
+        },
+        '29': {
+            'name_official': 'Málaga',
+            'name_dedomeno': 'malaga',
+            'name-idealista': 'malaga-provincia',
+        },
+        '30': {
+            'name_official': 'Murcia',
+            'name_dedomeno': 'murcia',
+            'name-idealista': 'murcia-provincia',
+        },
+        '31': {
+            'name_official': 'Navarra',
+            'name_dedomeno': 'navarra',
+            'name-idealista': 'navarra',
+        },
+        '32': {
+            'name_official': 'Ourense',
+            'name_dedomeno': 'ourense',
+            'name-idealista': 'ourense-provincia',
+        },
+        '34': {
+            'name_official': 'Palencia',
+            'name_dedomeno': 'palencia',
+            'name-idealista': 'palencia-provincia',
+        },
+        '35': {
+            'name_official': 'Palmas, Las',
+            'name_dedomeno': 'las palmas',
+            'name-idealista': 'las-palmas',
+        },
+        '36': {
+            'name_official': 'Pontevedra',
+            'name_dedomeno': 'pontevedra',
+            'name-idealista': 'pontevedra-provincia',
+        },
+        '26': {
+            'name_official': 'Rioja, La',
+            'name_dedomeno': 'la rioja',
+            'name-idealista': 'la-rioja',
+        },
+        '37': {
+            'name_official': 'Salamanca',
+            'name_dedomeno': 'salamanca',
+            'name-idealista': 'salamanca-provincia',
+        },
+        '38': {
+            'name_official': 'Santa Cruz de Tenerife',
+            'name_dedomeno': 'tenerife',
+            'name-idealista': 'santa-cruz-de-tenerife-provincia',
+        },
+        '40': {
+            'name_official': 'Segovia',
+            'name_dedomeno': 'segovia',
+            'name-idealista': 'segovia-provincia',
+        },
+        '41': {
+            'name_official': 'Sevilla',
+            'name_dedomeno': 'sevilla',
+            'name-idealista': 'sevilla-provincia',
+        },
+        '42': {
+            'name_official': 'Soria',
+            'name_dedomeno': 'soria',
+            'name-idealista': 'soria-provincia',
+        },
+        '43': {
+            'name_official': 'Tarragona',
+            'name_dedomeno': 'tarragona',
+            'name-idealista': 'tarragona-provincia',
+        },
+        '44': {
+            'name_official': 'Teruel',
+            'name_dedomeno': 'teruel',
+            'name-idealista': 'teruel-provincia',
+        },
+        '45': {
+            'name_official': 'Toledo',
+            'name_dedomeno': 'toledo',
+            'name-idealista': 'toledo-provincia',
+        },
+        '46': {
+            'name_official': 'Valencia/València',
+            'name_dedomeno': 'valencia',
+            'name-idealista': 'valencia-provincia',
+        },
+        '47': {
+            'name_official': 'Valladolid',
+            'name_dedomeno': 'valladolid',
+            'name-idealista': 'valladolid-provincia',
+        },
+        '49': {
+            'name_official': 'Zamora',
+            'name_dedomeno': 'zamora',
+            'name-idealista': 'zamora-provincia',
+        },
+        '50': {
+            'name_official': 'Zaragoza',
+            'name_dedomeno': 'zaragoza',
+            'name-idealista': 'zaragoza-provincia',
+        },
+        '51': {
+            'name_official': 'Ceuta',
+            'name_dedomeno': 'ceuta',
+            'name-idealista': 'ceuta-provincia',
+        },
+        '52': {
+            'name_official': 'Melilla',
+            'name_dedomeno': 'melilla',
+            'name-idealista': 'melilla-provincia',
+        },
+    },
 }

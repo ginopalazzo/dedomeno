@@ -26260,3 +26260,1433 @@ AttributeError: 'list' object has no attribute 'keys'
 [04/Feb/2018 19:05:51] WARNING [django.request:93] Not Found: /houses/houses
 [04/Feb/2018 19:05:51] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 2981
 [04/Feb/2018 19:05:54] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11717
+[04/Feb/2018 22:53:50] WARNING [django.request:93] Not Found: /houses/houses
+[04/Feb/2018 22:53:50] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 2981
+[04/Feb/2018 22:53:53] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[04/Feb/2018 22:53:55] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23674
+[04/Feb/2018 22:53:55] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[04/Feb/2018 22:54:00] WARNING [django.request:93] Not Found: /houses/d
+[04/Feb/2018 22:54:00] WARNING [django.server:124] "GET /houses/d HTTP/1.1" 404 2966
+[04/Feb/2018 22:54:23] INFO [django.server:124] "GET /houses/realestate/15076/ HTTP/1.1" 200 13009
+[04/Feb/2018 22:54:23] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 304 0
+[04/Feb/2018 22:54:30] INFO [django.server:124] "GET /houses/realestate/12135/ HTTP/1.1" 200 12925
+[05/Feb/2018 15:33:28] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[05/Feb/2018 15:33:28] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[05/Feb/2018 15:33:40] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[05/Feb/2018 15:33:40] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23674
+[05/Feb/2018 15:34:51] WARNING [django.request:93] Not Found: /houses/houses
+[05/Feb/2018 15:34:51] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 2981
+[05/Feb/2018 15:47:48] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23674
+[05/Feb/2018 15:47:50] WARNING [django.request:93] Not Found: /houses/houses
+[05/Feb/2018 15:47:50] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 3158
+[05/Feb/2018 15:48:45] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23676
+[05/Feb/2018 15:48:48] WARNING [django.request:93] Not Found: /houses/province
+[05/Feb/2018 15:48:48] WARNING [django.server:124] "GET /houses/province HTTP/1.1" 404 3164
+[05/Feb/2018 15:48:58] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[05/Feb/2018 15:48:59] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: provinces/index.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: provinces/index.html
+[05/Feb/2018 15:49:00] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 123411
+[05/Feb/2018 15:56:38] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: province/index.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: province/index.html
+[05/Feb/2018 15:56:38] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 123378
+[05/Feb/2018 15:56:40] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: province/index.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: province/index.html
+[05/Feb/2018 15:56:40] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 123378
+[05/Feb/2018 15:57:23] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: housees /index.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: housees /index.html
+[05/Feb/2018 15:57:23] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 123378
+[05/Feb/2018 15:57:24] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: housees /index.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: housees /index.html
+[05/Feb/2018 15:57:24] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 123378
+[05/Feb/2018 15:57:29] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 109, in find_template
+    template_name, skip=history,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 130, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: houses /index.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: houses /index.html
+[05/Feb/2018 15:57:29] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 123345
+[05/Feb/2018 15:57:46] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 9782
+[05/Feb/2018 15:57:46] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 15:57:46] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 15:57:46] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:00:53] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11651
+[05/Feb/2018 16:00:53] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:00:53] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:00:53] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:00:56] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11651
+[05/Feb/2018 16:00:56] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:00:56] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:00:56] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:03:30] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11618
+[05/Feb/2018 16:03:30] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:03:30] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:03:30] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:03:33] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11618
+[05/Feb/2018 16:03:33] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:03:33] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:03:33] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:03:34] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11618
+[05/Feb/2018 16:03:34] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:03:34] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:03:34] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:04:12] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11655
+[05/Feb/2018 16:04:12] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:04:12] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:04:12] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:04:33] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[05/Feb/2018 16:04:34] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[05/Feb/2018 16:04:36] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11655
+[05/Feb/2018 16:05:01] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[05/Feb/2018 16:05:02] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[05/Feb/2018 16:05:07] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[05/Feb/2018 16:05:08] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11655
+[05/Feb/2018 16:08:25] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[05/Feb/2018 16:08:34] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[05/Feb/2018 16:08:37] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[05/Feb/2018 16:08:37] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[05/Feb/2018 16:08:43] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 11655
+[05/Feb/2018 16:14:58] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13393
+[05/Feb/2018 16:14:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:14:58] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:14:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:15:45] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13405
+[05/Feb/2018 16:15:45] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:15:45] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:15:45] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:16:07] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13628
+[05/Feb/2018 16:16:07] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:16:07] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:16:07] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:16:38] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13627
+[05/Feb/2018 16:16:38] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:16:38] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:16:38] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:17:23] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[05/Feb/2018 16:17:23] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[05/Feb/2018 16:17:27] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13631
+[05/Feb/2018 16:24:49] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13632
+[05/Feb/2018 16:24:56] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13632
+[05/Feb/2018 16:24:58] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13632
+[05/Feb/2018 16:24:58] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:24:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:24:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:25:17] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13632
+[05/Feb/2018 16:25:17] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 16:25:17] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:25:17] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:25:19] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13632
+[05/Feb/2018 16:25:19] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 16:25:19] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 16:25:19] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:08:49] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13631
+[05/Feb/2018 17:08:49] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:08:49] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:08:49] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:11:07] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14768
+[05/Feb/2018 17:11:07] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:11:07] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:11:07] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:11:12] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14768
+[05/Feb/2018 17:11:12] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:11:12] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:11:12] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:12:04] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14802
+[05/Feb/2018 17:12:04] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:12:04] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:12:04] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:12:04] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:12:04] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:12:45] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14802
+[05/Feb/2018 17:12:45] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:12:45] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:12:45] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:12:45] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:12:45] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:34:53] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14070
+[05/Feb/2018 17:34:53] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:34:53] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:34:53] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:34:53] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:34:53] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:37:19] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:37:19] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:37:19] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14865
+[05/Feb/2018 17:37:19] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:37:19] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:37:19] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:37:19] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:37:19] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:38:00] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:38:00] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:38:00] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 15615
+[05/Feb/2018 17:38:00] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:38:00] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:38:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:38:00] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:38:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:54:00] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14719
+[05/Feb/2018 17:54:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:54:00] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:54:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:54:00] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:54:00] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:54:13] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14719
+[05/Feb/2018 17:54:13] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:54:13] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:54:13] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:54:13] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:54:13] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:54:25] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:54:25] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:54:25] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14866
+[05/Feb/2018 17:54:25] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:54:25] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:54:25] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:54:25] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:54:25] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:54:38] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:54:38] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:54:38] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14872
+[05/Feb/2018 17:54:38] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:54:38] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:54:38] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:54:38] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:54:38] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:54:46] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:54:46] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:54:46] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14872
+[05/Feb/2018 17:54:46] WARNING [django.request:93] Not Found: /houses/bundle.js
+[05/Feb/2018 17:54:46] WARNING [django.server:124] "GET /houses/bundle.js HTTP/1.1" 404 3167
+[05/Feb/2018 17:54:46] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:54:46] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:54:46] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:58:06] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 18055
+[05/Feb/2018 17:58:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 17:58:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 17:58:06] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 17:58:06] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 17:58:06] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 17:58:06] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 17:58:06] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:04:08] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 18099
+[05/Feb/2018 18:04:09] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:04:09] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 18:04:09] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:04:11] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:04:11] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:05:13] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 18097
+[05/Feb/2018 18:05:13] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 18:05:13] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:05:13] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:05:15] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:05:15] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:06:27] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 18097
+[05/Feb/2018 18:06:27] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1252
+[05/Feb/2018 18:06:27] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:06:27] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:06:29] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:06:29] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:06:54] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:06:54] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:06:54] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 18097
+[05/Feb/2018 18:06:54] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:06:54] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:06:54] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:10:55] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[05/Feb/2018 18:10:55] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 18056
+[05/Feb/2018 18:10:56] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:10:56] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:10:56] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:10:56] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:10:56] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:10:56] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:10:56] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:11:14] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:11:14] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:11:14] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 539, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 272: 'endblock'. Did you forget to register or load this tag?
+[05/Feb/2018 18:11:15] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 130024
+[05/Feb/2018 18:11:24] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[05/Feb/2018 18:11:24] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:11:24] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:11:24] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 8309
+[05/Feb/2018 18:11:24] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:11:24] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:11:24] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:11:24] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:11:34] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:11:34] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:11:34] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:11:34] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:11:35] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 18056
+[05/Feb/2018 18:11:35] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:11:35] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:11:35] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:11:35] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:11:35] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:11:35] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:11:35] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:12:33] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 475, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 477, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 539, in invalid_block_tag
+    "or load this tag?" % (token.lineno, command)
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 338: 'endblock'. Did you forget to register or load this tag?
+[05/Feb/2018 18:12:33] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:12:33] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:12:33] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:12:33] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:12:33] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 130540
+[05/Feb/2018 18:12:43] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:12:43] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:12:43] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:12:43] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:12:43] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 9469
+[05/Feb/2018 18:12:43] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:12:43] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:12:43] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:12:43] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:13:23] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:13:23] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:13:23] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:13:23] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:13:23] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 7442
+[05/Feb/2018 18:13:24] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:13:24] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:13:43] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 7456
+[05/Feb/2018 18:13:43] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:13:44] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:13:44] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:13:44] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:13:44] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:13:44] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:15:08] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:15:08] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:15:08] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 8680
+[05/Feb/2018 18:15:08] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:15:08] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:15:08] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:15:08] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:15:55] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:15:55] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:15:55] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:15:55] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:15:55] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 17676
+[05/Feb/2018 18:15:55] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:15:55] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:15:55] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:17:11] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 8690
+[05/Feb/2018 18:17:12] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:17:12] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:17:12] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:17:12] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:21:16] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 8691
+[05/Feb/2018 18:21:17] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:21:17] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:21:17] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:21:17] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:21:25] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:21:25] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:21:25] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:21:25] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:21:25] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 7510
+[05/Feb/2018 18:21:26] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:21:26] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:22:29] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 7518
+[05/Feb/2018 18:22:29] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:22:29] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:22:29] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:22:29] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:22:29] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:22:29] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:26:51] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:26:51] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:26:51] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 7447
+[05/Feb/2018 18:26:51] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:26:51] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:26:51] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:26:51] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:50:47] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 7518
+[05/Feb/2018 18:50:48] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:50:48] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:50:48] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:50:48] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:50:52] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 7518
+[05/Feb/2018 18:50:52] WARNING [django.request:93] Not Found: /houses/municipios.json
+[05/Feb/2018 18:50:52] WARNING [django.server:124] "GET /houses/municipios.json HTTP/1.1" 404 3185
+[05/Feb/2018 18:50:52] WARNING [django.request:93] Not Found: /houses/ccaa.json
+[05/Feb/2018 18:50:52] WARNING [django.server:124] "GET /houses/ccaa.json HTTP/1.1" 404 3167
+[05/Feb/2018 18:52:06] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12579
+[05/Feb/2018 18:52:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:52:06] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:52:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:52:22] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12580
+[05/Feb/2018 18:52:22] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:52:22] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:52:22] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:53:36] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12676
+[05/Feb/2018 18:53:36] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:53:36] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:53:36] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:54:08] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12712
+[05/Feb/2018 18:54:08] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:54:08] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:54:08] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:54:22] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12631
+[05/Feb/2018 18:54:22] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:54:22] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:54:22] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:54:47] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12706
+[05/Feb/2018 18:54:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:54:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:54:47] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:55:20] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12965
+[05/Feb/2018 18:55:20] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2361
+[05/Feb/2018 18:55:20] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:55:20] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:55:53] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12965
+[05/Feb/2018 18:55:53] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2369
+[05/Feb/2018 18:55:53] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:55:53] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:56:16] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[05/Feb/2018 18:56:16] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12965
+[05/Feb/2018 18:56:16] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:56:16] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:56:16] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[05/Feb/2018 18:56:47] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[05/Feb/2018 18:56:47] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12573
+[05/Feb/2018 18:56:47] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[05/Feb/2018 18:56:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[05/Feb/2018 18:56:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:57:49] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[05/Feb/2018 18:57:49] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12574
+[05/Feb/2018 18:57:49] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[05/Feb/2018 18:57:49] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[05/Feb/2018 18:57:49] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:27:20] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 10:27:22] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 10:27:22] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 10:27:25] INFO [django.server:124] "GET /houses/realestate/15076/ HTTP/1.1" 200 13009
+[06/Feb/2018 10:27:25] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 200 8297
+[06/Feb/2018 10:27:30] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11717
+[06/Feb/2018 10:27:34] WARNING [django.request:93] Not Found: /houses/houses
+[06/Feb/2018 10:27:34] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 3158
+[06/Feb/2018 10:27:41] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 10:27:42] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12574
+[06/Feb/2018 10:47:27] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12496
+[06/Feb/2018 10:47:27] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:47:27] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:47:27] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:48:42] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12129
+[06/Feb/2018 10:48:42] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:48:42] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:48:42] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:49:14] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12131
+[06/Feb/2018 10:49:14] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:49:14] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:49:14] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:49:19] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12131
+[06/Feb/2018 10:49:19] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:49:19] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:49:19] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:49:35] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12129
+[06/Feb/2018 10:49:35] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:49:35] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:49:35] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:49:42] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12496
+[06/Feb/2018 10:49:42] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:49:42] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:49:42] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:50:33] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12070
+[06/Feb/2018 10:50:33] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:50:33] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:50:33] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:50:36] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12070
+[06/Feb/2018 10:50:36] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:50:36] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:50:36] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:50:54] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12129
+[06/Feb/2018 10:50:54] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:50:54] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:50:54] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:51:34] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12198
+[06/Feb/2018 10:51:34] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:51:34] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:51:34] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:52:41] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12224
+[06/Feb/2018 10:52:41] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:52:41] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:52:41] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:54:36] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12238
+[06/Feb/2018 10:54:36] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:54:36] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:54:36] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:56:05] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 10:56:08] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 10:56:13] INFO [django.server:124] "GET /houses/realestate/12135/ HTTP/1.1" 200 12925
+[06/Feb/2018 10:56:13] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 200 8297
+[06/Feb/2018 10:57:58] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12371
+[06/Feb/2018 10:57:58] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:57:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:57:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 10:58:37] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11717
+[06/Feb/2018 10:58:40] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 10:59:09] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 10:59:11] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12371
+[06/Feb/2018 10:59:11] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 10:59:11] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 10:59:11] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:00:11] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 11:00:11] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:00:11] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:00:11] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:00:13] WARNING [django.request:93] Not Found: /favicon.ico
+[06/Feb/2018 11:00:13] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[06/Feb/2018 11:01:20] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12365
+[06/Feb/2018 11:01:21] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:01:21] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:01:21] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:01:51] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12365
+[06/Feb/2018 11:04:03] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12330
+[06/Feb/2018 11:04:03] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:04:03] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:04:03] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:06:32] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12327
+[06/Feb/2018 11:06:32] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:06:32] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:06:32] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:06:51] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12327
+[06/Feb/2018 11:06:51] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:06:51] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:06:51] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:07:49] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12221
+[06/Feb/2018 11:07:49] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:07:49] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:07:49] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:08:04] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12220
+[06/Feb/2018 11:08:04] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:08:04] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:08:04] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:08:18] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12220
+[06/Feb/2018 11:08:34] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12226
+[06/Feb/2018 11:08:34] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:08:34] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:08:34] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:08:51] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12226
+[06/Feb/2018 11:09:21] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12226
+[06/Feb/2018 11:09:46] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12326
+[06/Feb/2018 11:09:46] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 11:09:46] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:09:46] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:17:16] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 11:17:17] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 11:17:21] INFO [django.server:124] "GET /houses/realestate/12135/ HTTP/1.1" 200 12925
+[06/Feb/2018 11:17:32] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11717
+[06/Feb/2018 11:17:35] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 11:17:46] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[06/Feb/2018 11:17:58] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 11:17:59] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12326
+[06/Feb/2018 11:24:45] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[06/Feb/2018 11:24:51] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 11:24:52] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 11:24:53] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12326
+[06/Feb/2018 11:31:40] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12383
+[06/Feb/2018 11:31:40] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 11:31:40] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 11:31:40] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:02:54] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 12:02:55] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 12:03:08] INFO [django.server:124] "GET /houses/realestate/12135/ HTTP/1.1" 200 12925
+[06/Feb/2018 12:03:08] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:03:08] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:03:08] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 12:03:08] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 200 8297
+[06/Feb/2018 12:03:09] INFO [django.server:124] "GET /houses/realestate/12223/ HTTP/1.1" 200 12824
+[06/Feb/2018 12:03:11] INFO [django.server:124] "GET /houses/realestate/12002/ HTTP/1.1" 200 12721
+[06/Feb/2018 12:03:24] INFO [django.server:124] "GET /houses/realestate/15076/ HTTP/1.1" 200 13009
+[06/Feb/2018 12:03:24] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 12:03:24] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 200 8297
+[06/Feb/2018 12:03:24] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:03:24] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:03:25] INFO [django.server:124] "GET /houses/realestate/13386/ HTTP/1.1" 200 12781
+[06/Feb/2018 12:03:26] INFO [django.server:124] "GET /houses/realestate/12000/ HTTP/1.1" 200 12801
+[06/Feb/2018 12:03:27] INFO [django.server:124] "GET /houses/realestate/12008/ HTTP/1.1" 200 12960
+[06/Feb/2018 12:03:27] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:03:27] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 200 8297
+[06/Feb/2018 12:03:27] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:03:27] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 12:03:29] INFO [django.server:124] "GET /houses/realestate/12002/ HTTP/1.1" 200 12721
+[06/Feb/2018 12:03:31] INFO [django.server:124] "GET /houses/realestate/14614/ HTTP/1.1" 200 13025
+[06/Feb/2018 12:04:19] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[06/Feb/2018 12:11:01] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 12:11:02] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 12:11:04] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 12382
+[06/Feb/2018 12:14:06] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13186
+[06/Feb/2018 12:14:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:14:06] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 12:14:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:17:12] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14144
+[06/Feb/2018 12:17:12] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1254
+[06/Feb/2018 12:17:12] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:17:12] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:19:18] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14144
+[06/Feb/2018 12:19:18] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:19:18] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:19:18] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:21:40] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14143
+[06/Feb/2018 12:21:40] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:21:40] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:21:40] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:22:59] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14033
+[06/Feb/2018 12:22:59] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:22:59] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:22:59] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:23:20] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 13948
+[06/Feb/2018 12:23:20] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:23:20] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:23:20] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:23:56] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 12:23:56] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14174
+[06/Feb/2018 12:23:56] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:23:56] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:23:56] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:26:13] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 12:26:13] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14166
+[06/Feb/2018 12:26:13] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 12:27:31] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14155
+[06/Feb/2018 12:27:31] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:27:31] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:27:31] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:29:45] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14175
+[06/Feb/2018 12:29:45] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:29:45] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:29:45] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:29:59] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14170
+[06/Feb/2018 12:29:59] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:29:59] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:29:59] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:31:51] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14226
+[06/Feb/2018 12:32:00] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14226
+[06/Feb/2018 12:32:00] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 12:32:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 12:32:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 12:32:01] WARNING [django.request:93] Not Found: /favicon.ico
+[06/Feb/2018 12:32:01] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[06/Feb/2018 12:33:43] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14289
+[06/Feb/2018 12:33:43] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 12:39:56] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 14281
+[06/Feb/2018 12:39:56] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 13:25:50] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 50, in province
+    context = super().get_context_data(**kwargs)
+RuntimeError: super(): __class__ cell not found
+[06/Feb/2018 13:25:52] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 64529
+[06/Feb/2018 13:27:35] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 54, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 662, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 574, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'js'
+[06/Feb/2018 13:27:35] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 184173
+[06/Feb/2018 13:28:10] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16319
+[06/Feb/2018 13:28:10] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 13:28:25] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16319
+[06/Feb/2018 13:28:25] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 13:29:21] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 54, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 641, in __init__
+    token[start:]))
+django.template.exceptions.TemplateSyntaxError: Could not parse some characters: provinces_ine|[hover.id]| | js
+[06/Feb/2018 13:29:21] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 180368
+[06/Feb/2018 13:31:40] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16439
+[06/Feb/2018 13:31:40] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 13:31:40] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 13:31:40] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 13:31:50] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16439
+[06/Feb/2018 13:32:10] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16476
+[06/Feb/2018 13:33:04] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16493
+[06/Feb/2018 13:33:52] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16490
+[06/Feb/2018 13:36:04] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 52, in province
+    'provinces_ine': settings.IDEALISTA_URL_SCHEME['provinces-ine']
+KeyError: 'provinces-ine'
+[06/Feb/2018 13:36:04] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 64799
+[06/Feb/2018 13:36:43] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16490
+[06/Feb/2018 13:36:44] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 13:37:55] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16464
+[06/Feb/2018 13:38:16] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16463
+[06/Feb/2018 13:38:50] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16464
+[06/Feb/2018 13:39:57] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16557
+[06/Feb/2018 13:41:21] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16491
+[06/Feb/2018 13:41:21] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 13:41:22] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 13:41:22] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 15:16:03] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16491
+[06/Feb/2018 15:16:03] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 15:16:05] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[06/Feb/2018 15:16:05] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[06/Feb/2018 15:16:05] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[06/Feb/2018 15:16:05] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[06/Feb/2018 15:53:32] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 15:53:35] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 15:53:35] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 15:56:04] INFO [django.server:124] "GET /houses/realestate/15076/ HTTP/1.1" 200 13014
+[06/Feb/2018 17:05:31] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 16491
+[06/Feb/2018 17:05:31] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:26:08] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 19911
+[06/Feb/2018 17:26:09] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:26:09] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:26:09] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:32:29] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 17:32:32] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 17:32:32] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:34:04] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 19894
+[06/Feb/2018 17:34:04] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:34:04] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:34:04] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:34:37] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 19905
+[06/Feb/2018 17:34:37] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:34:37] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:34:37] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:35:08] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 19905
+[06/Feb/2018 17:35:08] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:35:08] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:35:08] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:35:20] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 19905
+[06/Feb/2018 17:35:20] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:35:20] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:35:20] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:41:24] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 54, in province
+    total=Count('address_province')).order_by('-total')[:len(property_list)]
+NameError: name 'property_list' is not defined
+[06/Feb/2018 17:41:26] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 64692
+[06/Feb/2018 17:42:01] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 59, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 155, in render
+    return compiled_parent._render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 67, in render
+    result = block.nodelist.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 943, in render
+    bit = node.render_annotated(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 910, in render_annotated
+    return self.render(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 993, in render
+    output = self.filter_expression.resolve(context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 703, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/templatetags/js.py", line 11, in js
+    return mark_safe(json.dumps(obj))
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/encoder.py", line 198, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/encoder.py", line 256, in iterencode
+    return _iterencode(o, 0)
+  File "/Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/json/encoder.py", line 179, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <QuerySet [{'total': 62035, 'rent': 0, 'address_province': 'barcelona', 'transaction': 'sale', 'sale': 62035}, {'total': 10932, 'rent': 10932, 'address_province': 'madrid', 'transaction': 'rent', 'sale': 0}, {'total': 6913, 'rent': 0, 'address_province': 'madrid', 'transaction': 'sale', 'sale': 6913}, {'total': 3112, 'rent': 0, 'address_province': 'palencia', 'transaction': 'sale', 'sale': 3112}, {'total': 2903, 'rent': 0, 'address_province': 'toledo', 'transaction': 'sale', 'sale': 2903}, {'total': 2340, 'rent': 2340, 'address_province': 'cadiz', 'transaction': 'rent', 'sale': 0}, {'total': 2098, 'rent': 2098, 'address_province': 'asturias', 'transaction': 'rent', 'sale': 0}, {'total': 2007, 'rent': 0, 'address_province': 'teruel', 'transaction': 'sale', 'sale': 2007}, {'total': 1451, 'rent': 1451, 'address_province': 'cantabria', 'transaction': 'rent', 'sale': 0}, {'total': 1261, 'rent': 1261, 'address_province': 'almeria', 'transaction': 'rent', 'sale': 0}, {'total': 1188, 'rent': 0, 'address_province': 'sevilla', 'transaction': 'sale', 'sale': 1188}, {'total': 1177, 'rent': 1177, 'address_province': 'malaga', 'transaction': 'rent', 'sale': 0}, {'total': 1037, 'rent': 1037, 'address_province': 'sevilla', 'transaction': 'rent', 'sale': 0}, {'total': 964, 'rent': 964, 'address_province': 'valencia', 'transaction': 'rent', 'sale': 0}, {'total': 714, 'rent': 0, 'address_province': 'soria', 'transaction': 'sale', 'sale': 714}, {'total': 238, 'rent': 0, 'address_province': 'zamora', 'transaction': 'sale', 'sale': 238}, {'total': 145, 'rent': 145, 'address_province': 'teruel', 'transaction': 'rent', 'sale': 0}, {'total': 122, 'rent': 0, 'address_province': 'lugo', 'transaction': 'sale', 'sale': 122}, {'total': 119, 'rent': 0, 'address_province': 'segovia', 'transaction': 'sale', 'sale': 119}, {'total': 67, 'rent': 0, 'address_province': 'cuenca', 'transaction': 'sale', 'sale': 67}, '...(remaining elements truncated)...']> is not JSON serializable
+[06/Feb/2018 17:42:02] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 361610
+[06/Feb/2018 17:43:38] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 28361
+[06/Feb/2018 17:43:38] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:43:38] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:43:38] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:44:24] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 28361
+[06/Feb/2018 17:44:25] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:44:28] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:44:28] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:45:02] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 28417
+[06/Feb/2018 17:45:02] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:45:03] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:45:03] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:46:01] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 28416
+[06/Feb/2018 17:46:01] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 17:46:01] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 17:46:01] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 17:46:58] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 28416
+[06/Feb/2018 21:01:52] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36268
+[06/Feb/2018 21:01:52] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:01:52] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:01:52] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:02:05] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36268
+[06/Feb/2018 21:02:05] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:02:05] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:02:05] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:04:30] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36836
+[06/Feb/2018 21:04:54] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36838
+[06/Feb/2018 21:05:27] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36840
+[06/Feb/2018 21:05:42] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36840
+[06/Feb/2018 21:05:42] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:05:42] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:05:42] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:06:09] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36796
+[06/Feb/2018 21:06:09] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:06:09] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:06:09] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:06:55] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36840
+[06/Feb/2018 21:06:56] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:06:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:06:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:07:19] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36842
+[06/Feb/2018 21:07:19] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:07:20] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:07:20] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:08:54] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36844
+[06/Feb/2018 21:08:54] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:08:54] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:08:54] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:14:50] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37061
+[06/Feb/2018 21:14:50] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:14:50] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:14:50] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:15:14] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37061
+[06/Feb/2018 21:15:14] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:15:15] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:15:15] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:16:59] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37064
+[06/Feb/2018 21:16:59] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:17:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:17:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:17:56] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37064
+[06/Feb/2018 21:17:56] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:17:57] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:17:57] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:18:30] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37081
+[06/Feb/2018 21:18:30] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:18:31] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:18:31] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:19:42] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37089
+[06/Feb/2018 21:19:42] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:19:43] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:19:43] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:20:06] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36542
+[06/Feb/2018 21:20:06] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:20:07] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:20:07] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:21:06] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36084
+[06/Feb/2018 21:21:06] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:21:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:21:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:21:46] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37105
+[06/Feb/2018 21:21:46] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:21:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:21:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:23:05] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37141
+[06/Feb/2018 21:23:05] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:23:05] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:23:05] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:24:58] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36889
+[06/Feb/2018 21:24:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:24:58] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:24:58] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:25:22] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36889
+[06/Feb/2018 21:25:22] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:25:23] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:25:23] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:26:24] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37162
+[06/Feb/2018 21:26:24] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:26:25] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:26:25] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:26:55] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37206
+[06/Feb/2018 21:26:55] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:26:55] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:26:55] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:28:14] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37059
+[06/Feb/2018 21:28:15] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:28:15] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:28:15] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:29:34] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37222
+[06/Feb/2018 21:29:35] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:29:35] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:29:35] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:30:58] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36891
+[06/Feb/2018 21:30:58] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:30:59] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:30:59] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:32:42] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23690
+[06/Feb/2018 21:32:42] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 21:33:51] ERROR [django.request:118] Internal Server Error: /houses/map
+Traceback (most recent call last):
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/dedomeno/houses/views.py", line 67, in province
+    return render(request, 'houses/province/index.html', context)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/shortcuts.py", line 36, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 144, in get_template
+    template, origin = self.find_template(template_name)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/engine.py", line 126, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loaders/base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 160, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 198, in compile_nodelist
+    return parser.parse()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 290, in do_extends
+    nodelist = parser.parse()
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 481, in parse
+    compiled_result = compile_func(self, token)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/loader_tags.py", line 233, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 454, in parse
+    raise self.error(token, e)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 452, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 568, in compile_filter
+    return FilterExpression(token, self)
+  File "/Users/ginopalazzo/Magic/dedomeno-proyect/myenv/lib/python3.5/site-packages/django/template/base.py", line 641, in __init__
+    token[start:]))
+django.template.exceptions.TemplateSyntaxError: Could not parse some characters: provinces_ine|[hover.id]['property_type']['house']['rent']| | intcomma
+[06/Feb/2018 21:33:51] ERROR [django.server:124] "GET /houses/map HTTP/1.1" 500 193870
+[06/Feb/2018 21:36:53] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37258
+[06/Feb/2018 21:36:53] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:36:53] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:36:53] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:37:44] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37228
+[06/Feb/2018 21:37:44] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:37:44] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:37:44] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:39:44] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[06/Feb/2018 21:39:59] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[06/Feb/2018 21:40:00] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23690
+[06/Feb/2018 21:40:04] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23690
+[06/Feb/2018 21:40:24] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23690
+[06/Feb/2018 21:40:27] WARNING [django.request:93] Not Found: /favicon.ico
+[06/Feb/2018 21:40:27] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[06/Feb/2018 21:40:46] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23690
+[06/Feb/2018 21:40:46] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 1255
+[06/Feb/2018 21:40:46] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:40:46] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:40:47] WARNING [django.request:93] Not Found: /favicon.ico
+[06/Feb/2018 21:40:47] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[06/Feb/2018 21:41:04] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37228
+[06/Feb/2018 21:41:04] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 21:41:39] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[06/Feb/2018 21:41:40] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:41:58] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23690
+[06/Feb/2018 21:41:58] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 21:42:08] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11717
+[06/Feb/2018 21:42:08] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 21:42:11] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23690
+[06/Feb/2018 21:44:55] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23676
+[06/Feb/2018 21:44:55] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:44:55] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:44:55] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:44:59] WARNING [django.request:93] Not Found: /houses/houses
+[06/Feb/2018 21:44:59] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 3158
+[06/Feb/2018 21:44:59] WARNING [django.request:93] Not Found: /favicon.ico
+[06/Feb/2018 21:44:59] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[06/Feb/2018 21:45:03] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[06/Feb/2018 21:45:09] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23676
+[06/Feb/2018 21:45:46] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 21:45:46] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[06/Feb/2018 21:45:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[06/Feb/2018 21:45:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[06/Feb/2018 21:45:47] WARNING [django.request:93] Not Found: /favicon.ico
+[06/Feb/2018 21:45:47] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[06/Feb/2018 21:45:56] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[06/Feb/2018 21:45:59] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 21:46:05] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11717
+[06/Feb/2018 21:46:10] INFO [django.server:124] "GET /houses/realestate/15076/ HTTP/1.1" 200 13014
+[06/Feb/2018 21:46:10] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 200 8297
+[06/Feb/2018 21:46:19] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37228
+[06/Feb/2018 21:46:19] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 22:11:53] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 22:11:53] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[06/Feb/2018 22:12:21] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37212
+[06/Feb/2018 22:12:24] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37228
+[06/Feb/2018 22:13:55] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23671
+[06/Feb/2018 22:16:41] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37228
+[06/Feb/2018 22:17:25] INFO [django.server:124] "GET / HTTP/1.1" 200 18054
+[07/Feb/2018 19:45:05] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37244
+[07/Feb/2018 19:45:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[07/Feb/2018 19:45:06] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[07/Feb/2018 21:12:50] INFO [django.server:124] "GET / HTTP/1.1" 200 18058
+[07/Feb/2018 21:12:50] INFO [django.server:124] "GET / HTTP/1.1" 200 18058
+[07/Feb/2018 21:12:51] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[07/Feb/2018 21:12:52] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[07/Feb/2018 21:12:52] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[08/Feb/2018 10:36:21] INFO [django.server:124] "GET / HTTP/1.1" 200 18076
+[08/Feb/2018 10:36:21] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[08/Feb/2018 10:36:21] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 304 0
+[08/Feb/2018 10:36:21] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 304 0
+[08/Feb/2018 10:36:23] WARNING [django.request:93] Not Found: /favicon.ico
+[08/Feb/2018 10:36:23] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[08/Feb/2018 10:36:47] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 23692
+[08/Feb/2018 10:36:58] INFO [django.server:124] "GET /houses/realestate/12135/ HTTP/1.1" 200 12950
+[08/Feb/2018 10:36:59] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 304 0
+[08/Feb/2018 10:37:18] INFO [django.server:124] "GET / HTTP/1.1" 200 18076
+[08/Feb/2018 10:41:37] INFO [django.server:124] "GET / HTTP/1.1" 200 18076
+[08/Feb/2018 10:41:38] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[08/Feb/2018 12:12:38] INFO [django.server:124] "GET /houses/realestate/12135/ HTTP/1.1" 200 12948

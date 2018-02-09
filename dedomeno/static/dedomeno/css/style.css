@@ -78,3 +78,47 @@ hr{
 .charts{
     margin-top: 50px;
 }
+
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  width: 325px;
+  height: 60px;
+  padding: 8px;
+  background: rgb(255,255,255);
+  font-family: "Helvetica Neue", "Helvetica", Arial sans-serif;
+  font-size: 12px;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.5),0 0 0 1px rgba(0,0,0,.08);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.g-place {
+  border-bottom: 1px solid rgb(130,130,130);
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+}
+.g-headline {
+  font-size: 16px;
+}
+.g-sub {
+  color: rgb(130,130,130);
+}
+.g-value {
+  float: right;
+  font-family: "Menlo", monospace;
+}
+.g-rank {
+  float: right;
+  font-size: 14px;
+}
+.legend {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  height: 90px;
+  width: 150px;
+}
+

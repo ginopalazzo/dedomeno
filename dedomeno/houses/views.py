@@ -5,8 +5,11 @@ from django.shortcuts import get_object_or_404, render
 from django.views.generic.detail import DetailView
 from django.db.models import Q
 from django.db.models import Count
+from django.db.models import Avg
+
 
 from houses.models import Property, House, RealEstate, Garage, Office, Room, Commercial, Land, StoreRoom, Building
+from idealista import settings
 
 from django.conf.urls import *
 from django.http import HttpResponse
@@ -44,6 +47,24 @@ def index(request):
 def real_estate(request):
     context = {}
     return render(request, 'houses/real_estate/index.html', context)
+
+
+def province(request):
+    province_ine = settings.IDEALISTA_URL_SCHEME['provinces_ine']
+    for key, value in province_ine.items():
+        name_dedomeno = province_ine[key]['name_dedomeno']
+        query = Property.objects.filter(address_province=name_dedomeno).values('address_province', 'transaction', 'property_type').annotate(
+                rent=Avg('price_raw', filter=Q(transaction='rent')),
+                sale=Avg('price_raw', filter=Q(transaction='sale')))
+
+        province_ine[key]['property_type'] = {i[0]: {'sale':0,'rent':0} for i in Property._meta.get_field('property_type').choices}
+        for item in query:
+            province_ine[key]['property_type'][item['property_type']][item['transaction']] = item[item['transaction']]
+
+    context = {
+        'provinces_ine': province_ine
+    }
+    return render(request, 'houses/province/index.html', context)
 
 
 class DetailRealEstateView(DetailView):

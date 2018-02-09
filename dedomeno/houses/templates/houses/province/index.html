@@ -1,0 +1,140 @@
+{% extends "houses/index.html" %}
+{% load humanize %}
+{% load django_bootstrap_breadcrumbs %}
+{% load js %}
+
+{% block title %}Dedomeno - Map{% endblock %}
+{% block breadcrumbs %}
+    {{ block.super }}
+    {% breadcrumb "Map" "/houses/map" %}
+{% endblock %}
+
+{% block content %}
+    <div class="container map">
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://d3js.org/topojson.v1.min.js"></script>
+        <script src="https://unpkg.com/rbush@1.4.3/rbush.js"></script>
+        <script src="https://unpkg.com/d3-composite-projections@0.4.0"></script>
+        <script src="https://unpkg.com/spamjs@1.1.0/spam.min.js"></script>
+
+        <script type='text/javascript'>
+        var hover = null;
+        var width = 960,
+            height = 650
+
+        // Tooltip stuff
+        var tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip")
+            .style("opacity", 0)
+
+        document.onmousemove = handleMouseMove
+
+        function handleMouseMove(event) {
+            mouseX = event.pageX
+            mouseY = event.pageY
+
+          // yolo
+            if (mouseX <= 400) {
+                tooltip.style("left", mouseX - 80 + "px")
+            } else if (mouseX >= 600) {
+                tooltip.style("left", mouseX - 300 + "px")
+            } else {
+                tooltip.style("left", mouseX - 160 + "px")
+            }
+
+            if (mouseY >= 500) {
+                tooltip.style("top", mouseY - 100 + "px")
+            } else {
+                tooltip.style("top", mouseY + 25 + "px")
+            }
+        }
+        d3.json("https://martingonzalez.net/es-provinces.v1.json", function(error, d) {
+            topojson.presimplify(d);
+
+            // Create our number formatter.
+            var formatter = new Intl.NumberFormat('en-US', {
+              style: 'currency',
+              currency: 'EUR',
+              minimumFractionDigits: 2,
+              // the default value for minimumFractionDigits depends on the currency
+              // and is usually already 2
+            });
+
+            var map = new StaticCanvasMap({
+                element: ".map",
+                width: width,
+                height: height,
+                projection: d3.geo.conicConformalSpain()
+                    .translate([width / 2 + 300, height / 2 + 110])
+                    .scale(960 * 4.3),
+                data: [{
+                    features: topojson.feature(d, d.objects["provinces"]),
+                    static: {
+                        paintfeature: function(parameters, d) {
+                            parameters.context.lineWidth = 1.5
+                            parameters.context.strokeStyle = "rgb(255,255,255)"
+                            parameters.context.stroke()
+                            parameters.context.fillStyle = "rgb(225, 220, 220)";
+                            parameters.context.fill()
+                        }
+                    },
+                    dynamic: {
+                        postpaint: function(parameters) {
+                            var provinces_ine = {{provinces_ine | js}};
+                            //var province_list = {{provinces_list | js}};
+                            if (!hover || !provinces_ine[hover.id].name_official) {
+                              tooltip.style("opacity", 0)
+                              return
+                            }
+                            parameters.context.strokeStyle = "rgba(46, 109, 164, 0.78)"
+                            parameters.context.beginPath();
+                            parameters.context.lineWidth = 1 / parameters.scale;
+                            parameters.path(hover);
+                            parameters.context.fillStyle = "rgb(126, 172, 211)";
+                            parameters.context.fill()
+                            parameters.context.stroke();
+                            tooltip.style("opacity", 1);
+
+                            console.log(parameters.context);
+                            console.log(hover.id);
+                            console.log(provinces_ine);
+                            //console.log(province_list);
+                            console.log(provinces_ine[hover.id].name_official);
+                            console.log(provinces_ine[hover.id].name_dedomeno);
+                            console.log(provinces_ine[hover.id]['property_type']);
+                            console.log(provinces_ine[hover.id].property_type);
+
+                            tooltip.style("opacity", 1)
+                                .html("<div class='g-place'>" +
+                                        "<span class='g-headline'>"+ provinces_ine[hover.id].name_official + "</span>" +
+                                        "<span class='g-rank'>" + hover.properties.ranking + " of 73</span><br />" +
+                                        "<span class='g-sub'> INE code:" + hover.id + "</span><br />" +
+                                    "</div>" +
+                                    "<div class='g-val'>" +
+                                        "<span> House </span>" +
+                                        "<span class='g-value'>" + formatter.format(provinces_ine[hover.id]['property_type']['house']['sale']) + " / " +
+                                        formatter.format(provinces_ine[hover.id]['property_type']['house']['rent'])  +
+                                        "</span>" +
+                                    "</div>")
+                        }
+                    },
+
+                    //{'property_type': {'storeroom': {'sale': 0, 'transaction': 153.40458015267177, 'rent': 0}, 'office': {'sale': 0, 'transaction': 809929.3738872403, 'rent': 0}, 'room': {'sale': 0, 'rent': 0}, 'building': {'sale': 0, 'transaction': 4106666.7131782947, 'rent': 0}, 'house': {'sale': 0, 'transaction': 2190.250531050856, 'rent': 0}, 'land': {'sale': 0, 'rent': 0}, 'garage': {'sale': 0, 'transaction': 80.78608058608059, 'rent': 0}, 'commercial': {'sale': 0, 'rent': 0}}, 'name-idealista': 'madrid-provincia', 'name_official': 'Madrid', 'name_dedomeno': 'madrid'}
+
+                    events: {
+                        hover: function(parameters, d) {
+                            hover = d;
+
+                            parameters.map.paint();
+                        },
+                        click: function(parameters, d) {
+                            parameters.map.zoom(d);
+                        }
+                    }
+                }]
+            });
+            map.init()
+        })
+        </script>
+    </div>
+{% endblock %}

@@ -260,7 +260,7 @@ class CrawlPropertyReactor():
 # spider = CrawlPropertyReactor(property_type='garage', transaction='sale', provinces=['teruel', 'melilla'])
 if __name__ == "__main__":
     print(0)
-    spider = CrawlPropertyReactor(property_type='garage', transaction='rent', provinces=['madrid'])
+    spider = CrawlPropertyReactor(property_type='garage', transaction='rent', provinces=['barcelona'])
     print(1)
     spider.conf()
     print(2)
