@@ -7,7 +7,8 @@
 
 import scrapy
 from scrapy_djangoitem import DjangoItem
-from houses.models import Price, Date, RealEstate, Property, House, Room, Office, Garage, Land, Commercial, StoreRoom, Building
+from houses.models import Price, Date, RealEstate, Property, House, Room, Office, Garage, Land, Commercial, StoreRoom,\
+    Building, TerritorialEntity
 
 
 class PropertyListItem(scrapy.Item):
@@ -23,6 +24,10 @@ class RealEstateItem(DjangoItem):
 
 class PriceItem(DjangoItem):
     django_model = Price
+
+
+class TerritorialEntityItem(DjangoItem):
+    django_model = TerritorialEntity
 
 
 class DateItem(DjangoItem):

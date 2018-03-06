@@ -209,15 +209,10 @@ class CrawlPropertyReactor():
 
     @defer.inlineCallbacks
     def conf(self):
-        print(1.1)
         runner = CrawlerRunner(self.settings)
-        print(1.2)
         for province in self.provinces:
-            print(1.3)
             property_crawler = runner.create_crawler('property')
-            print(1.4)
             yield runner.crawl(property_crawler, transaction=self.transaction, property_type=self.property_type, province=province)
-            print(1.5)
             province_dic_stats = {}
             province_dic_stats['transaction'] = self.transaction
             province_dic_stats['property_type'] = self.property_type
@@ -228,12 +223,8 @@ class CrawlPropertyReactor():
             province_dic_stats['item_scraped_count'] = property_crawler.stats.get_value('item_scraped_count')
             province_dic_stats['log_count/ERROR'] = property_crawler.stats.get_value('log_count/ERROR', default=0)
             # province_dic_stats.update(property_crawler.stats.get_stats())
-            print(1.6)
             self.stats_dic_list.append(province_dic_stats)
-            print(1.7)
-        print(1.8)
         reactor.stop()  # the script will block here until the crawling is finished
-        print(1.9)
         # pp = pprint.PrettyPrinter(indent=4)
         # pp.pprint(self.stats_dic_list)
         return self.stats_dic_list
@@ -259,13 +250,9 @@ class CrawlPropertyReactor():
 # valencia 3154
 # spider = CrawlPropertyReactor(property_type='garage', transaction='sale', provinces=['teruel', 'melilla'])
 if __name__ == "__main__":
-    print(0)
-    spider = CrawlPropertyReactor(property_type='garage', transaction='rent', provinces=['barcelona'])
-    print(1)
+    spider = CrawlPropertyReactor(property_type='land', transaction='sale', provinces=['salamanca'])
     spider.conf()
-    print(2)
     spider.run()
-    print(3)
 
 '''
 from scrapy.crawler import CrawlerRunner

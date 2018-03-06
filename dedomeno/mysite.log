@@ -27690,3 +27690,435 @@ django.template.exceptions.TemplateSyntaxError: Could not parse some characters:
 [08/Feb/2018 10:41:37] INFO [django.server:124] "GET / HTTP/1.1" 200 18076
 [08/Feb/2018 10:41:38] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
 [08/Feb/2018 12:12:38] INFO [django.server:124] "GET /houses/realestate/12135/ HTTP/1.1" 200 12948
+[09/Feb/2018 18:45:39] INFO [django.server:124] "GET / HTTP/1.1" 200 17998
+[09/Feb/2018 18:45:39] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[09/Feb/2018 18:45:39] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[09/Feb/2018 18:45:39] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[09/Feb/2018 18:45:42] WARNING [django.request:93] Not Found: /favicon.ico
+[09/Feb/2018 18:45:42] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[09/Feb/2018 18:45:51] INFO [django.server:124] "GET /admin/ HTTP/1.1" 302 0
+[09/Feb/2018 18:45:52] INFO [django.server:124] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1897
+[09/Feb/2018 18:45:52] INFO [django.server:124] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[09/Feb/2018 18:45:52] INFO [django.server:124] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[09/Feb/2018 18:45:52] INFO [django.server:124] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[09/Feb/2018 18:45:52] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[09/Feb/2018 18:45:52] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[09/Feb/2018 18:45:53] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[09/Feb/2018 18:46:05] INFO [django.server:124] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[09/Feb/2018 18:46:05] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 13430
+[09/Feb/2018 18:46:05] INFO [django.server:124] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[09/Feb/2018 18:46:05] INFO [django.server:124] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[09/Feb/2018 18:46:05] INFO [django.server:124] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[09/Feb/2018 18:46:05] INFO [django.server:124] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[09/Feb/2018 18:46:05] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[09/Feb/2018 18:56:25] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /admin/houses/territorialentity/ HTTP/1.1" 200 3784
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/js/actions.js HTTP/1.1" 200 6502
+[09/Feb/2018 18:56:29] INFO [django.server:124] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[09/Feb/2018 18:56:31] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 18:56:34] INFO [django.server:124] "GET /admin/houses/geocode/ HTTP/1.1" 200 3714
+[09/Feb/2018 18:56:34] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 18:56:35] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 18:57:00] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 18:57:03] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 18:57:06] INFO [django.server:124] "GET /admin/houses/territorialentity/ HTTP/1.1" 200 3784
+[09/Feb/2018 18:57:06] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 18:57:07] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 18:57:09] INFO [django.server:124] "GET /admin/houses/geocode/ HTTP/1.1" 200 3714
+[09/Feb/2018 18:57:09] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 18:57:10] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 19:15:04] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 19:15:07] INFO [django.server:124] "GET /admin/houses/garage/ HTTP/1.1" 200 6227
+[09/Feb/2018 19:15:07] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 19:15:08] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 19:15:12] INFO [django.server:124] "GET /admin/houses/geocode/ HTTP/1.1" 200 3714
+[09/Feb/2018 19:15:12] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 19:15:14] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 19:15:16] INFO [django.server:124] "GET /admin/houses/territorialentity/ HTTP/1.1" 200 3784
+[09/Feb/2018 19:15:16] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 19:15:17] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 19:15:20] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 19:15:22] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 20:22:08] INFO [django.server:124] "GET / HTTP/1.1" 200 18002
+[09/Feb/2018 20:29:38] INFO [django.server:124] "GET /admin/houses/realestate/ HTTP/1.1" 200 49343
+[09/Feb/2018 20:29:38] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /admin/houses/realestate/16954/change/ HTTP/1.1" 200 103414
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /static/admin/css/forms.css HTTP/1.1" 200 8173
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /static/admin/css/widgets.css HTTP/1.1" 200 10340
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 20283
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /static/admin/js/calendar.js HTTP/1.1" 200 7777
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /static/admin/js/inlines.js HTTP/1.1" 200 13673
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /static/admin/js/change_form.js HTTP/1.1" 200 712
+[09/Feb/2018 20:29:43] INFO [django.server:124] "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 495
+[09/Feb/2018 20:29:44] INFO [django.server:124] "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[09/Feb/2018 20:31:03] INFO [django.server:124] "GET /admin/houses/realestate/ HTTP/1.1" 200 49343
+[09/Feb/2018 20:31:53] INFO [django.server:124] "GET /admin/houses/realestate/16953/change/ HTTP/1.1" 200 102999
+[09/Feb/2018 20:31:53] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:32:00] INFO [django.server:124] "GET /admin/houses/realestate/ HTTP/1.1" 200 49343
+[09/Feb/2018 20:32:02] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 14302
+[09/Feb/2018 20:32:05] INFO [django.server:124] "GET /admin/houses/garage/ HTTP/1.1" 200 65995
+[09/Feb/2018 20:32:05] INFO [django.server:124] "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+[09/Feb/2018 20:32:05] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:32:09] INFO [django.server:124] "GET /admin/houses/garage/417310/change/ HTTP/1.1" 200 387600
+[09/Feb/2018 20:32:09] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:33:00] INFO [django.server:124] "GET /admin/houses/garage/ HTTP/1.1" 200 65995
+[09/Feb/2018 20:33:00] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:33:04] INFO [django.server:124] "GET /admin/houses/garage/417309/change/ HTTP/1.1" 200 387437
+[09/Feb/2018 20:33:05] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:33:29] INFO [django.server:124] "GET /admin/houses/garage/ HTTP/1.1" 200 65995
+[09/Feb/2018 20:33:53] INFO [django.server:124] "GET /admin/houses/ HTTP/1.1" 200 7504
+[09/Feb/2018 20:33:57] INFO [django.server:124] "GET /admin/houses/realestate/ HTTP/1.1" 200 49343
+[09/Feb/2018 20:33:58] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:34:01] INFO [django.server:124] "GET /admin/houses/realestate/16954/change/ HTTP/1.1" 200 103414
+[09/Feb/2018 20:34:01] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[09/Feb/2018 20:34:09] INFO [django.server:124] "GET /admin/houses/realestate/ HTTP/1.1" 200 49343
+[10/Feb/2018 16:52:04] WARNING [django.request:93] Not Found: /favicon.ico
+[10/Feb/2018 16:52:04] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[10/Feb/2018 16:53:27] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 13051
+[10/Feb/2018 16:53:27] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[10/Feb/2018 16:53:27] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 304 0
+[10/Feb/2018 16:53:27] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 304 0
+[10/Feb/2018 16:53:38] INFO [django.server:124] "GET /houses/realestate/10576/ HTTP/1.1" 200 12875
+[10/Feb/2018 16:53:39] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 200 8297
+[10/Feb/2018 16:53:48] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 13051
+[10/Feb/2018 16:53:51] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11733
+[10/Feb/2018 16:53:54] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36792
+[10/Feb/2018 16:57:28] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 13051
+[10/Feb/2018 16:57:30] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 13051
+[10/Feb/2018 16:57:30] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[10/Feb/2018 16:57:30] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[10/Feb/2018 16:57:30] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[10/Feb/2018 16:57:31] WARNING [django.request:93] Not Found: /favicon.ico
+[10/Feb/2018 16:57:31] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[10/Feb/2018 18:13:24] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 13051
+[10/Feb/2018 18:13:24] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[10/Feb/2018 18:13:24] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[10/Feb/2018 18:13:24] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[10/Feb/2018 18:13:25] WARNING [django.request:93] Not Found: /favicon.ico
+[10/Feb/2018 18:13:25] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[10/Feb/2018 18:13:33] INFO [django.server:124] "GET /houses/realestate/10576/ HTTP/1.1" 200 12875
+[10/Feb/2018 18:18:48] INFO [django.server:124] "GET / HTTP/1.1" 200 18006
+[10/Feb/2018 18:41:33] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 13051
+[10/Feb/2018 18:41:33] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[10/Feb/2018 18:41:33] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[10/Feb/2018 18:41:33] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[10/Feb/2018 18:41:33] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[10/Feb/2018 18:41:33] WARNING [django.request:93] Not Found: /favicon.ico
+[10/Feb/2018 18:41:33] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[10/Feb/2018 18:41:33] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[10/Feb/2018 18:41:33] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[10/Feb/2018 18:41:33] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[10/Feb/2018 18:41:33] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[10/Feb/2018 18:41:33] WARNING [django.request:93] Not Found: /favicon.ico
+[10/Feb/2018 18:41:33] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[10/Feb/2018 18:41:34] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 13051
+[10/Feb/2018 18:41:34] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[10/Feb/2018 18:41:34] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[10/Feb/2018 18:41:34] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[10/Feb/2018 18:41:34] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[10/Feb/2018 18:41:34] WARNING [django.request:93] Not Found: /favicon.ico
+[10/Feb/2018 18:41:34] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[10/Feb/2018 18:41:34] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[10/Feb/2018 18:41:34] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[10/Feb/2018 18:41:34] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[10/Feb/2018 18:41:34] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[10/Feb/2018 18:41:34] WARNING [django.request:93] Not Found: /favicon.ico
+[10/Feb/2018 18:41:34] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[13/Feb/2018 16:31:52] INFO [django.server:124] "GET /admin/ HTTP/1.1" 200 13891
+[13/Feb/2018 16:31:52] INFO [django.server:124] "GET /static/admin/css/dashboard.css HTTP/1.1" 200 412
+[13/Feb/2018 16:31:52] INFO [django.server:124] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[13/Feb/2018 16:31:52] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[13/Feb/2018 16:31:53] INFO [django.server:124] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[13/Feb/2018 16:31:54] INFO [django.server:124] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[13/Feb/2018 16:31:54] INFO [django.server:124] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[13/Feb/2018 16:31:54] INFO [django.server:124] "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[13/Feb/2018 16:31:54] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[13/Feb/2018 16:31:54] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[13/Feb/2018 16:31:54] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[13/Feb/2018 16:31:54] WARNING [django.request:93] Not Found: /favicon.ico
+[13/Feb/2018 16:31:54] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[13/Feb/2018 16:32:10] INFO [django.server:124] "GET /admin/houses/territorialentity/ HTTP/1.1" 200 42697
+[13/Feb/2018 16:32:10] INFO [django.server:124] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[13/Feb/2018 16:32:10] INFO [django.server:124] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[13/Feb/2018 16:32:10] INFO [django.server:124] "GET /static/admin/js/actions.js HTTP/1.1" 200 6502
+[13/Feb/2018 16:32:10] INFO [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[13/Feb/2018 16:32:10] INFO [django.server:124] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+[13/Feb/2018 16:32:10] INFO [django.server:124] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+[13/Feb/2018 16:32:10] INFO [django.server:124] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[13/Feb/2018 16:32:11] INFO [django.server:124] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[13/Feb/2018 16:32:11] INFO [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[13/Feb/2018 16:32:11] INFO [django.server:124] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[13/Feb/2018 16:32:11] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 16:32:11] INFO [django.server:124] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[13/Feb/2018 16:32:45] INFO [django.server:124] "GET /admin/houses/territorialentity/?p=2 HTTP/1.1" 200 45380
+[13/Feb/2018 16:32:46] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /admin/houses/territorialentity/?p=2 HTTP/1.1" 200 51952
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/css/changelists.css HTTP/1.1" 200 6170
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/js/core.js HTTP/1.1" 200 7134
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/css/base.css HTTP/1.1" 200 16106
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 363
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 258648
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/css/responsive.css HTTP/1.1" 200 17894
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/js/urlify.js HTTP/1.1" 200 8729
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1538
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/js/actions.js HTTP/1.1" 200 6502
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 6897
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 128820
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[13/Feb/2018 16:33:15] INFO [django.server:124] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[13/Feb/2018 16:33:16] WARNING [django.request:93] Not Found: /favicon.ico
+[13/Feb/2018 16:33:16] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[13/Feb/2018 16:58:47] INFO [django.server:124] "GET /admin/houses/territorialentity/?p=2 HTTP/1.1" 200 52577
+[13/Feb/2018 16:58:47] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 16:58:56] INFO [django.server:124] "GET /admin/houses/territorialentity/?p=0 HTTP/1.1" 200 52651
+[13/Feb/2018 16:58:57] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 16:59:38] INFO [django.server:124] "GET /admin/houses/territorialentity/?p=0 HTTP/1.1" 200 56188
+[13/Feb/2018 16:59:38] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 16:59:42] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4 HTTP/1.1" 200 54142
+[13/Feb/2018 16:59:42] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 16:59:42] INFO [django.server:124] "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+[13/Feb/2018 17:00:44] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=1 HTTP/1.1" 200 55271
+[13/Feb/2018 17:00:44] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:00:51] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=2 HTTP/1.1" 200 55234
+[13/Feb/2018 17:00:51] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:00:56] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=3 HTTP/1.1" 200 55456
+[13/Feb/2018 17:00:56] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:00:59] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=4 HTTP/1.1" 200 55876
+[13/Feb/2018 17:00:59] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:01:11] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=5 HTTP/1.1" 200 55911
+[13/Feb/2018 17:01:11] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:01:16] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=6 HTTP/1.1" 200 55922
+[13/Feb/2018 17:01:16] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:01:20] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=7 HTTP/1.1" 200 55924
+[13/Feb/2018 17:01:20] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:01:30] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=8 HTTP/1.1" 200 55926
+[13/Feb/2018 17:01:30] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:01:34] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4&p=9 HTTP/1.1" 200 55928
+[13/Feb/2018 17:01:34] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:01:53] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=6.4 HTTP/1.1" 200 57762
+[13/Feb/2018 17:01:53] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:02:33] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=6.4&p=1 HTTP/1.1" 200 58732
+[13/Feb/2018 17:02:33] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:02:36] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=-4.6 HTTP/1.1" 200 57461
+[13/Feb/2018 17:02:36] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:02:48] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6 HTTP/1.1" 200 54770
+[13/Feb/2018 17:02:48] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:03:27] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=1 HTTP/1.1" 200 55901
+[13/Feb/2018 17:03:27] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:03:37] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=0 HTTP/1.1" 200 55578
+[13/Feb/2018 17:03:37] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:04:50] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=1 HTTP/1.1" 200 55901
+[13/Feb/2018 17:04:50] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:13:46] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=0 HTTP/1.1" 200 55578
+[13/Feb/2018 17:13:46] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:13:57] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=1 HTTP/1.1" 200 55901
+[13/Feb/2018 17:13:57] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:14:01] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=2 HTTP/1.1" 200 55866
+[13/Feb/2018 17:14:01] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:14:03] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=3 HTTP/1.1" 200 56090
+[13/Feb/2018 17:14:03] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:15:00] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=4 HTTP/1.1" 200 56512
+[13/Feb/2018 17:15:00] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:15:05] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=5 HTTP/1.1" 200 56549
+[13/Feb/2018 17:15:05] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:15:08] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=6 HTTP/1.1" 200 56560
+[13/Feb/2018 17:15:08] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:15:11] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=7 HTTP/1.1" 200 56562
+[13/Feb/2018 17:15:11] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:15:14] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=8 HTTP/1.1" 200 56564
+[13/Feb/2018 17:15:14] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:15:18] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=9 HTTP/1.1" 200 56566
+[13/Feb/2018 17:15:18] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 17:15:21] INFO [django.server:124] "GET /admin/houses/territorialentity/?o=4.6&p=11 HTTP/1.1" 200 55136
+[13/Feb/2018 17:15:22] INFO [django.server:124] "GET /admin/jsi18n/ HTTP/1.1" 200 7031
+[13/Feb/2018 20:19:35] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /favicon.ico
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /favicon.ico
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[13/Feb/2018 20:19:35] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[13/Feb/2018 20:19:35] WARNING [django.request:93] Not Found: /favicon.ico
+[13/Feb/2018 20:19:35] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[13/Feb/2018 20:19:36] WARNING [django.request:93] Not Found: /apple-touch-icon-precomposed.png
+[13/Feb/2018 20:19:36] WARNING [django.server:124] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 2373
+[13/Feb/2018 20:19:36] WARNING [django.request:93] Not Found: /apple-touch-icon.png
+[13/Feb/2018 20:19:36] WARNING [django.server:124] "GET /apple-touch-icon.png HTTP/1.1" 404 2337
+[13/Feb/2018 20:19:36] WARNING [django.request:93] Not Found: /favicon.ico
+[13/Feb/2018 20:19:36] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[22/Feb/2018 17:17:20] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[03/Mar/2018 19:04:44] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[03/Mar/2018 19:04:44] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[03/Mar/2018 19:04:44] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[03/Mar/2018 19:04:44] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[03/Mar/2018 19:04:48] WARNING [django.request:93] Not Found: /favicon.ico
+[03/Mar/2018 19:04:48] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[03/Mar/2018 19:05:00] INFO [django.server:124] "GET /houses HTTP/1.1" 301 0
+[03/Mar/2018 19:05:00] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[03/Mar/2018 19:05:16] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[03/Mar/2018 19:05:34] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[03/Mar/2018 19:05:58] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[03/Mar/2018 19:06:05] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[03/Mar/2018 19:47:54] WARNING [django.request:93] Not Found: /houses/houses
+[03/Mar/2018 19:47:54] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 3158
+[03/Mar/2018 19:47:55] WARNING [django.request:93] Not Found: /favicon.ico
+[03/Mar/2018 19:47:55] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[03/Mar/2018 19:47:58] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11733
+[03/Mar/2018 19:48:01] WARNING [django.request:93] Not Found: /houses/houses
+[03/Mar/2018 19:48:01] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 3158
+[03/Mar/2018 19:48:07] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 36792
+[03/Mar/2018 20:04:52] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[03/Mar/2018 20:05:02] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[03/Mar/2018 20:05:41] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11733
+[03/Mar/2018 20:05:50] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[03/Mar/2018 20:05:52] INFO [django.server:124] "GET /houses/realestate/10576/ HTTP/1.1" 200 12875
+[03/Mar/2018 20:05:52] INFO [django.server:124] "GET /static/houses/js/donutcharts.js HTTP/1.1" 200 8297
+[03/Mar/2018 22:52:53] INFO [django.server:124] "GET /houses/realestate/13819/ HTTP/1.1" 200 12759
+[03/Mar/2018 22:53:24] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[04/Mar/2018 09:17:57] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[04/Mar/2018 09:17:59] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[04/Mar/2018 09:18:01] INFO [django.server:124] "GET /houses/realestate HTTP/1.1" 200 11733
+[04/Mar/2018 09:18:03] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[04/Mar/2018 09:18:06] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[04/Mar/2018 17:57:04] INFO [django.server:124] "GET / HTTP/1.1" 200 18016
+[04/Mar/2018 17:57:10] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 14550
+[04/Mar/2018 17:57:12] INFO [django.server:124] "GET /houses/realestate/10576/ HTTP/1.1" 200 12875
+[04/Mar/2018 19:22:29] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 16073
+[04/Mar/2018 19:22:31] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:22:31] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:23:05] INFO [django.server:124] "GET / HTTP/1.1" 200 18025
+[04/Mar/2018 19:40:21] INFO [django.server:124] "GET / HTTP/1.1" 200 18119
+[04/Mar/2018 19:40:21] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[04/Mar/2018 19:40:22] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:40:22] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:40:22] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:40:22] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:42:17] INFO [django.server:124] "GET / HTTP/1.1" 200 18178
+[04/Mar/2018 19:42:17] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[04/Mar/2018 19:42:18] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:42:18] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:42:22] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:42:22] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:43:51] INFO [django.server:124] "GET / HTTP/1.1" 200 18178
+[04/Mar/2018 19:43:51] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2056
+[04/Mar/2018 19:43:51] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:43:51] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:45:36] INFO [django.server:124] "GET / HTTP/1.1" 200 18178
+[04/Mar/2018 19:45:36] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:45:36] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:45:36] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:46:59] INFO [django.server:124] "GET / HTTP/1.1" 200 18172
+[04/Mar/2018 19:47:00] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:47:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:47:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:47:00] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:47:00] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:47:08] INFO [django.server:124] "GET / HTTP/1.1" 200 18173
+[04/Mar/2018 19:47:08] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:47:08] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:47:08] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:47:08] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:47:08] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:47:13] INFO [django.server:124] "GET / HTTP/1.1" 200 18170
+[04/Mar/2018 19:47:14] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:47:14] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:47:14] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:47:14] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:47:14] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:48:00] INFO [django.server:124] "GET / HTTP/1.1" 200 18169
+[04/Mar/2018 19:48:00] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:48:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:48:00] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:48:01] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:48:01] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:49:19] INFO [django.server:124] "GET / HTTP/1.1" 200 18088
+[04/Mar/2018 19:49:19] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:49:19] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:49:19] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:49:20] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:49:20] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:49:33] INFO [django.server:124] "GET / HTTP/1.1" 200 18088
+[04/Mar/2018 19:49:33] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:49:33] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:49:33] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:49:34] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:49:34] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:50:43] INFO [django.server:124] "GET / HTTP/1.1" 200 18072
+[04/Mar/2018 19:50:43] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:50:44] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:50:44] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:50:44] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:50:44] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:56:51] INFO [django.server:124] "GET / HTTP/1.1" 200 18069
+[04/Mar/2018 19:56:51] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:56:51] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:56:51] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:56:52] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:56:52] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 19:59:50] INFO [django.server:124] "GET / HTTP/1.1" 200 18195
+[04/Mar/2018 19:59:50] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 19:59:50] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 19:59:50] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 19:59:51] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 19:59:51] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 20:01:14] INFO [django.server:124] "GET / HTTP/1.1" 200 18222
+[04/Mar/2018 20:01:14] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 20:01:15] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 20:01:15] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 20:01:15] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 20:01:15] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 20:02:47] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 17773
+[04/Mar/2018 20:03:02] WARNING [django.request:93] Not Found: /houses/houses
+[04/Mar/2018 20:03:02] WARNING [django.server:124] "GET /houses/houses HTTP/1.1" 404 3158
+[04/Mar/2018 20:03:36] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37060
+[04/Mar/2018 20:03:36] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[04/Mar/2018 20:03:57] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 17773
+[04/Mar/2018 20:04:03] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37059
+[04/Mar/2018 20:04:07] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 17773
+[04/Mar/2018 20:04:11] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37058
+[04/Mar/2018 20:09:56] INFO [django.server:124] "GET /houses/map HTTP/1.1" 200 37060
+[04/Mar/2018 20:09:56] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 304 0
+[04/Mar/2018 20:09:59] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 17783
+[04/Mar/2018 20:12:57] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 17683
+[04/Mar/2018 20:12:57] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 20:12:57] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 20:12:57] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 20:13:11] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 17757
+[04/Mar/2018 20:13:11] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 20:13:11] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 20:13:11] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 20:13:47] INFO [django.server:124] "GET /houses/ HTTP/1.1" 200 17690
+[04/Mar/2018 20:13:47] INFO [django.server:124] "GET /static/dedomeno/css/style.css HTTP/1.1" 200 2090
+[04/Mar/2018 20:13:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno.png HTTP/1.1" 200 2118
+[04/Mar/2018 20:13:47] INFO [django.server:124] "GET /static/dedomeno/img/dedomeno-logo-dark.png HTTP/1.1" 200 421
+[04/Mar/2018 20:13:58] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 20:13:58] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310
+[04/Mar/2018 22:04:14] WARNING [django.request:93] Not Found: /favicon.ico
+[04/Mar/2018 22:04:14] WARNING [django.server:124] "GET /favicon.ico HTTP/1.1" 404 2310

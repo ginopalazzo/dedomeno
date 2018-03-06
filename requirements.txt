@@ -1,3 +1,4 @@
+alabaster==0.7.10
 amqp==2.2.2
 asn1crypto==0.24.0
 attrs==17.4.0
@@ -35,11 +36,17 @@ googlemaps==2.5.1
 gunicorn==19.7.1
 hyperlink==17.3.1
 idna==2.6
+imagesize==1.0.0
 incremental==17.5.0
+Jinja2==2.10
 jmespath==0.9.3
 kombu==4.1.0
 lxml==4.1.1
+MarkupSafe==1.0
+numpy==1.14.0
 olefile==0.44
+packaging==17.1
+pandas==0.22.0
 parsel==1.3.1
 pathspec==0.5.5
 Pillow==5.0.0
@@ -50,7 +57,9 @@ pyasn1==0.4.2
 pyasn1-modules==0.2.1
 pycparser==2.18
 PyDispatcher==2.0.5
+Pygments==2.2.0
 pyOpenSSL==17.5.0
+pyparsing==2.2.0
 pytest==3.3.0
 python-dateutil==2.6.1
 python-decouple==3.1
@@ -66,7 +75,10 @@ semantic-version==2.5.0
 service-identity==17.0.0
 Shapely==1.5.17.post1
 six==1.11.0
+snowballstemmer==1.2.1
 sources==1.1.0
+Sphinx==1.7.1
+sphinxcontrib-websupport==1.0.1
 tabulate==0.8.1
 tornado==4.5.3
 Twisted==17.9.0

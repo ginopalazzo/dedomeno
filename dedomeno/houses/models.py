@@ -5,6 +5,84 @@ from django.contrib.postgres.fields import JSONField
 from django.contrib.postgres.fields import ArrayField
 
 
+class TerritorialEntity(models.Model):
+    type = models.CharField(max_length=50, null=True, blank=True)
+    depth = models.IntegerField(blank=True, null=True)
+    code = models.CharField(max_length=50, null=True, blank=True)
+    name = models.CharField(max_length=100, null=True, blank=True)
+    code_idealista = models.CharField(max_length=50, null=True, blank=True)
+    code_idealista_raw = models.CharField(max_length=500, null=True, blank=True)
+    name_idealista = models.CharField(max_length=100, null=True, blank=True)
+    parent = models.ForeignKey('self', blank=True, null=True, on_delete=models.SET_NULL,
+                               related_name='children', help_text='father')
+
+    def get_all_children_properties(self):
+        query_list = [i.property.all() for i in self.get_all_children()]
+        query_final = query_list.pop()
+        for query in [i.property.all() for i in self.get_all_children()]:
+            query_final = query_final | query
+        return query_final
+
+    def get_all_children(self):
+        children = [self]
+        try:
+            child_list = self.children.all()
+        except AttributeError:
+            return children
+        for child in child_list:
+            children.extend(child.get_all_children())
+        return children
+
+    def get_all_parents(self):
+        parents = [self]
+        if self.parent is not None:
+            parent = self.parent
+            parents.extend(parent.get_all_parents())
+        return parents
+
+    def clean(self):
+        if self.parent in self.get_all_children():
+            raise ValidationError("A user cannot have itself or one of its' children as parent.")
+
+    '''
+    def get_childrens(self, also_self=True):
+        i.children.all() for i in madrid.children.all()
+            """ return a family tree for a Person object """
+
+            children = self.children.all()
+
+            if not children:
+                # this person has no children, recursion ends here
+                return {'name': person.name, 'children': []}
+
+            # this person has children, get every child's family tree
+            return {
+                'name': person.name,
+                'children': [get_family_tree(child) for child in children],
+            }
+
+    def get_path(self):
+        go = True
+        reverse_path = [self]
+        parent = self.parent
+        while go:
+            if parent:
+                reverse_path.append(parent)
+                parent = parent.parent
+            else:
+                go = False
+        return reverse_path[::-1]
+
+    def get_ascendent(self, depth):
+        if depth < self.depth:
+            pass
+        else:
+            return None
+    '''
+    def __str__(self):
+        return '{%s} depth=%i' % (self.code_idealista, self.depth)
+
+
 class RealEstate(models.Model):
     """
     Stores a Real Estate entity.
@@ -20,6 +98,7 @@ class RealEstate(models.Model):
     address = models.CharField(max_length=2000, null=True, blank=True)
     source = models.CharField(max_length=200, null=True, blank=True)
     country = models.CharField(max_length=200, blank=True, null=True)
+    geocode = models.ManyToManyField(TerritorialEntity)
 
     def __str__(self):
         return self.name
@@ -60,9 +139,13 @@ class Property(models.Model):
     phone_1 = models.CharField(blank=True, max_length=30, null=True)
     phone_2 = models.CharField(blank=True, max_length=30, null=True)
     real_estate = models.ForeignKey(RealEstate, blank=True, null=True, on_delete=models.SET_NULL,
+                                    related_name='property',
                                     help_text='If blank there is not a real estate involved')
     real_estate_raw = models.CharField(blank=True, max_length=200, null=True)
     price_raw = models.IntegerField(blank=True, null=True)
+    geocode_raw = ArrayField(models.CharField(max_length=200, blank=True, null=True), default=[])
+    geocode = models.ForeignKey(TerritorialEntity, blank=True, null=True, on_delete=models.SET_NULL,
+                                        related_name='property')
     address_path = ArrayField(models.CharField(max_length=200, blank=True, null=True), default=[])
     address_province = models.CharField(max_length=200, blank=True, null=True)
     address_raw = models.CharField(max_length=2000, blank=True, null=True)

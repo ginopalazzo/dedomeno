@@ -25,7 +25,7 @@ class PropertySpider(scrapy.Spider):
             }
     }
     """
-    name = "property"
+    name = "property_BACKUP"
 
     def __init__(self, transaction=None, property_type=None, province=None, *args, **kwargs):
         """

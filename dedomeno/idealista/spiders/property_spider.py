@@ -3,26 +3,29 @@
 import scrapy
 from scrapy.exceptions import CloseSpider
 from scrapy.utils.project import get_project_settings
-from idealista.items import RealEstateItem, HouseItem, RoomItem, OfficeItem, LandItem, GarageItem, CommercialItem, StoreRoomItem, BuildingItem
+from idealista.items import RealEstateItem, HouseItem, RoomItem, OfficeItem, LandItem, GarageItem, CommercialItem,\
+    StoreRoomItem, BuildingItem, TerritorialEntity
 # Django model imports
-from houses.models import Date, Price, RealEstate, House, Room, Office, Land, Garage, Commercial, StoreRoom, Building
+from houses.models import Date, Price, RealEstate, House, Room, Office, Land, Garage, Commercial, StoreRoom, Building,\
+    TerritorialEntity
 # Other imports
 from datetime import date
 import re
 
 
 class PropertySpider(scrapy.Spider):
-    """ The PropertySpider will crawl every property for a transaction, property type and province given.
-        It will also crawl every Real Estate associate with the Property.
-        Example of the pipelines needed to crawl. Be aware that the type of Property (i.e. Commercial) is needed.
-        Usually you want to declare this in the script calling the spider.
-        custom_settings = {
-            'ITEM_PIPELINES': {
-                'idealista.pipelines.PropertyPipeline': 300,
-                'idealista.pipelines.{House, Room, Office, Garage, Land, Commercial, Storeroom, Building}Pipeline': 400,
-                'idealista.pipelines.DatePipeline': 500,
-                'idealista.pipelines.PricePipeline': 600,
-            }
+    """
+    The PropertySpider will crawl every property for a transaction, property type and province given.
+    It will also crawl every Real Estate associate with the Property.
+    Example of the pipelines needed to crawl. Be aware that the type of Property (i.e. Commercial) is needed.
+    Usually you want to declare this in the script calling the spider.
+    custom_settings = {
+        'ITEM_PIPELINES': {
+            'idealista.pipelines.PropertyPipeline': 300,
+            'idealista.pipelines.{House, Room, Office, Garage, Land, Commercial, Storeroom, Building}Pipeline': 400,
+            'idealista.pipelines.DatePipeline': 500,
+            'idealista.pipelines.PricePipeline': 600,
+        }
     }
     """
     name = "property"
@@ -80,6 +83,7 @@ class PropertySpider(scrapy.Spider):
         # TODO: Change string concatenation
         property_name = self.urls_scheme[transaction_name + '_transaction'][property_name]
         query = self.urls_scheme['query_pub_date']
+        municipality = self.urls_scheme['municipality']
         property_list = []
         if provinces_name == 'all':
             provinces = self.urls_scheme['provinces'].values()
@@ -87,7 +91,7 @@ class PropertySpider(scrapy.Spider):
             provinces = [self.urls_scheme['provinces'][provinces_name]]
         for province in provinces:
             # TODO: Change string concatenation
-            property_list.append(url + transaction + separator + property_name + '/' + province + '/' + query)
+            property_list.append(url + transaction + separator + property_name + '/' + province + '/' + municipality)
         return property_list
 
     def set_property_item(self):
@@ -125,6 +129,13 @@ class PropertySpider(scrapy.Spider):
         }.get(self.property_type, 'Not a valid property')
 
     def parse(self, response):
+        municipality_list = response.xpath('//ul[@id="location_list"]/li/ul/li/a/@href').extract()
+        # print('municipality: ' + str(municipality_list))
+        for municipality_link in municipality_list:
+            link = response.urljoin(municipality_link + self.urls_scheme['query_pub_date'])
+            yield scrapy.Request(link, callback=self.parse_page)
+
+    def parse_page(self, response):
         """
         Will parse every property url list in self.start_urls, and capture the property and next page url
         :param response: response of a list of properties page
@@ -136,18 +147,35 @@ class PropertySpider(scrapy.Spider):
         bread = response.xpath('//div[@class="breadcrumb-subitems"]/ul/li/ul/li')
         
         """
-        breadcrumb_list = response.xpath('//div[@class="breadcrumb-subitems"]/ul/li/ul/li/a/@href').extract()
+        breadcrumb_list = response.xpath('//div[@class="breadcrumb-subitems"]/ul/li/ul/li/a')
         if len(breadcrumb_list) is not 0:
             for crumb in breadcrumb_list:
-                next_page = response.urljoin(crumb+self.urls_scheme['query_pub_date'])
-                yield scrapy.Request(next_page, callback=self.parse)
+                url = crumb.xpath('@href').extract_first()
+                '''
+                title = crumb.xpath('@title').extract_first()
+                data_id = crumb.xpath('@data-location-id').extract_first()
+                t, created = TerritorialEntity.objects.get_or_create(code_idealista_raw=data_id)
+                t.name_idealista = title
+                t.save(update_fields=['name_idealista'])
+                '''
+                next_page = response.urljoin(url+self.urls_scheme['query_pub_date'])
+                yield scrapy.Request(next_page, callback=self.parse_page)
         else:
-            # Gather all possible information of the territorial organization of the Property
-            geo_path = response.xpath('//div[@class="breadcrumb-geo wrapper clearfix"]/ul/li/a/text()').extract()
-            geo_current = response.xpath('//span[@class="breadcrumb-title icon-arrow-dropdown-after"]/text()').extract()
-            geo = list(map(str.strip, [*geo_path, *geo_current]))
-            geocode = re.findall(r"geo=(.*);", response.text)[0].split('-')
-            for item in response.xpath('//div[@class="item-info-container"]'):
+            item_list = response.xpath('//div[@class="item-info-container"]')
+            if item_list:
+                # Gather all possible information of the territorial organization of the Property
+                geo_path = response.xpath('//div[@class="breadcrumb-geo wrapper clearfix"]/ul/li/a/text()').extract()
+                geo_current = response.xpath(
+                    '//span[@class="breadcrumb-title icon-arrow-dropdown-after"]/text()').extract()
+                geo = list(map(str.strip, [*geo_path, *geo_current]))
+                geo_pattern = 'geo=(.{1,3})-(.{1,3})-(.{1,3})-(.{1,3})-(.{1,3})-(.{1,3})-(.{1,3})-(.{1,3})-(.{1,3})-(.{1,3})-(.{1,2})'
+                # print('url: ' + response.url)
+                # print('geopath: ' + str(geo))
+                # print('geocode_raw: ' + str(re.findall(geo_pattern, response.text)))
+                geocode_raw = re.findall(geo_pattern, response.text)[0]
+                geocode = [i for i in geocode_raw if i != 'XX']
+                # print('geocode: ' + str(geocode))
+            for item in item_list:
                 item_page = response.urljoin(item.xpath('.//a[@class="item-link "]/@href').extract_first())
                 # TODO: Change string concatenation
                 slug = 'id-' + item_page.split("/")[4]
@@ -181,7 +209,20 @@ class PropertySpider(scrapy.Spider):
             next_page = response.xpath('//a[@class="icon-arrow-right-after"]/@href').extract_first()
             if next_page is not None:
                 next_page = response.urljoin(next_page)
-                yield scrapy.Request(next_page, callback=self.parse)
+                yield scrapy.Request(next_page, callback=self.parse_page)
+
+    def set_geocode(self, geocode):
+        parent = None
+        for i in range(0, len(geocode)):
+            code_idealista_raw = ""
+            for j in range(i + 1):
+                code_idealista_raw += geocode[j] + '-'
+            territory, created = TerritorialEntity.objects.get_or_create(code_idealista_raw=code_idealista_raw.strip('-'),
+                                                                         code_idealista=geocode[i],
+                                                                         depth=i,
+                                                                         parent=parent)
+            parent = territory
+        return territory
 
     def parse_property(self, response):
         """
@@ -205,7 +246,9 @@ class PropertySpider(scrapy.Spider):
         property_item['property_type'] = self.property_type
         property_item['address_province'] = self.province
         property_item['address_path'] = response.meta['geo']
-        print(response.meta['geocode'])
+        property_item['geocode_raw'] = response.meta['geocode']
+        property_item['geocode'] = self.set_geocode(response.meta['geocode'])
+
         # property_item['html'] = response.text
         property_item['desc'] = response.xpath('//div[@class="adCommentsLanguage expandable"]/text()').extract_first()
         property_item['name'] = response.xpath('//div[@class="advertiser-data txt-soft"]/p/text()').extract_first()

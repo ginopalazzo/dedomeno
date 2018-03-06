@@ -11,6 +11,8 @@
 import sys
 import os
 import django
+from decouple import config, Csv
+
 
 # ------------ DJANGO SETTINGS ------------
 # sys.path.insert(0, BASE_DIR+'/dedomeno')
@@ -67,12 +69,16 @@ CLOSESPIDER_ERRORCOUNT = 10
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#!CONCURRENT_REQUESTS = 1
+CONCURRENT_REQUESTS = 1  # !
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
-# See also autothrottle settings and docs
-#! DOWNLOAD_DELAY = 0.04 #With the rotator proxies (DOUBLE CHECK!!)
-#!DOWNLOAD_DELAY = 0.6
+# See also autothcdrottle settings and docs
+DOWNLOAD_DELAY = 0.04  # With the rotator proxies (DOUBLE CHECK!!) #!
+#! DOWNLOAD_DELAY = 0.6
+# ---- HOME ----
+# CONCURRENT_REQUESTS = 1
+# DOWNLOAD_DELAY = 0.6
+# --------------
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 10
 # CONCURRENT_REQUESTS_PER_IP = 1
@@ -109,7 +115,7 @@ DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware': None,
     # 'idealista.idealistamiddlewares.redirect.RedirectMiddleware': 1,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': 80,
-    'idealista.middlewares.RotatorProxy': None, #!
+    'idealista.middlewares.RotatorProxy': 90,  #!
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'idealista.middlewares.RandomUserAgentMiddleware': 120,
@@ -139,20 +145,14 @@ DOWNLOADER_MIDDLEWARES = {
 # PROXY_LIST = '/Users/ginopalazzo/Magic/dedomeno-proyect/scrappers/houses/idealista/idealista/proxy_list.txt'
 BLACKLIST_HTTP_STATUS_CODES = [307]
 
-CUSTOM_PROXY_LIST = [
-    'http://***REMOVED***:***REMOVED***@185.150.103.211:58542',
-    'http://***REMOVED***:***REMOVED***@185.176.188.17:58542',
-    'http://***REMOVED***:***REMOVED***@185.176.189.211:58542',
-    'http://***REMOVED***:***REMOVED***@185.176.190.158:58542',
-    'http://***REMOVED***:***REMOVED***@185.176.191.18:58542'
-]
 '''
 CUSTOM_PROXY_LIST = [
-    'http://accounts1:YM5wTvgN@157.52.158.2:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.3:60099',
-    'http://accounts1:YM5wTvgN@157.52.158.61:60099'
+    'http://user:pass@111.111.111.111:00000',
+    'http://user:pass@ip:port'
 ]
 '''
+CUSTOM_PROXY_LIST = config('SCRAPY_CUSTOM_PROXY_LIST', cast=Csv())
+
 
 # ------------ PIPELINES SETTINGS ------------
 # Configure item pipelines: * Configuration per Spider
@@ -190,9 +190,9 @@ AUTOTHROTTLE_DEBUG = True
 
 # ------------ EMAIL WARNING SETTINGS ------------
 # The gmail account will be use to send the warning emails to the recipient
-GMAIL_USER = 'ginopalazzo@gmail.com'
-GMAIL_PASSWORD = '***REMOVED***'
-RECIPIENT = 'ginopalazzo@gmail.com'
+GMAIL_USER = config('SCRAPY_GMAIL_USER')
+GMAIL_PASSWORD = config('SCRAPY_GMAIL_PASSWORD')
+RECIPIENT = config('SCRAPY_RECIPIENT')
 
 
 # ------------ IDEALISTA SETTINGS ------------
