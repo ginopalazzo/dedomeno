@@ -1,0 +1,8 @@
+{
+  "": true,
+  "dedomeno/test/test_dedomeno.py::test_answer": true,
+  "dedomeno/test/test_sample.py::test_answer": true,
+  "dedomeno/test/test_settings.py": true,
+  "test/test_dedomeno.py::test_answer": true,
+  "test/test_settings.py": true
+}

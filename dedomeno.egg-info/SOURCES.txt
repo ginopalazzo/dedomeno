@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+dedomeno/__init__.py
+dedomeno/manage.py
+dedomeno.egg-info/PKG-INFO
+dedomeno.egg-info/SOURCES.txt
+dedomeno.egg-info/dependency_links.txt
+dedomeno.egg-info/requires.txt
+dedomeno.egg-info/top_level.txt
