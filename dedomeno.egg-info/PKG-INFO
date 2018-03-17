@@ -1,83 +1,107 @@
 Metadata-Version: 1.1
 Name: dedomeno
-Version: 0.1
+Version: 0.1.0
 Summary: A Spanish real estate (Idealista) python scraper
-Home-page: http://github.com/ginopalazzo/dedomeno/
+Home-page: https://github.com/ginopalazzo/dedomeno
 Author: Gino Palazzo
 Author-email: ginopalazzo@gmail.com
-License: GNU General Public License v3.0
+License: MIT license
 Description-Content-Type: UNKNOWN
-Description: # Dedomeno
-        > A python scraper for the spanish real estate digital marketplace: Idealista.com.
-        
-        A TravisCI button showing the state of the build
-        [![NPM Version][npm-image]][npm-url]
-        [![Build Status][travis-image]][travis-url]
-        [![Downloads Stats][npm-downloads]][npm-url]
-        
-        few more lines
-        
-        ![](header.png)
-        - [overview & motivation](TODO)
-        - [dedomeno documentation](Links to the project's ReadTheDocs page)
-        
-        ## Getting Started
-        These instructions will get you a copy of the project up and running on your
-        local machine for development and testing purposes.
-        See deployment for notes on how to deploy the project on a live system.
-        
-        ### Prerequisites
-        What things you need to install the software and how to install them
-        
-        ### Installing
-        A step by step series of examples that tell you have to get a development env running
-        
-        Say what the step will be
-        
-        Give the example
-        And repeat
-        
-        until finished
-        End with an example of getting some data out of the system or using it for a little demo
-        
-        ## Running the tests
-        Running the test requires pytest. Not implemented as you can see.
-        Give an example
-        
-        ## Deployment
-        Add additional notes about how to deploy this on a live system
-        
-        ## Built With
-        - [Django](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design
-        - [Scrapy](https://scrapy.org/) - An open source and collaborative framework for extracting the data you need from websites.
-        - [Celery](http://www.celeryproject.org/) - An asynchronous task queue/job queue based on distributed message passing.
+Description: ========
+        dedomeno
+        ========
         
         
-        ## Contributing
-        Please read CONTRIBUTING.md for details on our code of conduct, and the process for submitting pull requests to us.
+        .. image:: https://img.shields.io/pypi/v/dedomeno.svg
+                :target: https://pypi.python.org/pypi/dedomeno
         
-        ## Versioning
-        TODO: We use SemVer for versioning. For the versions available, see the tags on this repository.
+        .. image:: https://img.shields.io/travis/ginopalazzo/dedomeno.svg
+                :target: https://travis-ci.org/ginopalazzo/dedomeno
         
-        ## Authors
-        - Gino Palazzo - Initial work
-          - [ginopalazzo@gmail.com](ginopalazzo@gmail.com)
-          - [https://github.com/ginopalazzo](https://github.com/ginopalazzo)
+        .. image:: https://readthedocs.org/projects/dedomeno/badge/?version=latest
+                :target: https://dedomeno.readthedocs.io/en/latest/?badge=latest
+                :alt: Documentation Status
         
-        ## License
-        This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/ginopalazzo/dedomeno/blob/master/LICENSE) file for details.
         
-        ## Acknowledgments
-        - [Mike Duwee](https://github.com/mikeduwee)
-        - [Borja]()
-Platform: any
-Classifier: Programming Language :: Python
-Classifier: Development Status :: 1 - Alfa
-Classifier: Natural Language :: English
-Classifier: Environment :: Web Environment
+        
+        A Spanish real estate (Idealista) python scraper
+        
+        
+        * Free software: MIT license
+        * Documentation: https://dedomeno.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        First untest alpha version.
+        
+        Use crawlpropery.py to make manual crawls, just modify the CrawlPropertyReactor parameters to yours needs::
+        
+            dedomeno/idealista/crawlproperty.py
+        
+            if __name__ == "__main__":
+                spider = CrawlPropertyReactor(property_type='land', transaction='sale', provinces=['salamanca'])
+                spider.conf()
+                spider.run()
+        
+        
+        Use django + celery + flower + scrapy to do programmatic crawls and visualize the output::
+        
+            # 1. start django server, http://127.0.0.1:8000/
+            python manage.py runserver
+            # 2. remove all tasks from queue: celery. (Only works when RabbitMQ is up)
+            celery -A proj purge
+            # Enter admin http://127.0.0.1:8000/admin and change django-celery-beat to schedule the periodic task in the db
+            # 3. Run the RabbitMQ message broker
+            sudo rabbitmq-server
+            # 4. Celery:
+            # 4.1 Start the celery worker
+            celery -A dedomeno worker --loglevel=INFO
+            # 4.2 Run Flower, a web based tool for monitoring and administrating Celery clusters
+            celery -A dedomeno flower
+            # 4.3 Start the celery beat (schedule tasks)
+            celery -A dedomeno beat -l info -S django
+        
+        Built With
+        --------
+        
+        * Django_ - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design
+        * Scrapy_ - An open source and collaborative framework for extracting the data you need from websites.
+        * Celery_ - An asynchronous task queue/job queue based on distributed message passing
+        
+        
+        Credits
+        -------
+        
+        * Gino Palazzo ginopalazzo@gmail.com
+        * This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+        
+        .. _Cookiecutter: https://github.com/audreyr/cookiecutter
+        .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+        .. _Django: https://www.djangoproject.com/
+        .. _Scrapy: https://scrapy.org/
+        .. _Celery: http://www.celeryproject.org/
+        
+        
+        =======
+        History
+        =======
+        
+        0.1.0 (2018-03-17)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: dedomeno
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
 Classifier: Intended Audience :: Developers
-Classifier: License :: OSI Approved :: Apache Software License
-Classifier: Operating System :: OS Independent
-Classifier: Topic :: Software Development :: Libraries :: Python Modules
-Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
-Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
