@@ -1,66 +1,84 @@
-from __future__ import print_function
-from setuptools import setup
-from setuptools.command.test import test as TestCommand
-import io
-import codecs
-import os
-import sys
-import re
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-import dedomeno
+"""The setup script."""
 
-HERE = os.path.abspath(os.path.dirname(__file__))
+from setuptools import setup, find_packages
 
+with open('README.rst') as readme_file:
+    readme = readme_file.read()
 
-def read(*parts):
-    """Return multiple read calls to different readable objects as a single
-    string."""
-    # intentionally *not* adding an encoding option to open
-    return codecs.open(os.path.join(HERE, *parts), 'r').read()
+with open('HISTORY.rst') as history_file:
+    history = history_file.read()
 
+requirements = ['Click>=6.0', ]
 
-LONG_DESCRIPTION = read('README.md')
+setup_requirements = ['pytest-runner', ]
+
+test_requirements = ['pytest', ]
 
 setup(
-    setup_requires=['pytest-runner'],
-    name='dedomeno',
-    version='0.1',
-    url='http://github.com/ginopalazzo/dedomeno/',
-    license='GNU General Public License v3.0',
-    author='Gino Palazzo',
-    tests_require=['pytest'],
-    install_requires=['Django>=2.0.1',
-                      'Scrapy==1.5.0',
-                      'celery>=4.1.0',
-                      'django-bootstrap-breadcrumbs>=0.9.0',
-                      'django-celery-beat>=1.1.<0',
-                      'django-multiselectfield>=0.1.8',
-                      'fake-useragent>=0.1.8',
-                      'flower>=0.9.2',
-                      'python-decouple>=3.1',
-                      'scrapy-djangoitem>=1.1.1',
-                      ],
-
+    author="Gino Palazzo",
     author_email='ginopalazzo@gmail.com',
-    description='A Spanish real estate (Idealista) python scraper',
-    long_description=LONG_DESCRIPTION,
-    packages=['dedomeno'],
-    include_package_data=True,
-    platforms='any',
-    test_suite='dedomeno.test',
     classifiers=[
-        'Programming Language :: Python',
-        'Development Status :: 1 - Alfa',
-        'Natural Language :: English',
-        'Environment :: Web Environment',
+        'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Software License',
-        'Operating System :: OS Independent',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-        'Topic :: Software Development :: Libraries :: Application Frameworks',
-        'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        "Programming Language :: Python :: 2",
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+    ],
+    description="A Spanish real estate (Idealista) python scraper",
+    entry_points={
+        'console_scripts': [
+            'dedomeno=dedomeno.cli:main',
         ],
-    extras_require={
-        'testing': ['pytest'],
-    }
+    },
+    install_requires=requirements,
+    license="MIT license",
+    long_description=readme + '\n\n' + history,
+    include_package_data=True,
+    keywords='dedomeno',
+    name='dedomeno',
+    packages=find_packages(include=['dedomeno']),
+    setup_requires=setup_requirements,
+    test_suite='tests',
+    tests_require=test_requirements,
+    url='https://github.com/ginopalazzo/dedomeno',
+    version='0.1.0',
+    zip_safe=False,
 )
+
+# Config file for automatic testing at travis-ci.org
+
+language: python
+python:
+  - 3.6
+  - 3.5
+  - 3.4
+  - 2.7
+
+# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+install: pip install -U tox-travis
+
+# Command to run tests, e.g. python setup.py test
+script: tox
+
+# Assuming you have installed the travis-ci CLI tool, after you
+# create the Github repo and add it to Travis, run the
+# following command to finish PyPI deployment setup:
+# $ travis encrypt --add deploy.password
+deploy:
+  provider: pypi
+  distributions: sdist bdist_wheel
+  user: ginopalazzo
+  password:
+    secure: PLEASE_REPLACE_ME
+  on:
+    tags: true
+    repo: ginopalazzo/dedomeno
+    python: 3.6
