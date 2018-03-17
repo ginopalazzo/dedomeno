@@ -28,6 +28,14 @@ Features
 
 * TODO
 
+Built With
+--------
+
+* Django_ - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design
+* Scrapy_ - An open source and collaborative framework for extracting the data you need from websites.
+* Celery_ - An asynchronous task queue/job queue based on distributed message passing
+
+
 Credits
 -------
 
@@ -35,3 +43,6 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _Django: https://www.djangoproject.com/
+.. _Scrapy: https://scrapy.org/
+.. _Celery: http://www.celeryproject.org/

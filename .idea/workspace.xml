@@ -2,76 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e49cd6c-ddae-4f8f-be31-8be8a3d2aa63" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/docs/Makefile" afterPath="$PROJECT_DIR$/docs/Makefile" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/dedomeno.dedomeno.doctree" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/dedomeno.doctree" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/dedomeno.houses.doctree" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/dedomeno.houses.migrations.doctree" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/dedomeno.houses.templatetags.doctree" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/dedomeno.idealista.doctree" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/dedomeno.idealista.spiders.doctree" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/environment.pickle" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/doctrees/index.doctree" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/.buildinfo" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/dedomeno.dedomeno.rst.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/dedomeno.houses.migrations.rst.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/dedomeno.houses.rst.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/dedomeno.houses.templatetags.rst.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/dedomeno.idealista.rst.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/dedomeno.idealista.spiders.rst.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/dedomeno.rst.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_sources/index.rst.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/ajax-loader.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/alabaster.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/basic.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment-bright.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment-close.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/comment.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/custom.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/doctools.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/documentation_options.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/down-pressed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/down.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/file.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/jquery-3.2.1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/minus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/plus.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/pygments.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/searchtools.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/underscore-1.3.1.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/underscore.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/up-pressed.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/up.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/_static/websupport.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/dedomeno.dedomeno.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/dedomeno.houses.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/dedomeno.houses.migrations.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/dedomeno.houses.templatetags.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/dedomeno.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/dedomeno.idealista.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/dedomeno.idealista.spiders.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/genindex.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/objects.inv" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/search.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/html/searchindex.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/conf.py" afterPath="$PROJECT_DIR$/docs/conf.py" />
-      <change beforePath="$PROJECT_DIR$/docs/dedomeno.dedomeno.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dedomeno.houses.migrations.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dedomeno.houses.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dedomeno.houses.templatetags.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dedomeno.idealista.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dedomeno.idealista.spiders.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/dedomeno.rst" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/docs/index.rst" afterPath="$PROJECT_DIR$/docs/index.rst" />
-      <change beforePath="$PROJECT_DIR$/docs/make.bat" afterPath="$PROJECT_DIR$/docs/make.bat" />
-      <change beforePath="$PROJECT_DIR$/setup.cfg" afterPath="$PROJECT_DIR$/setup.cfg" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/README.rst" afterPath="$PROJECT_DIR$/README.rst" />
       <change beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,11 +64,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2340">
-              <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+            <state relative-caret-position="810">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.rst" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -222,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/dedomeno/houses/templates/houses/detail_real_estate.html" />
         <option value="$PROJECT_DIR$/dedomeno/templatetags/js.py" />
         <option value="$PROJECT_DIR$/dedomeno/houses/templatetags/js.py" />
         <option value="$PROJECT_DIR$/dedomeno/houses/static/houses/js/donutcharts.js" />
@@ -270,9 +212,10 @@
         <option value="$PROJECT_DIR$/pytest.ini" />
         <option value="$PROJECT_DIR$/setup.cfg" />
         <option value="$PROJECT_DIR$/dedomeno/pytest.ini" />
-        <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.rst" />
+        <option value="$PROJECT_DIR$/setup.py" />
       </list>
     </option>
   </component>
@@ -775,13 +718,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dedomeno/houses/templates/houses/province/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="51" lean-forward="false" selection-start-line="108" selection-start-column="51" selection-end-line="108" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dedomeno/idealista/spiders/property_spider_BACKUP.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="101">
@@ -1073,14 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dedomeno/pytest.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1101,6 +1029,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2340">
           <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
