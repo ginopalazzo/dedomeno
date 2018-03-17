@@ -21,7 +21,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: ginopalazzo
   password:
-    secure: ***REMOVED***
+    secure: cerdito888
   on:
     tags: true
     repo: ginopalazzo/dedomeno
