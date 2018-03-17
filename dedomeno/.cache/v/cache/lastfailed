@@ -1,9 +1,0 @@
-{
-  "houses/tests.py": true,
-  "houses/tests/test_sample.py": true,
-  "test/test_dedomeno.py": true,
-  "test/test_settings.py": true,
-  "test_sample.py": true,
-  "test_settings.py": true,
-  "tests/test_sample.py": true
-}

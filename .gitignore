@@ -2,12 +2,18 @@
 *~
 __pycache__
 myenv
+dedomeno/.cache
+dedomeno/celerybeat.pid
+dedomeno/db.sqlite3
+dedomeno/mysite.log
 dedomeno/mysite.log
 dedomeno/db.sqlite3
 dedomeno.sublime-workspace
 dedomeno.sublime-project
 .DS_Store
 .env
+.elasticbeanstalk
+mysite.log
 scrappers/houses/idealista/.scrapy/httpcache
 
 # Byte-compiled / optimized / DLL files
