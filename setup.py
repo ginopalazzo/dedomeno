@@ -11,7 +11,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=6.0', 'Scrapy>=1.5.0', 'scrapy-djangoitem==1.1.1', 'python-decouple==3.1',
+requirements = ['Click>=6.0', 'Scrapy>=1.5.0', 'scrapy-djangoitem>=1.1.1', 'python-decouple>=3.1',
                 'scrapy-djangoitem>=1.1.1', 'flower>=0.9.2', 'Django>=2.0.1',
                 'django-bootstrap-breadcrumbs>=0.9.0', 'django-celery-beat>=1.1.0',
                 'django-multiselectfield>=0.1.8', 'celery>=4.1.0']
