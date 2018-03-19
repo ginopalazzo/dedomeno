@@ -25,9 +25,9 @@ A Spanish real estate (Idealista) python scraper
 Features
 --------
 
-First untest alpha version.
+First untested alpha version.
 
-Use crawlpropery.py to make manual crawls, just modify the CrawlPropertyReactor parameters to yours needs::
+Use crawlpropery.py to make manual crawls, just modify the CrawlPropertyReactor parameters to your needs::
 
     dedomeno/idealista/crawlproperty.py
 
@@ -37,7 +37,7 @@ Use crawlpropery.py to make manual crawls, just modify the CrawlPropertyReactor 
         spider.run()
 
 
-Use django + celery + flower + scrapy to do programmatic crawls and visualize the output::
+I used django + celery + flower + scrapy to do programmatic crawls and visualize the output::
 
     # 1. start django server, http://127.0.0.1:8000/
     python manage.py runserver
@@ -57,9 +57,9 @@ Use django + celery + flower + scrapy to do programmatic crawls and visualize th
 Built With
 --------
 
-* Django_ - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design
+* Django_ - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.
 * Scrapy_ - An open source and collaborative framework for extracting the data you need from websites.
-* Celery_ - An asynchronous task queue/job queue based on distributed message passing
+* Celery_ - An asynchronous task queue/job queue based on distributed message passing.
 
 
 Credits
