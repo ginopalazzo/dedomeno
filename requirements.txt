@@ -81,7 +81,7 @@ Sphinx==1.7.1
 sphinxcontrib-websupport==1.0.1
 tabulate==0.8.1
 tornado==4.5.3
-Twisted==17.9.0
+Twisted==19.7.0
 unicodecsv==0.14.1
 urllib3==1.22
 vine==1.1.4
