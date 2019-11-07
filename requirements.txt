@@ -15,7 +15,7 @@ cffi==1.11.4
 chardet==3.0.4
 colorama==0.3.9
 constantly==15.1.0
-cryptography==2.1.4
+cryptography==2.3
 cssselect==1.0.3
 dj-database-url==0.4.2
 Django==2.0.1
