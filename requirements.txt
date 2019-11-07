@@ -18,7 +18,7 @@ constantly==15.1.0
 cryptography==2.1.4
 cssselect==1.0.3
 dj-database-url==0.4.2
-Django==2.0.1
+Django==2.0.12
 django-bootstrap-breadcrumbs==0.9.0
 django-celery-beat==1.1.0
 django-multiselectfield==0.1.8
