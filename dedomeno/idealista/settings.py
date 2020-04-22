@@ -140,7 +140,7 @@ DOWNLOADER_MIDDLEWARES = {
 # 3 = List of custom proxy, every request have different proxy
 # PROXY_MODE = 3
 # If proxy mode is 2 uncomment this sentence :
-# CUSTOM_PROXY = "http://ginopalazzo:cerdito888@fr.proxymesh.com:31280"
+# CUSTOM_PROXY = "http://user:pass@fr.proxymesh.com:31280"
 # If proxy mode is 3 uncomment this sentence :
 # PROXY_LIST = '/Users/ginopalazzo/Magic/dedomeno-proyect/scrappers/houses/idealista/idealista/proxy_list.txt'
 BLACKLIST_HTTP_STATUS_CODES = [307]
