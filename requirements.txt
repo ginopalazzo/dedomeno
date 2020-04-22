@@ -119,8 +119,7 @@ sqlparse==0.3.1
 tabulate==0.8.7
 termcolor==1.1.0
 texttable==1.6.2
-toml==0.10.0
-tornado==6.0.4
+toml==0.10.0tornado==6.0.4
 tox==3.14.6
 tqdm==4.45.0
 twine==3.1.1
