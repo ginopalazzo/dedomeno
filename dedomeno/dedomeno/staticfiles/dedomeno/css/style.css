@@ -1,0 +1,128 @@
+
+body {
+    font-family: 'Roboto Light',sans-serif;
+    font-weight: 300;
+}
+
+a {
+    color: #2e6da4;
+}
+a:hover {
+    color: rgba(46, 109, 164, 0.78);
+    text-decoration: none;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    border-top: 1px solid #2e6da4;
+}
+img.logo {
+    vertical-align: text-bottom;
+}
+.beta {
+    font-size: 20px;
+}
+.list-group-item-first{
+    background-color: rgba(204, 204, 204, 0.42);
+}
+.badge-sale {
+    background-color: #2e6da4;
+    color: white;
+}
+.badge-rent {
+    background-color: rgba(46, 109, 164, 0.78);
+    color: white;
+}
+.navbar {
+    margin-bottom: 40px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.breadcrumb{
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.page-footer{
+    margin-top: 40px;
+}
+
+.footer-rrss{
+    background-color: rgba(46, 109, 164, 0.78);
+    color : white;
+}
+
+hr{
+   border-top: 1px solid rgba(46, 109, 164, 0.78);
+}
+
+.page-footer{
+    background: #2B2B2B;
+    color: #999;
+    box-shadow: 0 -2px 4px 0 rgba(0,0,0,.6);
+}
+
+.page-footer strong{
+    color: white;
+}
+
+.footer-copyright{
+    background-color: rgba(0,0,0,.2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.charts{
+    margin-top: 50px;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 1;
+  width: 325px;
+  height: 60px;
+  padding: 8px;
+  background: rgb(255,255,255);
+  font-family: "Helvetica Neue", "Helvetica", Arial sans-serif;
+  font-size: 12px;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.5),0 0 0 1px rgba(0,0,0,.08);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.g-place {
+  border-bottom: 1px solid rgb(130,130,130);
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+}
+.g-headline {
+  font-size: 16px;
+}
+.g-sub {
+  color: rgb(130,130,130);
+}
+.g-value {
+  float: right;
+  font-family: "Menlo", monospace;
+}
+.g-rank {
+  float: right;
+  font-size: 14px;
+}
+.legend {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  height: 90px;
+  width: 150px;
+}
+
+a.icons-sm {
+    color: white;
+}
+

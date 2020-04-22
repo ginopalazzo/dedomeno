@@ -145,13 +145,13 @@ DOWNLOADER_MIDDLEWARES = {
 # PROXY_LIST = '/Users/ginopalazzo/Magic/dedomeno-proyect/scrappers/houses/idealista/idealista/proxy_list.txt'
 BLACKLIST_HTTP_STATUS_CODES = [307]
 
-'''
+
 CUSTOM_PROXY_LIST = [
     'http://user:pass@111.111.111.111:00000',
     'http://user:pass@ip:port'
 ]
-'''
-CUSTOM_PROXY_LIST = config('SCRAPY_CUSTOM_PROXY_LIST', cast=Csv())
+
+CUSTOM_PROXY_LIST = CUSTOM_PROXY_LIST #config('SCRAPY_CUSTOM_PROXY_LIST', cast=Csv())
 
 
 # ------------ PIPELINES SETTINGS ------------

@@ -143,10 +143,10 @@ class Property(models.Model):
                                     help_text='If blank there is not a real estate involved')
     real_estate_raw = models.CharField(blank=True, max_length=200, null=True)
     price_raw = models.IntegerField(blank=True, null=True)
-    geocode_raw = ArrayField(models.CharField(max_length=200, blank=True, null=True), default=[])
+    geocode_raw = ArrayField(models.CharField(max_length=200, blank=True, null=True), default=list)
     geocode = models.ForeignKey(TerritorialEntity, blank=True, null=True, on_delete=models.SET_NULL,
                                         related_name='property')
-    address_path = ArrayField(models.CharField(max_length=200, blank=True, null=True), default=[])
+    address_path = ArrayField(models.CharField(max_length=200, blank=True, null=True), default=list)
     address_province = models.CharField(max_length=200, blank=True, null=True)
     address_raw = models.CharField(max_length=2000, blank=True, null=True)
     address = JSONField(blank=True, null=True)
